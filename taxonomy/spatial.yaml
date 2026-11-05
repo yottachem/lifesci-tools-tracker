@@ -10,7 +10,15 @@
 #     launched:   first commercial year; hits before it are counted as noise by the probe
 #     context:    for ambiguous names, the brand only counts when one of these co-occurs
 #     vendor:     current owner; acquired_from records the history
-#     verify:     true = ownership/launch facts not yet checked against a primary source
+#     verify:     true = ownership/launch facts not yet checked against a primary source;
+#                 launch = ownership checked, launch year still open
+#     pending:    an announced deal that would change the vendor; confirm close before moving the platform
+#
+# Landscape cross-check (2026-11-05): ownership, pending deals and current models checked against the
+# Tools Companies vault analysis life-science-tools-landscape-2026 (verified 2026-10-22; V rows cite a
+# 2025-2026 primary or trade-press source). Ownership was cleared only on V rows that name the platform or
+# the business unit that sells it; V~ rows (aggregator or single source) left verify: true. Conflicts were
+# settled against primary filings (Qiagen 20-F for Parse, 10x 10-Q for Scale, Bio-Rad FAQ for QX700).
 #   cpc:          headline patent classes (reference only); matching uses the shared life-science CPC scope in ingest/uspto.py
 #   nih_terms:    RePORTER title/abstract phrases (funded demand)
 #   patent_terms: claim-style wording patents use instead of journal terms (title/abstract, plural-tolerant);
@@ -67,6 +75,8 @@ technologies:
         platforms:
           - {name: Visium, query: '"Visium"', vendor: 10x Genomics, launched: 2019}
           - {name: Visium HD, query: '"Visium HD"', vendor: 10x Genomics, launched: 2024, parent: Visium}
+          - {name: StrataMap, query: '"StrataMap"', context: ['Illumina', 'spatial'], vendor: Illumina, launched: 2026,
+             note: 'sequencer-based spatial capture, announced 2025-02, launched 2026-06 (landscape 2026-10-22). Precision sample pending'}
           - {name: Stereo-seq, query: '"Stereo-seq"', vendor: MGI Tech, acquired_from: STOmics (BGI Group; announced 2026-03, confirm close), launched: 2022,
              note: '"STOmics" dropped: matches ostomy literature ("stomics") even when quoted'}
           - {name: Curio Seeker / Trekker, query: '"Curio Seeker" OR "Curio Trekker" OR "Curio Bioscience"', context: ['spatial', 'Slide-seq', 'Slide-tags'], vendor: Takara Bio,
@@ -78,13 +88,18 @@ technologies:
         label: Imaging-based in situ
         platforms:
           - {name: Xenium, query: '"Xenium"', context: ['spatial', 'in situ', 'transcript'], vendor: 10x Genomics, launched: 2022}
-          - {name: MERSCOPE, query: '"MERSCOPE" OR "Vizgen"', vendor: Vizgen, launched: 2021}
+          - {name: MERSCOPE, query: '"MERSCOPE" OR "Vizgen"', vendor: Vizgen, launched: 2021, note: MERSCOPE Ultra matches this query}
+          - {name: Atera, query: '"Atera"', context: ['10x Genomics', 'in situ', 'spatial', 'whole transcriptome'], vendor: 10x Genomics, launched: 2026,
+             note: 'whole-transcriptome in situ, ~$495K, ships 2H 2026 (landscape 2026-10-22). "Atera" is also an IT software company, so the context is required. Precision sample pending'}
+          - {name: Pyxa, query: '"Pyxa" OR "Stellaromics"', context: ['spatial', 'STARmap', 'in situ', 'three-dimensional', '3D'], vendor: Stellaromics, launched: 2026,
+             note: 'STARmap-based 3D spatial multiomics in intact tissue; launched at AGBT 2026-02 (alpha called Plexa). Precision sample pending'}
           - {name: CosMx SMI, query: '"CosMx"', vendor: Bruker, acquired_from: NanoString (2024), launched: 2021}
           - {name: Molecular Cartography, query: '"Molecular Cartography" AND "Resolve Biosciences"', vendor: Resolve Biosciences, launched: 2021}
           - {name: GenePS, query: '"GenePS" AND ("seqFISH" OR "Spatial Genomics")', vendor: Spatial Genomics, launched: 2022,
              note: product of seqFISH (Caltech); academic seqFISH use is a method_term}
-          - {name: G4X, query: '"G4X" AND "Singular Genomics"', vendor: Singular Genomics, launched: 2025,
-             note: private since Deerfield take-private (2025-02)}
+          - {name: G4X, query: '"G4X" AND "Singular Genomics"', vendor: Singular Genomics, launched: 2026,
+             note: 'private since Deerfield take-private (2025-02). Commercial US launch 2026-02-17 after an early-access program, so pre-2026 hits include real early-access use',
+             source: 'https://singulargenomics.com/news/g4x-launch-annoucement'}
           - {name: AVITI24, query: '"AVITI24"', context: ['Teton', 'cytoprofiling'], vendor: Element Biosciences, launched: 2024,
              note: 'AVITI24 is also a plain NGS sequencer; only Teton/cytoprofiling use is spatial (2026-11-05 sample: "in situ" context let sequencing use back in)'}
       region_based:
@@ -135,7 +150,7 @@ technologies:
           - {name: COMET, query: '("Lunaphore" AND ("COMET" OR "sequential immunofluorescence" OR "seqIF")) OR ("COMET" AND "sequential immunofluorescence")',
              vendor: Bio-Techne, acquired_from: Lunaphore (2023-07), note: bare "Lunaphore" matched oncology disclosures (2026-11-05 sample)}
           - {name: Cell DIVE, query: '"Cell DIVE"', context: ['multiplex', 'multiplexed', 'Leica', 'immunofluorescence', 'GE Healthcare'], vendor: Leica Microsystems, note: current generation introduced 2022-06}
-          - {name: Orion, query: '"Orion" AND "RareCyte"', vendor: RareCyte, launched: 2020}
+          - {name: Orion, query: '"Orion" AND "RareCyte"', vendor: RareCyte, launched: 2020, note: Orion HT and Orion LE (2026-04-20) match this query}
           - {name: MACSima, query: '"MACSima"', context: ['imaging', 'multiplex', 'multiplexed', 'cyclic', 'immunofluorescence'], vendor: Miltenyi Biotec, launched: 2019}
           - {name: CellScape, query: '"CellScape"', context: ['Canopy', 'Bruker'], vendor: Bruker, acquired_from: Canopy Biosciences (2020)}
       mass_spec_imaging:
@@ -144,7 +159,8 @@ technologies:
           - {name: Hyperion, query: '"Hyperion" AND "imaging mass cytometry"', launched: 2017, vendor: Standard BioTools, acquired_from: Fluidigm (rename 2022),
              pending: sale of mass cytometry business to Element Biosystems LLC (GMT Venture Partners) agreed 2026-09-30; confirm close.
                Not Element Biosciences}
-          - {name: MIBIscope, query: '"MIBIscope" OR "MIBI-TOF" OR "Ionpath"', vendor: Ionpath, launched: 2020}
+          - {name: MIBIscope, query: '"MIBIscope" OR "MIBI-TOF" OR "Ionpath"', vendor: Ionpath, launched: 2020,
+             note: 'Ionpath moved toward services in 2023-05 but launched MIBIscope 3.0 in 2024-11, so the instrument is still sold'}
     cpc:
       - G01N33/582
       - G01N33/6848  # mass spectrometry of proteins (check)

@@ -1,5 +1,7 @@
 # Vendor roster. Spatial pilot checked 2026-11-03; pending deals re-checked 2026-11-05.
 # Other 8 technologies drafted 2026-11-05 (platform facts carry verify: true in taxonomy/*.yaml).
+# Landscape cross-check 2026-11-05: deals and ownership reconciled with the Tools Companies vault analysis
+# life-science-tools-landscape-2026 (method in the taxonomy/spatial.yaml header). Its own sources are cited here.
 # role: pure_play = financials shown on technology pages; context = diversified, shown for reference only;
 #       private = roster only (no SEC filings).
 # Financials and market value come from EDGAR (cik) only. Non-US listings (Takara Bio, MGI Tech) are roster only.
@@ -10,9 +12,13 @@ vendors:
     ticker: TXG
     cik: 1770787
     role: pure_play
-    platforms: [Visium, Visium HD, Xenium, Chromium, ScaleBio]
+    platforms: [Visium, Visium HD, Xenium, Atera, Chromium, ScaleBio]
     history:
-      - {date: 2025-08-07, event: Agreed to acquire Scale Biosciences ($30M cash and stock; confirm close), source: 'https://investors.10xgenomics.com/news/news-details/2025/10x-Genomics-to-Acquire-Scale-Biosciences/'}
+      - {date: 2025-05, event: 'Patent settlements: Bruker pays $68M plus royalties; Vizgen/Harvard paid $26M plus royalties (2025-02)',
+         source: 'https://www.businesswire.com/news/home/20250514837657/en/Bruker-and-10x-Genomics-Reach-Global-Settlement-of-Patent-Litigation'}
+      - {date: 2025-08-07, event: Agreed to acquire Scale Biosciences, source: 'https://investors.10xgenomics.com/news/news-details/2025/10x-Genomics-to-Acquire-Scale-Biosciences/'}
+      - {date: 2025-08-11, event: 'Completed acquisition of Scale Biosciences ($30M cash plus 1.1M shares, plus milestones)',
+         source: 'https://www.sec.gov/Archives/edgar/data/1770787/000162828025050332/txg-20250930.htm'}
   Bruker:
     status: public
     ticker: BRKR
@@ -21,7 +27,8 @@ vendors:
     platforms: [CosMx SMI, GeoMx DSP, CellScape, timsTOF]
     history:
       - {year: 2020, event: Acquired Canopy Biosciences (CellScape)}
-      - {year: 2024, event: Acquired NanoString (CosMx, GeoMx)}
+      - {year: 2024, event: Acquired NanoString (CosMx, GeoMx) in bankruptcy auction (~$392.6M cash)}
+      - {date: 2025-05, event: Settled 10x patent litigation ($68M plus life-of-patent royalties on spatial sales)}
   Quanterix:
     status: public
     ticker: QTRX
@@ -39,6 +46,9 @@ vendors:
     platforms: [COMET]
     history:
       - {date: 2023-07-10, event: Completed acquisition of Lunaphore (COMET), source: 'https://www.biospace.com/bio-techne-completes-lunaphore-acquisition'}
+      - {date: 2026-06-25, event: 'Agreed to be acquired by Merck KGaA ($73/share, ~$11.3B EV). Stockholders approved 2026-09-23; not closed as of the 2026-10-22 landscape (expected late 2026 / early 2027)',
+         source: 'https://www.dcatvci.org/top-industry-news/merck-kgaa-to-acquire-bio-techne-for-11-3-bn-to-boost-life-sciences-products-arm/'}
+    pending: Merck KGaA acquisition; on close, COMET moves to Merck KGaA (Frankfurt listing, roster only) and TECH financials stop
   Standard BioTools:
     status: public
     ticker: LAB
@@ -75,9 +85,21 @@ vendors:
       - {year: 2024, event: STOmics established (BGI Group) to commercialize Stereo-seq; Complete Genomics US distributor}
       - {date: 2026-03, event: MGI Tech announced acquisition of STOmics and CycloneSEQ from BGI Group (RMB 365.7M). No completion notice found as of 2026-11-05,
          source: 'https://www.genomeweb.com/sequencing/mgi-tech-acquire-bgis-spatial-nanopore-sequencing-subsidiaries-rmb-3657m-cash'}
+      - {date: 2026-02-23, event: 'Agreed to sell Complete Genomics (US DNBSEQ seller) to Swiss Rockets AG (~$50M); pending MGI holder approval and CFIUS. MGI keeps a license to 205 patents. BIOSECURE-driven',
+         source: 'https://www.completegenomics.com/complete-genomics-enters-definitive-agreement-to-be-acquired-by-swiss-rockets-ag/'}
+    note: BGI group is on the DoD 1260H list (2026-06-08); BIOSECURE prohibitions phase in from about 2028
   Vizgen:
     status: private
     platforms: [MERSCOPE]
+    history:
+      - {date: 2024-10-09, event: Merged with Ultivue (protein imaging), source: 'https://www.businesswire.com/news/home/20241009625549/en/Vizgen-and-Ultivue-Merge-to-Enable-Deeper-Insights-into-Disease-Mechanisms-and-Drive-Innovation-in-Spatial-Multi-Omics'}
+      - {date: 2025-02, event: Settled 10x/Harvard patent litigation ($26M plus royalties)}
+      - {date: 2026-01-08, event: $48M financing; staff cuts later in 2026, source: 'https://www.vcaonline.com/news/2026010812/vizgen-announces-48-million-financing/'}
+  Stellaromics:
+    status: private
+    platforms: [Pyxa]
+    history:
+      - {date: 2026-02, event: Pyxa launched at AGBT, source: 'https://www.stellaromics.com/news'}
   Resolve Biosciences:
     status: private
     platforms: [Molecular Cartography]
@@ -91,10 +113,12 @@ vendors:
     platforms: [G4X]
     history:
       - {date: 2025-02, event: Taken private by Deerfield Management ($20.00/share), source: 'https://www.singulargenomics.com/news/singular-genomics-aquisition'}
+      - {date: 2026-02-17, event: G4X commercial US launch, source: 'https://singulargenomics.com/news/g4x-launch-annoucement'}
   Element Biosciences:
     status: private
-    platforms: [AVITI24, AVITI]
+    platforms: [AVITI24, AVITI, VITARI]
     history:
+      - {date: 2026-06-09, event: Series E including $175M from Samsung (~$680M raised in total), source: 'https://www.businesswire.com/news/home/20260609302219/en/Element-Biosciences-Announces-Upsized-Series-E-to-Accelerate-Global-Growth-Across-Ecosystem-of-Genomic-Multiomic-and-Clinical-Research-Solutions'}
       - {date: 2024-04-05, event: AVITI24 orders opened, source: 'https://www.biospace.com/element-biosciences-announces-availability-of-aviti24-the-first-benchtop-sequencer-capable-of-direct-cell-profiling'}
   AtlasXomics:
     status: private
@@ -104,21 +128,26 @@ vendors:
     platforms: [Orion]
     history:
       - {date: 2020-07-16, event: Orion announced, source: 'https://www.biospace.com/rarecyte-announces-the-orion-spatial-biology-platform-with-breakthrough-technology-for-same-day-highly-multiplexed-tissue-analysis'}
+      - {date: 2026-04-20, event: Launched Orion HT and Orion LE, source: 'https://www.businesswire.com/news/home/20260420836125/en/RareCyte-Expands-Clinical-Scale-Spatial-Proteomics-Portfolio-with-New-Orion-Systems-and-Leadership-Appointment'}
   Miltenyi Biotec:
     status: private
     platforms: [MACSima, MACSQuant]
   Ionpath:
     status: private
     platforms: [MIBIscope]
+    history:
+      - {date: 2023-05-24, event: Shifted toward a spatial proteomics services business, source: 'https://www.businesswire.com/news/home/20230524005260/en/Ionpath-Announces-Shift-Toward-Spatial-Proteomics-Services-Business'}
+      - {date: 2024-11-05, event: Launched MIBIscope 3.0 (instrument still sold), source: 'https://www.businesswire.com/news/home/20241105144180/en/Ionpath-Announces-the-Launch-of-MIBIscope%E2%84%A2-3.0-Spatial-Proteomics-Imaging-Platform'}
   Illumina:
     status: public
     ticker: ILMN
     cik: 1110803
     role: pure_play
-    platforms: [NovaSeq, NovaSeq X, NextSeq, MiSeq, MiniSeq / iSeq, HiSeq, PIPseq, SomaScan]
+    platforms: [NovaSeq, NovaSeq X, NextSeq, MiSeq, MiniSeq / iSeq, HiSeq, PIPseq, SomaScan, StrataMap]
     history:
-      - {date: 2024-07, event: Acquired Fluent BioSciences (PIPseq); confirm date}
+      - {date: 2024-07-09, event: Acquired Fluent BioSciences (PIPseq), source: 'https://investor.illumina.com/news/press-release-details/2024/Illumina-acquires-Fluent-BioSciences-to-accelerate-single-cell-analysis-and-discovery-to-a-broader-customer-base/default.aspx'}
       - {date: 2026-01-30, event: Completed acquisition of SomaLogic from Standard BioTools, source: 'https://investor.illumina.com/news-releases/news-release-details/illumina-completes-acquisition-somalogic'}
+      - {date: 2026-06, event: Launched StrataMap spatial (sequencer-based capture)}
   PacBio:
     status: public
     ticker: PACB
@@ -132,7 +161,9 @@ vendors:
     platforms: [MinION, GridION, PromethION, Flongle]
   Ultima Genomics:
     status: private
-    platforms: [UG 100]
+    platforms: [UG 100 / UG 200]
+    history:
+      - {date: 2026-02-23, event: Launched UG 200 ($850K) and UG 200 Ultra ($1.25M), source: 'https://www.prnewswire.com/news-releases/ultima-genomics-introduces-the-next-generation-of-sequencing-at-scale-with-the-launch-of-the-ug200-series-and-next-generation-solaris-2-0-workflows-delivering-higher-output-better-performance-and-more-flexible-wafer-configuratio-302694374.html'}
   Roche:
     status: public_non_us
     listing: SIX ROG
@@ -148,7 +179,8 @@ vendors:
     platforms: [Ion Torrent, Absolute Q, QuantStudio, StepOne / 7500, Attune NxT, Orbitrap Astral, Orbitrap Exploris, Q Exactive, Orbitrap Tribrid, Olink]
     history:
       - {year: 2021, event: Acquired Combinati (Absolute Q digital PCR)}
-      - {date: 2024-07, event: Completed acquisition of Olink Proteomics; confirm date}
+      - {date: 2024-07, event: 'Completed acquisition of Olink Proteomics ($3.1B); trade-press source only, confirm day against a Thermo release',
+         source: 'https://pharmtech.com/view/thermo-fisher-scientific-expands-proteomics-services-with-olink-acquisition'}
   Waters:
     status: public
     ticker: WAT
@@ -161,9 +193,6 @@ vendors:
   Singleron:
     status: private
     platforms: [Singleron]
-  Parse Biosciences:
-    status: private
-    platforms: [Evercode]
   Mission Bio:
     status: private
     platforms: [Tapestri]
@@ -180,7 +209,11 @@ vendors:
     ticker: QGEN
     cik: 1015820
     role: context
-    platforms: [QIAcuity, Rotor-Gene]
+    platforms: [QIAcuity, Rotor-Gene, Evercode]
+    history:
+      - {date: 2025-12-02, event: 'Acquired Parse Biosciences (Evercode) for $229.1M cash plus up to $55M milestones',
+         source: 'https://www.sec.gov/Archives/edgar/data/1015820/000101582026000018/qgen-20251231.htm'}
+      - {date: 2026-08, event: 'Strategic review under way (PE bidders reported); new CEO Jonathan Pratt from 2026-09-01'}
   Cytek Biosciences:
     status: public
     ticker: CTKB
@@ -207,8 +240,14 @@ vendors:
     role: pure_play
     platforms: [Proteograph]
   Alamar Biosciences:
-    status: private
+    status: public
+    ticker: ALMR
+    cik: 2104204
+    role: pure_play
     platforms: [NULISA]
+    history:
+      - {date: 2026-04-17, event: 'Nasdaq IPO at $17/share ($219.9M gross incl. greenshoe; closed 2026-04-20)',
+         source: 'https://www.stocktitan.net/news/ALMR/precision-proteomics-leader-alamar-biosciences-lists-on-sa24g7t221z6.html'}
   Quantum-Si:
     status: public
     ticker: QSI
