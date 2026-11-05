@@ -1,4 +1,4 @@
-# Vendor roster (spatial pilot). Checked 2026-11-03.
+# Vendor roster (spatial pilot). Checked 2026-11-03; pending deals re-checked 2026-11-05.
 # role: pure_play = financials shown on technology pages; context = diversified, shown for reference only;
 #       private = roster only (no SEC filings).
 # Financials and market value come from EDGAR (cik) only. Non-US listings (Takara Bio, MGI Tech) are roster only.
@@ -44,7 +44,7 @@ vendors:
     platforms: [Hyperion]
     history:
       - {year: 2022, event: Fluidigm renamed Standard BioTools}
-      - {date: 2026-09-30, event: 'Agreed to sell Mass Cytometry business (CyTOF, Hyperion) to Element Biosystems LLC (GMT Venture Partners) for $5.5M, replacing a July 2026 Multiplex Bio deal. Close not yet confirmed',
+      - {date: 2026-09-30, event: 'Agreed to sell Mass Cytometry business (CyTOF, Hyperion) to Element Biosystems LLC (GMT Venture Partners) for $5.5M, replacing a July 2026 Multiplex Bio deal. Not closed as of 2026-11-05: needs stockholder approval and the Treeline Biosciences merger close; expected end of 2026, outside date 2027-06-30',
          source: 'https://www.sec.gov/Archives/edgar/data/0001162194/000114036126038110/ef20082995_ex99-1.htm'}
     note: Element Biosystems LLC is unrelated to Element Biosciences (AVITI24)
   Danaher (Leica Microsystems):
@@ -67,7 +67,7 @@ vendors:
     platforms: [Stereo-seq]
     history:
       - {year: 2024, event: STOmics established (BGI Group) to commercialize Stereo-seq; Complete Genomics US distributor}
-      - {date: 2026-03, event: MGI Tech announced acquisition of STOmics and CycloneSEQ from BGI Group (RMB 365.7M). Close not yet confirmed,
+      - {date: 2026-03, event: MGI Tech announced acquisition of STOmics and CycloneSEQ from BGI Group (RMB 365.7M). No completion notice found as of 2026-11-05,
          source: 'https://www.genomeweb.com/sequencing/mgi-tech-acquire-bgis-spatial-nanopore-sequencing-subsidiaries-rmb-3657m-cash'}
   Vizgen:
     status: private
