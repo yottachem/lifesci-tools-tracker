@@ -1,22 +1,38 @@
-technology,platform,sampled,kept,yes,no,unclear,precision,ci_low,ci_high,coverage,low
-spatial_transcriptomics,Visium,50,44,25,1,18,0.96,0.81,0.99,0.59,False
-spatial_transcriptomics,Visium HD,50,44,30,0,14,1.0,0.89,1.0,0.68,False
-spatial_transcriptomics,Stereo-seq,50,48,26,2,20,0.93,0.77,0.98,0.58,False
-spatial_transcriptomics,Curio Seeker / Trekker,50,25,12,6,7,0.67,0.44,0.84,0.72,True
-spatial_transcriptomics,AtlasXomics,33,33,11,13,9,0.46,0.28,0.65,0.73,True
-spatial_transcriptomics,Xenium,50,45,26,1,18,0.96,0.82,0.99,0.6,False
-spatial_transcriptomics,MERSCOPE,50,45,26,3,16,0.9,0.74,0.96,0.64,False
-spatial_transcriptomics,CosMx SMI,50,44,25,2,17,0.93,0.77,0.98,0.61,False
-spatial_transcriptomics,Molecular Cartography,50,47,25,1,21,0.96,0.81,0.99,0.55,False
-spatial_transcriptomics,GenePS,10,10,4,0,6,1.0,0.51,1.0,0.4,False
-spatial_transcriptomics,G4X,19,17,15,0,2,1.0,0.8,1.0,0.88,False
-spatial_transcriptomics,AVITI24,48,6,5,0,1,1.0,0.57,1.0,0.83,False
-spatial_transcriptomics,GeoMx DSP,50,42,28,0,14,1.0,0.88,1.0,0.67,False
-spatial_proteomics,PhenoCycler (CODEX),50,41,26,2,13,0.93,0.77,0.98,0.68,False
-spatial_proteomics,COMET,50,17,11,2,4,0.85,0.58,0.96,0.76,False
-spatial_proteomics,Cell DIVE,50,21,14,2,5,0.88,0.64,0.97,0.76,False
-spatial_proteomics,Orion,50,48,29,1,18,0.97,0.83,0.99,0.62,False
-spatial_proteomics,MACSima,50,37,24,3,10,0.89,0.72,0.96,0.73,False
-spatial_proteomics,CellScape,31,31,16,1,14,0.94,0.73,0.99,0.55,False
-spatial_proteomics,Hyperion,50,49,30,0,19,1.0,0.89,1.0,0.61,False
-spatial_proteomics,MIBIscope,50,50,31,2,17,0.94,0.8,0.98,0.66,False
+technology,signal,entry,sampled,kept,yes,no,unclear,precision,ci_low,ci_high,coverage,low
+spatial_transcriptomics,platforms,Visium,50,44,25,1,18,0.96,0.81,0.99,0.59,False
+spatial_transcriptomics,platforms,Visium HD,50,44,30,0,14,1.0,0.89,1.0,0.68,False
+spatial_transcriptomics,platforms,Stereo-seq,50,48,26,2,20,0.93,0.77,0.98,0.58,False
+spatial_transcriptomics,platforms,Curio Seeker / Trekker,50,25,12,6,7,0.67,0.44,0.84,0.72,True
+spatial_transcriptomics,platforms,AtlasXomics,33,33,11,13,9,0.46,0.28,0.65,0.73,True
+spatial_transcriptomics,platforms,Xenium,50,45,26,1,18,0.96,0.82,0.99,0.6,False
+spatial_transcriptomics,platforms,MERSCOPE,50,45,26,3,16,0.9,0.74,0.96,0.64,False
+spatial_transcriptomics,platforms,CosMx SMI,50,44,25,2,17,0.93,0.77,0.98,0.61,False
+spatial_transcriptomics,platforms,Molecular Cartography,50,47,25,1,21,0.96,0.81,0.99,0.55,False
+spatial_transcriptomics,platforms,GenePS,10,10,4,0,6,1.0,0.51,1.0,0.4,False
+spatial_transcriptomics,platforms,G4X,19,17,15,0,2,1.0,0.8,1.0,0.88,False
+spatial_transcriptomics,platforms,AVITI24,48,6,5,0,1,1.0,0.57,1.0,0.83,False
+spatial_transcriptomics,platforms,GeoMx DSP,50,42,28,0,14,1.0,0.88,1.0,0.67,False
+spatial_transcriptomics,methods,"""spatial transcriptomics""",50,50,46,0,4,1.0,0.92,1.0,0.92,False
+spatial_transcriptomics,methods,"""spatially resolved transcriptomics""",50,50,45,0,5,1.0,0.92,1.0,0.9,False
+spatial_transcriptomics,methods,"""in situ sequencing""",50,50,37,7,6,0.84,0.71,0.92,0.88,False
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",50,50,44,0,6,1.0,0.92,1.0,0.88,False
+spatial_transcriptomics,methods,"""Slide-seq"" OR ""Slide-seqV2"" OR ""Slide-tags""",50,50,43,2,5,0.96,0.85,0.99,0.9,False
+spatial_transcriptomics,methods,"""seqFISH"" OR ""seqFISH+""",50,50,39,0,11,1.0,0.91,1.0,0.78,False
+spatial_transcriptomics,methods,"""DBiT-seq""",33,33,27,1,5,0.96,0.82,0.99,0.85,False
+spatial_transcriptomics,nih,all nih_terms,50,50,50,0,0,1.0,0.93,1.0,1.0,False
+spatial_transcriptomics,patents,all patent_terms,50,45,43,2,0,0.96,0.85,0.99,1.0,False
+spatial_proteomics,platforms,PhenoCycler (CODEX),50,41,26,2,13,0.93,0.77,0.98,0.68,False
+spatial_proteomics,platforms,COMET,50,17,11,2,4,0.85,0.58,0.96,0.76,False
+spatial_proteomics,platforms,Cell DIVE,50,21,14,2,5,0.88,0.64,0.97,0.76,False
+spatial_proteomics,platforms,Orion,50,48,29,1,18,0.97,0.83,0.99,0.62,False
+spatial_proteomics,platforms,MACSima,50,37,24,3,10,0.89,0.72,0.96,0.73,False
+spatial_proteomics,platforms,CellScape,31,31,16,1,14,0.94,0.73,0.99,0.55,False
+spatial_proteomics,platforms,Hyperion,50,49,30,0,19,1.0,0.89,1.0,0.61,False
+spatial_proteomics,platforms,MIBIscope,50,50,31,2,17,0.94,0.8,0.98,0.66,False
+spatial_proteomics,methods,"""spatial proteomics""",50,37,30,4,3,0.88,0.73,0.95,0.92,False
+spatial_proteomics,methods,"""multiplexed immunofluorescence"" OR ""multiplex immunofluorescence""",50,50,43,0,7,1.0,0.92,1.0,0.86,False
+spatial_proteomics,methods,"""imaging mass cytometry""",50,50,46,0,4,1.0,0.92,1.0,0.92,False
+spatial_proteomics,methods,"""multiplexed ion beam imaging""",50,50,40,0,10,1.0,0.91,1.0,0.8,False
+spatial_proteomics,methods,"""cyclic immunofluorescence"" OR CyCIF",50,50,43,0,7,1.0,0.92,1.0,0.86,False
+spatial_proteomics,nih,all nih_terms,50,50,48,2,0,0.96,0.87,0.99,1.0,False
+spatial_proteomics,patents,all patent_terms,47,43,41,1,1,0.98,0.88,1.0,0.98,False

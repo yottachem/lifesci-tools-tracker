@@ -16,7 +16,7 @@ Run: uv run python -m ingest.openalex
 """
 import requests
 
-from ingest.common import contact, load_taxonomies, platforms, secret, write_snapshot
+from ingest.common import contact, load_taxonomies, method_term, platforms, secret, write_snapshot
 
 URL = "https://api.openalex.org/works"
 TYPES = ("article", "review", "preprint", "conference-abstract", "conference-paper", "book-chapter",
@@ -30,6 +30,13 @@ def works_filter(field, query):
 def platform_query(p):
     q = p["query"]
     if ctx := p.get("context"):
+        q = f"({q}) AND (" + " OR ".join(f'"{c}"' for c in ctx) + ")"
+    return q
+
+
+def method_query(m):
+    q = method_term(m)
+    if isinstance(m, dict) and (ctx := m.get("context")):
         q = f"({q}) AND (" + " OR ".join(f'"{c}"' for c in ctx) + ")"
     return q
 
@@ -55,8 +62,8 @@ def run():
     out, cost = {}, 0.0
     for tech_id, tech in load_taxonomies().items():
         methods, plats = {}, {}
-        for term in tech["method_terms"]:
-            methods[term], usd = by_year("title_and_abstract.search", term)
+        for m in tech["method_terms"]:
+            methods[method_term(m)], usd = by_year("title_and_abstract.search", method_query(m))
             cost += usd
         for fam_id, p in platforms(tech):
             q = platform_query(p)

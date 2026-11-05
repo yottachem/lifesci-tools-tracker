@@ -70,3 +70,13 @@ def test_patent_terms_well_formed(tech_id):
             assert set(e) == {"phrase", "with"} and e["with"], f"{tech_id}: {e}"
         else:
             assert isinstance(e, str) and e.strip(), f"{tech_id}: {e!r}"
+
+
+@pytest.mark.parametrize("tech_id", sorted(TECHS))
+def test_method_terms_well_formed(tech_id):
+    # a method term is an OpenAlex string, or {term, context: [words]} for generic wording
+    for m in TECHS[tech_id]["method_terms"]:
+        if isinstance(m, dict):
+            assert set(m) == {"term", "context"} and m["context"] and '"' in m["term"], f"{tech_id}: {m}"
+        else:
+            assert isinstance(m, str) and m.strip(), f"{tech_id}: {m!r}"

@@ -1,0 +1,201 @@
+technology,signal,entry,id,year,type,title,evidence,snippet,label,reason,josh_check,josh_label
+spatial_proteomics,nih,spatial proteomics,11221425,2025,K00,Defining Therapeutically Targetable Regulators of Tumor-Intrinsic Immune Suppression in Glioblastoma,title/abstract,"...art sequencing and imaging technologies, advanced in vivo genetic
+screening, and robust in vitro and in vivo validation using genetic inactivation techniques.
+In Aim 1, spatial proteomics and transcriptomics technologies paired with single-cell RNA-sequencing
+to visualize distinct spatial domains with local immune-suppression in patient GBM specimens.
+Tra...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,10552842,2022,UG3,Spatially-resolved proteome mapping of senescent cells and their tissue microenvironment at single-cell resolution,title/abstract,"...senescence and developing SNC-targeting therapy approaches is to comprehensively characterize
+cellular senescence in various human tissues. Mass spectrometry (MS)-based spatial proteomics can provide
+direct insights into cellular heterogeneity and reveal novel protein markers. However, current spatial proteomics
+technologies are limited by their poor spat...",no,"no; mass-spec proteome mapping of senescent cells, not antibody imaging",judgment,
+spatial_proteomics,nih,imaging mass cytometry; spatial proteomics,11418487,2026,U19,Characterization of human DRG at the single cell level via integrated transcriptomics and spatial proteomics,title/abstract,"Characterization of human DRG at the single cell level via integrated transcriptomics and spatial proteomics. Project Abstract – Project 2
+Rodent models of dorsal root ganglia (DRG) have been extremely useful in identifying the cellular and molecular
+mechanisms involved in pain...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,multiplexed immunofluorescence,11109707,2025,K08,Elucidating the molecular and cellular mechanisms of immune evasion in pancreatic cancer,title/abstract,"...fically, I will evaluate the effects of TIGIT/PD-1 co-blockade plus CD40 agonism on the tumor-immune microenvironment in PDAC using single-cell transcriptomic and highly multiplexed immunofluorescence technologies. I will also utilize flow cytometry and multiplexed imaging to investigate the spatiotemporal dynamics of T cell phenotypes and localization during tumor pr...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,multiplexed immunofluorescence,11246968,2025,RF1,Upstream pathogenesis in familial and sporadic frontotemporal dementia and motor neuron disease,title/abstract,"...study post-mortem brain tissue from patients with C9orf72-associated and sporadic
+FTLD/MND-TDP, mining a unique dataset assembled during the previous cycle using a novel multiplexed
+immunofluorescence platform. In Aims 1-2, we will deeply characterize the interaction between C9orf72-
+associated dipeptide repeat protein inclusions and TDP-43 and seek evidence for TDP-4...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,multiplexed immunofluorescence,10242156,2021,P50,Biospecimen Bank,title/abstract,"...e collection of leukapheresis specimens to generate CAR-T cells (Project 1); characterization of
+complex Hodgkin lymphoma and host cell populations through multispectral multiplexed immunofluorescence
+(mIF) phenotyping and gene expression profiling (GEP) (Project 3); cytogenetic and genomic characterization
+of lymphomas and the preparation of samples to generate prima...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11321189,2026,R35,Composition and Function of Membrane Contact Sites in Differentiation and Disease,title/abstract,"...ne means that LDs are not
+connected to vesicular trafficking pathways, so MCSs are the only way these organelles can exchange
+material with other organelles. We will use spatial proteomics to identify proteins at LD contacts with other
+organelles including mitochondria, the endoplasmic reticulum (ER), and the plasma membrane. We will then
+test the roles of...",no,no; organelle contact-site proteomics (subcellular),,
+spatial_proteomics,nih,spatial proteomics,11103159,2025,P01,Molecular Regulation of Stem Cell Aging,title/abstract,"...the impact of rejuvenating interventions on stem cells and their niches. The
+Projects are supported by three essential Cores – an Administrative Core; a Single Cell and Spatial Proteomics
+Core, which includes cutting-edge spatial proteomic technologies; and a Bioinformatics Core both to serve as
+the critical hub for storing, processing, visualizing, analy...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,11124966,2024,OT2,CANCAN-HARVARDTHCHAN,title/abstract,"...ss spectroscopy, dynamic nuclear imaging, and dietary and pharmacologic interventions; (2) cellular components and secreted factors from the tumor microenvironment using imaging mass cytometry, patient-derived organoid xenografts, microbial toxins, and CRISPR-based manipulations; (3) central pathways regulating appetite, behavior, and peripheral organ metaboli...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11067768,2025,R01,TROP2-Directed CAR-NK Cells for the Immunotherapy of Pancreatic Cancer,title/abstract,"...y and
+efficacy of intraperitoneally delivered iC9/TROP2CAR/IL-15 NK cells in patients with TROP2+ PDAC. In Aim 2
+we will apply innovative single-cell transcriptomics and spatial proteomics to comprehensively characterize the
+fate of the adoptively transferred CAR-NK cells and their interaction with other cells within the TME, to uncover
+key mechanisms of e...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11186242,2025,R44,pan-XLSM: an AI-powered microscopy platform for imaging and analysis of highly expanded tissue samples,title/abstract,"...n and disorders at the molecular level requires
+a spatial biology technology that can map the 3D distribution of molecular markers at the
+nanoscale within tissues. While spatial proteomics technologies have revolutionized in situ
+molecular profiling of tissues, limitations in resolution, epitope accessibility, sample degradation,
+and 3D imaging capability...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,10995082,2024,U01,Pre-cancer atlas of skin cancer,title/abstract,"...quencing, 2. T-cell and B-cell receptor clonotyping, 3. Bulk-cell
+RNA-sequencing, 4 spatial transcriptomics (10X Visium), 5. Spatial transcriptomics (10X Xenium), and 6.
+Spatial proteomics (IBEX) and compare the individual progression stages of each precursor-associated tumor.
+Collectively, these assays will reveal the key genetic and immunological events...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11073531,2024,R21,Spatial Proteomics of osteoarthritis in bones to uncover disease progression,title/abstract,"Spatial Proteomics of osteoarthritis in bones to uncover disease progression. PROJECT SUMMARY / ABSTRACT
+There is an urgent need to develop novel and innovative technologies to advance hea...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry; spatial proteomics,10929973,2024,U19,INTERCEPT: Integrated Research Center for human Pain Tissues,title/abstract,"...le-nucleus sequencing atlases
+of dorsal root ganglia, including DRG from donors without and with a recent history of pain. We will generate a
+spatial atlas of hDRG using imaging mass cytometry, and optimize computational approaches for integrated IMC
+and single cell transcriptomic analysis of hDRG. Finally, we will combine analysis of electrophysiological,
+tra...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,11002666,2025,K23,Discovering immune drivers of fibroblast polarization andrecovery in systemic sclerosis,title/abstract,"...nset of SSc; n=12) and healthy
+(n=12) skin will be performed cross-sectionally. Immune pathways and cell types associated with activated
+fibroblasts will be evaluated by imaging mass cytometry (IMC), digital cell deconvolution, and histology. In a
+longitudinal analysis, baseline clinical and molecular features (histology scores; immune cell and fibroblast
+pola...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,11120987,2025,P50,Impact of Cannabinoid Across the Lifespan (ICAL),title/abstract,"...us preliminary data generated by the close cooperation of ICAL’s three Projects, will be tested in Aim 1
+using emerging molecular techniques (e.g., single-nuclei RNAseq, imaging mass cytometry) along with state-of-
+the-art electrophysiological and behavioral methods. In Aim 2, we will continue our service mission by (1)
+organizing symposia and workshops to str...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,multiplexed immunofluorescence,10707543,2023,U54,MUC1 in Therapy Resistance,title/abstract,"...mary tumors and metastatic lesions from
+untreated and treated patients (from our tissue core) by utilizing spatial transcriptomics (single cell RNAseq) and
+by performing multiplexed immunofluorescence.",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10211114,2021,U54,Project 1 - Spleen,title/abstract,"...compared to peripheral blood mononuclear cells
+(PBMCs) from the same patient's blood (AIM III), and isolated immune cell subsets will be subjected to RNA-
+Seq (AIM IVB). Imaging mass cytometry (IMC) will provide the ultimate co-registration of
+biomolecules/biomarkers to individual cells (AIM IVA). Similarly, we will use multiplexed small molecule
+fluorescence...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10149263,2021,K08,Immunologic Biomarkers of Rejection in Clinical Liver Transplantation,title/abstract,"...in the sensitivity of techniques to
+characterize immune responses, even in small tissue samples. We hypothesize that a liver-focused immune
+panel can be developed using imaging mass cytometry (IMC) to deeply analyze intrahepatic immune infiltrates
+in human liver tissue. We also hypothesize that graft-infiltrating lymphocytes can be characterized using IMC to...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11141043,2025,P01,"The Role of the Y Chromosome in Bladder Tumor Development, Growth And Progression",title/abstract,"...une system in this process using defined LOF functional mutants to define the regions 
+on these proteins responsible for tumor growth suppression. With Project 1, we use spatial proteomics to 
+examine immunological infiltrates in relation to mutant and WT Kdm5d and Uty cancer cell expression and 
+various knockout mice or antibody depletion strategy to defi...",yes,yes; term used for the technology as defined,random,
+spatial_proteomics,nih,spatial proteomics,11403953,2026,U54,Specialized Center of Research Excellence on Sex Differences in Autoimmunity,title/abstract,...al variable in autoimmunity. SCORE-X has three objectives. Objective 1 is to drive innovation and intellectual leadership of sex biased autoimmunity. Human organoids and spatial proteomics will be employed to dissect the newly recognized role of female-specific XIST RNA protein complex in driving autoimmunity. Objective 2 is to enable translational interdi...,yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10332415,2022,P30,Molecular Genomics Core,title/abstract,"...o perform comprehensive molecular profiling with linkage to curated patient data,
+including single-cell genomics, liquid biopsies for screening and residual disease, and imaging mass cytometry
+and spatial transcriptomics to capture tumor and tumor microenvironment interactions applied to NCCC's diverse
+patient population. During the current grant period (2015-...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10892126,2024,U01,Spatial Elucidation of Human Acute Kidney Injury and Chronic Kidney Disease using Imaging Mass Cytometry,title/abstract,"Spatial Elucidation of Human Acute Kidney Injury and Chronic Kidney Disease using Imaging Mass Cytometry. Abstract
+Acute kidney injury (AKI) is a syndromic term encompassing a wide range of insults and pathogenic
+responses that lead to a rapid reduction in glomerular filtra...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10676870,2023,R03,Exploring biomarkers of clinical benefit to VEGFR inhibitor combined with PD-L1 inhibitor in recurrent/metastatic Adenoid Cystic Carcinoma,title/abstract,"...re associated with benefit. 2) Assess stroma and immunologic determinants of clinical benefit
+to axitinib and avelumab in ACC. We will examine ACC TIME composition using imaging mass cytometry and
+determine if the composition of the TIME correlates with clinical benefit. We will also assess tumor-associated
+T-cell attributes via baseline tumors TCR-seq and cir...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,11212856,2025,P30,Immune Monitoring Shared Resource,title/abstract,"...y by time-of-flight (CyTOF).
+Aim 2: Support high-parameter spatial analysis of single-cell data generated from intact tissue sections
+(high-dimensional spatial biology). Imaging mass cytometry or multiplex immunofluorescence are used to
+provide this service.
+Aim 3: Develop, test, validate, and share bioinformatic tools to support analysis of complex datasets
+g...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,11420471,2026,P30,Cytometry and Imaging Shared Resource,title/abstract,"...r the analysis and preparative sorting of both normal and tumor cells. The CISR 
+offers state-of-the-art instrumentation and services for flow cytometry, mass cytometry, imaging mass cytometry, and optical imaging, as well as expertise in their applications. Optical imaging is increasingly used as an integral tool for understanding cancer and the tumor microen...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11168919,2025,U54,METEOR-BioLogical Specimen Translation (METEOR-BLST),title/abstract,"...ole exome
+sequencing, 2) single nuclear snRNAseq and single nuclear snATACseq, 3) targeted SureQuant protein mass
+spectrometry, 4) NIMS-based spatial metabolomics and 5) spatial proteomics by CODEX. The BLST is not a
+stand-alone core facility, but rather functions integratively and synergistically across METEOR. Tumor and blood
+samples originate within the...",yes,yes; term used for the technology as defined,random,
+spatial_proteomics,nih,imaging mass cytometry,10183002,2021,R01,Comparative modeling of sarcoma microenvironments for the discovery of biomarkers and tumor vulnerabilities,title/abstract,"...f treatment response and TME composition. The
+employment of these new models, together with newer technologies such as single-cell RNA-
+sequencing (scRNA-seq), CyTOF and Imaging Mass Cytometry (IMC) will ultimately illuminate
+the key expression profile of the single tumor cells, mechanisms of metastasis, resistance to
+conventional treatments and TME components...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,multiplexed immunofluorescence,11174407,2025,U01,A Multimodal 3D Atlas of Colorectal Cancer Across Ages of Onset,title/abstract,"...stable CRCs, later-onset microsatellite unstable CRCs). We employ cutting-edge
+technologies, such as customized spatial transcriptomics, co-detection by indexing highly multiplexed
+immunofluorescence microscopy, untargeted imaging mass spectrometry, and histological and
+autofluorescence imaging, to comprehensively characterize CRC tissue at various molecular levels a...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10747317,2024,U54,RTB 1,title/abstract,"...nvasion to quantify
+morphological and cellular features of intravasation. We will also perform multi-dimensional immune profiling of
+these intravasation foci in 3D using imaging mass cytometry, which can label with 40 antibodies on each tissue
+section. These analyses will allow us to compare the tumor microenvironment in foci of intravasation to that in
+other...",yes,yes; term used for the technology as defined,random,
+spatial_proteomics,nih,imaging mass cytometry,10096452,2020,R01,Defining the Pathogenesis and Prognosis of Human Acute Interstitial Nephritis,title/abstract,"...health
+centers (Yale and Johns Hopkins), as discovery and validation cohorts for this study. To perform the quantitative
+analysis we will use an imaging technique called Imaging Mass Cytometry (IMC) that supports the simultaneous,
+spatially-preserved quantification of up to 42 antibodies on a single tissue section. We have an existing library
+of 27 validated k...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11074258,2024,U54,A single-cell spatial map characterizing the stromal TME in bladder and breast early-lesions,title/abstract,"...s is
+conceptually different to most other studies, which primarily focus on one side of the coin. Further, the integration
+of knowledge from Project 1 and 2 as a unified spatial proteomics and transcriptomics map by the Shared
+Resource Core will reveal spatial and temporal relationships between distinct fibroblast populations with
+opposing functions, their...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11319056,2026,R01,A novel breast cancer therapy based on secreted protein ligands from CD36+ fibroblasts,title/abstract,"...lso be profiled for
+tumor morphology and molecular endpoints using advanced computational methods. In addition, in select cases,
+tumor sections will be complemented with spatial proteomics/transcriptomic for additional mechanistic studies.
+The study is innovative because it applies, for the first time, factors secreted from CD36+ FBs that confer tumor
+supp...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,9843644,2020,R01,lncRNA Control of Airway Epithelial Cell Responses to Type 2 Inflammation,title/abstract,"...tion, cellular composition, mucociliary status, and
+chemokine production of BEC organoid cultures grown in the presence or absence of IL13. Cultures will be
+evaluated by imaging mass cytometry, ATAC-Seq and single-cell RNA-Seq. In Aim 3 we will identify the
+mechanism used by WFDC21P to regulate epithelial STAT signaling. We will test which STATs are impacted b...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10625054,2022,OT2,CANCAN-Glasgow,title/abstract,"...ss spectroscopy, dynamic nuclear imaging, and dietary and pharmacologic interventions; (2) cellular components and secreted factors from the tumor microenvironment using imaging mass cytometry, patient-derived organoid xenografts, microbial toxins, and CRISPR-based manipulations; (3) central pathways regulating appetite, behavior, and peripheral organ metaboli...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,multiplexed immunofluorescence,11418088,2026,U54,High-Content Imaging & Analysis Core,title/abstract,"...in
+multiple biological contexts. The High-Content Imaging & Analysis Core will be co-led by two investigators
+(Fallahi-Sichani and Rohde) with complementary expertise in multiplexed immunofluorescence imaging, image
+analysis, and data science. Aim #1 will support the development, validation, and application of highly
+multiplexed immunofluorescence staining and imaging...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10648672,2023,R21,Cellular mechanisms for the degeneration and aging of human rotator cuff tears,title/abstract,"...and 2) chronic human muscle injury
+leads to exhaustion and senescence of the SC pool, thereby leading to accelerated degeneration.
+In Aim 1, we will use high-dimensional imaging mass cytometry to quantify immune-stromal-
+muscle heterogeneity as well as phenotypic markers of senescence and activation. Imaging mass
+cytometry can achieve multiplex staining upward...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,10343115,2022,R21,High-Resolution Spatial MIST Technology for Functional Proteomic Study of Neuroinflammation in Alzheimer's Disease,title/abstract,".... The current multiplexed protein assays on tissue samples are either labor
+intensive and low coverage or in low spatial resolution. In this project, we aim to develop a spatial proteomics
+technology with cellular resolution to fill the technological gap and timely address the most imperative issues in
+AD mechanisms. This technology is built upon a multipl...",yes,yes; term used for the technology as defined,random,
+spatial_proteomics,nih,imaging mass cytometry,10994089,2025,U54,Tech Core 1,title/abstract,"...other imaging modalities to extract high
+cellular/molecular content from the 3D samples. These include immunocytochemistry (CODA+IHC),
+immunofluorescence (CODA+IF), and imaging mass cytometry (CODA+IMC). This is particularly important as
+many potential molecular and cellular contributors of intravasation/extravasation and cancer cell invasion into
+veins, incl...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11403457,2025,ZIA,Mucosal Immunity and Inflammatory Disease,title/abstract,"...spatial context and further characterize the diverse cell types at the oral mucosal barrier, our recent study has now implemented an integrated omics approach combining spatial proteomics and transcriptomics platforms with CITE-Seq (Cellular Indexing of Transcriptomes and Epitopes by Sequencing) and spectral flow cytometry to gain novel insights into muco...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,multiplexed immunofluorescence,10232666,2021,R01,A Phase II and Biomarker Study of Dual VEGF/PD-L1 Blockade in Neoadjuvant Setting in Resectable HCC Patients,title/abstract,"...ameters. Aim 2a is to analyze immune T-
+cell clusters in pretreatment biopsies and posttreatment surgical resection specimens to evaluate CD8+ T-
+cell : Treg ratio using multiplexed immunofluorescence and single cell RNA sequencing. Aim 2b is to study
+changes in tissue immune cells, regulatory proteins, and plasma cytokines (multiplexed protein array) to
+explore a bio...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,11596283,2026,OT2,The CANcer Cachexia Action Network (CANCAN): a Multidisciplinary Virtual Institute with the Mission to Cure Cancer Cachexia,title/abstract,"...ss spectroscopy,
+dynamic nuclear imaging, and dietary and pharmacologic interventions; (2) cellular components and
+secreted factors from the tumor microenvironment using imaging mass cytometry, patient-derived
+organoid xenografts, microbial toxins, and CRISPR-based manipulations; (3) central pathways
+regulating appetite, behavior, and peripheral organ metaboli...",yes,yes; term used for the technology as defined,random,
+spatial_proteomics,nih,imaging mass cytometry,10799433,2024,R01,Generation of novel murine B-cell lymphoma models using mosaic analysis by dual recombinase-mediated cassette exchange (MADR) to more closely resemble human B-cell lymphomas,title/abstract,"...s for lymphoma will require spatially resolved, highly multiplexed single cell
+based biomarkers of TME composition and structure. For that project we proposed to perform imaging
+mass cytometry analysis (IMC) on over 2000 cases of aggressive B cell lymphoma with the following aims:
+Specific Aim 1: Validate spatially-derived protein biomarkers of DLBCL outcomes...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10708203,2023,U54,TBEL Project 3,title/abstract,"...identify non-genetic drivers of neoplastic
+progression, we will analyze immune and stromal cell subsets in the same three-dimensionally reconstructed
+PanIN samples using imaging mass cytometry, allowing us to determine the variability of key components of the
+PME across multiple regions of these PanIN samples. This complementary analysis will allow us to corre...",yes,yes; term used for the technology as defined,random,
+spatial_proteomics,nih,imaging mass cytometry,10670431,2023,U54,Pregnant Female Reproductive Tissue Mapping Center,title/abstract,"...des extracellular
+matrix proteomics, and bulk and single-nucleus RNAseq and ATACseq. The results of these studies will be
+analyzed to identify targets for the subsequent imaging mass cytometry (IMC) and spatial transcriptomic
+studies. These data types will be integrated to enable mapping of the relationships among different cell types
+and between cells and the...",yes,yes; term used for the technology as defined,random,
+spatial_proteomics,nih,imaging mass cytometry,11374472,2026,U19,Mechanisms of Induction and Maintenance of Systemic and Gut Mucosal T Cell Immunity to Salmonella and Shigella Following Infection and Vaccination in Children and Adults,title/abstract,"...ned from Ty21a immunized
+adult volunteers. Throughout these studies, we make use of advanced technologies (e.g., mass-cytometry,
+EpiTOF, ATAC-seq, RNA-seq, scRNA-seq and imaging mass cytometry (Core 3). All the data will be analyzed
+by using a sophisticated system biology approach (Core 2) in concert with data provided by other projects (RP2
+and RP3). These st...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,11370417,2025,R01,Targeting p21-Highly Expressing Cells to Increase Lifespan and Healthspan in Old Age,title/abstract,"...ved p21high cells (2-10%), and perform single cell RNA sequencing
+on these cells along with non-p21high cells. In addition, we will perform single nucleus sequencing and imaging
+mass cytometry. In aim 2, we will investigate the role of NF-κB pathway in p21high cells in lifespan and healthspan
+shortening. This project is likely to have a broad impact on aging r...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,spatial proteomics,11180224,2025,U01,Pediatric Solid Tumor Microenvironment Atlas,title/abstract,"...spital Los Angeles (CHLA)
+group will provide well annotated tumor specimens with clinical information in an ethnically diverse patient
+population, and lead in generating spatial proteomics data using pediatric and TME specific antibody panels. B)
+California Institute of Technology (Caltech) group will provide innovative spatial omics technologies including...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10268239,2021,U54,Female Reproductive Tissue Mapping Center,title/abstract,"...sting, extracellular matrix proteomics, and bulk and single-cell RNAseq and ATACseq. The results of these
+studies will be analyzed to identify targets for the subsequent imaging mass cytometry (IMC) and spatial
+transcriptomic studies. These data types will be integrated to enable mapping of the relationships among
+different cell types and between cells and the...",yes,yes; term used for the technology as defined,,
+spatial_proteomics,nih,imaging mass cytometry,10310513,2022,R03,Generation of novel histoculture methods for studying human NK cell development,title/abstract,"...-edge microscopy and image analysis to visualize
+human NK cells within autologous tissue and measure migration in 3 dimensions. We will additionally use
+multi-parametric imaging mass cytometry to localize cells within tissue (Aim 1). Further, we will extend our
+model to include infection of the tonsils with EBV, which will allow us to measure differences in ce...",yes,yes; term used for the technology as defined,,

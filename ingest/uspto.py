@@ -24,7 +24,7 @@ import zipfile
 import pandas as pd
 import requests
 
-from ingest.common import ROOT, load_taxonomies, secret, write_snapshot
+from ingest.common import ROOT, load_taxonomies, method_term, secret, write_snapshot
 
 API = "https://api.uspto.gov/api/v1/datasets/products/{pid}"
 CACHE = ROOT / "data" / "cache" / "uspto"
@@ -105,7 +105,7 @@ def phrases(tech):
     """
     out = {}
     for t in tech.get("method_terms", []):
-        out.update((q, ()) for q in re.findall(r'"([^"]+)"', t))
+        out.update((q, ()) for q in re.findall(r'"([^"]+)"', method_term(t)))
     out.update((q, ()) for q in tech.get("nih_terms", []))
     for e in tech.get("patent_terms", []):
         out.update([(e["phrase"], tuple(e["with"]))] if isinstance(e, dict) else [(e, ())])

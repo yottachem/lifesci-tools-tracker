@@ -1,0 +1,182 @@
+technology,signal,entry,id,year,type,title,evidence,snippet,label,reason,josh_check,josh_label
+spatial_transcriptomics,nih,spatial transcriptomics,10708066,2023,U54,Radiation Effect on Immune Cells and the Microbiome,title/abstract,"...d related cellular responses (i.e., apoptosis, ER mitochondrial stress, activation of inflammatory pathways,
+immunological fitness). Using single cell RNA-sequencing and spatial transcriptomics, we will generate a road
+map of the effects of RT on the different immune cell types (T and B cell subpopulations, dendritic cells,
+monocytes, macrophages, NK cells) in...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10555898,2023,U19,Project 2: 3-D Molecular atlas of AD proteinopathy,title/abstract,"...study the full impact of protein aggregates on the “highly local”
+environment. Specifically, we use a combination of highly multiplexed antibody staining and genome-wide
+spatial transcriptomics methods to examine our hypothesis on the reorganization of neuronal and glial cell
+types around pathological inclusions, with a focus on the two major AD-associated prot...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10991136,2024,R01,Non-coding RNA regulation of Myeloid Cells,title/abstract,"...cancer immunotherapies. Thus, in aim 1 of
+this project, we will use two novel conditionally knock-out strains for NDUFA4 and NDUFA4L3 that we generated,
+single-cell and spatial transcriptomics, and the humanized mouse MISTRG-6 that supports the development of
+human TAMs, to establish how CIV subunit composition in TAMs regulate anti-tumor immunity and response...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11140466,2025,U01,Creating high-resolution multi-omics molecular atlases for developing urogenital organs,title/abstract,"..., and nerves) at single cell resolution (Aim 1). We will then add the spatial dimension to this molecular landscape to build 2D and 3D molecular atlases by incorporating spatial transcriptomics (ST), CODEX, and light sheet microscopy (LSM) (Aim 2). In Aim 3, we will extend our study to disease models, focusing on murine models of congenital anomalies of the kid...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10577900,2023,R21,Spatial mapping of MS genetics on affected brain tissue,title/abstract,"...genetics in order to identify enriched CNS cell,
+ their spatial distribution, and underlying mechanisms. Finally, we will validate these findings uti-lizing genome-wide spatial transcriptomics technologies.",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11141109,2025,U01,Genomic and Immunologic Characterization of Inflammatory Bowel Disease and its Phenotypes,title/abstract,"...ere ulcerative colitis and perianal Crohn’s disease. The UTGRC, specifically, will advance the understanding of UC pathophysiology by integrating imaging mass cytometry, spatial transcriptomics and scRNA-seq, in conjunction with tissue-associated microbiome analysis, to develop a comprehensive understanding of the immune, genomic, cellular and microbial factors...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11287587,2026,R01,Control of virus-induced lung sequelae by P2RX7-expressing CD4+ T cells,title/abstract,"...RH cell phenotype. To answer these questions, we will use a
+combination of genetic and pharmacological approaches, as well as a series of ex vivo and in vivo imaging and
+spatial transcriptomics assessments. In Aim 2, we will test if pharmacological inhibition of P2RX7 can be used
+to (a) prevent and/or (b) revert the lung sequelae caused by severe influenza or S...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11222512,2025,R21,Decoding Spatial and Cellular Heterogeneity in Recurrence of WTC-Related Prostate Cancer,title/abstract,"...plication is to uncover the molecular and
+cellular mechanisms driving prostate cancer recurrence in individuals exposed to World Trade Center (WTC)
+toxins. By leveraging spatial transcriptomics and multi-omics analyses, we will identify key regulatory pathways
+that differentiate recurrent tumors from those in remission in the spatial context of their TME. Our c...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11176956,2025,F99,Genetic and Neural Sources of Individual Differences in Goal-directed Learning in Health and Disease,title/abstract,"...ied
+genes associated with learning. The expression of these genes converges onto cell types in the subicular
+complex, implicating its role in learning differences. Using spatial transcriptomics and anatomical tracing, I will
+determine how these identified genetic differences result in neuronal cell type properties and morphology in the
+subicular complex across...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11043742,2025,U01,Human Pancreas Analysis Program for Type 2 Diabetes (HPAP-T2D),title/abstract,"...ed islet cell populations; single cell ATACseq and RNAseq, flow mass cytometry for single
+cell quantification of more than 30 cell surface and intracellular markers, and spatial
+transcriptomics. Finally, Core E will assemble, annotate and maintain an open-access database
+for the Program and its member-researchers, and collaborate with HIRN in the sharing of dat...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11192376,2025,R01,"Regulatory Crosstalk Between Human Endogenous Retroviruses, HIV, and EBV, in Lymphoma",title/abstract,"...without
+EBV (and with or without HIV) from the USA and Brazil, which will be comprehensively characterized
+pathologically and molecularly using single-cell genomics and spatial transcriptomics. We will analyze these data
+using computational tools we have tailored to profile and link HERV and gene expression. Furthermore, we will
+establish in vitro models to di...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11247751,2025,R13,GI Epithelium: Interface with the Outside World,title/abstract,"...ollaborations, and mentoring the next generation of GI investigators. In the last 15 years, advances in multi-omic technologies, organoid models, single-cell approaches, spatial transcriptomics, and stem cell culture methodologies have spurred major growth in impactful science studying the role of the gastrointestinal epithelium in health and disease. To reflec...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11442965,2026,R01,PI3K pathways in molecular selection for adjuvant aspirin treatment of colorectal cancer,title/abstract,"...umor molecular features that
+potentially predict aspirin adjuvant effects (Aim 1). We will interrogate aspirin's potential immune mechanisms
+using integrated analyses of spatial transcriptomics of tumor tissue, sequencing of the peripheral T cell
+receptors (Aim 2), complemented by functional assays of neoantigen-specific circulating lymphocytes (Aim 3).
+This wo...",yes,yes; term used for the technology as defined,random,
+spatial_transcriptomics,nih,spatial transcriptomics,11238043,2026,P30,Molecular Genomics Core,title/abstract,"...ecular profiling with linkage to curated patient data, including single-cell genomics, liquid biopsies for screening and residual disease, and imaging mass cytometry and spatial transcriptomics to capture tumor and tumor microenvironment interactions applied to NCCC's patient population. During the current grant period (2015-2020), 122 NCCC members representing...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10795115,2023,K00,Defining the Differential Role of Mrgprb4+ Social Touch Somatosensory Neurons in Pain Modulation and Frontolimbic Dysregulation During Chronic Inflammatory Pain,title/abstract,"...Aim 3, I will focus on identifying laboratories for my postdoctoral work,
+prioritizing expertise in multiplexed “omics” profiling, circuit-specific approaches (including spatial
+transcriptomics), and electrophysiology, which will build on my current training to allow me to further investigate
+the role of astrocyte plasticity in psychiatric disease. Aim 3 will a...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11535946,2026,P20,Investigating the Role of CircRNAs in Pain and Nocieptive Sensitization,title/abstract,"...that loss of circNTRK2 contributes to heightened pain sensitivity. We will (1) map circNTRK2 and pain-linked circRNA expression in human DRG tissue using sequencing and spatial transcriptomics, (2) define how circNTRK2 regulates BDNF mRNA stability and translation in vitro, and (3) determine circNTRK2’s functional role in vivo using antisense oligonucleotides...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11177645,2025,K22,Investigating the cell intrinsic and extrinsic mechanisms governing lung cancer cell plasticity,title/abstract,"...out of putative
+regulators of plasticity, identify plasticity-associated tumor microenvironmental factors and dissect non-cell-
+autonomous regulation of plasticity using spatial transcriptomics, and explore the role of plasticity in resistance
+development to anti-cancer therapies. Addressing these fundamental questions will provide new insights into the
+biology...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10928967,2023,U54,The Human Lung BioMolecular Multi-Scale Atlas Program (HuBMAP-Lung),title/abstract,"...lecular technologies. Our Lung data provided to the HuBMAP Data Portal in Phase I has been focused to
+single nucleus RNA-sequencing, chromatin availability and beginning spatial transcriptomics. In addition to
+further increasing representation of human diversity in these data types, the next phase of our TMC turns primary
+effort toward determining spatial organ...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11080445,2024,P01,Cellular senescence and cell fate/interactions as drivers of Alzheimer's and age-related dementias,title/abstract,"...also provide statistical and bioinformatics support, and three scientific cores: 1) an
+iPSC/Organoid core; 2) a Proteomics and Metabolism core; and 3) a Single Cell and Spatial Transcriptomics
+core. The PPG benefits from the exceptionally diverse expertise of the Project and Core leaders and co-leaders,
+all of whom are acknowledged leaders in contemporary agin...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11294898,2026,R01,Roles and Regulation of Failed Repair Proximal Tubule in the AKI to CKD Transition,title/abstract,...tigate the role of NFAT5 expression in regulating the FR-PT state. We will assess the effects of Nfat5 modulation using a variety of approaches including high resolution spatial transcriptomics. Specific Aim 3: Determine the functional contribution of Vcam1+ FR-PT to both successful repair and the AKI to CKD transition through cell ablation analysis. We will te...,yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10376527,2021,U54,WU-SN-TMC Bio-Analysis Core,title/abstract,"...lish a comprehensive epigenetic and transcriptomic
+landscape in targeted tissues. We will add the spatial dimension to build 2D and 3D molecular atlases by
+incorporating spatial transcriptomics, CODEX, and light sheet microscopy. We will also use proteomics to study
+the biomarkers and secretome of senescent cells. To validate our results, we will use establishe...",yes,yes; term used for the technology as defined,random,
+spatial_transcriptomics,nih,spatial transcriptomics,10936558,2024,DP1,High-dimensional chemical targeting of multiple neuron types to regulate energy balance,title/abstract,"...mixtures on various satiety-related neurons using 3D two-photon calcium imaging and
+pharmacology in brain slices or in awake mice during feeding behavior, followed by 3D spatial transcriptomics
+to identify the molecular identity and receptor repertoire of each imaged neuron. We will develop optimal mixtures
+to selectively promote and sustain satiety in either l...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11177649,2025,R00,Integrating Spatial Omics and Drug Imaging to Dissect the Role of Pancreatic Tumor Microenvironment in Drug Resistance,title/abstract,"...cian-scientist who pioneered the first-in-human clinical studies for fluorescence-guided cancer surgery, and
+Dr. Robert West, who developed the Smart-3SEQ technology for spatial transcriptomics. The K99 phase of Dr.
+Lu’s training will consist of (i) structured mentorship by the primary mentor and co-mentors, (ii) close interactions
+with advisory committee and c...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11293637,2026,R01,NextGen Spatial Multi-omics Technologies,title/abstract,"...methods are not able to map these modalities simultaneously in tissues with spatial resolution. On the other
+hand, the methods that do provide spatial information, like spatial transcriptomics, are not only unimodal, but
+also prohibitively expensive, requiring costly consumables or specialized capital equipment. Therefore, we
+currently lack spatial information...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10227141,2021,R35,"Computational tools for estimating cell-type-specific effects in bulk RNA-seq and spatial transcriptomics data, using reference single-cell RNA-seq datasets",title/abstract,"Computational tools for estimating cell-type-specific effects in bulk RNA-seq and spatial transcriptomics data, using reference single-cell RNA-seq datasets. PROJECT SUMMARY / ABSTRACT
+RNA-seq is a powerful tool for studying molecular biology. However, without cell sorting (...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics; spatially resolved transcriptomics,10769761,2024,R01,Diabetes-enhanced Experimental Periodontitis,title/abstract,"...ivo as assessed by scRNA-seq. The studies
+proposed involve sophisticated bioinformatic analysis of scRNA-seq data very recently obtained and a new
+experimental approach, spatially resolved transcriptomics, to provide new insight on how diabetes may affect
+dendritic cell activity. The risk in this approach in Aim 1 is mitigated by Prel Data that have identified potential
+k...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10494078,2022,U01,Integrative Single Cell isoform and chromatin accessibility Mapping of Chronic Opioid Exposure in Cognitive Brain Areas in HIV,title/abstract,"...ecules, and how these distributions are impacted by sex,
+stress and opioid-associated learning. In further preliminary studies, we conduct opioid receptor mapping, brain
+spatial transcriptomics, NHP cognitive behavioral assessment and pharmacological profiling of current ART
+regimens in tissues. These approaches will provide a comprehensive regional landscape t...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11196274,2025,P50,Core 2: Biospecimen/Pathology Core,title/abstract,"...clude
+novel targeted next-generation sequencing (NGS) methods to profile extracted RNA from post-digital rectal exam
+urine, next-generation molecular profiling utilizing spatial transcriptomics (10X Genomics Visium), and novel
+prostate cancer-focused targeted NGS assays available for profiling tissue-extracted DNA and RNA from
+prostate cancer tumor specimens. (...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10653991,2023,R01,Multi-racial genetic analysis of hidradenitis suppurativa,title/abstract,"...and
+healthy controls. Second, we perform trans-ethnic genome wide meta-analysis to identify shared and
+distinct genetic risk factors. Third, we will perform multi-racial spatial transcriptomics and proteomics of
+HS skin to elucidate cell-cell interactions, and further identify causal GWAS variants through luciferase
+reporter assays. Together, these studies will...",yes,yes; term used for the technology as defined,random,
+spatial_transcriptomics,nih,spatial transcriptomics,11384859,2026,R01,Leveraging human musculoskeletal development to identify causal disease variants,title/abstract,"...al levels, using the
+functional genomic techniques of single cell multiomics, to detect expressed transcripts/genes and regulatory
+elements per cell for each tissue, and spatial transcriptomics for each anatomical region to detect gene
+expression at high definition histologically. Importantly, we will generate transcriptomic and epigenomic maps for
+all the larg...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11415296,2025,ZIA,Single-cell Analysis of Normal and Perturbed Dynamic and Spatial  Biological Systems,title/abstract,"...tandard methods. Additionally, we applied it to CODEX single-cell imaging temporal data from a murine melanoma model to study CD8+ T-cell therapy effects, and to MERFISH spatial transcriptomics temporal data to explore inflammation and tissue repair in colitis. In melanoma, Perturb-STNet uncovered regulators like KLRG1 and CD79b, along with mediating pairs and...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10913123,2023,ZIA,Epigenetic mechanisms of mammalian tissue aging,title/abstract,"...s direction, we initiated a comprehensive spatiotemporal profiling of the cellular and molecular landscape in aging murine brains of both sexes. Our expectation was that spatial transcriptomics will reveal mRNA differences, paracrine signaling, and cellular networks not captured in averaged spatially naive analyses of homogenized biopsies. In a related project,...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10887572,2024,U01,Genomic and Immunologic Characterization of Inflammatory Bowel Disease and its Phenotypes,title/abstract,"...ere ulcerative colitis and perianal Crohn’s disease. The UTGRC, specifically, will advance the
+understanding of UC pathophysiology by integrating imaging mass cytometry, spatial transcriptomics and
+scRNA-seq, in conjunction with tissue-associated microbiome analysis, to develop a comprehensive
+understanding of the immune, genomic, cellular and microbial factors...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11566348,2026,R21,Integrative framework for surface protein imputation for spatial biology of cancer,title/abstract,"...malignant cells but also well-organized complex ecosystems.
+Spatial organization is strongly related to tumor development, recurrence, metastasis and
+treatment response. Spatial transcriptomics (ST) technologies measure genome-wide mRNA
+expression across thousands of spots on a tissue slice while preserving information about the
+location of spots and delineatin...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11368781,2026,R37,Regulation of anti-tumor immunity by CX3CL1,title/abstract,"...L1high tumors. Aim 2 will interrogate how CX3CL1high tumor cells create local suppressive niches, using a
+combination of our novel mouse model of tumor heterogeneity and spatial transcriptomics analysis of human
+bladder cancer and melanoma samples. Aim 3 will test the ability of CX3CR1:CX3CL1 therapeutic blockade to
+remodel the TME of CX3CL1high tumors as well...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11166531,2025,U01,Mapping the single cell state basis of metastasis in space and time,title/abstract,"...rphogenesis and (2) the cancer cells in luminal and basal breast cancer
+recapitulate basal epithelial and hybrid EMT programs. Recent advances in single cell sequencing, spatial
+transcriptomics, and machine learning enable transcriptome-wide resolution of these states in tissue, quantitative
+comparison of normal and cancerous cell states, and the identification...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10646196,2023,F31,Towards a spatial view of Ras signaling and immune cell function in NF-1 mutant glioblastoma,title/abstract,"...providing a framework for universal therapeutic target discovery
+using integrated multiplexed immunofluorescence (mpIF), a method for in situ single-cell profiling, and spatial
+transcriptomics (ST). I have curated a cohort of 84 GBM patients (42 NF1 altered and 42 NF1 WT) with
+targeted panel-based genome sequencing, and I will perform mpIF and ST on adjacent f...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11406082,2026,R01,Integrating tissue engineering and microfluidics to model the spatial niches of the human endometrium in vitro with guidance from in vivo multiomics data,title/abstract,"...etween cell origin (“nature”) and spatial environment (“nurture”) in defining
+epithelial cell identity in the in vitro models built in Aim 1. We will use single-cell and spatial transcriptomics
+technologies to profile the devices, and we will use clonal tracing to map the origin of a cell type. By integrating
+vivo/in vitro datasets, we will conduct a systematic...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11133443,2025,R01,Understanding Sarcoidosis Susceptibility and Disease Burden Through Multi Omics,title/abstract,"...iptomic effects via colocalization of genetic and QTL effects. Finally, in Aim 3, we will a) identify candidate
+genes that are differentially expressed in granulomas via spatial transcriptomics and whose protein products are
+dysregulated in bronchoalveolar lavage (BAL) and b) identify genes best suited for functional and drug target
+studies based on integrating...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11384685,2026,R01,Integrative analysis of spatial transcriptomics with histology images and single cells,title/abstract,"Integrative analysis of spatial transcriptomics with histology images and single cells. PROJECT SUMMARY
+The
+function.
+relative
+disease
+ tissues in our body consist of diverse cell t ypes with each cell type specialize...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11360198,2026,DP1,IDENTIFYING EPIGENOMICS AND CONNECTOMICS OF PROTRACTED OPIOID WITHDRAWAL AND RELAPSE USING CELLULAR BARCODING,title/abstract,"...le-cell connectomic
+measurements with single-cell measures of gene expression and genome accessibility in the same cells. Finally,
+combination of these technologies with spatial transcriptomics methods, including STARmap and BARseq2, lets
+us map the observed changes with high resolution in 3D brain space.
+Here we apply our multi-omic tools to measure the change...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11442175,2026,R01,Mechanistic and Therapeutic Strategies to Mitigate Arsenic Trioxide-Induced Neurotoxicity,title/abstract,"...tive and integrative approaches, combining human iPSC-
+derived neurons and microglia with novel conditional mouse models and cutting-edge molecular techniques,
+including spatial transcriptomics, to map region- and cell-specific transcriptional responses. These approaches
+will transform our understanding of ATO-induced neurotoxicity by revealing how neuronal str...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10647776,2023,P01,Single cell analysis core,title/abstract,"...hat nuclei isolated from these cells will,
+to a large extent, reflect the gene expression pattern in intact single cells. AIM 3 will develop and apply a new
+technology – spatial transcriptomics -- for in vivo validation of single-cell senescent signatures from
+Aims 1 and 2. We will develop this technology to study the interplay between neurons and senescent ast...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10880498,2024,UM1,Functionally guided adult whole brain cell atlas in human and NHP,title/abstract,"...ders to tackle the challenge of creating a new human and
+non-human primate cell atlas linked to functional brain architecture. Single cell transcriptomic, epigenomic and spatial
+transcriptomics will be used to classify and spatially map cell types across the entire human, macaque and marmoset
+brain, sampling based on brain maps derived from structural and funct...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11128393,2024,OT2,A Computational IMage Analysis Platform (CIMAP) for HuBMAP,title/abstract,"...tology to biomolecules in distinct cell types.  As a first step, we will employ select data collected under HuBMAP or generated via this HIVE team using CODEX as well as spatial transcriptomics (ST), and develop the proposed computational pipeline.  We will demonstrate mapping of cell types and cell states to brightfield histology images on the same section fro...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11196935,2025,R35,Statistical methods to delineate the spatial and temporal pattern of cell-cell interactions in Spatial Transcriptomics data,title/abstract,"Statistical methods to delineate the spatial and temporal pattern of cell-cell interactions in Spatial Transcriptomics data. PROJECT SUMMARY
+Although studies of cell-cell interactions (CCIs) have attracted substantial attention from researchers to
+understand cellular development and rela...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,in situ sequencing,10753584,2024,R01,Smooth muscle cell-derived cell fates and cellular interactions in atherosclerotic plaque stability in disease progression and regression.,title/abstract,"...ion in atherosclerosis regression,
+and if regression is attenuated by SMC-Mϕ and SDC ox-DNA damage. In these Aims, we will; (1) integrate
+spatial hybridization-based RNA in situ sequencing (HybRISS), sc-omics and SMC lineage tracing to define
+identity, spatial functions, and master regulators of SDCs during lesion progression and regression, focusing on
+fu...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11248736,2026,R01,Risk of Alzheimer's Disease and Related Dementias from Perinatal Lead Exposure: Brain Region and Cell Type Effects,title/abstract,"...ee time points. We will 2) determine cell types in the
+brain most susceptible to the effects of Pb, using pathology and state-of-the-art ultrahigh resolution single cell
+spatial transcriptomics. We will 3) relate the molecular effects in mice from perinatal Pb exposure to existing
+data on human neurodegenerative disorders. This will be the first brain cell type...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,10994082,2025,U54,Center for 3D Imaging in Cancer Cell Biology,title/abstract,"...xtract high cellular/molecular content from 3D samples. These include
+immunocytochemistry (CODA+IHC), immunofluorescence (CODA+IF), imaging mass cytometry (CODA+IMC)
+and spatial transcriptomics/proteomics (CODA+DBiT-seq). These proposed expanded versions of CODA offer
+a unique opportunity to produce new 3D multi-omic maps of human PDAC and breast tumors near an...",yes,yes; term used for the technology as defined,,
+spatial_transcriptomics,nih,spatial transcriptomics,11336594,2026,RM1,"EvoCell: Using cell evolution in nematodes to model, predict, and controlcell identity in animals",title/abstract,"...ndependently developed and used to
+characterize individual animal cells en masse including single-cell gene expression profiling, new techniques for
+electron microscopy, spatial transcriptomics, and cell lineaging. These methods have been used to build cell
+atlases for a growing set of animals. However, we still lack an integrated model for the underlying genet...",yes,yes; term used for the technology as defined,,

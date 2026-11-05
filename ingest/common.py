@@ -44,6 +44,12 @@ def secret(name, keychain_service):
     return r.stdout.strip() or None
 
 
+def method_term(m):
+    """A method_terms entry is an OpenAlex term string, or {term, context: [...]} when the term only
+    counts next to one of the context words (generic wording such as "spatial proteomics")."""
+    return m["term"] if isinstance(m, dict) else m
+
+
 def contact():
     """Contact email for SEC and OpenAlex: CONTACT_EMAIL, else Keychain item lifesci-tracker-contact.
 

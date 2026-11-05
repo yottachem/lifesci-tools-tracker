@@ -48,18 +48,18 @@ technologies:
     patent_terms:   # tested on the life-science corpus 2026-11-03; dropped: spatially resolved, spatial location/information/resolution/position (physics, metrology)
       - spatial barcode
       - spatially barcoded
-      - spatial array
-      - spatial gene expression
+      - {phrase: spatial array, with: [tissue, biological sample, capture probe, barcode, nucleic acid, RNA, transcript, oligonucleotide, analyte]}   # bare: multi-well plates, analog electronics
+      - {phrase: spatial gene expression, with: [tissue, biological sample, capture probe, barcode, nucleic acid, RNA, transcript, oligonucleotide, analyte]}   # bare: gene-switch 'spatial gene expression control'
       - spatial transcriptome
       - spatial transcriptomic
       - spatial tagging
       - spatially tagging
       - spatially tagged
       - spatially distinguished
-      - spatial detection
+      - {phrase: spatial detection, with: [tissue, biological sample, capture probe, barcode, nucleic acid, RNA, transcript, oligonucleotide, analyte]}   # bare: metrology sensors
       - spatial omics
       - spatial multiomics
-      - spatial profiling
+      - {phrase: spatial profiling, with: [tissue, biological sample, capture probe, barcode, nucleic acid, RNA, transcript, oligonucleotide, analyte]}   # bare: protein-variant drug discovery, optical sensors
       - {phrase: spatial analysis, with: [analyte, nucleic acid, capture probe, barcode, RNA, transcript, oligonucleotide]}
     families:
       sequencing_capture:
@@ -105,7 +105,8 @@ technologies:
       immunofluorescence, DNA-barcoded antibodies, or metal-tagged antibodies read by mass
       spectrometry.
     method_terms:
-      - '"spatial proteomics"'
+      - {term: '"spatial proteomics"', context: [immunofluorescence, multiplex, multiplexed, antibody, antibodies, CODEX, PhenoCycler, imaging mass cytometry, microenvironment, immune, high-plex, single-cell]}
+        # bare term 0.72 (2026-11-05 sample): subcellular localization and mass-spec tissue proteomics also use it; NOT "mass spectrometry" reached 0.96 but cut a third of real hits
       - '"multiplexed immunofluorescence" OR "multiplex immunofluorescence"'
       - '"imaging mass cytometry"'
       - '"multiplexed ion beam imaging"'
@@ -115,7 +116,7 @@ technologies:
       - multiplexed immunofluorescence
       - imaging mass cytometry
     patent_terms:
-      - {phrase: multiplexed imaging, with: [tissue, antibody, antibodies, immunofluorescence, cell, biomarker, staining]}
+      - {phrase: multiplexed imaging, with: [tissue, antibody, antibodies, immunofluorescence, biomarker, staining]}   # 'cell' let live-cell RNA probes in (2026-11-05 sample)
       - multiplexed tissue imaging
       - cyclic staining
       - iterative staining
