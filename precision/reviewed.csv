@@ -64,3 +64,91 @@ spatial_proteomics,platforms,MIBIscope,W3186815057,2026-11-05
 spatial_proteomics,platforms,MIBIscope,W3217539659,2026-11-05
 spatial_proteomics,platforms,MIBIscope,W4234785173,2026-11-05
 spatial_proteomics,platforms,MIBIscope,W4407848322,2026-11-05
+spatial_transcriptomics,methods,"""spatial transcriptomics""",W7150919192,2026-11-05
+spatial_transcriptomics,methods,"""spatial transcriptomics""",W4415354404,2026-11-05
+spatial_transcriptomics,methods,"""spatially resolved transcriptomics""",W3010704850,2026-11-05
+spatial_transcriptomics,methods,"""spatially resolved transcriptomics""",W4399693082,2026-11-05
+spatial_transcriptomics,methods,"""spatially resolved transcriptomics""",W4409764238,2026-11-05
+spatial_transcriptomics,methods,"""in situ sequencing""",W3010704850,2026-11-05
+spatial_transcriptomics,methods,"""in situ sequencing""",W4206247338,2026-11-05
+spatial_transcriptomics,methods,"""in situ sequencing""",W4403195735,2026-11-05
+spatial_transcriptomics,methods,"""in situ sequencing""",W4409821576,2026-11-05
+spatial_transcriptomics,methods,"""in situ sequencing""",W4410056425,2026-11-05
+spatial_transcriptomics,methods,"""in situ sequencing""",W4399503298,2026-11-05
+spatial_transcriptomics,methods,"""in situ sequencing""",W4412163643,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W2485836676,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W4366265028,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W7202378882,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W7128219972,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W4404585551,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W4388071835,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W4409691456,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W7118559472,2026-11-05
+spatial_transcriptomics,methods,"""multiplexed error-robust FISH"" OR ""MERFISH""",W7169855579,2026-11-05
+spatial_transcriptomics,methods,"""Slide-seq"" OR ""Slide-seqV2"" OR ""Slide-tags""",W7118121378,2026-11-05
+spatial_transcriptomics,methods,"""Slide-seq"" OR ""Slide-seqV2"" OR ""Slide-tags""",W4405041827,2026-11-05
+spatial_transcriptomics,methods,"""Slide-seq"" OR ""Slide-seqV2"" OR ""Slide-tags""",W4295027729,2026-11-05
+spatial_transcriptomics,methods,"""Slide-seq"" OR ""Slide-seqV2"" OR ""Slide-tags""",W4416021256,2026-11-05
+spatial_transcriptomics,methods,"""Slide-seq"" OR ""Slide-seqV2"" OR ""Slide-tags""",W4386978316,2026-11-05
+spatial_transcriptomics,methods,"""Slide-seq"" OR ""Slide-seqV2"" OR ""Slide-tags""",W4205895674,2026-11-05
+spatial_transcriptomics,methods,"""Slide-seq"" OR ""Slide-seqV2"" OR ""Slide-tags""",W4409149530,2026-11-05
+spatial_transcriptomics,methods,"""seqFISH"" OR ""seqFISH+""",W7203480099,2026-11-05
+spatial_transcriptomics,methods,"""seqFISH"" OR ""seqFISH+""",W4404716762,2026-11-05
+spatial_transcriptomics,methods,"""seqFISH"" OR ""seqFISH+""",W4402582151,2026-11-05
+spatial_transcriptomics,methods,"""seqFISH"" OR ""seqFISH+""",W4395479490,2026-11-05
+spatial_transcriptomics,methods,"""seqFISH"" OR ""seqFISH+""",W4390598931,2026-11-05
+spatial_transcriptomics,methods,"""DBiT-seq""",W4406375155,2026-11-05
+spatial_transcriptomics,methods,"""DBiT-seq""",W3100967665,2026-11-05
+spatial_transcriptomics,nih,spatial transcriptomics,11442965,2026-11-05
+spatial_transcriptomics,nih,spatial transcriptomics,10376527,2026-11-05
+spatial_transcriptomics,nih,spatial transcriptomics,10653991,2026-11-05
+spatial_transcriptomics,patents,spatial tagging,11519033,2026-11-05
+spatial_transcriptomics,patents,spatially tagged,11592447,2026-11-05
+spatial_transcriptomics,patents,spatial array; spatial barcode,12497654,2026-11-05
+spatial_transcriptomics,patents,spatially tagged,11808769,2026-11-05
+spatial_transcriptomics,patents,in situ sequencing,11085072,2026-11-05
+spatial_transcriptomics,patents,spatial analysis,20210254140,2026-11-05
+spatial_transcriptomics,patents,spatial analysis,20210230681,2026-11-05
+spatial_transcriptomics,patents,spatial omics,20250101493,2026-11-05
+spatial_transcriptomics,patents,spatial omics,20240161290,2026-11-05
+spatial_transcriptomics,patents,spatial profiling,20210324474,2026-11-05
+spatial_transcriptomics,patents,spatial analysis; spatial barcode,20240002931,2026-11-05
+spatial_transcriptomics,patents,spatial detection,20220372547,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W4409690291,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W4409326374,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W4416446319,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W7164340337,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W7149027445,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W4308296207,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W4386019486,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W7155411708,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W7158645060,2026-11-05
+spatial_proteomics,methods,"""spatial proteomics""",W4400014963,2026-11-05
+spatial_proteomics,methods,"""multiplexed immunofluorescence"" OR ""multiplex immunofluorescence""",W4393088523,2026-11-05
+spatial_proteomics,methods,"""multiplexed immunofluorescence"" OR ""multiplex immunofluorescence""",W7160863961,2026-11-05
+spatial_proteomics,methods,"""multiplexed immunofluorescence"" OR ""multiplex immunofluorescence""",W4404144056,2026-11-05
+spatial_proteomics,methods,"""imaging mass cytometry""",W3083476619,2026-11-05
+spatial_proteomics,methods,"""imaging mass cytometry""",W4309185512,2026-11-05
+spatial_proteomics,methods,"""imaging mass cytometry""",W3145026833,2026-11-05
+spatial_proteomics,methods,"""multiplexed ion beam imaging""",W4234785173,2026-11-05
+spatial_proteomics,methods,"""multiplexed ion beam imaging""",W4221080529,2026-11-05
+spatial_proteomics,methods,"""multiplexed ion beam imaging""",W2586126825,2026-11-05
+spatial_proteomics,methods,"""multiplexed ion beam imaging""",W7162557993,2026-11-05
+spatial_proteomics,methods,"""cyclic immunofluorescence"" OR CyCIF",W7128604343,2026-11-05
+spatial_proteomics,methods,"""cyclic immunofluorescence"" OR CyCIF",W2193067168,2026-11-05
+spatial_proteomics,methods,"""cyclic immunofluorescence"" OR CyCIF",W4282971634,2026-11-05
+spatial_proteomics,methods,"""cyclic immunofluorescence"" OR CyCIF",W7204167050,2026-11-05
+spatial_proteomics,methods,"""cyclic immunofluorescence"" OR CyCIF",W7169569179,2026-11-05
+spatial_proteomics,nih,spatial proteomics,10552842,2026-11-05
+spatial_proteomics,nih,spatial proteomics,11141043,2026-11-05
+spatial_proteomics,nih,spatial proteomics,11168919,2026-11-05
+spatial_proteomics,nih,imaging mass cytometry,10747317,2026-11-05
+spatial_proteomics,nih,spatial proteomics,10343115,2026-11-05
+spatial_proteomics,nih,imaging mass cytometry,11596283,2026-11-05
+spatial_proteomics,nih,imaging mass cytometry,10708203,2026-11-05
+spatial_proteomics,nih,imaging mass cytometry,10670431,2026-11-05
+spatial_proteomics,patents,spatial proteomic; spatial proteomics,12181479,2026-11-05
+spatial_proteomics,patents,imaging mass cytometry,12283471,2026-11-05
+spatial_proteomics,patents,imaging mass cytometry,20210333173,2026-11-05
+spatial_proteomics,patents,spatial analysis,20220404245,2026-11-05
+spatial_proteomics,patents,multiplexed tissue imaging,20250110027,2026-11-05
