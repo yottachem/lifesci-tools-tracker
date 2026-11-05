@@ -132,12 +132,14 @@ vendors:
   Miltenyi Biotec:
     status: private
     platforms: [MACSima, MACSQuant]
-  Ionpath:
+  Oregon Physics:
     status: private
     platforms: [MIBIscope]
     history:
-      - {date: 2023-05-24, event: Shifted toward a spatial proteomics services business, source: 'https://www.businesswire.com/news/home/20230524005260/en/Ionpath-Announces-Shift-Toward-Spatial-Proteomics-Services-Business'}
-      - {date: 2024-11-05, event: Launched MIBIscope 3.0 (instrument still sold), source: 'https://www.businesswire.com/news/home/20241105144180/en/Ionpath-Announces-the-Launch-of-MIBIscope%E2%84%A2-3.0-Spatial-Proteomics-Imaging-Platform'}
+      - {date: 2023-05-24, event: Ionpath shifted toward a spatial proteomics services business, source: 'https://www.businesswire.com/news/home/20230524005260/en/Ionpath-Announces-Shift-Toward-Spatial-Proteomics-Services-Business'}
+      - {date: 2024-11-05, event: Ionpath launched MIBIscope 3.0, source: 'https://www.businesswire.com/news/home/20241105144180/en/Ionpath-Announces-the-Launch-of-MIBIscope%E2%84%A2-3.0-Spatial-Proteomics-Imaging-Platform'}
+      - {date: 2025-09, event: 'Acquired MIBIscope IP and digital assets (patents, trademarks, software, product designs) from Ionpath in 2025; responsible for manufacturing, service and development since 2025-09. Ionpath status unconfirmed (ionpath.com redirects to mibiscope.com)',
+         source: 'https://www.oregon-physics.com/mibiscope/'}
   Illumina:
     status: public
     ticker: ILMN

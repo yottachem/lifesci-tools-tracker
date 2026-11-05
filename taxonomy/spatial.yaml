@@ -159,8 +159,8 @@ technologies:
           - {name: Hyperion, query: '"Hyperion" AND "imaging mass cytometry"', launched: 2017, vendor: Standard BioTools, acquired_from: Fluidigm (rename 2022),
              pending: sale of mass cytometry business to Element Biosystems LLC (GMT Venture Partners) agreed 2026-09-30; confirm close.
                Not Element Biosciences}
-          - {name: MIBIscope, query: '"MIBIscope" OR "MIBI-TOF" OR "Ionpath"', vendor: Ionpath, launched: 2020,
-             note: 'Ionpath moved toward services in 2023-05 but launched MIBIscope 3.0 in 2024-11, so the instrument is still sold'}
+          - {name: MIBIscope, query: '"MIBIscope" OR "MIBI-TOF" OR "Ionpath"', vendor: Oregon Physics, acquired_from: Ionpath (2025), launched: 2020,
+             note: 'Oregon Physics bought the MIBIscope IP and assets in 2025 and has made and serviced it since 2025-09. "Ionpath" stays in the query: papers cite the original maker'}
     cpc:
       - G01N33/582
       - G01N33/6848  # mass spectrometry of proteins (check)
