@@ -13,11 +13,12 @@ technologies:
       (top-down). Includes mass-spec tissue and single-cell proteomics.
     method_terms:
       - '"mass spectrometry-based proteomics" OR "MS-based proteomics"'
-      - '"data-independent acquisition"'
+      - {term: '"data-independent acquisition"', context: [proteomics, proteome, proteomic, peptide, peptides, protein, proteins]}   # DIA is also a small-molecule screening mode
       - '"shotgun proteomics" OR "bottom-up proteomics"'
       - '"top-down proteomics"'
       - '"tandem mass tag"'
-      - '"single-cell proteomics"'   # mostly MS; check in the precision sample
+      # "single-cell proteomics" also names CyTOF, secretion immunoassays and antibody imaging; the context keeps mass spec
+      - {term: '"single-cell proteomics"', context: [mass spectrometry, mass spectrometer, LC-MS, MS-based, peptide, peptides, nanoPOTS, SCoPE-MS, Orbitrap, timsTOF]}
     nih_terms:
       - quantitative proteomics
       - data-independent acquisition
@@ -62,18 +63,19 @@ technologies:
       molecules digitally. Low-plex immunoassays (ELISA, bead panels) are not counted.
     method_terms:
       - '"proximity extension assay"'
-      - '"affinity proteomics" OR "affinity-based proteomics"'
+      # "affinity proteomics" also names affinity purification-mass spec (interaction partners); the context keeps reagent panels
+      - {term: '"affinity proteomics" OR "affinity-based proteomics"', context: [plasma, serum, antibody, antibodies, Olink, SomaScan, multiplex, multiplexed, biomarker, biomarkers, bead array, antibody array]}
       - '"aptamer-based proteomics" OR "aptamer-based proteomic"'
       - '"single molecule array"'
-    nih_terms:
+    nih_terms:   # "affinity proteomics" left out: in grants it mostly means affinity purification-mass spec
       - proximity extension assay
-      - affinity proteomics
       - aptamer-based proteomics
       - single molecule array
     patent_terms:
       - proximity extension assay
       - slow off-rate modified aptamer
-      - single molecule array
+      # "single molecule array" is also the Solexa/Illumina DNA sequencing-array term; Simoa abstracts say "analyte molecule"
+      - {phrase: single molecule array, with: [analyte molecule, immunoassay]}
       - {phrase: digital immunoassay, with: [single molecule, bead, protein]}
     families:
       sequencing_readout:
@@ -106,7 +108,8 @@ technologies:
       - '"single-molecule protein sequencing"'
       - '"fluorosequencing"'
       - '"nanopore protein sequencing"'
-      - {term: '"protein sequencing"', context: [single-molecule, single molecule, nanopore, recognizer, recognizers, next-generation]}
+      # no "recognizer" in the context: OpenAlex stems it to match "recognized" in Edman-era papers
+      - {term: '"protein sequencing"', context: [single-molecule, single molecule, nanopore, next-generation]}
     nih_terms:
       - single molecule protein sequencing
       - fluorosequencing

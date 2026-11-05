@@ -46,8 +46,9 @@ technologies:
           - {name: CFX, query: '"CFX96" OR "CFX384" OR "CFX Opus" OR "CFX Connect"', vendor: Bio-Rad, verify: true}
           - {name: LightCycler, query: '"LightCycler 480" OR "LightCycler 96" OR "LightCycler PRO"', vendor: Roche, verify: true}
           - {name: Rotor-Gene, query: '"Rotor-Gene"', vendor: QIAGEN, verify: true}
-          - {name: Biomark, query: '"Biomark HD" OR "BioMark"', context: ['Fluidigm', 'Standard BioTools', 'qPCR', 'real-time PCR', 'dynamic array'],
-             vendor: Standard BioTools, verify: true}
+          - {name: Biomark, query: '"Fluidigm BioMark" OR "BioMark HD" OR "Biomark X9" OR "Biomark X" OR "Standard BioTools Biomark"',
+             context: ['Fluidigm', 'Standard BioTools', 'dynamic array', 'integrated fluidic circuit'], vendor: Standard BioTools, verify: true,
+             note: OpenAlex stems a bare "BioMark" to "biomarker" (precision 0.14 in the first sample); the query needs the vendor or model}
     cpc:
       - C12Q1/686    # PCR
       - C12Q1/6851   # quantitative amplification

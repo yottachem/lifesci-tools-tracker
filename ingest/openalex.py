@@ -43,8 +43,10 @@ def method_query(m):
     return q
 
 
-def by_year(field, query):
-    params = {"filter": works_filter(field, query), "group_by": "publication_year"}
+def get(params, what):
+    """GET /works with the contact and key added; backs off on the burst limit (429).
+    Errors name `what`, never the URL, which carries the key."""
+    params = dict(params)
     if email := contact():
         params["mailto"] = email
     if key := secret("OPENALEX_API_KEY", "openalex-api-key"):
@@ -53,12 +55,19 @@ def by_year(field, query):
         try:
             r = requests.get(URL, params=params, timeout=60)
         except requests.RequestException as e:
-            raise RuntimeError(f"OpenAlex request failed ({type(e).__name__}) for {field}:{query}") from None
+            raise RuntimeError(f"OpenAlex request failed ({type(e).__name__}) for {what}") from None
         if r.status_code != 429:
             break
-        time.sleep(2 ** attempt)  # burst limit; the daily $ budget shows in X-RateLimit-Remaining-USD
+        if int(r.headers.get("Retry-After", 0)) > 60:  # daily $ budget spent; resets at midnight UTC
+            raise RuntimeError(f"OpenAlex daily budget spent ({what}); resets in {int(r.headers['Retry-After']) // 60} min")
+        time.sleep(2 ** attempt)  # burst limit
     if not r.ok:
-        raise RuntimeError(f"OpenAlex {r.status_code} for {field}:{query}")
+        raise RuntimeError(f"OpenAlex {r.status_code} for {what}")
+    return r
+
+
+def by_year(field, query):
+    r = get({"filter": works_filter(field, query), "group_by": "publication_year"}, f"{field}:{query}")
     d = r.json()
     counts = {int(g["key"]): g["count"] for g in d["group_by"] if g["key"].isdigit()}
     return counts, d["meta"].get("cost_usd", 0)

@@ -45,12 +45,15 @@ Keys and contact are read from environment variables, or from the macOS Keychain
 
 ## Counting rules
 
-- Brand queries are fully quoted. OpenAlex stems bare words and strips a trailing "s" even inside quotes, so brands ending in "s" carry an AND context term.
+- Brand queries are fully quoted. OpenAlex stems bare words and strips a trailing "s" even inside quotes, so brands ending in "s" carry an AND context term. Stemming also joins a brand to a common word ("BioMark" matches "biomarker"), so such brands are queried with the vendor or model name.
+- Terms shared with another field carry an AND context term that keeps the tracked meaning ("data-independent acquisition" needs a protein word; "single-cell proteomics" needs a mass-spec word).
 - Platform share is share of mentions: a paper naming two platforms counts once for each.
 - Academic methods (Slide-seq, seqFISH, DBiT-seq) count toward technology adoption, never toward a vendor's share.
 - Each platform is counted under one technology.
 - Only scholarly work types count (articles, reviews, preprints, conference papers and abstracts, chapters, books, dissertations, editorials, letters). Dataset, software and peer-review records are excluded.
 - Spatial proteomics means antibody-based tissue imaging. Subcellular protein-localization and mass-spec tissue proteomics also call themselves "spatial proteomics" but use different tools, so they are not counted.
+- Mass-spec proteomics includes mass-spec tissue and single-cell proteomics. Affinity proteomics excludes low-plex immunoassays (ELISA, bead panels). CyTOF and imaging flow count under flow cytometry.
+- NIH grants for affinity proteomics are counted from method terms only (proximity extension, aptamer, single molecule array). In grant text "affinity proteomics" mostly means affinity purification-mass spec, so it is left out and the series undercounts.
 - Every brand query and search term has a measured precision from a labeled random sample (`precision/`); platforms under 0.8 are flagged on the site. Counts are compared across years per 100K OpenAlex works, and the current year is marked partial.
 - Patents count when a title or abstract term matches within a life-science CPC scope. Claims are not searched, so counts are a consistent lower bound.
 - Market value is derived (month-end close x latest reported shares outstanding). Raw prices are not stored or published.

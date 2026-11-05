@@ -1,0 +1,175 @@
+technology,signal,entry,id,year,type,title,evidence,snippet,label,reason,josh_check,josh_label
+affinity_proteomics,nih,proximity extension assay,11138442,2025,R61,Development of methods for highly multiplexed quantification of cancer proteomes using large-scale nanobody libraries,title/abstract,"...d sequencing (e.g. using Slide-seq, MERFISH, etc), in situ sequencing to detect
+antibodies bound to targets (similar to CODEX) and targeted proteomics (such as the Olink proximity extension
+assay). These applications currently rely on laborious and expensive barcoding of individual (commercial)
+antibodies, followed by pooling for parallel detection. Here, we prop...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,affinity proteomics,7932312,2010,U24,APT: the Analytical Proteomics Team,title/abstract,...cademic groups with deep expertise and extensive resources in proteomics technologies to most efficiently evaluate and roll out robust protocols and standards for MS and affinity proteomics approaches. Prostate cancer samples will be made available from the NCI-sponsored ECOG trial; breast cancer patient and control samples will be collected specifically fo...,unclear,"unclear; 'MS and affinity proteomics approaches', affinity method not stated",0,
+affinity_proteomics,nih,proximity extension assay,9991899,2020,U01,Biomarkers and mechanisms in cancer associated thrombosis,title/abstract,"...large cohorts
+of cancer patients comparing plasma proteins in patients who subsequently develop clots compared to those
+who remain clot free. This project utilizes novel proximity extension assay technologies. (2) If the tumor drives
+clot formation in cancer, then the sporadic nature of cancer thrombosis could be explained by the
+heterogeneity of tumors even with...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,10704146,2023,R01,Salivary Diagnostics for Sepsis Screening in the Neonate,title/abstract,"...te the clinical utility of neonatal salivary c-reactive protein
+(CRP) quantification. In parallel, the Walt Laboratory at Harvard Medical School has invented multiplexed
+Single Molecule Array (SiMoA) technology capable of quantifying multiple proteins in saliva from a single
+sample source at a femtoscale level. Together, we have optimized and adapted the SiMo...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,affinity proteomics,9346316,2017,R43,Harnessing Genomic Information to Engineer Combinatorial Biosynthesis of a Large Polyketide Natural Products Library,none,,unclear,unclear; no abstract text in the source,0,
+affinity_proteomics,nih,proximity extension assay,11212860,2025,P30,Proteomics Shared Resource,title/abstract,"...ices on non-MS platforms, including single-cell secretome and
+signaling analysis on the IsoSpark platform, the Olink HT Platform for measuring about 5,300 proteins using
+Proximity Extension Assay technology with next-generation sequencing (NGS) readouts and peptide synthesis
+and peptide microarrays. 40% of revenue in the current funding period has come from MCCCC...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,9119555,2016,R01,Comprehensive Evaluation of Aging-Related Clinical Outcomes and Geroproteins,title/abstract,"...der investigation of relevant
+pathways in general population-based cohorts. We will therefore undertake systematic comparisons of state-of-the-art LC mass spectroscopy, aptamer-based proteomics, and immunoassays to select the best assay for each protein. We will then harness the comprehensive clinical phenotyping and exceptional statistical power of two large,...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,11449845,2026,R01,Biomarkers and Pathogenesis of Perioperative Neurocognitive Disorders,title/abstract,"...ut microbiota profile, blood IPA, butyric acid, GSK3b, pGSK3b, BD versus non-BD Tau
+and pTau217, IL-6 and CRP concentrations using newly developed nanoneedle technology, Single Molecule
+Array (Simoa), specific antibody (e.g., brain derived-specific Tau antibody) and other methods. We will
+determine incidence and severity of postoperative delirium, dNCR and PN...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,10389666,2022,F32,"Plasma Phosphorylated-Tau, Neurodegeneration, and Clinical Outcomes",title/abstract,"...earch lab and the clinic,
+development of an accessible and accurate early marker of Alzheimer’s pathology is essential. Recent
+technological advances in highly sensitive single-molecule array techniques have created the opportunity to
+accurately measure phosphorylated tau (p-tau), a pathological hallmark of Alzheimer’s disease, in the blood.
+Plasma p-tau has...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,9991873,2020,R01,Salivary Diagnostics for Sepsis Screening in the Neonate,title/abstract,"...te the clinical utility of neonatal salivary c-reactive protein
+(CRP) quantification. In parallel, the Walt Laboratory at Harvard Medical School has invented multiplexed
+Single Molecule Array (SiMoA) technology capable of quantifying multiple proteins in saliva from a single
+sample source at a femtoscale level. Together, we have optimized and adapted the SiMo...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,10150471,2021,R01,Salivary Diagnostics for Sepsis Screening in the Neonate,title/abstract,"...te the clinical utility of neonatal salivary c-reactive protein
+(CRP) quantification. In parallel, the Walt Laboratory at Harvard Medical School has invented multiplexed
+Single Molecule Array (SiMoA) technology capable of quantifying multiple proteins in saliva from a single
+sample source at a femtoscale level. Together, we have optimized and adapted the SiMo...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,10144907,2022,P01,Biomarkers Core (Core E),title/abstract,"...ines, and CSFs are collected, processed and stored
+according to best practices to minimize pre-analytical variability. ATN data has been generated using ultra-
+sensitive single molecule array (Simoa) technology with assays for Ab42, NT1 tau and neurofilament-light (NfL)
+in all samples to date as well as modifying factor data for vascular injury and immune res...",yes,yes; term used for the technology as defined,1,
+affinity_proteomics,nih,proximity extension assay,11420028,2026,R01,Impact of Treating Asymptomatic CMV Replication on Cardiovascular Risk in Treated HIV Infection,title/abstract,"...tion risk by Mendelian Randomization
+of clinical trials. Aim 3 will characterize the plasma proteomic signatures that are altered by letermovir therapy
+using a the Olink proximity extension assay platform and relate these changes to concurrent changes in
+vascular inflammation. These studies also benefit from a strong MPI team with complementary expertise and a
+lo...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,9697377,2019,R01,Comprehensive Evaluation of Aging-Related Clinical Outcomes and Geroproteins,title/abstract,"...ader investigation of relevant
+pathways in general population-based cohorts. We will therefore undertake systematic comparisons of state-of-the-art LC mass spectroscopy, aptamer-based proteomics, and immunoassays to select the best assay for each protein. We will then harness the comprehensive clinical phenotyping and exceptional statistical power of two large,...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,9914761,2019,RF1,Clinical & biological signatures of post-traumatic neurodegeneration: Toward in vivo diagnosis of the late effects of TBI.,title/abstract,"...verlap with other large-scale AD/ADRD research efforts. We will apply advanced psychometric and statistical methods, novel neuroimaging processing tools, ultra-sensitive single molecule array (Simoa) technology, and state-of-the-art neuropathology methods to advance knowledge of PT-ADRD. In Aim 1 we will test the hypothesis that PT-ADRD (e.g., cognitive impai...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,affinity proteomics,10247701,2021,P50,Epigenetic and Genetic Vulnerabilities in Synovial Sarcoma,title/abstract,"...synovial sarcoma by phospho-protein profiling of patient-derived 
+xenografts; and (c) define the targets of pazopanib in synovial sarcoma by two complementary methods, 
+affinity proteomics and PLATO (parallel analysis of translated ORFs). These two analyses should clarify the 
+critical kinase targets of this multi-targeted kinase inhibitor that is active i...",no,"no; 'affinity proteomics' = affinity purification-mass spectrometry (interaction partners), not affinity-reagent panels",0,
+affinity_proteomics,nih,aptamer-based proteomics,9657706,2018,P30,Genomics Shared Resource,title/abstract,"...(91%). Future Directions: The GSR has three main future
+directions that will enhance the SR and UCCC member cancer research: 1) Optimize single cell genomics; 2)
+Enhance aptamer-based proteomics; 3) Adopt single molecule sequencing.",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,9934663,2020,P01,Biomarkers Core (Core E),title/abstract,"...ines, and CSFs are collected, processed and stored
+according to best practices to minimize pre-analytical variability. ATN data has been generated using ultra-
+sensitive single molecule array (Simoa) technology with assays for Ab42, NT1 tau and neurofilament-light (NfL)
+in all samples to date as well as modifying factor data for vascular injury and immune res...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,11309567,2026,R01,Hemopexin as an Early Biomarker of Anthracycline Cardiac Toxicity,title/abstract,"...dequate in patients treated with anthracyclines, largely
+because they do not reflect the underlying molecular mechanisms of toxicity. To address this unmet need, we
+used aptamer-based proteomics to measure over 1,300 plasma proteins in a discovery cohort of women
+treated with anthracyclines for breast cancer. In addition to changes in proteins previously associa...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,11452131,2026,K24,Mid-Career Mentoring and Research on Blood-Based Biomarkers of Alzheimer's Disease,title/abstract,"...emerging studies show that
+newer BBM (i.e. pTau-217/brain-derived tau [BD-tau] ratio) can be more specific to AD pathology and less
+impacted by comorbidities, I will use single molecule array immunoassays to test the overall hypothesis that
+among community-dwelling older adults, BBM indicate greater AD pathology in regular cannabis users, which
+will be associ...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,11004140,2025,P01,Biomarkers Core (Core E),title/abstract,"...ines, and CSFs are collected, processed and stored
+according to best practices to minimize pre-analytical variability. ATN data has been generated using ultra-
+sensitive single molecule array (Simoa) technology with assays for Ab42, NT1 tau and neurofilament-light (NfL)
+in all samples to date as well as modifying factor data for vascular injury and immune res...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,proximity extension assay,10676123,2023,R01,Proteomic discovery in an inception cohort of acute myocardial infarction survivors,title/abstract,"...and potential therapeutic targets for the secondary prevention of CHD. In the Heart and Vascular Health (HVH)
+Study, we propose to use a proteomics platform based on the proximity extension assay to measure 1,160
+plasma proteins in an inception cohort of 1,575 survivors of an acute myocardial infarction (AMI), validate
+recurrent CHD events during up to 16 years o...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,affinity proteomics,10197460,2021,R21,RESISTANCE AND RESPONSE SIGNALING TO PARP1 INHIBITORS IN OVARIAN CANCER,title/abstract,"...rotein complexes and the cellular signaling network
+that can be detected using integrated functional proteomics. We have recently shown that mass spectrometry
+(MS)-based affinity proteomics with DDR proteins or with PARPis as baits is a powerful method to characterize
+multiprotein complexes, and that phosphoproteomics is ideally suited to capture complement...",no,"no; 'affinity proteomics' = affinity purification-mass spectrometry (interaction partners), not affinity-reagent panels",0,
+affinity_proteomics,nih,single molecule array,11217393,2026,RF1,LRRK2 signaling in the progression of Parkinson's disease and dementia,title/abstract,"...rogressive pathological depositions of α-synuclein and tau.
+ To accomplish these goals, our work in the last decade has culminated in the development of ultra-
+sensitive single molecule array assays, capable of assessing, with great specificity and sensitivity, LRRK2
+signaling in biobanked tissues and fluids. Our recent results, starting from cross-sections o...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,affinity proteomics,8212499,2012,R01,Mechanistic Studies on Lung Cancer Prevention by Tea Polyphenols,title/abstract,"...lar changes (e.g., ERK1/2, AKT, ASK1, JNK, VEGF, and oxidative stress parameters) will be compared in vivo vs. in vitro.  2. Identify direct molecular targets of EGCG by affinity-proteomics and functional studies.  To identify direct molecular targets for EGCG, we will use affinity chromatography and mass spectrometry in collaboration with Dr. Zigang Dong a...",no,"no; 'affinity proteomics' = affinity purification-mass spectrometry (interaction partners), not affinity-reagent panels",0,
+affinity_proteomics,nih,aptamer-based proteomics,11110408,2025,R01,Human iPSCs for Elucidating Intercellular Crosstalk Signaling in Dilated Cardiomyopathy,title/abstract,"...pathways potentially involved in LMNA-DCM pathogenesis. In Aim 1, we will comprehensively
+profile the baseline secretomes of each cell type by employing high-throughput aptamer-based proteomics
+methods, and perform trans-well co-culture assays to systematically evaluate the downstream functional
+consequences of cellular crosstalk. In Aim 2, we will complement t...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,10439789,2022,R01,Proteomic signatures to identifypathways underlying the progression toheart failure,title/abstract,"...HFrEF) in late life,
+and that detailed longitudinal proteomic and phenotypic data will allow for discovery of novel biologic
+pathways and prognostic risk markers for HF. Aptamer-based proteomics provide precise quantification of
+4,931 circulating proteins and unprecedented profiling of relevant inflammatory and non-inflammatory
+pathways. Employing rigorous epide...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,11194879,2024,ZIC,Biospecimen Repository Core,title/abstract,"...everal investigators by carrying out assays with specimens from those investigators studies.  The SIMOA is one assay that has been performed for multiple investigators.  Single Molecule Array is considered the gold-standard assay for measuring levels of several key markers of neurological injury or disease, such as Neurofilament-light (NF-L), TAU protein, cyt...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,10215276,2021,R01,CHARGE consortium: gene discovery for CVD and aging phenotypes,title/abstract,"...n 39,819 subjects; 2) whole-exome sequence (WES) data on 28,346; 3)
+methylation data on 16,083; 4) gene expression data on 12,133; 5) metabolomics data on 25,521; and 6)
+aptamer-based proteomics data on 11,306. CHARGE and its 40 active Working Groups, which collaborate
+and coordinate with NIH programs such as the NHLBI's Trans-Omics for Precision Medicine, are w...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,9874859,2020,R21,Development of Novel Tau-SIMOA Assays,title/abstract,"...system and the US economy, but currently no treatments exist and a critical need for effective biomarkers
+persists. The development of ultrasensitive assays such as the single molecule array (SIMOA) platform has
+facilitated a significant biomarker opportunity that may transform the current landscape and have a large
+impact on our ability to manage these dise...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,9099104,2016,R01,Ultrasensitive C.difficile toxin measurement for diagnosis and outcome prediction,title/abstract,"...nage CDI. Under our recent NIAID R21 (5R21AI103612-02), we have successfully developed ultrasensitive and quantitative ""digital ELISA"" assays for toxins A and B based on single molecule array (Simoa) technology. Our novel assays detect native toxins in stool with LODs of 0.45 (A) and 1.5 (B) g/mL, can quantify toxin across a 4-log dynamic range, and detect t...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,affinity proteomics,9836733,2019,F31,Transcriptional Programming in the Maintenance and Commitment of Nephron Progenitors,title/abstract,"...es.
+In AIM 2, I will perform multi-protein proteomic analysis to define multiprotein complexes surrounding β-catenin
+with immunoprecipitation and mass spectrometry-based affinity proteomics Mechanistic understanding of
+Wnt/β-catenin signaling in concert with identified binding partners will facilitate the derivation of nephron-like cell
+types in vitro and u...",no,"no; 'affinity proteomics' = affinity purification-mass spectrometry (interaction partners), not affinity-reagent panels",0,
+affinity_proteomics,nih,aptamer-based proteomics,10446349,2022,R01,Contributions of pulmonary arterial and venous remodeling to HFpEF in the elderly,title/abstract,"...matous), and advanced 3D and strain-based echo measures of RV
+function will be performed. These data will be integrated with clinical assessments, outcomes surveillance,
+aptamer-based proteomics, and genomics to help define the most relevant targets to prevent progressive PVD
+in the very elderly. Specific aims include: (1) Define the extent to which LV dysfuncti...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,9445352,2017,R01,Comprehensive Evaluation of Aging-Related Clinical Outcomes and Geroproteins - SUPPLEMENT,title/abstract,"...der investigation of relevant
+pathways in general population-based cohorts. We will therefore undertake systematic comparisons of state-of-the-art LC mass spectroscopy, aptamer-based proteomics, and immunoassays to select the best assay for each protein. We will then harness the comprehensive clinical phenotyping and exceptional statistical power of two large,...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,10541806,2023,P01,Biomarkers Core (Core E),title/abstract,"...ines, and CSFs are collected, processed and stored
+according to best practices to minimize pre-analytical variability. ATN data has been generated using ultra-
+sensitive single molecule array (Simoa) technology with assays for Ab42, NT1 tau and neurofilament-light (NfL)
+in all samples to date as well as modifying factor data for vascular injury and immune res...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,8545204,2013,R21,Picogram-level DNA sequencing using Nanopores and Zero-Mode Waveguides,none,,no,"no; nanopore/ZMW DNA sequencing project, not Simoa",0,
+affinity_proteomics,nih,proximity extension assay,11384129,2026,K24,Systems biology of acute and chronic multi-organ failure in children with congenital heart disease,title/abstract,"...actions among diverse molecular pathways in a
+systems biology approach to understanding this complex pathophysiology.
+Specific Aim 1 (New Science under the K24): Utilize proximity extension assay technology to perform
+longitudinal measurement of the circulating proteome in the convalescent period after neonatal CHD surgery
+and determine the proteomic phenotype/ch...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,10137783,2021,F32,Development of an Ultrasensitive Point-of-Care Salivary Diagnostic for Mild Traumatic Brain Injury,title/abstract,"...n to measure low abundance protein biomarkers for mild TBI in saliva, as a noninvasive test that
+can easily be deployed in schools, military fields, and emergency rooms. Single Molecule Array (Simoa)
+technology, developed by the Walt lab, is the current state of the art for ultrasensitive protein detection, using
+digital enzyme-linked immunosorbent assay (ELI...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,10133539,2021,P30,Genomics Shared Resource,title/abstract,"...(91%). Future Directions: The GSR has three main future
+directions that will enhance the SR and UCCC member cancer research: 1) Optimize single cell genomics; 2)
+Enhance aptamer-based proteomics; 3) Adopt single molecule sequencing.",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,11063992,2025,R01,Hemopexin as an Early Biomarker of Anthracycline Cardiac Toxicity,title/abstract,"...dequate in patients treated with anthracyclines, largely
+because they do not reflect the underlying molecular mechanisms of toxicity. To address this unmet need, we
+used aptamer-based proteomics to measure over 1,300 plasma proteins in a discovery cohort of women
+treated with anthracyclines for breast cancer. In addition to changes in proteins previously associa...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,11311331,2026,U19,Project 2:  Synovial Fluid Proteomics,title/abstract,"...ipants), which will include
+those with and without frequent knee pain. We will measure proteins in ~500 paired synovial fluid and blood
+plasma samples using SOMAScan, an aptamer-based proteomics assay that simultaneously detects ~7,000
+proteins. Proteomic findings in MOST will be replicated in an international consortium, STEpUP OA, which
+includes ~1,800 individ...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,proximity extension assay,10229377,2021,U01,Biomarkers and mechanisms in cancer associated thrombosis,title/abstract,"...large cohorts
+of cancer patients comparing plasma proteins in patients who subsequently develop clots compared to those
+who remain clot free. This project utilizes novel proximity extension assay technologies. (2) If the tumor drives
+clot formation in cancer, then the sporadic nature of cancer thrombosis could be explained by the
+heterogeneity of tumors even with...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,10775732,2024,P01,Biomarkers Core (Core E),title/abstract,"...ines, and CSFs are collected, processed and stored
+according to best practices to minimize pre-analytical variability. ATN data has been generated using ultra-
+sensitive single molecule array (Simoa) technology with assays for Ab42, NT1 tau and neurofilament-light (NfL)
+in all samples to date as well as modifying factor data for vascular injury and immune res...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,aptamer-based proteomics,9647105,2019,K08,The Role of PPM1G in Apolipoprotein E Biology and Atherosclerotic Cardiovascular Disease,none,,unclear,unclear; no abstract text in the source,1,
+affinity_proteomics,nih,aptamer-based proteomics,10881881,2024,R01,Human iPSCs for Elucidating Intercellular Crosstalk Signaling in Dilated Cardiomyopathy,title/abstract,"...pathways potentially involved in LMNA-DCM pathogenesis. In Aim 1, we will comprehensively
+profile the baseline secretomes of each cell type by employing high-throughput aptamer-based proteomics
+methods, and perform trans-well co-culture assays to systematically evaluate the downstream functional
+consequences of cellular crosstalk. In Aim 2, we will complement t...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,proximity extension assay,10709463,2022,N01,"ADDING ADDITIONAL FUNDS UNDER OPTION PERIOD 1, TASK AREAS 5 AND 6, FOR CORE YEAR 5.",title/abstract,"...n our laboratory that measures 1,536 proteins using an extensive collection
+of nucleotide-labeled antibodies (Olink). The assay leverages a novel method referred to as a proximity extension assay (PEA) which can be quantified by Next Generation Sequencing
+(NGS). We have rigorously addressed intra- and inter-assay variability (both <13%) and acquired data >20-fold...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,affinity proteomics,9031815,2016,R01,Genetics and Mechanisms of Mitral Valve Prolapse,title/abstract,"...MVP. Specifically, we aim to: 1.Expand the network of MVP genes by: a. evaluating the remaining GWAS loci, b. performing comprehensive protein interaction studies using affinity proteomics, and c. explore the role of the MVP gene network in regulating cellular migration, 2. Investigate the mechanism of valve dysfunction in Tns1 knockout mice, and 3. Determ...",no,"no; 'affinity proteomics' = affinity purification-mass spectrometry (interaction partners), not affinity-reagent panels",0,
+affinity_proteomics,nih,proximity extension assay,10176481,2021,U01,Characterizing and predicting colitis in immune checkpoint blockade-treated cancer patients,title/abstract,"...esions. We will also measure peripheral blood serologic markers
+(anti-microbial and anti-GM-CSF autoantibodies by ELISA, soluble cytokine and protein analytes with Olink
+proximity extension assay) that we recently found to be risk factors detectable prior to development of IBD, and
+analyze them for their capacity to predict irColitis. From stool collected before...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,single molecule array,10413099,2022,P30,Biomarker Core,title/abstract,"...MRI scans acquired from
+harmonized clinical scans, from ongoing studies, or de novo for neurodegenerative and cerebrovascular
+markers. The Core features a newly-acquired single molecule array (Simoa) Benchtop Multiplexed Biomarker
+Detection Analyzer and Mesoscale Discovery (MSD) platform for analysis of CSF and blood and development
+of novel biomarkers. These...",yes,yes; term used for the technology as defined,0,
+affinity_proteomics,nih,proximity extension assay,10450725,2022,R01,Proteomic discovery in an inception cohort of acute myocardial infarction survivors,title/abstract,"...and potential therapeutic targets for the secondary prevention of CHD. In the Heart and Vascular Health (HVH)
+Study, we propose to use a proteomics platform based on the proximity extension assay to measure 1,160
+plasma proteins in an inception cohort of 1,575 survivors of an acute myocardial infarction (AMI), validate
+recurrent CHD events during up to 16 years o...",yes,yes; term used for the technology as defined,0,

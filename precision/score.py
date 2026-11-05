@@ -27,10 +27,8 @@ import csv
 import json
 import math
 
-import requests
-
-from ingest.common import ROOT, load_taxonomies, method_term, platforms, secret
-from ingest.openalex import URL, method_query, platform_query, works_filter
+from ingest.common import ROOT, load_taxonomies, method_term, platforms
+from ingest.openalex import get, method_query, platform_query, works_filter
 
 OUT = ROOT / "precision"
 RAW = ROOT / "data" / "raw"
@@ -51,11 +49,7 @@ def openalex_kept(ids, field, query):
     for i in range(0, len(ids), 50):
         params = {"filter": f"openalex:{'|'.join(ids[i:i + 50])}," + works_filter(field, query),
                   "per-page": 50, "select": "id"}
-        if key := secret("OPENALEX_API_KEY", "openalex-api-key"):
-            params["api_key"] = key
-        r = requests.get(URL, params=params, timeout=60)
-        if not r.ok:
-            raise RuntimeError(f"OpenAlex {r.status_code} re-scoring {query}")
+        r = get(params, f"re-scoring {query}")
         out |= {w["id"].rsplit("/", 1)[-1] for w in r.json()["results"]}
     return out
 

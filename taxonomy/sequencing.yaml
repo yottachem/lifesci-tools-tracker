@@ -82,7 +82,7 @@ technologies:
       - long read sequencing
       - single molecule real time sequencing
       - zero mode waveguide
-      - {phrase: nanopore, with: [polynucleotide, nucleic acid, sequencing, DNA, RNA]}
+      - {phrase: nanopore, with: [sequencing, sequence, sequencer, sequenced]}   # nucleic-acid context alone admitted nanopore sensing
     families:
       smrt:
         label: Single-molecule real-time (SMRT)

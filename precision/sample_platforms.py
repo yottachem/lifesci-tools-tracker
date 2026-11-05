@@ -14,12 +14,11 @@ import random
 import re
 import sys
 import time
-from pathlib import Path
 
 import requests
 
-from ingest.common import ROOT, contact, load_taxonomies, platforms, secret
-from ingest.openalex import URL, platform_query, works_filter
+from ingest.common import ROOT, load_taxonomies, platforms
+from ingest.openalex import get, platform_query, works_filter
 
 OUT = ROOT / "precision"
 EPMC = ROOT / "data" / "cache" / "europepmc"
@@ -31,14 +30,7 @@ FIELDS = ["technology", "platform", "work_id", "year", "type", "title", "evidenc
 def sample(query):
     params = {"filter": works_filter("default.search", query), "sample": N, "seed": SEED, "per-page": N,
               "select": "id,title,publication_year,abstract_inverted_index,ids"}
-    if email := contact():
-        params["mailto"] = email
-    if key := secret("OPENALEX_API_KEY", "openalex-api-key"):
-        params["api_key"] = key
-    r = requests.get(URL, params=params, timeout=60)
-    if not r.ok:
-        raise RuntimeError(f"OpenAlex {r.status_code} sampling {query}")
-    return r.json()["results"]
+    return get(params, f"sampling {query}").json()["results"]
 
 
 def abstract(inv):
@@ -62,18 +54,14 @@ def brand_regex(p):
     """The brand is the first quoted term of each top-level OR branch; AND context terms are left out."""
     branches = re.split(r"\s+OR\s+(?![^()]*\))", p["query"])
     terms = [re.findall(r'"([^"]+)"', b)[0] for b in branches if '"' in b]
-    return re.compile("|".join(re.escape(t) for t in terms), re.IGNORECASE)
+    # whole word: "Absolute Q" must not match "absolute quantification", nor "BioMark" "biomarker"
+    return re.compile(r"(?<![A-Za-z0-9])(?:" + "|".join(re.escape(t) for t in terms) + r")(?![a-z])", re.IGNORECASE)
 
 
 def works_by_id(ids):
     params = {"filter": "openalex:" + "|".join(ids), "per-page": 50,
               "select": "id,title,publication_year,abstract_inverted_index,ids,type"}
-    if key := secret("OPENALEX_API_KEY", "openalex-api-key"):
-        params["api_key"] = key
-    r = requests.get(URL, params=params, timeout=60)
-    if not r.ok:
-        raise RuntimeError(f"OpenAlex {r.status_code} fetching works")
-    return {w["id"].rsplit("/", 1)[-1]: w for w in r.json()["results"]}
+    return {w["id"].rsplit("/", 1)[-1]: w for w in get(params, "fetching works").json()["results"]}
 
 
 def evidence(w, rx):
@@ -119,6 +107,10 @@ def run(techs=None):
     for tech_id, tech in load_taxonomies().items():
         if techs and tech_id not in techs:
             continue
+        path = OUT / f"{tech_id}_platforms.csv"
+        if path.exists():
+            print(path, "exists; delete it to resample (labels would be lost)", flush=True)
+            continue
         rows = []
         for _, p in platforms(tech):
             rx = brand_regex(p)
@@ -136,7 +128,6 @@ def run(techs=None):
                 rows.append({"technology": tech_id, "platform": p["name"], "work_id": w["id"].rsplit("/", 1)[-1],
                              "year": w.get("publication_year"), "title": title[:200], "evidence": ev, "snippet": snip,
                              "label": "", "reason": "", "josh_check": int(rng.random() < 0.10), "josh_label": ""})
-        path = OUT / f"{tech_id}_platforms.csv"
         with open(path, "w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=FIELDS)
             w.writeheader()

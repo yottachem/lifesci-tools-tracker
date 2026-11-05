@@ -1,0 +1,151 @@
+technology,signal,entry,id,year,type,title,evidence,snippet,label,reason,josh_check,josh_label
+flow_cytometry,nih,flow cytometry,9758298,2018,P30,Flow Cytometry,title/abstract,"Flow Cytometry. FLOW CYTOMETRY SHARED RESOURCE
+Director: Philip R Streeter, PhD
+ABSTRACT / PROJECT SUMMARY
+The Knight Flow Cytometry Shared Resource provides Knight Cancer Institute me...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,8716525,2014,F31,Role of cell-to-cell HIV-1 spread in vivo during intravenous transmission,title/abstract,"...exposure to model transmission in intravenous drug users (IDU).  For visualization of HIV transmission, the use of fluorescently-tagged HIV-1 clones will be assessed by flow cytometry and novel multi-photon live imaging techniques.  The three areas to be investigated in this project are:      
+1) Characterize organ-to-organ spread of HIV-1 after intra...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,mass cytometry,10597102,2023,R01,"Genital Immune, Mucosal, and Viral Effects of Female Genital Schistosomiasis in Tanzania",title/abstract,"...ion on the
+frequency, intensity, and duration of genital HSV-2 reactivation. In the first aim, we will collect cervical cells by
+brush and characterize cells by flow and mass cytometry. In the second aim, we will isolate epithelial cells
+collected by cervical brush and perform RNA-Seq to elucidate genes and pathways specific to epithelial
+integrity. In...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,mass cytometry,9734136,2019,P01,Core B: Advanced Proteomic Phenotyping Core,title/abstract,"...dataset.
+Since its first application to characterize the human immune continuum in healthy bone marrow by the Nolan
+Laboratory at Stanford, high dimensional single cell mass cytometry (CyTOF) has proven over and over again
+to be a technology that can provide a systems-level view of the immune system in health and disease. This
+unprecedented level of d...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry; fluorescence-activated cell sorting; mass cytometry; spectral flow cytometry,11192901,2025,P30,Flow Cytometry Shared Resource,title/abstract,"Flow Cytometry Shared Resource. PROJECT SUMMARY: FLOW CYTOMETRY SHARED RESOURCE
+The Sylvester Comprehensive Cancer Center (Sylvester) Flow Cytometry Shared Resource (FCSR) offers
+compr...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9773727,2018,P30,Flow Cytometry,title/abstract,"Flow Cytometry. PROJECT SUMMARY/ABSTRACT
+The Flow Cytometry Shared Resource (FCSR, formerly called the Optical Biology Shared Resource or
+Opticore) provides access to state-of-the-art...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,11283574,2026,R21,Dual targeting of AML by BCL-2 inhibition and by CD123-directed NK engager/NK cell immune therapies,title/abstract,"...nt-derived xenograft (PDX) models generated from Ven/Aza-sensitive or -resistant AML. Molecular
+signatures of each therapeutic arm and combinations will be determined by flow cytometry, immunochemistry,
+immunophenotypic profiling, methylation assays and scRNAseq.
+ Results of this proposed work will lay the foundation and provide rationale for successfu...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,fluorescence-activated cell sorting,10467279,2022,R21,Sorting and characterization of cancer cells based on metabolic phenotype,title/abstract,"...feasibility of cell sorting based on this metabolic feature. In Aim 1, we will optimize the
+engineering approach for cell sorting based on cellular metabolic phenotype. Fluorescence-activated cell sorting
+(FACS) will be coupled with metabolic biosensors, and automated microscopy, photoactivation and fluorescent
+labeling of cells for cell separation. In Aim 2, we will use...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9712933,2019,R01,Understanding the Function of Tamm-Horsfall Protein in Acute kidney Injury.,title/abstract,"...Other techniques used in this work include: Immunofluorescence laser micro-dissection of
+specific tubular sections, Immunofluoresence confocal and intravital microscopy, flow cytometry, real time-
+PCR, western blot, various forms of chromatography and mass spectrometry.
+This research is innovative, because it will uncover novel regulatory functions for...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9181200,2016,R21,Molecular Spectroscopic Photoacoustic Imaging for Breast Lesion Characterization,title/abstract,"...l breast tissue and benign breast lesions in patients. It will be
+synthesized, tested, and optimized for its B7-H3 binding abilities in murine and human cell lines using flow
+cytometry. Since ICG can undergo significant shifts in optical absorption spectra based on its bound state to
+proteins, through live cell imaging experiments with confocal microsc...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,11348175,2026,P20,"Kansas Center for Metabolism and Obesity REsearch (KC-MORE) - Cells, Tissues, Bioanalysis and Biostatistics Core",title/abstract,"...e will function as liaisons between several existing 
+institutional and regional NIH-funded core facilities and the COBRE investigators. These include Genomics core 
+and Flow Cytometry core facilities at the University of Kansas Medical Center (KUMC) and IDEA National 
+Resource for Quantitative Proteomics at University of Arkansas for Medical Sciences....",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,10276188,2021,R35,Identifying the Rules Governing Host-Microbiome Composition and Function,title/abstract,"...heir
+effects can have varying degrees of permanence on their host. (3) We will leverage classical community
+ecology theory in biological networks with recent advances in flow cytometry bacterial fingerprinting to
+characterize traits of transient versus stable microbiome networks. We will quantify bacteria-bacteria
+interaction strengths within naturally...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,11083718,2025,R01,Bcl11b: A Master Transcription Factor Controlling Human NK Cell Development,none,,unclear,unclear; no abstract text in the source,0,
+flow_cytometry,nih,flow cytometry,8760364,2014,P50,Biostatistics and Bioinformatics Core,title/abstract,"...provide a facility and computational leadership to design and carry out projects using high-dimensional technologies including tissue array, microarray gene expression, flow cytometry. Software and up-to-date statistical methodology will also be provided. It aims to maintain and develop a central data repository and provide data management/quality con...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,fluorescence-activated cell sorting,7809546,2010,F32,Identification of Mechanisms Regulating Muscle Size and Shape,title/abstract,"...s will be characterized by live confocal imaging of fluorescent markers, elucidating the steps in this process and aiding in the interpretation of genetic data. Finally, fluorescence activated cell sorting (FACS) will be used to isolate subpopulations of myoblasts from Drosophila embryos; microarray analysis will be performed on particular groups of cells to identify the t...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry; mass cytometry,8734834,2014,S10,CyTOF Mass Cytometer,title/abstract,"...DESCRIPTION (provided by applicant): We are requesting funds for purchase of a new CyTOF 2 mass cytometer, manufactured by DVS Sciences, Inc. to complement the existing flow cytometry instruments in the Flow Cytometry Core Facility at the La Jolla Institute for Allergy and Immunology (LJI). If awarded, this novel technology will be available to scient...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,7900883,2010,F30,Modulation of Autoimmune Diabetes by N-acetyl-D-glucosamine Specific B cells,title/abstract,"...with GlcNAc recognition. The absolute numbers, phenotype, and tissue distribution of GlcNAc-specific B cells, as well as GlcNAc-specific IgM titers, will be measured by flow cytometry, ELISA, ELISPOT, and immunofluorescence microscopy utilizing clonal idiotype markers. This study will attempt to determine how a common infectious organism, Group A Stre...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9164851,2016,R03,Mechanisms of Tissue-Specific Autoimmunity in the Elderly,title/abstract,"...In the second aim, cell populations involved in the maintenance of tolerance will be examined in
+tissues where tolerance has been lost (skin) or maintained (blood) using flow cytometry to assess cell
+frequency and phenotype and in vitro functional assays. This project is innovative because it applies the recent
+advances in our understanding of resident...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,8177006,2011,R21,Development of Improved Diagnostic Allergy Test,none,,unclear,unclear; no abstract text in the source,0,
+flow_cytometry,nih,flow cytometry,10751030,2024,K08,Role of Tissue Resident Macrophages in Conventional Outflow Function,title/abstract,"...ll allow Dr. Liu to expand upon her current scientific knowledge and skills by gaining
+experience in ocular immunology, aqueous outflow physiology, genetic mouse models, flow cytometry and
+single-cell RNA sequencing. Dr. Liu will obtain formal didactics in ocular immunology, mouse genetics,
+biostatistics and responsible conduct of research. She will at...",yes,yes; term used for the technology as defined,1,
+flow_cytometry,nih,flow cytometry,9069753,2016,R21,High-throughput radionuclide counting and sorting of single cells,title/abstract,"...his project is to develop an innovative methodology for measuring radionuclide uptake in single cells using a standard flow cytometer. The rationale for this aim is that flow cytometry in its current form can only interrogate cellular states by detecting fluorescence emissions from single cells, a process that excludes small-molecule compounds that are...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,mass cytometry,10170220,2021,K23,Modulation of the B cell response to dengue virus infection by Plasmodium falciparum co-infection,title/abstract,"...designed a training plan
+consisting of specific objectives that will provide the PI with practical experience conducting international
+research, specialized skill using mass cytometry for immunologic research, proficiency in managing complex
+data, and expertise in the development of adaptive immunity. To achieve these objectives, the team has
+develope...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,11318157,2026,F31,Epigenetic regulation of Plasmodium-specific CD4 T cells,none,,unclear,unclear; no abstract text in the source,0,
+flow_cytometry,nih,flow cytometry,8639903,2014,T37,HEALTH DISPARITIES RESEARCH THROUGH INTERNATIONAL EXCHANGE,title/abstract,"...Further isolation, characterization and formulation of natural product extracts will be analyzed by GCMS, MALD-TOFF, chemical analysis, and effects on cell functions by flow cytometry, immunocytochemistry and microscopy in laboratories at foreign sites and at Howard University by collaboration. Infectious diseases studies will be further enhanced thro...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,8532087,2012,P30,Regional Oncology Research Center,title/abstract,"...r Center investigators:  Animal Resources, Bioinformatics, Microarray, Cancer Functional Imaging, Cell Imaging, Common Equipment, Cytogenetics, Experimental Irradiators, Flow Cytometry, Glassware Washing, Mass Spectrometry, Specimen Accessioning Core (SAC), Tissue Microarray Core, Pharmacology Analytical Core, Human Immunology, Cell Processing and Gene...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,11336059,2026,P20,Retina homeostasis in the absence of RPE phagocytosis,title/abstract,"...e instrumental in advancing our research by supporting essential lab personnel,
+reagents, and the upkeep of our mouse colony. It will also provide critical access to the Flow Cytometry,
+Metabolic Phenotyping, and Molecular and Cellular Phenotyping Cores, which are central to completing the
+proposed experiments. This funding will enable the disseminatio...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9626879,2019,P30,Biorepository & Tissue Research Facility,title/abstract,"...is carried out in the Biomolecular Analysis Facility from
+nucleic acids extracted from tissue samples by the BTRF; and circulating tumor cell analysis carried out in the
+Flow Cytometry Core from blood samples processed in the BTRF. In the last CCSG competitive renewal in
+2011, the BTRF was awarded a score of “Outstanding Merit”, since then the BTRF has...",yes,yes; term used for the technology as defined,1,
+flow_cytometry,nih,flow cytometry,11364905,2026,R01,Understanding the Development of Pathogenic CD8 T Cells in HLA-B*27-Associated Acute Anterior Uveitis,title/abstract,"...T cells that recognize both the YeiH antigen and autoantigens through molecular mimicry. These comparisons will be evaluated by performing single-cell RNA sequencing and flow cytometry in samples from HLA-8*27' healthy controls and B27AAU patients. Third, we will analyze candidate transcription factors (CEBPD, RORA, RUNX2, BHLHE40, and ZBTB16) using le...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,10687176,2023,DP2,Lipid Antigen Presentation as a Driver of T2D Inflammation,title/abstract,"...of lipid antigen
+presentation in T2D combines use of human blood samples, transgenic and humanized mice, single cell RNA
+sequencing, multiparameter cytokine analysis and flow cytometry, coupled with computational methods that
+allow for a systems biology approach to antigen discovery and hypotheses testing. In research Area 1, we will
+assess lipid antig...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9326937,2017,R00,Functional Analysis of LncRNAs in Epithelial Ovarian Cancer,title/abstract,"...run by dedicated highly trained staff, that are available to all Cancer Centre members. Particularly relevant to this proposal are The Cell and Tissue Imaging Core, the Flow Cytometry core and the Small Animal Imaging core, all containing the newest state-of-the art equipment and analysis softwate. Research. Most cancer research to date has focused on...",yes,yes; term used for the technology as defined,1,
+flow_cytometry,nih,flow cytometry,11464607,2026,R01,Defining the role of lipocalin-2 in postoperative delirium,title/abstract,"...ion in postoperative delirium. We will
+perform in-depth immune cell profiling on mouse and human blood samples before/after surgery using single-
+cell RNA-sequencing and flow cytometry. Here, we will use Lyz2CreERT2/+::Lcn2fl/fl mice to discretely investigate
+the neutrophil-derived LCN2 on the neurovascular unit, including changes in neuro-immune inter...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9753299,2019,P20,Tumor Microenvironment (TME) CoBRE,title/abstract,"...rom Appalachian patients, aligned with the robust translational nature of the
+TME group. In addition, a new single cell analysis core will be established in the existing flow cytometry core
+to investigate the genomics of single cells isolated from the TME. We will also emplace new imaging
+technologies to support microbeam irradiation, microCT, pre-clin...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,8886291,2014,P30,Specialized Cancer Center Support Grant,title/abstract,"...on, and Reducing Cancer Disparities. We also propose seven Shared Resources: Biorepository and Tissue Technology, Biostatistics, Genomics and Bioinformatics, Microscopy, Flow Cytometry, Transgenic Mouse, Diet and Physical Activity. All Programs and Resources reflect the scientific strengths and goals of the MCC. MCC is poised to leverage its exceptiona...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9164338,2016,K01,Elucidating the role and regulation of periostin in therapy-induced chemoresistance in metastatic breast cancer,title/abstract,"...lls. We will determine if this resistance is mediated through
+activation of the Wnt and\or Akt signaling pathways and induction of a CSC phenotype using western blot and
+flow cytometry. For aim 2, we will use mouse models of breast cancer metastasis to identify the key cytokines
+and their cellular sources regulating POSTN production within established...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9990503,2019,ZIA,Human Specimen Collection to Support Basic and Clinical Research,title/abstract,"...arate experiments blood from both healthy donors and sickle cells patients were used to isolate low density granulocytes (LDGs) using density gradient centrifugation and flow cytometry.
+
+4.	Microparticles: Isolation of RBC pellet and plasma from blood samples of SCD patients and Healthy volunteers for microparticle isolation and investigation.
+
+5.	GBT...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9335018,2016,P30,Indiana University Melvin and Bren Simon Cancer Center Support Grant,title/abstract,"...ogy, 5) Tumor Microenvironment and Metastasis. Supporting the members of these programs are seven shared resources. Preclinical share resources: 1) Chemical Genomics, 2) Flow Cytometry,3) In Vivo Therapeutics. Clinical shared resources: 1) Clinical Pharmacology and Analytical Core, 2) Tissue Procurement and Distribution. Other shared resource: Biostati...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,8268482,2012,P01,Identification of cancer stem cell therapeutic targets,title/abstract,"...al project as well as the success of this program. Each project will be supported by 4 cores: an 
+administrative core, a bioinformatics core, an animal model core, and a flow cytometry core.",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry; mass cytometry,11072196,2024,P30,Flow Cytometry Shared Resource,title/abstract,"Flow Cytometry Shared Resource. FLOW CYTOMETRY SHARED RESOURCE ABSTRACT
+The Flow Cytometry Shared Resource (FCSR) has been an integral component of the UC San Diego Moores
+Cancer Cente...",yes,yes; term used for the technology as defined,1,
+flow_cytometry,nih,flow cytometry,10902645,2024,F31,Impact of antibiotic treatment on Lactobacillus population dynamics and intestinal T cell regulatory function,title/abstract,"...we will examine the changes in IL-10 production of intestinal T cells during ciprofloxacin treatment by
+treating IL-10 reporter mice with ciprofloxacin. Our preliminary flow cytometry data suggests that
+ciprofloxacin treatment increases IL-10 production in IELs. Furthermore, preliminary in vitro data suggested
+that Lactobacillus induces IL-10 producti...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,10470107,2022,P30,Flow Cytometry and Cell Sorting Shared Resource Facility,title/abstract,"Flow Cytometry and Cell Sorting Shared Resource Facility. PROJECT SUMMARY/ABSTRACT
+ The Flow Cytometry and Cell Sorting Shared Resource Facility (FCCS SRF) facilitates high impact canc...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,9764462,2019,R01,Surfactant protein-A regions as TLR4-immunomodulators,title/abstract,"...-dependent
+mechanisms at cellular and tissue levels in lungs of wild type and genetic mouse models of TLR4 and its
+adaptors, using in vivo imaging, immunohistochemistry, flow cytometry, and confocal microscopy. It is
+expected that the end-point determinants of the proposed studies and analyses will eventually help establish
+the mechanism of action of t...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,8881063,2015,U19,"Immune Protection from Malaria: Age, Exposure Intensity, and the T Cell Response",title/abstract,"...age, spanning the developmental period during which the natural acquisition of clinical 
+immunity is normally observed. The proposed studies will utilize multiparameter flow cytometry, gene 
+expression microarrays, and multiplex cytokine analysis to characterize the immune response to malaria and 
+determine the relationship between this response and m...",yes,yes; term used for the technology as defined,1,
+flow_cytometry,nih,fluorescence-activated cell sorting,9974919,2020,K01,Immune and developmental actions of the maternal microbial metabolites on the hypothalamus,title/abstract,"...(1) gain technical and didactic training in immunology
+and metabolism using our mouse model of hypothalamic dysregulation; (2) leverage cutting-edge techniques,
+such as fluorescence activated cell sorting, cell-type specific transgenics and next generation sequencing, to
+expand our knowledge on early-life immunity in the developing hypothalamus within the field of central...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,8946328,2014,ZIA,Control of immediate hypersensitivity responses in parasitic and other diseases,title/abstract,...gen orthologues) drives a CD4+ IL-4/IL-13 dominated response in filarial infection that is augmented when the subject is also allergic when measured using multiparameter flow cytometry or multiplexed cytokine measurements.,yes,yes; term used for the technology as defined,1,
+flow_cytometry,nih,flow cytometry,9926128,2020,K01,Elucidating the role and regulation of periostin in therapy-induced chemoresistance in metastatic breast cancer,title/abstract,"...lls. We will determine if this resistance is mediated through
+activation of the Wnt and\or Akt signaling pathways and induction of a CSC phenotype using western blot and
+flow cytometry. For aim 2, we will use mouse models of breast cancer metastasis to identify the key cytokines
+and their cellular sources regulating POSTN production within established...",yes,yes; term used for the technology as defined,1,
+flow_cytometry,nih,mass cytometry,9190649,2016,F31,Functional and transcriptional signatures of preterm birth,title/abstract,"...versus preterm, and 2) Identifying the
+transcriptional response to influenza in pregnant women who subsequently deliver at term or preterm. Under
+the first aim, a novel mass cytometry panel developed by the Blish lab will be used to study the cell subsets
+and immune functions at baseline and in response to in vitro influenza infection. This highly dim...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,mass cytometry,10364968,2022,U19,Molecular and cellular analysis of host response to Cocci,title/abstract,"...fferences in innate and/or adaptive immune responses,
+contributes to the spectrum of disease manifestations. The long-term goal of Project 2 is to apply transcriptomics,
+mass cytometry, single-cell RNAseq, and phage display to analyze the molecular and cellular response to
+Coccidioides infection using both in vitro infection models and patient samples....",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,10753566,2024,R01,Regulation of medullary thymic epithelial cells and thymic central tolerance by Ikaros,title/abstract,"...complete these aims, we have developed a unique and powerful set of
+genetic tools and mouse reporter lines that allow us to perturb Ikaros function in mTECs. We will use flow
+cytometry to investigate mTEC and thymic immune cell phenotypes, combined scRNA-seq/scATAC-seq to
+analyze gene expression and chromatin accessibility, and supplement with mechanis...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry; spectral flow cytometry,11403408,2025,ZIA,Immunologic Studies Associated with COVID-19 ,title/abstract,"...uninfected and among those who became infected, 16 had provided 1-2 additional blood samples post-infection. We assessed B-cell responses to SARS-CoV-2 spike proteins by spectral flow cytometry, as well as antibody responses by measuring binding antibodies against a panel of wild-type (WT) and eight variant receptor binding domain (RBD) proteins and antibody ne...",yes,yes; term used for the technology as defined,0,
+flow_cytometry,nih,flow cytometry,11164979,2025,F31,Sympathetic signaling as a candidate mechanism underlying bone loss after spinal cord injury,title/abstract,"...w niche represent a heterogenous population contributing to multiple processes like bone metabolism and
+the immune response, I will employ two single-cell applications – flow cytometry and single-cell RNA sequencing
+(scRNA-seq) – to probe temporal hematopoietic changes after SCI.
+Preliminary data for this proposal suggest that bone loss persists at T11...",yes,yes; term used for the technology as defined,0,

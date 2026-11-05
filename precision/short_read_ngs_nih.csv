@@ -1,0 +1,152 @@
+technology,signal,entry,id,year,type,title,evidence,snippet,label,reason,josh_check,josh_label
+short_read_ngs,nih,whole exome sequencing,10652367,2023,R01,A Multi-omics evaluation of Carfilzomib-related Cardiotoxicity,title/abstract,"...s application are to identify and validate metabolomic and pharmacogenomic
+biomarkers for carfilzomib-related HF in MM patients using a multi-omics approach and existing whole exome
+sequencing (WES) data from the Oncology Research Information Exchange Network (ORIEN), and in large
+electronic health record (EHR) systems, namely the UK Biobank and biobank at Van...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing; next-generation sequencing,11364440,2025,P30,Cancer Genomics Facility,title/abstract,"...nformatics Services
+(CBS) and Biostatistics Facility (BF), providing a seamless concierge service for HCC investigators navigating
+this complex landscape. The CGF offers next generation sequencing support for clinical, translational and
+discovery-based cancer biology with a scope of other services that span from customized arrays to single cell
+genomics. Implement...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9793542,2018,R01,Incorporating Local Haplotype Sharing to Detect Genetic Associations,title/abstract,"...method reinvents the haplotype association mapping to provide several benefits -- no phasing requirement, no sliding-window requirement, an ability to work directly with next-generation sequencing data, and enhanced interpretability of association findings. Because each SNP serves as a core SNP for its local haplotypes, our haplotype method has the same number of...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,whole exome sequencing,8446960,2013,R01,Role of acetyltransferase gene inactivation in follicular lymphoma pathogenesis,title/abstract,"...normal cellular functions and role in lymphomagenesis remains a major research imperative in order to develop targeted, highly specific therapies. Using next-generation whole-exome sequencing analysis and high-density single nucleotide polymorphism (SNP) array analysis we have shown that over 40% of FL cases are associated with structural alterations inactiva...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9149887,2016,P30,Research Informatics (RI),title/abstract,"...ts. These include comprehensive suites of software 
+applications for Cancer Clinical Research (CCR); Biospecimen Management and Annotation (itBioPath); a 
+microarray and next-generation sequencing Laboratory Information Management System (LIMS) and 
+experiment analysis and annotation suite (GNomEx); and a drug/chemical screening annotation and 
+management suite (C...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9161726,2015,ZIA,Integrative genomic analysis of the human response to glucocorticoids,title/abstract,"...and tissue culture areas, validating and developing assays and protocols for tissue culture, nucleic acid purification, nucleic acid quality control, flow cytometry, and next-generation sequencing. We analyzed data from an initial experiment comparing the transcriptional response to glucocorticoids in a hematopoietic (human lymphoblastoid cells) and a non-hematopo...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9116919,2016,K99,THE ROLE OF RNA METHYLATION IN THE REGULATION OF lncRNA FUNCTION,title/abstract,"...ognition may be affected by RNA modification. This will be carried out using a combination of tools to probe the structure of RNAs, RNA-protein binding, and cutting-edge next-generation sequencing technologies that will enable this examination in a transcriptome-wide scale. The second aim will examine the role of RNA adenosine methylation in the function and stabi...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,10023797,2019,N01,High Throughput Genotyping and DNA Sequencing for Studying the Genetic Contributions to Human Disease: Genetic Analysis of Metopic Nonsyndromic Craniosynostosis (Boyadjiev Boyd) ,title/abstract,"...NCS and mNCS may share common causative variants and propose an array-based family study of mNCS case-parent trios and replication with independent case-control samples. Next generation sequencing and functional assays of candidate genes and loci identified in GWAS of mNCS will be conducted together with those for sNCS. In summary, the current proposal represents...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,11418635,2025,ZIA,Molecular and Clinical Manifestations of Matrix and Aggregate Myopathies,title/abstract,"...easures such as dynamic breathing MRI to directly visualize the involvement of respiratory muscles as well as those for younger patients. We are using and developing new next generation sequencing technology to identify new genes in our cohort of undiagnosed patients in collaboration with the as a member of the Center of Mendelian Genomics at MGH/Broad, continuous...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,10259365,2020,ZIA,"HEAL: Induced Pluripotent Stem Cell (iPSC)-Derived Cell Types for Pain, Addiction and Overdose",title/abstract,"...ference datasets that were directly generated from human tissues. To this end, primary human DRG tissues were obtained from a commercial vendor and will be processed for next-generation sequencing and bioinformatics analysis. As complete datasets of DRG tissues will be obtained from three different patients, the findings will constitute a unique and highly compreh...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,8360097,2011,P20,UOFL BIOINFORMATICS CORE,title/abstract,"...niversity of Tennessee Health Science Center), Systems Biology (plenary speakers Mike Miles VCU; Greg Buck VCU; Zhongming Zhao VCU; Ping Xu VCU; Damail Bonchev VCU), and Next-Generation Sequencing and Epigenetics (plenary speakers Jarret Glasscock, Cofactor Genomics; Robert Hanson, NIH-NIDDK). 
+
+
+The Ninth  Annual UT-ORNL-KBRIN Bioinformatics Summit that will b...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,10535945,2022,F31,Defining the impact of complement inhibition by tick saliva in tick-borne virus evolution and adaptive immune responses in murine models of infection,title/abstract,"...d by: 1)
+advancing the applicants repertoire of virology and immunology tools and high-impact publications, 2) allowing
+the applicant to acquire a new skillset analyzing next generation sequencing data, 3) encouraging the applicant’s
+attendance at in-person meetings for purposes of networking and seeking a suitable postdoctoral mentor. The
+research and training go...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9848565,2019,P30,Cancer Genomics Shared Resource,title/abstract,"Cancer Genomics Shared Resource. CANCER GENOMICS SHARED RESOURCE 
+Project Summary 
+Next-generation sequencing (NGS) and microarray technologies are essential resources for investigating the 
+genomic and molecular underpinnings of cancer formation, progression, and clinical outco...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,9570641,2018,P50,Core 2: Data Analysis and Translational Application Core,title/abstract,"...ranslational Applications Core (DATA Core) of the 
+AACORT was established to 1) provide a core center for standardized computational and 
+bioinformatic analysis of human high-throughput sequencing data, and 2) provide an infrastructure 
+for the standardized annotation, storage, and sharing of high-dimensional, patient matched data. As 
+the AACORT pursues translati...",yes,yes; term used for the technology as defined,1,
+short_read_ngs,nih,whole exome sequencing,10290623,2021,R21,Identification and molecular characterization of FGFR4 p.G388R variant signaling in cerebellar hemangioblastomas,title/abstract,"...both familial (germline mutations) and sporadic (somatic mutations) CNS HBs, the underlying
+pathogenic mechanisms responsible for HBs remain incompletely understood. By whole exome sequencing of
+archived VHL disease-associated and sporadic cerebellar HBs and matched cerebellum and/or blood cells
+(n=23, age 24-63), we found 314 pathogenic and/or likely deleter...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,8068985,2010,R01,Drosophila Population Genomics,title/abstract,...s to play a vibrant critical role in the advancement of methods and ideas used to understand variation in the structure and function of animal genomes. Recently released high-throughput sequencing platforms offer the first step on the path to the $1000 (or even $100) human genome. The early applications of these technologies already focus our attention on the enor...,yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9781330,2018,ZIA,Testing Interventions for Gastrointestinal Dysfunction in a Murine Model,title/abstract,"...ifferent tissue types. Additionally, DNA isolated from the colonic mucosa has been used to characterize the colonic mucosa adherent microbiome in the study animals using next generation sequencing of the v3-4 hyper-variable regions of the bacterial 16S region. Data collection has been completed and the data analyses is underway. These data will further be integrat...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,whole exome sequencing,10895288,2024,F31,A novel genetic mutation reveals the molecular and cellular mechanisms of severe recurrent skin inflammation,title/abstract,"...two patients affected by pyoderma gangrenosum (PG), an extremely
+rare and severe neutrophilic necrotic skin disorder, without severe systemic autoinflammatory symptoms. Whole
+exome sequencing (WES) revealed a homozygous R57C OTULIN missense mutation in each patient. OTULIN
+encodes a deubiquitinase that is the only known enzyme that specifically cleaves linear...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9343690,2016,ZIA,Functional Genomics of Sarcoma,title/abstract,"...es to investigation. We now routinely obtain excellent copy number data from FFPE samples as well. Over the past several year, we have increasingly utilized the power of next generation sequencing to improve the precision and throughput of these analyses. Our laboratory has had a long standing interesting sarcoma biology, and we have been most recently applying th...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,10453634,2022,P50,RP-2: Discovery and Characterization of Novel Genes and DNA Repair Pathways Predisposing to Urothelial Cancer,title/abstract,"...also numerous reports of multiple-case urothelial cancer kindreds
+that have not yet been systematically studied using modern sequencing methodologies. Using
+bait capture next-generation sequencing assays of paired somatic and germline DNA, we
+showed that that 20% of urothelial cancer patients have moderate- to highly-penetrant known
+predisposition genes. Approxima...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9872587,2019,R01,Molecular Complete Response in Blood as a Predictor for a Pathologic Complete Response after Neoadjuvant Therapy fo Breast Cancer,title/abstract,"...herapy versus those that are already cured. The proposed project
+addresses this conundrum. The research team will employ the newer technologies of digital PCR (dPCR) and
+next generation sequencing (NGS), to reliably detect and quantify plasma tumor DNA (ptDNA) molecules shed
+into the circulation from cancer cells. They have already demonstrated the ability to dete...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,whole exome sequencing,9524343,2018,R01,Genetics of Mullerian Development,title/abstract,"...vitro analyses and family studies. A critical barrier to diagnose and counsel MRKH women is the lack of
+understanding of its pathogenesis. We found a new gene—ZNHIT3—by whole exome sequencing (WES),
+supported by a de novo heterozygous frameshift mutation, two intragenic exon 5 deletions, three whole gene
+deletions, and two 17q12 deletions including ZNHIT3. ZN...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,8201680,2012,P01,Identification of Novel Therapeutic Agents for Alcohol Abuse using Phage Display,title/abstract,"...This Project will explore the role of these regulatory RNAs using several innovative approaches to alcohol research, including profiling of all known microRNAs (miRNAs), next generation sequencing of unique small RNAs, prediction and validation of miRNAs, mRNA target interactions, expression patterns of miRNAs which may act in combination to regulate mRNA expressi...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,11297832,2026,R01,Mechanisms of antigen diversification in Trypanosoma brucei,title/abstract,"...nts predominate at later stages
+of infection, but the mechanisms driving their formation have been nearly impossible to study until now. Our lab
+has optimized a targeted high-throughput sequencing method to characterize the full spectrum of recombination
+events occurring within a VSG, along with a Cas9-based method for inducing mosaic formation in vitro. Here,
+we...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,10828891,2024,R01,Mechanisms of Abnormal Diaphragm and Cardiac Development,title/abstract,"...from large-scale genomic
+knowledge sources. We will use these scores to identify novel CDH and CDH/CVM genes from cytogenetically
+defined critical regions and form large next-generation sequencing databases as part of our multifaceted
+approach to novel gene discovery. We will also accelerate the pace at which human disease genes are
+discovered by making these scor...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,whole exome sequencing,9423662,2017,U01,Alcoholic Hepatitis Consortia: an intramural/extramural collaboration to unravel genetic determinants,title/abstract,"...al Alcohol
+Research Collaborations (U01)) with Dr. David Goldman in the Laboratory of Neuro Genetics (LNG) at NIAAA.
+Dr. Goldman and his team have extensive expertise in whole exome sequencing and analysis of allele
+frequencies related to alcohol abuse. The combination of the extensive biorepository and phenotypic data
+from the ASH UO1 consortia with the exper...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,8516107,2013,U54,Core O: HIGH THROUGHPUT SEQUENCING,title/abstract,"Core O: HIGH THROUGHPUT SEQUENCING. A central theme in this proposal is a generic experimental design that investigates NSAID responses in five model systems, yeast, human cells, fish, mice, and man (see...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,8727605,2014,R01,NanoRNA-mediated control of gene expression,title/abstract,"...apparent increase in the occurrence of nanoRNA-primed transcription. Building on these findings, we propose to use genetic and biochemical approaches in conjunction with high- throughput sequencing to determine how nanoRNA priming can alter gene expression, identify factors that control the nanoRNA content of the cell, and systematically identify nanoRNAs. The prop...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,whole exome sequencing,8854513,2015,P01,Integrative Annotation of the Morbid Human Genome,title/abstract,"...vestigate balanced chromosomal abnormalities
+(BCAs). The advent of genome-wide surveys of dosage imbalance and now point mutations in the coding
+portion of the genome by whole-exome sequencing has enabled the rapid growth of large cohort studies to
+evaluate the genetic architecture of complex disorders, including congenital anomalies, yet these studies still
+f...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing; massively parallel sequencing,9640130,2018,P30,Integrated Genomics,title/abstract,"...ic technology applications that best meet their research aims and then effectively
+support those choices. During the current funding period the IGSR has greatly expanded high-throughput
+sequencing resources and services, and currently provides a wide range of massively parallel sequencing (MPS)
+options, including exome and panel sequencing, whole genome sequencing...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9718316,2019,R25,An Immersive Experience in Medical Genomics,title/abstract,"An Immersive Experience in Medical Genomics. Project Summary
+Next generation sequencing (NGS) has transformed the field of genomics, bringing it to the
+forefront of healthcare, however the rapid pace of scientific discovery and technological
+development in...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,11398009,2026,R00,The role of host mRNA cleavage by RNase L in viral infections,title/abstract,"...e, in
+specific aim 1, I will investigate this relationship between host mRNA cleavage by RNase L and translation at
+the global and individual gene level by combining two high-throughput sequencing methods, ribosome footprint
+profiling and RNA sequencing in RNase L activated human cells. In addition, ribosome-mediated RNase L
+cleavage activity will be also directly...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,massively parallel sequencing,8178973,2011,R01,Neuronal Epigenomic Changes in Neurodevelopment and Disease,title/abstract,"...om defined cell types in vivo, enabling the analysis of DNA methylation changes induced in specific neuronal cell populations in response to early-life experiences using massively parallel sequencing techniques. Thus, we propose: 1) To employ a dissociated neuronal culture system to characterize neuronal activity-induced changes in DNA methylation, and 2) To investig...",yes,yes; term used for the technology as defined,1,
+short_read_ngs,nih,next-generation sequencing,9018017,2016,R01,Methylomic and genomic impacts of organic pollutants in Dup15q syndrome,title/abstract,"...15 duplication in a novel human cell line system to examine effects of PCB-95 or BDE-47 exposures on genomic stability (DNA-seq) and DNA methylation (MethylC-seq) using next generation sequencing technology. In the second aim, the effect of genetic and epigenetic changes on long-range chromatin loop structure within 15q11-q13 will be examined by chromatin conform...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,8292210,2012,R01,Genomic Approaches to Defining Inherited Basis of Childhood Cancer,title/abstract,"...ortant
+insights into the mechanisms of cancer and potential therapeutic targets in both children and adults with cancer
+in the general population. Current utilization of high-throughput sequencing methodologies for coding changes
+has been focused on somatic mutations in tumor tissue, and conversely; genome-wide association studies of
+cancer susceptibility have foc...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9493455,2018,R01,Pathways controlling mRNA translation pathways in dopaminergic neurons,title/abstract,"...minergic neurotransmission, the specific aims of this proposal are: (1) To map m6A sites in the midbrain transcriptome at single-nucleotide resolution. We will develop a next-generation sequencing approach that uses a novel to detect m6A in living cells. These experiments will provide new insights into the potential biological functions of m6A and will result in t...",yes,yes; term used for the technology as defined,1,
+short_read_ngs,nih,whole exome sequencing,9675133,2019,P50,Discovering New Mendelian Genes Controlling Human Reproduction Using the Human Disease Model of Isolated GnRH Deficiency (IGD),title/abstract,"...bsets of our IGD cohort of 
+2,000+ IGD patients who: a) share a second rare phenotype; or b) are from multiplex IGD families, and provide 
+them facilitated access to our whole exome sequencing (WES) pipeline in which we can define new coding 
+sequence mutations. SA #2 will then use novel statistical enrichment analysis that will allow novel gene 
+discovery usi...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing; whole exome sequencing,10395533,2022,P30,Genomics,title/abstract,"...mprehensive Cancer Center (HCCC) laboratory and clinical research communities. The researchbased services and resources of the GSR include: 1) DNA sequencing, including whole exome sequencing, 2) 
+custom oligonucleotides, 3) DNA microarrays (Illumina BeadArray system), 4) real-time PCR, 5) molecular 
+biology computing, and 6) genome, mRNA and single cell sequ...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,whole exome sequencing,10917389,2024,R00,Combinatory Effects of Genetic Variants in Eosinophilic Esophagitis,title/abstract,"...APN14) and thymic
+stromal lymphopoietin (TSLP), which are notably both expressed by the same relevant cell type, esophageal
+epithelial cells. Recently, we have performed whole-exome sequencing (WES) on EoE multiplex families and
+identified a set of rare genetic variants involved in EoE. Though recent research progress provides the evidence
+for EoE genetic etio...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,10993661,2025,R21,Interrogation of the sRNA regulatory network mediating virulence of Streptococcus pneumoniae,title/abstract,"...teria, trans-acting small non-coding RNAs
+(sRNAs) play key roles in regulating stress and virulence responses. While many sRNAs have been
+identified in S. pneumoniae via high-throughput sequencing studies, biological function has been
+assigned to only a few. The goal of this exploratory proposal is to identify the mRNA targets for sRNA
+candidates in S. pneumoniae,...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,whole exome sequencing,8703777,2014,R01,Probing The Dark Matter of the Genome in the NHLBI Family Heart Study,title/abstract,"...ease (e.g. serum lipids, cytokines, obesity, CAC).  To address these research gaps, we propose using the large, well characterized family study, FamHS, as a platform for Whole Exome Sequencing (WES), plus Targeted Regulatory Sequencing (TRS) for variants associated with cardiovascular disease, atherosclerosis and associated endophenotypes. The FamHS represents...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9407041,2018,R01,Regulation of cardiac hypertrophy and failure by the histone methyltransferase Smyd1,title/abstract,"...le is known regarding Smyd1's molecular function in the adult myocardium. This application will leverage a unique genetic animal model and state-of-the-art proteomic and next- generation sequencing technologies to conceptually advance our understanding of heart failure. Specifically, this work will determine if Smyd1a can inhibit growth and pathologic remodeling in...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,10654043,2023,R01,Experimental and bioinformatics platform for epigenome analysis using nanopore sequencing,title/abstract,"...nt to the regulation of DNA-template biological processes from transcription to DNA replication and
+repair. Most existing techniques for characterizing epigenome utilize Next Generation Sequencing (NGS)
+following the biochemical reactions that capture the signals (e.g., bisulfite conversion, cross-linking and
+chromatin immunoprecipitation/ChIP). The development of...",no,no; nanopore epigenome project; NGS named only as the existing method it replaces,0,
+short_read_ngs,nih,whole exome sequencing,8448606,2013,R01,Genomic Basis of Premature Ovarian Insufficiency,title/abstract,"...ble animal models, we determined that there are currently over 400 genes implicated in ovarian insufficiency. This set of genes we call the ""ovariome"". We propose to use whole exome sequencing on familial POI cases and available 1,000 genomes database as a control, to discover candidate pathologic variants. We will use the top 10 genes and top pathologic varia...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,8152103,2011,U01,Ribonucleoprotein Complexes Regulating T-Cell Activation,title/abstract,"...tein-protein complexes will be input into a structural genomics effort as the second target stream. The RNA targets for the RNA-binding proteins will be identified using high throughput sequencing and crosslinking (HITS-CLIP), and confirmed in T-cells and in vitro. The resulting set of RNA-protein complexes will be input into a structural genomics effort as the th...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,9464528,2018,P50,Integrated GWAS of complex behavioral and gene expression traits in outbred rats,title/abstract,"...onstellation of psychologically complex behavioral phenotypes that are associated with drug abuse. Our center capitalizes on a number of recent advances in study design, next-generation sequencing and statistical methods that together create an exceptional opportunity. Whereas the past two decades have seen enormous advances in both forward (phenotype to genotype)...",yes,yes; term used for the technology as defined,1,
+short_read_ngs,nih,next-generation sequencing,10917011,2023,I01,A Phase 2 study of a Checkpoint Inhibitor in Men with Progressive Metastatic Castrate Resistant Prostate Cancer Characterized by a Mismatch Repair Deficiency or Biallelic CDK12 Inactivation,title/abstract,"...pared to the US population at large, which could in principle affect the frequencies of dMMR and CDK12-/-
+as well as response to checkpoint inhibition. Using a sensitive next generation sequencing platform and
+bioanalytic tool to detect microsatellite instability, a surrogate for dMMR, we predict that we can detect dMMR or
+CDK12-/- in at least 15% of Veterans. Fur...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,high-throughput sequencing,8804900,2015,R37,Genetic Analysis of RNA Virus-Host Interaction,title/abstract,"...to test key elements of each phase of the model. The three Aims are summarized as follows: 
+¿ Aim 1 - Understand silencing events during the initial targeting phase. New high-throughput 
+sequencing technology will be used to analyze the genetic requirements for initial targeting of viral 
+genomes by DCL factors during early stages of infection, and test the hypothe...",yes,yes; term used for the technology as defined,0,
+short_read_ngs,nih,next-generation sequencing,8382000,2012,P30,CORE B:   High-throughput Genomic and RNA Analysis,title/abstract,"...resents a combination of two previously funded IDDRC cores (Core B2: Genomic Array Core
+and Core C4: Expression Array Core). As a new activity, the core will also offer next generation
+sequencing technology to users. Originally the Genomic Array Core was set up to offer array
+comparative genomic hybridization (aCGH) to users of the BCM-IDDRC. Since that time the...",yes,yes; term used for the technology as defined,1,
+short_read_ngs,nih,next-generation sequencing,10371040,2022,U19,Parasite Genetics Core,title/abstract,"Parasite Genetics Core. Abstract 
+The aim of the Parasite Genetics Core (PGC) will be to enable the Southern and Central Africa ICEMR to 
+apply state-of-the-art next generation sequencing and bioinformatic tools to better understand malaria 
+epidemiology and the impact of control interventions in Zambia, Zimbabwe and the Democratic Republic of the 
+Congo...",yes,yes; term used for the technology as defined,0,
