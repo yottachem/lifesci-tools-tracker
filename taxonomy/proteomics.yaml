@@ -1,0 +1,127 @@
+# Proteomics beyond spatial: mass-spec, affinity/single-molecule, protein sequencing.
+# Field reference and counting rules: taxonomy/spatial.yaml header.
+# Drafted 2026-11-05; Josh reviews. verify: true = launch year / ownership not yet checked against a primary source.
+
+technologies:
+
+  ms_proteomics:
+    label: Mass-spec proteomics
+    stage: growth
+    definition: >
+      Identifies and quantifies proteins by mass spectrometry, usually of digested peptides
+      separated by liquid chromatography (bottom-up, DDA or DIA), sometimes of intact proteins
+      (top-down). Includes mass-spec tissue and single-cell proteomics.
+    method_terms:
+      - '"mass spectrometry-based proteomics" OR "MS-based proteomics"'
+      - '"data-independent acquisition"'
+      - '"shotgun proteomics" OR "bottom-up proteomics"'
+      - '"top-down proteomics"'
+      - '"tandem mass tag"'
+      - '"single-cell proteomics"'   # mostly MS; check in the precision sample
+    nih_terms:
+      - quantitative proteomics
+      - data-independent acquisition
+      - shotgun proteomics
+      - top-down proteomics
+    patent_terms:
+      - data independent acquisition
+      - tandem mass tag
+      - {phrase: isobaric, with: [peptide, proteomic, mass spectrometry]}
+      - {phrase: proteomic, with: [mass spectrometry, mass spectrometer, peptide, LC-MS]}
+    families:
+      orbitrap:
+        label: Orbitrap (Thermo Fisher)
+        platforms:
+          - {name: Orbitrap Astral, query: '"Orbitrap Astral"', vendor: Thermo Fisher Scientific, launched: 2023, verify: true}
+          - {name: Orbitrap Exploris, query: '"Orbitrap Exploris" OR "Exploris 480" OR "Exploris 240"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'],
+             vendor: Thermo Fisher Scientific, launched: 2019, verify: true}
+          - {name: Q Exactive, query: '"Q Exactive" OR "Q-Exactive"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'],
+             vendor: Thermo Fisher Scientific, launched: 2011, verify: true, note: also a metabolomics workhorse; the context keeps proteomics use}
+          - {name: Orbitrap Tribrid, query: '"Orbitrap Fusion" OR "Fusion Lumos" OR "Orbitrap Eclipse" OR "Orbitrap Ascend"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'],
+             vendor: Thermo Fisher Scientific, launched: 2013, verify: true}
+      tof:
+        label: Time-of-flight
+        platforms:
+          - {name: timsTOF, query: '"timsTOF"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'], vendor: Bruker, launched: 2017, verify: true}
+          - {name: ZenoTOF / TripleTOF, query: '"ZenoTOF" OR "TripleTOF"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'], vendor: Danaher, verify: true}
+      sample_prep:
+        label: Sample prep for MS
+        platforms:
+          - {name: Proteograph, query: '"Proteograph"', vendor: Seer, launched: 2021, verify: true}
+    cpc:
+      - G01N33/6848  # protein analysis by mass spectrometry
+      - H01J49       # mass spectrometers (outside the life-science CPC scope; instrument patents are not counted)
+    cpc_note: reference only; matching uses the shared life-science CPC scope in ingest/uspto.py
+
+  affinity_proteomics:
+    label: Affinity and single-molecule proteomics
+    stage: growth
+    definition: >
+      Measures hundreds to thousands of proteins in blood or lysate with affinity reagents
+      (antibody pairs, aptamers) read out by sequencing or fluorescence, or counts single protein
+      molecules digitally. Low-plex immunoassays (ELISA, bead panels) are not counted.
+    method_terms:
+      - '"proximity extension assay"'
+      - '"affinity proteomics" OR "affinity-based proteomics"'
+      - '"aptamer-based proteomics" OR "aptamer-based proteomic"'
+      - '"single molecule array"'
+    nih_terms:
+      - proximity extension assay
+      - affinity proteomics
+      - aptamer-based proteomics
+      - single molecule array
+    patent_terms:
+      - proximity extension assay
+      - slow off-rate modified aptamer
+      - single molecule array
+      - {phrase: digital immunoassay, with: [single molecule, bead, protein]}
+    families:
+      sequencing_readout:
+        label: Antibody pairs, sequencing readout
+        platforms:
+          - {name: Olink, query: '"Olink"', vendor: Thermo Fisher Scientific, acquired_from: Olink Proteomics (2024-07), verify: true}
+          - {name: NULISA, query: '"NULISA" OR "NULISAseq"', vendor: Alamar Biosciences, launched: 2023, verify: true}
+      aptamer:
+        label: Aptamer
+        platforms:
+          - {name: SomaScan, query: '"SomaScan" OR "SomaLogic"', vendor: Illumina, acquired_from: Standard BioTools (2026-01-30; SomaLogic merged into Standard BioTools 2024-01), verify: true}
+      single_molecule:
+        label: Single-molecule counting
+        platforms:
+          - {name: Simoa, query: '"Simoa"', vendor: Quanterix, launched: 2014, verify: true}
+    note: Nautilus (single-molecule proteome analysis) is pre-commercial; add at launch
+    cpc:
+      - G01N33/543   # immunoassay with insoluble carriers (check)
+      - C12Q1/6804   # nucleic acid readout of protein binding (check)
+    cpc_note: reference only; matching uses the shared life-science CPC scope in ingest/uspto.py
+
+  protein_sequencing:
+    label: Protein sequencing
+    stage: emerging
+    definition: >
+      Reads the amino-acid sequence of single peptide or protein molecules directly, with
+      fluorescent recognizers, fluorosequencing or nanopores. Edman degradation and de novo
+      mass-spec sequencing are not counted.
+    method_terms:
+      - '"single-molecule protein sequencing"'
+      - '"fluorosequencing"'
+      - '"nanopore protein sequencing"'
+      - {term: '"protein sequencing"', context: [single-molecule, single molecule, nanopore, recognizer, recognizers, next-generation]}
+    nih_terms:
+      - single molecule protein sequencing
+      - fluorosequencing
+      - nanopore protein sequencing
+    patent_terms:
+      - fluorosequencing
+      - amino acid recognizer
+      - {phrase: protein sequencing, with: [single molecule, nanopore, recognizer, fluorophore]}
+      - {phrase: polypeptide sequencing, with: [single molecule, nanopore, recognizer, fluorophore]}
+    families:
+      recognizer:
+        label: Recognizer-based
+        platforms:
+          - {name: Platinum (Quantum-Si), query: '"Quantum-Si"', context: ['protein sequencing', 'peptide', 'Platinum'], vendor: Quantum-Si, launched: 2022, verify: true}
+    note: Erisyon, Glyphic and Portal Biotech are pre-commercial; add when they ship
+    cpc:
+      - G01N33/6818  # sequencing of polypeptides (check)
+    cpc_note: reference only; matching uses the shared life-science CPC scope in ingest/uspto.py

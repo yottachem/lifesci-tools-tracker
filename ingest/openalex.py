@@ -14,6 +14,8 @@ are re-raised without it.
 
 Run: uv run python -m ingest.openalex
 """
+import time
+
 import requests
 
 from ingest.common import contact, load_taxonomies, method_term, platforms, secret, write_snapshot
@@ -47,10 +49,14 @@ def by_year(field, query):
         params["mailto"] = email
     if key := secret("OPENALEX_API_KEY", "openalex-api-key"):
         params["api_key"] = key
-    try:
-        r = requests.get(URL, params=params, timeout=60)
-    except requests.RequestException as e:
-        raise RuntimeError(f"OpenAlex request failed ({type(e).__name__}) for {field}:{query}") from None
+    for attempt in range(6):
+        try:
+            r = requests.get(URL, params=params, timeout=60)
+        except requests.RequestException as e:
+            raise RuntimeError(f"OpenAlex request failed ({type(e).__name__}) for {field}:{query}") from None
+        if r.status_code != 429:
+            break
+        time.sleep(2 ** attempt)  # burst limit; the daily $ budget shows in X-RateLimit-Remaining-USD
     if not r.ok:
         raise RuntimeError(f"OpenAlex {r.status_code} for {field}:{query}")
     d = r.json()

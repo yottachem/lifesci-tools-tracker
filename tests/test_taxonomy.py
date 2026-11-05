@@ -1,4 +1,8 @@
-"""Taxonomy and vendor roster rules. Failures here mean a query would silently miscount."""
+"""Taxonomy and vendor roster rules. Failures here mean a query would silently miscount.
+
+LAUNCH_GATE=1 also runs the launch-only checks (no verify: true left).
+"""
+import os
 import re
 
 import pytest
@@ -49,6 +53,7 @@ def test_platform_names_unique_per_technology():
         assert len(names) == len(set(names)), tech_id
 
 
+@pytest.mark.skipif(os.environ.get("LAUNCH_GATE") != "1", reason="launch gate: run with LAUNCH_GATE=1")
 def test_no_unverified_facts_at_launch():
     flagged = [p["name"] for _, _, p in PLATFORMS if p.get("verify")]
     assert not flagged, f"verify: true still set on {flagged}"

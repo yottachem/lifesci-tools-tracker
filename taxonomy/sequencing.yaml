@@ -1,0 +1,150 @@
+# Sequencing technologies: short-read NGS, long-read sequencing, single-cell.
+# Field reference and counting rules: taxonomy/spatial.yaml header.
+# OpenAlex splits camelCase brands and stems the parts ("GridION" matched "grid", 332K works/yr),
+# so they need a vendor-name context. "Vega" is also the VEGA genome-annotation database.
+# Drafted 2026-11-05; Josh reviews. verify: true = launch year / ownership not yet checked against a primary source.
+
+technologies:
+
+  short_read_ngs:
+    label: Short-read sequencing
+    stage: mature
+    definition: >
+      Sequences millions to billions of short DNA fragments (typically 50-300 bases per read)
+      in parallel on a flow cell or chip, by synthesis, binding/avidity, or ion detection.
+    method_terms:
+      - '"next-generation sequencing"'
+      - '"massively parallel sequencing"'
+      - '"high-throughput sequencing"'
+      - '"whole-exome sequencing"'
+      - '"sequencing by synthesis"'
+    nih_terms:
+      - next-generation sequencing
+      - massively parallel sequencing
+      - high-throughput sequencing
+      - whole exome sequencing
+    patent_terms:
+      - sequencing by synthesis
+      - sequencing by binding
+      - sequencing by avidity
+      - massively parallel sequencing
+      - next generation sequencing
+      - {phrase: flow cell, with: [sequencing, nucleic acid, polynucleotide, cluster]}
+    families:
+      illumina_sbs:
+        label: Illumina sequencing by synthesis
+        platforms:
+          - {name: NovaSeq, query: '"NovaSeq"', vendor: Illumina, launched: 2017, verify: true}
+          - {name: NovaSeq X, query: '"NovaSeq X"', vendor: Illumina, launched: 2023, parent: NovaSeq, verify: true}
+          - {name: NextSeq, query: '"NextSeq"', vendor: Illumina, launched: 2014, verify: true}
+          - {name: MiSeq, query: '"MiSeq"', vendor: Illumina, launched: 2011, verify: true}
+          - {name: MiniSeq / iSeq, query: '"MiniSeq" OR "iSeq 100"', vendor: Illumina, launched: 2016, verify: true}
+          - {name: HiSeq, query: '"HiSeq"', vendor: Illumina, launched: 2010, verify: true, note: discontinued; still cited for legacy data}
+      other_optical:
+        label: Other optical short-read
+        platforms:
+          - {name: AVITI, query: '"AVITI"', context: ['Element Biosciences', 'Element AVITI', 'avidity sequencing'], vendor: Element Biosciences, launched: 2022, verify: true,
+             note: AVITI24 (cell profiling) is counted under spatial transcriptomics}
+          - {name: DNBSEQ, query: '"DNBSEQ" OR "MGISEQ" OR "BGISEQ"', vendor: MGI Tech, verify: true, note: sold in the US as Complete Genomics}
+          - {name: UG 100, query: '"Ultima Genomics" OR ("UG 100" AND "Ultima")', vendor: Ultima Genomics, launched: 2023, verify: true}
+          - {name: Onso, query: '"Onso"', context: ['PacBio', 'Pacific Biosciences', 'sequencing by binding'], vendor: PacBio, launched: 2023, verify: true}
+          - {name: AXELIOS 1, query: '"AXELIOS" AND ("Roche" OR "sequencing by expansion" OR "SBX")', vendor: Roche, launched: 2026,
+             note: 'SBX (sequencing by expansion); launched 2026-06-29. Roche calls it single-molecule but it competes with short-read benchtops'}
+      ion_semiconductor:
+        label: Ion semiconductor
+        platforms:
+          - {name: Ion Torrent, query: '"Ion Torrent" OR "Ion S5" OR "Ion PGM" OR "Ion Proton" OR "Genexus"', context: ['sequencing', 'sequencer', 'Ion AmpliSeq'],
+             vendor: Thermo Fisher Scientific, launched: 2010, verify: true}
+    cpc:
+      - C12Q1/6869   # sequencing methods
+      - C12Q1/6874   # sequencing on solid supports
+    cpc_note: reference only; matching uses the shared life-science CPC scope in ingest/uspto.py
+
+  long_read_sequencing:
+    label: Long-read sequencing
+    stage: growth
+    definition: >
+      Sequences single DNA or RNA molecules thousands to millions of bases long, by real-time
+      imaging of a polymerase (SMRT) or by ionic current through a nanopore.
+    method_terms:
+      - '"long-read sequencing"'
+      - '"nanopore sequencing"'
+      - '"single-molecule real-time sequencing" OR "SMRT sequencing"'
+      - '"HiFi reads" OR "HiFi sequencing"'
+      - '"third-generation sequencing"'
+    nih_terms:
+      - long-read sequencing
+      - nanopore sequencing
+      - single molecule real-time sequencing
+      - third generation sequencing
+    patent_terms:
+      - nanopore sequencing
+      - long read sequencing
+      - single molecule real time sequencing
+      - zero mode waveguide
+      - {phrase: nanopore, with: [polynucleotide, nucleic acid, sequencing, DNA, RNA]}
+    families:
+      smrt:
+        label: Single-molecule real-time (SMRT)
+        platforms:
+          - {name: Sequel, query: '"Sequel"', context: ['PacBio', 'Pacific Biosciences', 'SMRT'], vendor: PacBio, launched: 2015, verify: true}
+          - {name: Revio, query: '"Revio"', context: ['PacBio', 'Pacific Biosciences', 'HiFi', 'SMRT'], vendor: PacBio, launched: 2023, verify: true}
+          - {name: Vega, query: '"PacBio Vega" OR ("Vega" AND "PacBio" AND "benchtop")', vendor: PacBio, launched: 2024, verify: true}
+      nanopore:
+        label: Nanopore
+        platforms:
+          - {name: MinION, query: '"MinION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2015, verify: true}
+          - {name: GridION, query: '"GridION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2017, verify: true}
+          - {name: PromethION, query: '"PromethION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2018, verify: true}
+          - {name: Flongle, query: '"Flongle"', vendor: Oxford Nanopore Technologies, launched: 2019, verify: true}
+          - {name: CycloneSEQ, query: '"CycloneSEQ"', vendor: MGI Tech, verify: true,
+             note: BGI nanopore; part of the MGI Tech acquisition announced 2026-03 (confirm close)}
+    cpc:
+      - G01N33/48721   # nanopore analysis of nucleic acids
+      - C12Q1/6869
+    cpc_note: reference only; matching uses the shared life-science CPC scope in ingest/uspto.py
+
+  single_cell:
+    label: Single-cell genomics
+    stage: growth
+    definition: >
+      Profiles RNA, chromatin, or surface proteins in thousands to millions of individual cells
+      by partitioning them (droplets, wells) or by combinatorial barcoding, then sequencing.
+    method_terms:
+      - '"single-cell RNA sequencing" OR "single-cell RNA-seq" OR "scRNA-seq"'
+      - '"single-nucleus RNA sequencing" OR "single-nucleus RNA-seq" OR "snRNA-seq"'
+      - '"single-cell ATAC" OR "scATAC-seq"'
+      - '"CITE-seq"'
+      - '"single-cell multiomics" OR "single-cell multi-omics"'
+    nih_terms:
+      - single-cell RNA sequencing
+      - single-nucleus RNA sequencing
+      - scRNA-seq
+      - single-cell ATAC
+    patent_terms:
+      - cell barcode
+      - combinatorial indexing
+      - split pool barcoding
+      - {phrase: single cell sequencing, with: [barcode, partition, droplet, library]}
+      - {phrase: single cell, with: [barcode, barcoded, partition, droplet, sequencing library]}
+    families:
+      partition:
+        label: Droplet and well partitioning
+        platforms:
+          - {name: Chromium, query: '"Chromium"', context: ['10x Genomics', 'Chromium Controller', 'Chromium X', 'Chromium iX', 'scRNA-seq', 'single-cell RNA', 'single-nucleus RNA'], vendor: 10x Genomics, launched: 2016, verify: true}
+          - {name: BD Rhapsody, query: '"BD Rhapsody"', vendor: Waters, acquired_from: BD (2026-02), launched: 2017, verify: true}
+          - {name: PIPseq, query: '"PIPseq"', vendor: Illumina, acquired_from: Fluent BioSciences (2024), verify: true}
+          - {name: Singleron, query: '"Singleron" OR "GEXSCOPE"', vendor: Singleron, verify: true}
+      combinatorial:
+        label: Combinatorial barcoding
+        platforms:
+          - {name: Evercode, query: '"Evercode" OR "Parse Biosciences"', vendor: Parse Biosciences, launched: 2021, verify: true}
+          - {name: ScaleBio, query: '"ScaleBio" OR "Scale Biosciences"', vendor: 10x Genomics, acquired_from: Scale Biosciences (agreed 2025-08; confirm close), verify: true}
+      targeted_dna:
+        label: Targeted single-cell DNA
+        platforms:
+          - {name: Tapestri, query: '"Tapestri"', context: ['Mission Bio', 'single-cell DNA', 'single-cell', 'scDNA'], vendor: Mission Bio, launched: 2017, verify: true}
+    cpc:
+      - C12Q1/6806   # sample preparation for nucleic acid analysis (check)
+      - C12N15/1065  # barcode/library construction (check)
+    cpc_note: reference only; matching uses the shared life-science CPC scope in ingest/uspto.py

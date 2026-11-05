@@ -1,4 +1,5 @@
-# Vendor roster (spatial pilot). Checked 2026-11-03; pending deals re-checked 2026-11-05.
+# Vendor roster. Spatial pilot checked 2026-11-03; pending deals re-checked 2026-11-05.
+# Other 8 technologies drafted 2026-11-05 (platform facts carry verify: true in taxonomy/*.yaml).
 # role: pure_play = financials shown on technology pages; context = diversified, shown for reference only;
 #       private = roster only (no SEC filings).
 # Financials and market value come from EDGAR (cik) only. Non-US listings (Takara Bio, MGI Tech) are roster only.
@@ -9,13 +10,15 @@ vendors:
     ticker: TXG
     cik: 1770787
     role: pure_play
-    platforms: [Visium, Visium HD, Xenium]
+    platforms: [Visium, Visium HD, Xenium, Chromium, ScaleBio]
+    history:
+      - {date: 2025-08-07, event: Agreed to acquire Scale Biosciences ($30M cash and stock; confirm close), source: 'https://investors.10xgenomics.com/news/news-details/2025/10x-Genomics-to-Acquire-Scale-Biosciences/'}
   Bruker:
     status: public
     ticker: BRKR
     cik: 1109354
     role: context
-    platforms: [CosMx SMI, GeoMx DSP, CellScape]
+    platforms: [CosMx SMI, GeoMx DSP, CellScape, timsTOF]
     history:
       - {year: 2020, event: Acquired Canopy Biosciences (CellScape)}
       - {year: 2024, event: Acquired NanoString (CosMx, GeoMx)}
@@ -24,7 +27,7 @@ vendors:
     ticker: QTRX
     cik: 1503274
     role: pure_play
-    platforms: [PhenoCycler (CODEX)]
+    platforms: [PhenoCycler (CODEX), Simoa]
     history:
       - {date: 2025-07-08, event: Completed acquisition of Akoya Biosciences; PhenoCycler and PhenoImager keep the Akoya name,
          source: 'https://www.businesswire.com/news/home/20250707828058/en'}
@@ -41,18 +44,21 @@ vendors:
     ticker: LAB
     cik: 1162194
     role: context
-    platforms: [Hyperion]
+    platforms: [Hyperion, CyTOF, Biomark]
     history:
       - {year: 2022, event: Fluidigm renamed Standard BioTools}
+      - {date: 2024-01, event: Merged with SomaLogic}
+      - {date: 2026-01-30, event: Sold SomaLogic to Illumina ($350M cash plus up to $75M milestones), source: 'https://investor.illumina.com/news-releases/news-release-details/illumina-completes-acquisition-somalogic'}
       - {date: 2026-09-30, event: 'Agreed to sell Mass Cytometry business (CyTOF, Hyperion) to Element Biosystems LLC (GMT Venture Partners) for $5.5M, replacing a July 2026 Multiplex Bio deal. Not closed as of 2026-11-05: needs stockholder approval and the Treeline Biosciences merger close; expected end of 2026, outside date 2027-06-30',
          source: 'https://www.sec.gov/Archives/edgar/data/0001162194/000114036126038110/ef20082995_ex99-1.htm'}
     note: Element Biosystems LLC is unrelated to Element Biosciences (AVITI24)
-  Danaher (Leica Microsystems):
+  Danaher:
     status: public
     ticker: DHR
     cik: 313616
     role: context
-    platforms: [Cell DIVE]
+    platforms: [Cell DIVE, CytoFLEX, Gallios / Navios, ZenoTOF / TripleTOF]
+    note: operating companies Leica Microsystems (Cell DIVE), Beckman Coulter (cytometers), Sciex (mass spec)
   Takara Bio:
     status: public_non_us
     listing: TSE 4974
@@ -64,7 +70,7 @@ vendors:
     status: public_non_us
     listing: SSE STAR 688114 / HKEX 2338 (verify listing codes)
     role: context
-    platforms: [Stereo-seq]
+    platforms: [Stereo-seq, DNBSEQ, CycloneSEQ]
     history:
       - {year: 2024, event: STOmics established (BGI Group) to commercialize Stereo-seq; Complete Genomics US distributor}
       - {date: 2026-03, event: MGI Tech announced acquisition of STOmics and CycloneSEQ from BGI Group (RMB 365.7M). No completion notice found as of 2026-11-05,
@@ -87,7 +93,7 @@ vendors:
       - {date: 2025-02, event: Taken private by Deerfield Management ($20.00/share), source: 'https://www.singulargenomics.com/news/singular-genomics-aquisition'}
   Element Biosciences:
     status: private
-    platforms: [AVITI24]
+    platforms: [AVITI24, AVITI]
     history:
       - {date: 2024-04-05, event: AVITI24 orders opened, source: 'https://www.biospace.com/element-biosciences-announces-availability-of-aviti24-the-first-benchtop-sequencer-capable-of-direct-cell-profiling'}
   AtlasXomics:
@@ -100,7 +106,112 @@ vendors:
       - {date: 2020-07-16, event: Orion announced, source: 'https://www.biospace.com/rarecyte-announces-the-orion-spatial-biology-platform-with-breakthrough-technology-for-same-day-highly-multiplexed-tissue-analysis'}
   Miltenyi Biotec:
     status: private
-    platforms: [MACSima]
+    platforms: [MACSima, MACSQuant]
   Ionpath:
     status: private
     platforms: [MIBIscope]
+  Illumina:
+    status: public
+    ticker: ILMN
+    cik: 1110803
+    role: pure_play
+    platforms: [NovaSeq, NovaSeq X, NextSeq, MiSeq, MiniSeq / iSeq, HiSeq, PIPseq, SomaScan]
+    history:
+      - {date: 2024-07, event: Acquired Fluent BioSciences (PIPseq); confirm date}
+      - {date: 2026-01-30, event: Completed acquisition of SomaLogic from Standard BioTools, source: 'https://investor.illumina.com/news-releases/news-release-details/illumina-completes-acquisition-somalogic'}
+  PacBio:
+    status: public
+    ticker: PACB
+    cik: 1299130
+    role: pure_play
+    platforms: [Sequel, Revio, Vega, Onso]
+  Oxford Nanopore Technologies:
+    status: public_non_us
+    listing: LSE ONT
+    role: context
+    platforms: [MinION, GridION, PromethION, Flongle]
+  Ultima Genomics:
+    status: private
+    platforms: [UG 100]
+  Roche:
+    status: public_non_us
+    listing: SIX ROG
+    role: context
+    platforms: [AXELIOS 1, Digital LightCycler, LightCycler]
+    history:
+      - {date: 2026-06-29, event: Launched AXELIOS 1 (sequencing by expansion), source: 'https://www.fiercebiotech.com/medtech/roche-rolls-out-new-dna-sequencing-expansion-approach'}
+  Thermo Fisher Scientific:
+    status: public
+    ticker: TMO
+    cik: 97745
+    role: context
+    platforms: [Ion Torrent, Absolute Q, QuantStudio, StepOne / 7500, Attune NxT, Orbitrap Astral, Orbitrap Exploris, Q Exactive, Orbitrap Tribrid, Olink]
+    history:
+      - {year: 2021, event: Acquired Combinati (Absolute Q digital PCR)}
+      - {date: 2024-07, event: Completed acquisition of Olink Proteomics; confirm date}
+  Waters:
+    status: public
+    ticker: WAT
+    cik: 1000697
+    role: context
+    platforms: [BD Rhapsody, FACSCalibur, FACSCanto, FACSAria, LSR Fortessa / LSR II, FACSymphony, FACSDiscover, Accuri]
+    history:
+      - {date: 2026-02-09, event: Completed Reverse Morris Trust combination with BD Biosciences & Diagnostic Solutions ($18.8B); BD flow cytometry and single-cell brands now in the Waters Biosciences division,
+         source: 'https://www.rdworldonline.com/waters-closes-deal-for-bd-biosciences-diagnostics-assets-reorganizes-into-four-divisions/'}
+  Singleron:
+    status: private
+    platforms: [Singleron]
+  Parse Biosciences:
+    status: private
+    platforms: [Evercode]
+  Mission Bio:
+    status: private
+    platforms: [Tapestri]
+  Bio-Rad:
+    status: public
+    ticker: BIO
+    cik: 12208
+    role: context
+    platforms: [QX ddPCR, QX700 (naica), CFX]
+    history:
+      - {date: 2025-06-30, event: Completed acquisition of Stilla Technologies (~$225M); naica relaunched as QX700, source: 'https://www.tipranks.com/news/company-announcements/bio-rad-completes-acquisition-of-stilla-technologies'}
+  QIAGEN:
+    status: public
+    ticker: QGEN
+    cik: 1015820
+    role: context
+    platforms: [QIAcuity, Rotor-Gene]
+  Cytek Biosciences:
+    status: public
+    ticker: CTKB
+    cik: 1831915
+    role: pure_play
+    platforms: [Aurora, Northern Lights, ImageStream]
+    history:
+      - {year: 2023, event: Acquired Luminex flow cytometry and imaging business (Amnis, Guava); confirm date}
+  Sony:
+    status: public_non_us
+    listing: TSE 6758
+    role: context
+    platforms: [Sony cytometers]
+  Agilent:
+    status: public
+    ticker: A
+    cik: 1090872
+    role: context
+    platforms: [NovoCyte]
+  Seer:
+    status: public
+    ticker: SEER
+    cik: 1726445
+    role: pure_play
+    platforms: [Proteograph]
+  Alamar Biosciences:
+    status: private
+    platforms: [NULISA]
+  Quantum-Si:
+    status: public
+    ticker: QSI
+    cik: 1816431
+    role: pure_play
+    platforms: [Platinum (Quantum-Si)]
