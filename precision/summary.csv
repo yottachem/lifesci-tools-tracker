@@ -2,7 +2,7 @@ technology,platform,sampled,kept,yes,no,unclear,precision,ci_low,ci_high,coverag
 spatial_transcriptomics,Visium,50,44,25,1,18,0.96,0.81,0.99,0.59,False
 spatial_transcriptomics,Visium HD,50,44,30,0,14,1.0,0.89,1.0,0.68,False
 spatial_transcriptomics,Stereo-seq,50,48,26,2,20,0.93,0.77,0.98,0.58,False
-spatial_transcriptomics,Curio Seeker / Trekker,50,25,12,7,6,0.63,0.41,0.81,0.76,True
+spatial_transcriptomics,Curio Seeker / Trekker,50,25,12,6,7,0.67,0.44,0.84,0.72,True
 spatial_transcriptomics,AtlasXomics,33,33,11,13,9,0.46,0.28,0.65,0.73,True
 spatial_transcriptomics,Xenium,50,45,26,1,18,0.96,0.82,0.99,0.6,False
 spatial_transcriptomics,MERSCOPE,50,45,26,3,16,0.9,0.74,0.96,0.64,False

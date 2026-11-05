@@ -8,6 +8,8 @@ needs a fresh sample (python -m precision.sample_platforms <technology>).
 Writes precision/summary.csv (per platform) and precision/spot_check.csv (rows for Josh: the
 random 10% plus labels inferred from a repeated pattern, limited to rows the current query keeps).
 Precision = yes / (yes + no), with a 95% Wilson interval; low = precision under LOW.
+Josh's josh_label, where filled, overrides label. Each run first copies josh_label from
+spot_check.csv into the per-technology samples, so regenerating spot_check.csv never loses it.
 
 Run: uv run python -m precision.score
 """
@@ -38,6 +40,27 @@ def kept(ids, query):
     return out
 
 
+def merge_spot_checks():
+    path = OUT / "spot_check.csv"
+    if not path.exists():
+        return
+    josh = {(r["technology"], r["work_id"], r["platform"]): r["josh_label"].strip()
+            for r in csv.DictReader(open(path)) if r["josh_label"].strip()}
+    for tech_id in {t for t, _, _ in josh}:
+        sample = OUT / f"{tech_id}_platforms.csv"
+        rows = list(csv.DictReader(open(sample)))
+        for r in rows:
+            r["josh_label"] = josh.get((tech_id, r["work_id"], r["platform"]), r["josh_label"])
+        with open(sample, "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(rows)
+
+
+def final(r):
+    return r["josh_label"] or r["label"]
+
+
 def wilson(yes, n, z=1.96):
     if not n:
         return None, None
@@ -47,6 +70,7 @@ def wilson(yes, n, z=1.96):
 
 
 def run():
+    merge_spot_checks()
     summary, spot = [], []
     for tech_id, tech in load_taxonomies().items():
         path = OUT / f"{tech_id}_platforms.csv"
@@ -57,7 +81,7 @@ def run():
             sampled = [r for r in rows if r["platform"] == p["name"]]
             keep = kept([r["work_id"] for r in sampled], platform_query(p))
             live = [r for r in sampled if r["work_id"] in keep]
-            yes, no = (sum(r["label"] == lab for r in live) for lab in ("yes", "no"))
+            yes, no = (sum(final(r) == lab for r in live) for lab in ("yes", "no"))
             lo, hi = wilson(yes, yes + no)
             prec = round(yes / (yes + no), 2) if yes + no else None
             summary.append({"technology": tech_id, "platform": p["name"], "sampled": len(sampled), "kept": len(live),
