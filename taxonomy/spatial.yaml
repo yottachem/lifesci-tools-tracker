@@ -1,0 +1,149 @@
+# Spatial pilot taxonomy (DRAFT 2026-11-03, pending Josh's review).
+#
+# Each technology has:
+#   method_terms: generic phrases, matched in title + abstract (adoption of the method)
+#   platforms:    commercial brands, matched in full text (methods sections name instruments)
+#     query:      OpenAlex search string. Bare words are STEMMED (STOmics matches "stomic"); quote every brand.
+#                 Quotes are not fully exact: a trailing "s" is still stripped ("GenePS" matches "Genep",
+#                 "STOmics" matches "stomic"), so a brand ending in s needs an AND context term.
+#                 AND/OR/NOT allowed
+#     launched:   first commercial year; hits before it are counted as noise by the probe
+#     context:    for ambiguous names, the brand only counts when one of these co-occurs
+#     vendor:     current owner; acquired_from records the history
+#     verify:     true = ownership/launch facts not yet checked against a primary source
+#   cpc:          headline patent classes (reference only); matching uses the shared life-science CPC scope in ingest/uspto.py
+#   nih_terms:    RePORTER title/abstract phrases (funded demand)
+#   patent_terms: claim-style wording patents use instead of journal terms (title/abstract, plural-tolerant);
+#                 {phrase, with: [...]} counts only next to a context word
+#
+# Counting rules (Josh, 2026-11-03):
+#   - Platform share = share of mentions: a paper naming two platforms adds one to each.
+#     Sub-brands with parent: (Visium HD) are shown inside the parent and excluded from share totals.
+#   - Academic methods (Slide-seq, seqFISH, DBiT-seq) are method_terms: they count toward the
+#     technology's adoption curve, never toward a vendor's share.
+#   - A platform is counted under one technology only (GeoMx: spatial transcriptomics).
+# Precision: ~50 sampled hits per platform and per method term, labeled before launch.
+
+technologies:
+
+  spatial_transcriptomics:
+    label: Spatial transcriptomics
+    stage: emerging
+    definition: >
+      Measures RNA expression with the tissue location preserved, either by capturing
+      transcripts onto a spatially barcoded surface (sequencing-based) or by reading them
+      in place with multiplexed in situ hybridization or sequencing (imaging-based).
+    method_terms:
+      - '"spatial transcriptomics"'
+      - '"spatially resolved transcriptomics"'
+      - '"in situ sequencing"'
+      - '"multiplexed error-robust FISH" OR "MERFISH"'
+      - '"Slide-seq" OR "Slide-seqV2" OR "Slide-tags"'   # academic methods; Curio products counted separately
+      - '"seqFISH" OR "seqFISH+"'   # academic method; GenePS counted separately
+      - '"DBiT-seq"'   # academic method; AtlasXomics counted separately
+    nih_terms:
+      - spatial transcriptomics
+      - spatially resolved transcriptomics
+      - in situ sequencing
+    patent_terms:   # tested on the life-science corpus 2026-11-03; dropped: spatially resolved, spatial location/information/resolution/position (physics, metrology)
+      - spatial barcode
+      - spatially barcoded
+      - spatial array
+      - spatial gene expression
+      - spatial transcriptome
+      - spatial transcriptomic
+      - spatial tagging
+      - spatially tagging
+      - spatially tagged
+      - spatially distinguished
+      - spatial detection
+      - spatial omics
+      - spatial multiomics
+      - spatial profiling
+      - {phrase: spatial analysis, with: [analyte, nucleic acid, capture probe, barcode, RNA, transcript, oligonucleotide]}
+    families:
+      sequencing_capture:
+        label: Sequencing-based capture
+        platforms:
+          - {name: Visium, query: '"Visium"', vendor: 10x Genomics, launched: 2019}
+          - {name: Visium HD, query: '"Visium HD"', vendor: 10x Genomics, launched: 2024, parent: Visium}
+          - {name: Stereo-seq, query: '"Stereo-seq"', vendor: MGI Tech, acquired_from: STOmics (BGI Group; announced 2026-03, confirm close), launched: 2022,
+             note: '"STOmics" dropped: matches ostomy literature ("stomics") even when quoted'}
+          - {name: Curio Seeker / Trekker, query: '"Curio Seeker" OR "Curio Trekker" OR "Curio Bioscience"', vendor: Takara Bio,
+             acquired_from: Curio Bioscience (2025-01), launched: 2022,
+             note: products of Slide-seqV2 and Slide-tags; academic method use is a method_term}
+          - {name: AtlasXomics, query: '"AtlasXomics" AND "spatial"', vendor: AtlasXomics,
+             note: commercializes DBiT-seq (Yale); academic DBiT-seq use is a method_term; launch year unconfirmed}
+      imaging_in_situ:
+        label: Imaging-based in situ
+        platforms:
+          - {name: Xenium, query: '"Xenium"', context: ['spatial', 'in situ', 'transcript'], vendor: 10x Genomics, launched: 2022}
+          - {name: MERSCOPE, query: '"MERSCOPE" OR "Vizgen"', vendor: Vizgen, launched: 2021}
+          - {name: CosMx SMI, query: '"CosMx"', vendor: Bruker, acquired_from: NanoString (2024), launched: 2021}
+          - {name: Molecular Cartography, query: '"Molecular Cartography" AND "Resolve Biosciences"', vendor: Resolve Biosciences, launched: 2021}
+          - {name: GenePS, query: '"GenePS" AND ("seqFISH" OR "Spatial Genomics")', vendor: Spatial Genomics, launched: 2022,
+             note: product of seqFISH (Caltech); academic seqFISH use is a method_term}
+          - {name: G4X, query: '"G4X" AND "Singular Genomics"', vendor: Singular Genomics, launched: 2025,
+             note: private since Deerfield take-private (2025-02)}
+          - {name: AVITI24, query: '"AVITI24"', vendor: Element Biosciences, launched: 2024}
+      region_based:
+        label: Region-based profiling
+        platforms:
+          - {name: GeoMx DSP, query: '"GeoMx"', vendor: Bruker, acquired_from: NanoString (2024), launched: 2019}
+    cpc:
+      - C12Q1/6841   # in situ hybridisation
+      - C12Q1/6874   # sequencing methods on solid supports (check)
+      - G01N33/582   # labels, fluorescent (broad; needs keyword AND)
+    cpc_note: patents count when a term matches title/abstract within the life-science CPC scope; these narrow groups missed most 10x filings (2026-11-03)
+
+  spatial_proteomics:
+    label: Spatial proteomics
+    stage: emerging
+    definition: >
+      Images many proteins in one tissue section with location preserved, by cyclic
+      immunofluorescence, DNA-barcoded antibodies, or metal-tagged antibodies read by mass
+      spectrometry.
+    method_terms:
+      - '"spatial proteomics"'
+      - '"multiplexed immunofluorescence" OR "multiplex immunofluorescence"'
+      - '"imaging mass cytometry"'
+      - '"multiplexed ion beam imaging"'
+      - '"cyclic immunofluorescence" OR CyCIF'
+    nih_terms:
+      - spatial proteomics
+      - multiplexed immunofluorescence
+      - imaging mass cytometry
+    patent_terms:
+      - {phrase: multiplexed imaging, with: [tissue, antibody, antibodies, immunofluorescence, cell, biomarker, staining]}
+      - multiplexed tissue imaging
+      - cyclic staining
+      - iterative staining
+      - sequential staining
+      - mass cytometry imaging
+      - CyCIF
+      - spatial proteomic
+      - {phrase: spatial analysis, with: [protein, antibody, antibodies, immunofluorescence, mass cytometry]}
+    families:
+      cyclic_fluorescence:
+        label: Cyclic / barcoded fluorescence
+        platforms:
+          - {name: PhenoCycler (CODEX), query: '"PhenoCycler" OR ("CODEX" AND "multiplexed imaging")', launched: 2019, vendor: Quanterix,
+             acquired_from: Akoya Biosciences (2025-07), brand_kept: Akoya,
+             note: CODEX is ambiguous (codices, other tools); counted only with the AND context}
+          - {name: COMET, query: '"Lunaphore" OR ("COMET" AND "sequential immunofluorescence")', vendor: Bio-Techne, acquired_from: Lunaphore (2023-07)}
+          - {name: Cell DIVE, query: '"Cell DIVE"', vendor: Leica Microsystems, note: current generation introduced 2022-06}
+          - {name: Orion, query: '"Orion" AND "RareCyte"', vendor: RareCyte, launched: 2020}
+          - {name: MACSima, query: '"MACSima"', vendor: Miltenyi Biotec, launched: 2019}
+          - {name: CellScape, query: '"CellScape"', context: ['Canopy', 'Bruker'], vendor: Bruker, acquired_from: Canopy Biosciences (2020)}
+      mass_spec_imaging:
+        label: Metal-tag mass spec imaging
+        platforms:
+          - {name: Hyperion, query: '"imaging mass cytometry" AND "Hyperion"', launched: 2017, vendor: Standard BioTools, acquired_from: Fluidigm (rename 2022),
+             pending: sale of mass cytometry business to Element Biosystems LLC (GMT Venture Partners) agreed 2026-09-30; confirm close.
+               Not Element Biosciences}
+          - {name: MIBIscope, query: '"MIBIscope" OR "MIBI-TOF" OR "Ionpath"', vendor: Ionpath, launched: 2020}
+    cpc:
+      - G01N33/582
+      - G01N33/6848  # mass spectrometry of proteins (check)
+    cpc_note: same rule as transcriptomics
+    footnote: GeoMx DSP also runs protein panels but is counted once, under spatial transcriptomics (Josh, 2026-11-03)

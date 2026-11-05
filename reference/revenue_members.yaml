@@ -1,0 +1,32 @@
+# XBRL revenue members (srt:ProductOrServiceAxis) mapped to revenue mix and to technologies.
+# Leaf members only, so nothing is counted twice. ingest.edgar_mix checks that each year's mix
+# sums to reported total revenue (within 1%) and flags years that don't.
+# Checked against 10-K instances 2026-11-03.
+
+10x Genomics:
+  mix:
+    instrument: [txg:InstrumentsMember, txg:InstumentsMember]   # "Instuments" is the company's own tag, 2020-2022
+    consumable: [txg:ConsumablesMember]
+    service: [us-gaap:ServiceMember]
+    other: [txg:LicensingAndRoyaltyRevenueMember]
+  technology:   # reported from FY2023
+    spatial_transcriptomics:
+      instrument: [txg:SpatialInstrumentsMember]
+      consumable: [txg:SpatialConsumablesMember]
+    single_cell:
+      instrument: [txg:ChromiumInstrumentsMember, txg:SingleCellInstrumentsMember]
+      consumable: [txg:ChromiumConsumablesMember, txg:SingleCellConsumablesMember]
+
+Quanterix:
+  mix:
+    instrument: [qtrx:InstrumentProductsMember]
+    consumable: [qtrx:ConsumableAndOtherProductsMember]
+    service: [qtrx:ResearchServicesMember, qtrx:ServiceTypeWarrantiesMember, qtrx:OtherServicesMember, us-gaap:LicenseAndServiceMember]
+    other: [us-gaap:GrantMember]
+  technology:   # reported from FY2025 (Akoya acquired 2025-07-08)
+    spatial_proteomics:
+      product: [qtrx:SpatialProductRevenueMember]
+      service: [qtrx:SpatialServiceAndOtherRevenueMember]
+    affinity_single_molecule_proteomics:
+      product: [qtrx:SimoaProductRevenueMember]
+      service: [qtrx:SimoaServiceAndOtherRevenueMember]
