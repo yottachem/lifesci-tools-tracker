@@ -49,6 +49,8 @@ Keys and contact are read from environment variables, or from the macOS Keychain
 - Platform share is share of mentions: a paper naming two platforms counts once for each.
 - Academic methods (Slide-seq, seqFISH, DBiT-seq) count toward technology adoption, never toward a vendor's share.
 - Each platform is counted under one technology.
+- Only scholarly work types count (articles, reviews, preprints, conference papers and abstracts, chapters, books, dissertations, editorials, letters). Dataset, software and peer-review records are excluded.
+- Every brand query has a measured precision from a labeled random sample (`precision/`); platforms under 0.8 are flagged on the site. Counts are compared across years per 100K OpenAlex works, and the current year is marked partial.
 - Patents count when a title or abstract term matches within a life-science CPC scope. Claims are not searched, so counts are a consistent lower bound.
 - Market value is derived (month-end close x latest reported shares outstanding). Raw prices are not stored or published.
 

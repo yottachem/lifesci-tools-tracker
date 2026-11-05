@@ -69,11 +69,11 @@ technologies:
           - {name: Visium HD, query: '"Visium HD"', vendor: 10x Genomics, launched: 2024, parent: Visium}
           - {name: Stereo-seq, query: '"Stereo-seq"', vendor: MGI Tech, acquired_from: STOmics (BGI Group; announced 2026-03, confirm close), launched: 2022,
              note: '"STOmics" dropped: matches ostomy literature ("stomics") even when quoted'}
-          - {name: Curio Seeker / Trekker, query: '"Curio Seeker" OR "Curio Trekker" OR "Curio Bioscience"', vendor: Takara Bio,
+          - {name: Curio Seeker / Trekker, query: '"Curio Seeker" OR "Curio Trekker" OR "Curio Bioscience"', context: ['spatial', 'Slide-seq', 'Slide-tags'], vendor: Takara Bio,
              acquired_from: Curio Bioscience (2025-01), launched: 2022,
-             note: products of Slide-seqV2 and Slide-tags; academic method use is a method_term}
+             note: 'products of Slide-seqV2 and Slide-tags; academic method use is a method_term. Low precision (2026-11-05 sample): "Curio Biosciences" appears in founder and honoraria disclosures inside spatial papers; no query term separates them'}
           - {name: AtlasXomics, query: '"AtlasXomics" AND "spatial"', vendor: AtlasXomics,
-             note: commercializes DBiT-seq (Yale); academic DBiT-seq use is a method_term; launch year unconfirmed}
+             note: 'commercializes DBiT-seq (Yale); academic DBiT-seq use is a method_term; launch year unconfirmed. Low precision (2026-11-05 sample): founder disclosures and affiliations in DBiT papers; product-term variants did not help'}
       imaging_in_situ:
         label: Imaging-based in situ
         platforms:
@@ -85,11 +85,12 @@ technologies:
              note: product of seqFISH (Caltech); academic seqFISH use is a method_term}
           - {name: G4X, query: '"G4X" AND "Singular Genomics"', vendor: Singular Genomics, launched: 2025,
              note: private since Deerfield take-private (2025-02)}
-          - {name: AVITI24, query: '"AVITI24"', vendor: Element Biosciences, launched: 2024}
+          - {name: AVITI24, query: '"AVITI24"', context: ['Teton', 'cytoprofiling'], vendor: Element Biosciences, launched: 2024,
+             note: 'AVITI24 is also a plain NGS sequencer; only Teton/cytoprofiling use is spatial (2026-11-05 sample: "in situ" context let sequencing use back in)'}
       region_based:
         label: Region-based profiling
         platforms:
-          - {name: GeoMx DSP, query: '"GeoMx"', vendor: Bruker, acquired_from: NanoString (2024), launched: 2019}
+          - {name: GeoMx DSP, query: '"GeoMx"', context: ['NanoString', 'spatial', 'DSP', 'Bruker'], vendor: Bruker, acquired_from: NanoString (2024), launched: 2019}
     cpc:
       - C12Q1/6841   # in situ hybridisation
       - C12Q1/6874   # sequencing methods on solid supports (check)
@@ -130,15 +131,16 @@ technologies:
           - {name: PhenoCycler (CODEX), query: '"PhenoCycler" OR ("CODEX" AND "multiplexed imaging")', launched: 2019, vendor: Quanterix,
              acquired_from: Akoya Biosciences (2025-07), brand_kept: Akoya,
              note: CODEX is ambiguous (codices, other tools); counted only with the AND context}
-          - {name: COMET, query: '"Lunaphore" OR ("COMET" AND "sequential immunofluorescence")', vendor: Bio-Techne, acquired_from: Lunaphore (2023-07)}
-          - {name: Cell DIVE, query: '"Cell DIVE"', vendor: Leica Microsystems, note: current generation introduced 2022-06}
+          - {name: COMET, query: '("Lunaphore" AND ("COMET" OR "sequential immunofluorescence" OR "seqIF")) OR ("COMET" AND "sequential immunofluorescence")',
+             vendor: Bio-Techne, acquired_from: Lunaphore (2023-07), note: bare "Lunaphore" matched oncology disclosures (2026-11-05 sample)}
+          - {name: Cell DIVE, query: '"Cell DIVE"', context: ['multiplex', 'multiplexed', 'Leica', 'immunofluorescence', 'GE Healthcare'], vendor: Leica Microsystems, note: current generation introduced 2022-06}
           - {name: Orion, query: '"Orion" AND "RareCyte"', vendor: RareCyte, launched: 2020}
-          - {name: MACSima, query: '"MACSima"', vendor: Miltenyi Biotec, launched: 2019}
+          - {name: MACSima, query: '"MACSima"', context: ['imaging', 'multiplex', 'multiplexed', 'cyclic', 'immunofluorescence'], vendor: Miltenyi Biotec, launched: 2019}
           - {name: CellScape, query: '"CellScape"', context: ['Canopy', 'Bruker'], vendor: Bruker, acquired_from: Canopy Biosciences (2020)}
       mass_spec_imaging:
         label: Metal-tag mass spec imaging
         platforms:
-          - {name: Hyperion, query: '"imaging mass cytometry" AND "Hyperion"', launched: 2017, vendor: Standard BioTools, acquired_from: Fluidigm (rename 2022),
+          - {name: Hyperion, query: '"Hyperion" AND "imaging mass cytometry"', launched: 2017, vendor: Standard BioTools, acquired_from: Fluidigm (rename 2022),
              pending: sale of mass cytometry business to Element Biosystems LLC (GMT Venture Partners) agreed 2026-09-30; confirm close.
                Not Element Biosciences}
           - {name: MIBIscope, query: '"MIBIscope" OR "MIBI-TOF" OR "Ionpath"', vendor: Ionpath, launched: 2020}

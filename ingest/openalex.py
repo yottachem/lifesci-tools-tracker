@@ -5,6 +5,10 @@ title + abstract + open-access full text (methods sections name the instrument).
 OpenAlex stems bare words and matches quoted terms exactly, so brands must be quoted
 (tests/test_taxonomy.py enforces this).
 
+Only scholarly work types count (TYPES): datasets, software, peer-review records and other
+repository deposits name platforms too (e.g. HuBMAP "CODEX data from ..." records) and would
+inflate counts.
+
 Key: OPENALEX_API_KEY or Keychain item openalex-api-key. The key travels in the URL, so errors
 are re-raised without it.
 
@@ -15,6 +19,12 @@ import requests
 from ingest.common import contact, load_taxonomies, platforms, secret, write_snapshot
 
 URL = "https://api.openalex.org/works"
+TYPES = ("article", "review", "preprint", "conference-abstract", "conference-paper", "book-chapter",
+         "book", "dissertation", "editorial", "letter")
+
+
+def works_filter(field, query):
+    return f"type:{'|'.join(TYPES)},{field}:{query}"
 
 
 def platform_query(p):
@@ -25,7 +35,7 @@ def platform_query(p):
 
 
 def by_year(field, query):
-    params = {"filter": f"{field}:{query}", "group_by": "publication_year"}
+    params = {"filter": works_filter(field, query), "group_by": "publication_year"}
     if email := contact():
         params["mailto"] = email
     if key := secret("OPENALEX_API_KEY", "openalex-api-key"):
