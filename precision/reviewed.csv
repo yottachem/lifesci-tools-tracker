@@ -152,3 +152,562 @@ spatial_proteomics,patents,imaging mass cytometry,12283471,2026-11-05
 spatial_proteomics,patents,imaging mass cytometry,20210333173,2026-11-05
 spatial_proteomics,patents,spatial analysis,20220404245,2026-11-05
 spatial_proteomics,patents,multiplexed tissue imaging,20250110027,2026-11-05
+qpcr_dpcr,platforms,QX ddPCR,W4385805511,2026-11-06
+qpcr_dpcr,platforms,QX ddPCR,W3086286093,2026-11-06
+qpcr_dpcr,platforms,QX700 (naica),W4281776030,2026-11-06
+qpcr_dpcr,platforms,QIAcuity,W4410321313,2026-11-06
+qpcr_dpcr,platforms,QIAcuity,W4316036963,2026-11-06
+qpcr_dpcr,platforms,QIAcuity,W7169510002,2026-11-06
+qpcr_dpcr,platforms,QIAcuity,W7171791668,2026-11-06
+qpcr_dpcr,platforms,QIAcuity,W7167501171,2026-11-06
+qpcr_dpcr,platforms,QIAcuity,W7223587800,2026-11-06
+qpcr_dpcr,platforms,QIAcuity,W7222960340,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W4408990546,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W4401589252,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W7124425215,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W4392242782,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W2811478209,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W4367309866,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W4412696157,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W7129728168,2026-11-06
+qpcr_dpcr,platforms,Absolute Q,W4412878833,2026-11-06
+qpcr_dpcr,platforms,QuantStudio,W7221009230,2026-11-06
+qpcr_dpcr,platforms,QuantStudio,W4391755860,2026-11-06
+qpcr_dpcr,platforms,QuantStudio,W4393232051,2026-11-06
+qpcr_dpcr,platforms,QuantStudio,W4384925781,2026-11-06
+qpcr_dpcr,platforms,StepOne / 7500,W4206480176,2026-11-06
+qpcr_dpcr,platforms,StepOne / 7500,W3153310966,2026-11-06
+qpcr_dpcr,platforms,StepOne / 7500,W4415149152,2026-11-06
+qpcr_dpcr,platforms,CFX,W3000397787,2026-11-06
+qpcr_dpcr,platforms,CFX,W1726692666,2026-11-06
+qpcr_dpcr,platforms,CFX,W3154055914,2026-11-06
+qpcr_dpcr,platforms,LightCycler,W2271518881,2026-11-06
+qpcr_dpcr,platforms,LightCycler,W1518620957,2026-11-06
+qpcr_dpcr,platforms,LightCycler,W4411037194,2026-11-06
+qpcr_dpcr,platforms,LightCycler,W4388500189,2026-11-06
+qpcr_dpcr,platforms,Rotor-Gene,W3092834651,2026-11-06
+qpcr_dpcr,platforms,Rotor-Gene,W3136892423,2026-11-06
+qpcr_dpcr,platforms,Rotor-Gene,W20123063,2026-11-06
+qpcr_dpcr,platforms,Biomark,W4393054470,2026-11-06
+qpcr_dpcr,platforms,Biomark,W4205488820,2026-11-06
+qpcr_dpcr,platforms,Biomark,W3194622638,2026-11-06
+qpcr_dpcr,platforms,Biomark,W3134656240,2026-11-06
+qpcr_dpcr,platforms,Biomark,W2946963067,2026-11-06
+qpcr_dpcr,methods,"""quantitative PCR"" OR ""real-time PCR"" OR ""qPCR""",W2983952667,2026-11-06
+qpcr_dpcr,methods,"""quantitative PCR"" OR ""real-time PCR"" OR ""qPCR""",W4324368169,2026-11-06
+qpcr_dpcr,methods,"""RT-qPCR""",W7125235208,2026-11-06
+qpcr_dpcr,methods,"""RT-qPCR""",W3122543843,2026-11-06
+qpcr_dpcr,methods,"""RT-qPCR""",W4210485205,2026-11-06
+qpcr_dpcr,methods,"""digital PCR"" OR ""dPCR""",W4281772349,2026-11-06
+qpcr_dpcr,methods,"""digital PCR"" OR ""dPCR""",W7223152741,2026-11-06
+qpcr_dpcr,methods,"""digital PCR"" OR ""dPCR""",W2072653188,2026-11-06
+qpcr_dpcr,methods,"""digital PCR"" OR ""dPCR""",W2487226073,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W4281772349,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W4225116442,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W2959499736,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W3006695530,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W4387875118,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W4411849948,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W2604807216,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W4406346852,2026-11-06
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",W4324117441,2026-11-06
+qpcr_dpcr,nih,quantitative PCR,7978907,2026-11-06
+qpcr_dpcr,nih,real-time PCR,8397366,2026-11-06
+qpcr_dpcr,nih,real-time PCR,8256107,2026-11-06
+qpcr_dpcr,patents,digital PCR; droplet digital; droplet digital PCR,11376595,2026-11-06
+qpcr_dpcr,patents,quantitative PCR,9090702,2026-11-06
+qpcr_dpcr,patents,qPCR,20100075312,2026-11-06
+qpcr_dpcr,patents,real time PCR; real-time PCR,20150057172,2026-11-06
+qpcr_dpcr,patents,real time PCR; real-time PCR,20100173301,2026-11-06
+qpcr_dpcr,patents,dPCR,20240254539,2026-11-06
+qpcr_dpcr,patents,real time PCR; real-time PCR,20120058474,2026-11-06
+qpcr_dpcr,patents,ddPCR; digital PCR; droplet digital,20190221286,2026-11-06
+qpcr_dpcr,patents,real time PCR; real-time PCR,20160362722,2026-11-06
+qpcr_dpcr,patents,quantitative PCR,20150267248,2026-11-06
+flow_cytometry,platforms,FACSCalibur,W2008161494,2026-11-06
+flow_cytometry,platforms,FACSCalibur,W2069878165,2026-11-06
+flow_cytometry,platforms,FACSCanto,W4311840946,2026-11-06
+flow_cytometry,platforms,FACSCanto,W2970739294,2026-11-06
+flow_cytometry,platforms,FACSCanto,W3036389479,2026-11-06
+flow_cytometry,platforms,FACSAria,W4200585787,2026-11-06
+flow_cytometry,platforms,FACSAria,W4386387670,2026-11-06
+flow_cytometry,platforms,FACSAria,W3123422372,2026-11-06
+flow_cytometry,platforms,FACSAria,W3093444901,2026-11-06
+flow_cytometry,platforms,FACSAria,W2140943644,2026-11-06
+flow_cytometry,platforms,FACSAria,W2058019279,2026-11-06
+flow_cytometry,platforms,FACSAria,W3152860974,2026-11-06
+flow_cytometry,platforms,LSR Fortessa / LSR II,W4283696918,2026-11-06
+flow_cytometry,platforms,LSR Fortessa / LSR II,W4291582763,2026-11-06
+flow_cytometry,platforms,LSR Fortessa / LSR II,W4386387670,2026-11-06
+flow_cytometry,platforms,LSR Fortessa / LSR II,W2794600019,2026-11-06
+flow_cytometry,platforms,LSR Fortessa / LSR II,W4410256612,2026-11-06
+flow_cytometry,platforms,LSR Fortessa / LSR II,W2278544506,2026-11-06
+flow_cytometry,platforms,FACSymphony,W4404061102,2026-11-06
+flow_cytometry,platforms,FACSDiscover,W7214015590,2026-11-06
+flow_cytometry,platforms,FACSDiscover,W7214341751,2026-11-06
+flow_cytometry,platforms,FACSDiscover,W7164050869,2026-11-06
+flow_cytometry,platforms,FACSDiscover,W4411715332,2026-11-06
+flow_cytometry,platforms,FACSDiscover,W4416776427,2026-11-06
+flow_cytometry,platforms,Accuri,W4401854182,2026-11-06
+flow_cytometry,platforms,Accuri,W4392809342,2026-11-06
+flow_cytometry,platforms,CytoFLEX,W4387742941,2026-11-06
+flow_cytometry,platforms,CytoFLEX,W4405181338,2026-11-06
+flow_cytometry,platforms,CytoFLEX,W7142911111,2026-11-06
+flow_cytometry,platforms,CytoFLEX,W3201986202,2026-11-06
+flow_cytometry,platforms,CytoFLEX,W3165183165,2026-11-06
+flow_cytometry,platforms,Gallios / Navios,W2985722197,2026-11-06
+flow_cytometry,platforms,Gallios / Navios,W7166661465,2026-11-06
+flow_cytometry,platforms,Gallios / Navios,W3112540831,2026-11-06
+flow_cytometry,platforms,Aurora,W4377107725,2026-11-06
+flow_cytometry,platforms,Aurora,W4402923356,2026-11-06
+flow_cytometry,platforms,Northern Lights,W4404316032,2026-11-06
+flow_cytometry,platforms,Northern Lights,W4282913922,2026-11-06
+flow_cytometry,platforms,Northern Lights,W4382657391,2026-11-06
+flow_cytometry,platforms,Northern Lights,W4415762677,2026-11-06
+flow_cytometry,platforms,Northern Lights,W4396671258,2026-11-06
+flow_cytometry,platforms,Northern Lights,W4385454401,2026-11-06
+flow_cytometry,platforms,Northern Lights,W7196943679,2026-11-06
+flow_cytometry,platforms,ImageStream,W3200696404,2026-11-06
+flow_cytometry,platforms,ImageStream,W2467733976,2026-11-06
+flow_cytometry,platforms,ImageStream,W4322758729,2026-11-06
+flow_cytometry,platforms,Attune NxT,W4411147563,2026-11-06
+flow_cytometry,platforms,Attune NxT,W4395479655,2026-11-06
+flow_cytometry,platforms,Attune NxT,W4226068654,2026-11-06
+flow_cytometry,platforms,Attune NxT,W3023220912,2026-11-06
+flow_cytometry,platforms,Attune NxT,W4308531339,2026-11-06
+flow_cytometry,platforms,Attune NxT,W4414614977,2026-11-06
+flow_cytometry,platforms,Attune NxT,W2946686637,2026-11-06
+flow_cytometry,platforms,Sony cytometers,W4390616946,2026-11-06
+flow_cytometry,platforms,Sony cytometers,W4283720778,2026-11-06
+flow_cytometry,platforms,Sony cytometers,W2756389146,2026-11-06
+flow_cytometry,platforms,Sony cytometers,W4211144006,2026-11-06
+flow_cytometry,platforms,Sony cytometers,W4404510216,2026-11-06
+flow_cytometry,platforms,NovoCyte,W7164892140,2026-11-06
+flow_cytometry,platforms,NovoCyte,W4403055794,2026-11-06
+flow_cytometry,platforms,NovoCyte,W4415046229,2026-11-06
+flow_cytometry,platforms,NovoCyte,W4404419518,2026-11-06
+flow_cytometry,platforms,NovoCyte,W3024417511,2026-11-06
+flow_cytometry,platforms,NovoCyte,W4308506817,2026-11-06
+flow_cytometry,platforms,NovoCyte,W4403872334,2026-11-06
+flow_cytometry,platforms,MACSQuant,W2578144844,2026-11-06
+flow_cytometry,platforms,MACSQuant,W4400233058,2026-11-06
+flow_cytometry,platforms,MACSQuant,W7141263341,2026-11-06
+flow_cytometry,platforms,MACSQuant,W3170082512,2026-11-06
+flow_cytometry,platforms,MACSQuant,W4319322409,2026-11-06
+flow_cytometry,platforms,MACSQuant,W3005487467,2026-11-06
+flow_cytometry,platforms,MACSQuant,W4407459727,2026-11-06
+flow_cytometry,platforms,MACSQuant,W4282978595,2026-11-06
+flow_cytometry,platforms,MACSQuant,W4410549256,2026-11-06
+flow_cytometry,platforms,CyTOF,W4401724173,2026-11-06
+flow_cytometry,platforms,CyTOF,W2810882198,2026-11-06
+flow_cytometry,platforms,CyTOF,W3209344343,2026-11-06
+flow_cytometry,platforms,CyTOF,W4388496355,2026-11-06
+flow_cytometry,platforms,CyTOF,W2585665652,2026-11-06
+flow_cytometry,platforms,CyTOF,W4403113322,2026-11-06
+flow_cytometry,methods,"""flow cytometry""",W2376057526,2026-11-06
+flow_cytometry,methods,"""flow cytometry""",W7117725526,2026-11-06
+flow_cytometry,methods,"""flow cytometry""",W4404052916,2026-11-06
+flow_cytometry,methods,"""flow cytometry""",W2899502645,2026-11-06
+flow_cytometry,methods,"""flow cytometry""",W4392509090,2026-11-06
+flow_cytometry,methods,"""flow cytometry""",W3118829585,2026-11-06
+flow_cytometry,methods,"""flow cytometry""",W2921263157,2026-11-06
+flow_cytometry,methods,"""spectral flow cytometry"" OR ""spectral cytometry""",W4408846198,2026-11-06
+flow_cytometry,methods,"""spectral flow cytometry"" OR ""spectral cytometry""",W4396598590,2026-11-06
+flow_cytometry,methods,"""spectral flow cytometry"" OR ""spectral cytometry""",W4308382081,2026-11-06
+flow_cytometry,methods,"""spectral flow cytometry"" OR ""spectral cytometry""",W4362601532,2026-11-06
+flow_cytometry,methods,"""spectral flow cytometry"" OR ""spectral cytometry""",W4312166530,2026-11-06
+flow_cytometry,methods,"""mass cytometry"" NOT ""imaging mass cytometry""",W3096976675,2026-11-06
+flow_cytometry,methods,"""mass cytometry"" NOT ""imaging mass cytometry""",W4385330391,2026-11-06
+flow_cytometry,methods,"""mass cytometry"" NOT ""imaging mass cytometry""",W2981492940,2026-11-06
+flow_cytometry,methods,"""mass cytometry"" NOT ""imaging mass cytometry""",W3025291099,2026-11-06
+flow_cytometry,methods,"""mass cytometry"" NOT ""imaging mass cytometry""",W7223653693,2026-11-06
+flow_cytometry,methods,"""fluorescence-activated cell sorting""",W4362578942,2026-11-06
+flow_cytometry,methods,"""fluorescence-activated cell sorting""",W2919939285,2026-11-06
+flow_cytometry,methods,"""fluorescence-activated cell sorting""",W7166859183,2026-11-06
+flow_cytometry,methods,"""fluorescence-activated cell sorting""",W2053095351,2026-11-06
+flow_cytometry,methods,"""imaging flow cytometry""",W1946521231,2026-11-06
+flow_cytometry,methods,"""imaging flow cytometry""",W2897192958,2026-11-06
+flow_cytometry,methods,"""imaging flow cytometry""",W2800374626,2026-11-06
+flow_cytometry,methods,"""imaging flow cytometry""",W4318269912,2026-11-06
+flow_cytometry,methods,"""imaging flow cytometry""",W2509234207,2026-11-06
+flow_cytometry,methods,"""imaging flow cytometry""",W4404836653,2026-11-06
+flow_cytometry,nih,flow cytometry,10751030,2026-11-06
+flow_cytometry,nih,flow cytometry,9626879,2026-11-06
+flow_cytometry,nih,flow cytometry,9326937,2026-11-06
+flow_cytometry,nih,flow cytometry; mass cytometry,11072196,2026-11-06
+flow_cytometry,nih,flow cytometry,8881063,2026-11-06
+flow_cytometry,nih,flow cytometry,8946328,2026-11-06
+flow_cytometry,nih,flow cytometry,9926128,2026-11-06
+flow_cytometry,patents,flow cytometry,9651470,2026-11-06
+flow_cytometry,patents,cell sorter,20230132556,2026-11-06
+flow_cytometry,patents,imaging mass cytometry; mass cytometry,20230013375,2026-11-06
+flow_cytometry,patents,flow cytometry,20180327843,2026-11-06
+ms_proteomics,platforms,Orbitrap Astral,W7213341355,2026-11-06
+ms_proteomics,platforms,Orbitrap Astral,W4415982128,2026-11-06
+ms_proteomics,platforms,Orbitrap Astral,W4405924702,2026-11-06
+ms_proteomics,platforms,Orbitrap Astral,W7214215779,2026-11-06
+ms_proteomics,platforms,Orbitrap Exploris,W7169727656,2026-11-06
+ms_proteomics,platforms,Orbitrap Exploris,W4400248911,2026-11-06
+ms_proteomics,platforms,Orbitrap Exploris,W7221508319,2026-11-06
+ms_proteomics,platforms,Q Exactive,W2750987002,2026-11-06
+ms_proteomics,platforms,Q Exactive,W3155783726,2026-11-06
+ms_proteomics,platforms,Q Exactive,W2600171046,2026-11-06
+ms_proteomics,platforms,Q Exactive,W2996243610,2026-11-06
+ms_proteomics,platforms,Q Exactive,W3027049034,2026-11-06
+ms_proteomics,platforms,Q Exactive,W7125633000,2026-11-06
+ms_proteomics,platforms,Q Exactive,W2783176814,2026-11-06
+ms_proteomics,platforms,Orbitrap Tribrid,W2417586279,2026-11-06
+ms_proteomics,platforms,Orbitrap Tribrid,W2898937957,2026-11-06
+ms_proteomics,platforms,Orbitrap Tribrid,W4293105793,2026-11-06
+ms_proteomics,platforms,Orbitrap Tribrid,W7202340827,2026-11-06
+ms_proteomics,platforms,timsTOF,W7169778622,2026-11-06
+ms_proteomics,platforms,timsTOF,W4410068955,2026-11-06
+ms_proteomics,platforms,ZenoTOF / TripleTOF,W4293152805,2026-11-06
+ms_proteomics,platforms,ZenoTOF / TripleTOF,W4378070384,2026-11-06
+ms_proteomics,platforms,ZenoTOF / TripleTOF,W7133938131,2026-11-06
+ms_proteomics,platforms,Proteograph,W4390344997,2026-11-06
+ms_proteomics,platforms,Proteograph,W7119849755,2026-11-06
+ms_proteomics,platforms,Proteograph,W4394963881,2026-11-06
+ms_proteomics,platforms,Proteograph,W7197001200,2026-11-06
+ms_proteomics,methods,"""mass spectrometry-based proteomics"" OR ""MS-based proteomics""",W2005508070,2026-11-06
+ms_proteomics,methods,"""data-independent acquisition""",W2811509973,2026-11-06
+ms_proteomics,methods,"""data-independent acquisition""",W4402498183,2026-11-06
+ms_proteomics,methods,"""data-independent acquisition""",W4403476603,2026-11-06
+ms_proteomics,methods,"""data-independent acquisition""",W3037783563,2026-11-06
+ms_proteomics,methods,"""data-independent acquisition""",W1535758028,2026-11-06
+ms_proteomics,methods,"""shotgun proteomics"" OR ""bottom-up proteomics""",W2890333562,2026-11-06
+ms_proteomics,methods,"""shotgun proteomics"" OR ""bottom-up proteomics""",W2897335047,2026-11-06
+ms_proteomics,methods,"""top-down proteomics""",W2062413801,2026-11-06
+ms_proteomics,methods,"""top-down proteomics""",W7214935805,2026-11-06
+ms_proteomics,methods,"""top-down proteomics""",W2898142635,2026-11-06
+ms_proteomics,methods,"""top-down proteomics""",W2767144842,2026-11-06
+ms_proteomics,methods,"""top-down proteomics""",W2010349321,2026-11-06
+ms_proteomics,methods,"""top-down proteomics""",W4385779707,2026-11-06
+ms_proteomics,methods,"""top-down proteomics""",W7152938909,2026-11-06
+ms_proteomics,methods,"""tandem mass tag""",W2318273580,2026-11-06
+ms_proteomics,methods,"""tandem mass tag""",W7213429502,2026-11-06
+ms_proteomics,methods,"""tandem mass tag""",W7214914880,2026-11-06
+ms_proteomics,methods,"""tandem mass tag""",W2971374468,2026-11-06
+ms_proteomics,methods,"""single-cell proteomics""",W4399882884,2026-11-06
+ms_proteomics,methods,"""single-cell proteomics""",W2983086552,2026-11-06
+ms_proteomics,nih,data-independent acquisition,11419954,2026-11-06
+ms_proteomics,nih,top-down proteomics,8855324,2026-11-06
+ms_proteomics,nih,quantitative proteomics,9273646,2026-11-06
+ms_proteomics,nih,quantitative proteomics,10335862,2026-11-06
+ms_proteomics,patents,proteomic,12013392,2026-11-06
+ms_proteomics,patents,isobaric,9863956,2026-11-06
+ms_proteomics,patents,quantitative proteomics,9194005,2026-11-06
+ms_proteomics,patents,data independent acquisition; data-independent acquisition,20250258150,2026-11-06
+ms_proteomics,patents,proteomic,20140302545,2026-11-06
+ms_proteomics,patents,isobaric,20230096494,2026-11-06
+affinity_proteomics,platforms,Olink,W4323067016,2026-11-06
+affinity_proteomics,platforms,Olink,W7170092012,2026-11-06
+affinity_proteomics,platforms,Olink,W4392618822,2026-11-06
+affinity_proteomics,platforms,Olink,W2996095718,2026-11-06
+affinity_proteomics,platforms,Olink,W7134140576,2026-11-06
+affinity_proteomics,platforms,NULISA,W7214744126,2026-11-06
+affinity_proteomics,platforms,NULISA,W7165912594,2026-11-06
+affinity_proteomics,platforms,NULISA,W4410502072,2026-11-06
+affinity_proteomics,platforms,SomaScan,W7127577504,2026-11-06
+affinity_proteomics,platforms,SomaScan,W4285803892,2026-11-06
+affinity_proteomics,platforms,SomaScan,W4417229754,2026-11-06
+affinity_proteomics,platforms,SomaScan,W4385302512,2026-11-06
+affinity_proteomics,platforms,SomaScan,W4409183274,2026-11-06
+affinity_proteomics,platforms,Simoa,W4376133444,2026-11-06
+affinity_proteomics,platforms,Simoa,W4309717842,2026-11-06
+affinity_proteomics,platforms,Simoa,W3189505148,2026-11-06
+affinity_proteomics,platforms,Simoa,W2792994524,2026-11-06
+affinity_proteomics,platforms,Simoa,W7124954233,2026-11-06
+affinity_proteomics,platforms,Simoa,W3215044690,2026-11-06
+affinity_proteomics,platforms,Simoa,W3043452939,2026-11-06
+affinity_proteomics,platforms,Simoa,W7159926015,2026-11-06
+affinity_proteomics,platforms,Simoa,W7117258510,2026-11-06
+affinity_proteomics,platforms,Simoa,W4406246968,2026-11-06
+affinity_proteomics,platforms,Simoa,W3104807274,2026-11-06
+affinity_proteomics,platforms,Simoa,W4390195221,2026-11-06
+affinity_proteomics,platforms,Simoa,W3163017087,2026-11-06
+affinity_proteomics,platforms,Simoa,W4409222273,2026-11-06
+affinity_proteomics,platforms,Simoa,W4409531859,2026-11-06
+affinity_proteomics,platforms,Simoa,W7119466182,2026-11-06
+affinity_proteomics,platforms,Simoa,W2914468144,2026-11-06
+affinity_proteomics,methods,"""proximity extension assay""",W2952624934,2026-11-06
+affinity_proteomics,methods,"""proximity extension assay""",W4398210383,2026-11-06
+affinity_proteomics,methods,"""proximity extension assay""",W4401669413,2026-11-06
+affinity_proteomics,methods,"""proximity extension assay""",W4379510861,2026-11-06
+affinity_proteomics,methods,"""proximity extension assay""",W4220981937,2026-11-06
+affinity_proteomics,methods,"""proximity extension assay""",W7203858717,2026-11-06
+affinity_proteomics,methods,"""affinity proteomics"" OR ""affinity-based proteomics""",W3137305808,2026-11-06
+affinity_proteomics,methods,"""aptamer-based proteomics"" OR ""aptamer-based proteomic""",W4416639571,2026-11-06
+affinity_proteomics,methods,"""aptamer-based proteomics"" OR ""aptamer-based proteomic""",W2460528421,2026-11-06
+affinity_proteomics,methods,"""aptamer-based proteomics"" OR ""aptamer-based proteomic""",W4389940500,2026-11-06
+affinity_proteomics,methods,"""single molecule array""",W4384704800,2026-11-06
+affinity_proteomics,methods,"""single molecule array""",W4416639874,2026-11-06
+affinity_proteomics,methods,"""single molecule array""",W4280534580,2026-11-06
+affinity_proteomics,nih,single molecule array,10144907,2026-11-06
+affinity_proteomics,nih,single molecule array,8545204,2026-11-06
+affinity_proteomics,nih,aptamer-based proteomics,9647105,2026-11-06
+affinity_proteomics,patents,slow off-rate modified aptamer,10526663,2026-11-06
+affinity_proteomics,patents,slow off-rate modified aptamer,20170051337,2026-11-06
+protein_sequencing,platforms,Platinum (Quantum-Si),W4379983906,2026-11-06
+protein_sequencing,platforms,Platinum (Quantum-Si),W4405085238,2026-11-06
+protein_sequencing,platforms,Platinum (Quantum-Si),W4396858058,2026-11-06
+protein_sequencing,methods,"""single-molecule protein sequencing""",W3129475001,2026-11-06
+protein_sequencing,methods,"""single-molecule protein sequencing""",W4386826863,2026-11-06
+protein_sequencing,methods,"""single-molecule protein sequencing""",W4400350094,2026-11-06
+protein_sequencing,methods,"""single-molecule protein sequencing""",W4404123981,2026-11-06
+protein_sequencing,methods,"""single-molecule protein sequencing""",W3192483458,2026-11-06
+protein_sequencing,methods,"""single-molecule protein sequencing""",W4390722707,2026-11-06
+protein_sequencing,methods,"""single-molecule protein sequencing""",W4205214909,2026-11-06
+protein_sequencing,methods,"""fluorosequencing""",W4400350094,2026-11-06
+protein_sequencing,methods,"""fluorosequencing""",W7111984673,2026-11-06
+protein_sequencing,methods,"""fluorosequencing""",W7129127778,2026-11-06
+protein_sequencing,methods,"""fluorosequencing""",W4287116651,2026-11-06
+protein_sequencing,methods,"""nanopore protein sequencing""",W2942129348,2026-11-06
+protein_sequencing,methods,"""nanopore protein sequencing""",W7221692301,2026-11-06
+protein_sequencing,methods,"""protein sequencing""",W4403116774,2026-11-06
+protein_sequencing,methods,"""protein sequencing""",W3004821879,2026-11-06
+protein_sequencing,nih,single molecule protein sequencing,10709532,2026-11-06
+protein_sequencing,nih,fluorosequencing; single molecule protein sequencing,10499925,2026-11-06
+protein_sequencing,nih,nanopore protein sequencing; single molecule protein sequencing,11428313,2026-11-06
+protein_sequencing,nih,single molecule protein sequencing,10646810,2026-11-06
+protein_sequencing,nih,single molecule protein sequencing,11253979,2026-11-06
+protein_sequencing,nih,single molecule protein sequencing,11406864,2026-11-06
+protein_sequencing,nih,single molecule protein sequencing,8825522,2026-11-06
+protein_sequencing,nih,fluorosequencing,10821396,2026-11-06
+protein_sequencing,patents,protein sequencing,11767348,2026-11-06
+protein_sequencing,patents,protein sequencing,11980849,2026-11-06
+protein_sequencing,patents,protein sequencing,20240302380,2026-11-06
+protein_sequencing,patents,protein sequencing,20210072251,2026-11-06
+protein_sequencing,patents,protein sequencing,20200018768,2026-11-06
+protein_sequencing,patents,protein sequencing; single molecule protein sequencing; single-molecule protein sequencing,20240361331,2026-11-06
+short_read_ngs,platforms,NovaSeq,W7214037396,2026-11-06
+short_read_ngs,platforms,NovaSeq,W4401171764,2026-11-06
+short_read_ngs,platforms,NovaSeq,W4405986692,2026-11-06
+short_read_ngs,platforms,NovaSeq,W4403170776,2026-11-06
+short_read_ngs,platforms,NovaSeq,W4410192123,2026-11-06
+short_read_ngs,platforms,NovaSeq,W4403871001,2026-11-06
+short_read_ngs,platforms,NovaSeq X,W7220841348,2026-11-06
+short_read_ngs,platforms,NovaSeq X,W7214157926,2026-11-06
+short_read_ngs,platforms,NovaSeq X,W4402070639,2026-11-06
+short_read_ngs,platforms,NovaSeq X,W4406627387,2026-11-06
+short_read_ngs,platforms,NovaSeq X,W7223099630,2026-11-06
+short_read_ngs,platforms,NovaSeq X,W7163865410,2026-11-06
+short_read_ngs,platforms,NovaSeq X,W7223356549,2026-11-06
+short_read_ngs,platforms,NovaSeq X,W4412616696,2026-11-06
+short_read_ngs,platforms,NextSeq,W3154351087,2026-11-06
+short_read_ngs,platforms,NextSeq,W4321236573,2026-11-06
+short_read_ngs,platforms,NextSeq,W4311658451,2026-11-06
+short_read_ngs,platforms,NextSeq,W4380996607,2026-11-06
+short_read_ngs,platforms,NextSeq,W4391392358,2026-11-06
+short_read_ngs,platforms,MiSeq,W7163411751,2026-11-06
+short_read_ngs,platforms,MiSeq,W2995078019,2026-11-06
+short_read_ngs,platforms,MiSeq,W3006306605,2026-11-06
+short_read_ngs,platforms,MiSeq,W7111960599,2026-11-06
+short_read_ngs,platforms,MiniSeq / iSeq,W7212232265,2026-11-06
+short_read_ngs,platforms,MiniSeq / iSeq,W4200313068,2026-11-06
+short_read_ngs,platforms,MiniSeq / iSeq,W4206383808,2026-11-06
+short_read_ngs,platforms,HiSeq,W2946862318,2026-11-06
+short_read_ngs,platforms,HiSeq,W2990027730,2026-11-06
+short_read_ngs,platforms,HiSeq,W7154950022,2026-11-06
+short_read_ngs,platforms,HiSeq,W2605450878,2026-11-06
+short_read_ngs,platforms,HiSeq,W3031850649,2026-11-06
+short_read_ngs,platforms,HiSeq,W2783905246,2026-11-06
+short_read_ngs,platforms,AVITI,W7213552873,2026-11-06
+short_read_ngs,platforms,AVITI,W7124177692,2026-11-06
+short_read_ngs,platforms,AVITI,W4415218655,2026-11-06
+short_read_ngs,platforms,AVITI,W4410717070,2026-11-06
+short_read_ngs,platforms,AVITI,W7206176923,2026-11-06
+short_read_ngs,platforms,DNBSEQ,W4388731792,2026-11-06
+short_read_ngs,platforms,DNBSEQ,W4389721268,2026-11-06
+short_read_ngs,platforms,DNBSEQ,W4405735960,2026-11-06
+short_read_ngs,platforms,DNBSEQ,W7140168437,2026-11-06
+short_read_ngs,platforms,DNBSEQ,W4386930261,2026-11-06
+short_read_ngs,platforms,DNBSEQ,W4413376149,2026-11-06
+short_read_ngs,platforms,UG 100 / UG 200,W7213980004,2026-11-06
+short_read_ngs,platforms,UG 100 / UG 200,W7130914218,2026-11-06
+short_read_ngs,platforms,UG 100 / UG 200,W7148939050,2026-11-06
+short_read_ngs,platforms,UG 100 / UG 200,W7148792229,2026-11-06
+short_read_ngs,platforms,Onso,W7140188351,2026-11-06
+short_read_ngs,platforms,Onso,W7114930915,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W245110925,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W2983714691,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W7171646288,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W2927661693,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W1991634131,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W2914893890,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W2890005884,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W1953414397,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W4379051622,2026-11-06
+short_read_ngs,platforms,Ion Torrent,W2138822296,2026-11-06
+short_read_ngs,methods,"""next-generation sequencing""",W2998328089,2026-11-06
+short_read_ngs,methods,"""next-generation sequencing""",W2340109007,2026-11-06
+short_read_ngs,methods,"""next-generation sequencing""",W4313500383,2026-11-06
+short_read_ngs,methods,"""next-generation sequencing""",W2921614555,2026-11-06
+short_read_ngs,methods,"""next-generation sequencing""",W4403293488,2026-11-06
+short_read_ngs,methods,"""next-generation sequencing""",W2615517193,2026-11-06
+short_read_ngs,methods,"""next-generation sequencing""",W4415425840,2026-11-06
+short_read_ngs,methods,"""next-generation sequencing""",W1972221219,2026-11-06
+short_read_ngs,methods,"""massively parallel sequencing""",W4238613884,2026-11-06
+short_read_ngs,methods,"""massively parallel sequencing""",W2102535731,2026-11-06
+short_read_ngs,methods,"""massively parallel sequencing""",W7118903106,2026-11-06
+short_read_ngs,methods,"""massively parallel sequencing""",W2791152408,2026-11-06
+short_read_ngs,methods,"""high-throughput sequencing""",W2952781962,2026-11-06
+short_read_ngs,methods,"""high-throughput sequencing""",W3193393909,2026-11-06
+short_read_ngs,methods,"""high-throughput sequencing""",W3196557661,2026-11-06
+short_read_ngs,methods,"""high-throughput sequencing""",W4399208171,2026-11-06
+short_read_ngs,methods,"""high-throughput sequencing""",W3216419469,2026-11-06
+short_read_ngs,methods,"""whole-exome sequencing""",W7148719416,2026-11-06
+short_read_ngs,methods,"""whole-exome sequencing""",W4283785412,2026-11-06
+short_read_ngs,methods,"""whole-exome sequencing""",W2990534398,2026-11-06
+short_read_ngs,methods,"""sequencing by synthesis""",W3113397101,2026-11-06
+short_read_ngs,methods,"""sequencing by synthesis""",W2085060961,2026-11-06
+short_read_ngs,methods,"""sequencing by synthesis""",W2607679510,2026-11-06
+short_read_ngs,methods,"""sequencing by synthesis""",W1992618238,2026-11-06
+short_read_ngs,methods,"""sequencing by synthesis""",W2586229766,2026-11-06
+short_read_ngs,nih,high-throughput sequencing,9570641,2026-11-06
+short_read_ngs,nih,massively parallel sequencing,8178973,2026-11-06
+short_read_ngs,nih,next-generation sequencing,9493455,2026-11-06
+short_read_ngs,nih,next-generation sequencing,10654043,2026-11-06
+short_read_ngs,nih,next-generation sequencing,9464528,2026-11-06
+short_read_ngs,nih,next-generation sequencing,8382000,2026-11-06
+short_read_ngs,patents,next generation sequencing; next-generation sequencing,11390905,2026-11-06
+short_read_ngs,patents,high-throughput sequencing,20200239870,2026-11-06
+short_read_ngs,patents,whole exome sequencing; whole-exome sequencing,20250218532,2026-11-06
+long_read_sequencing,platforms,Sequel,W2219139669,2026-11-06
+long_read_sequencing,platforms,Sequel,W4411100310,2026-11-06
+long_read_sequencing,platforms,Sequel,W3091599432,2026-11-06
+long_read_sequencing,platforms,Revio,W4407235720,2026-11-06
+long_read_sequencing,platforms,Revio,W4414711262,2026-11-06
+long_read_sequencing,platforms,Revio,W7160912090,2026-11-06
+long_read_sequencing,platforms,Revio,W7135406897,2026-11-06
+long_read_sequencing,platforms,Revio,W4410226358,2026-11-06
+long_read_sequencing,platforms,Vega,W7171423789,2026-11-06
+long_read_sequencing,platforms,Vega,W7172118771,2026-11-06
+long_read_sequencing,platforms,MinION,W4417011141,2026-11-06
+long_read_sequencing,platforms,MinION,W4392617889,2026-11-06
+long_read_sequencing,platforms,MinION,W7170148708,2026-11-06
+long_read_sequencing,platforms,MinION,W7145654520,2026-11-06
+long_read_sequencing,platforms,MinION,W4311810752,2026-11-06
+long_read_sequencing,platforms,GridION,W4408069968,2026-11-06
+long_read_sequencing,platforms,GridION,W3044999833,2026-11-06
+long_read_sequencing,platforms,GridION,W7131896103,2026-11-06
+long_read_sequencing,platforms,GridION,W3088504223,2026-11-06
+long_read_sequencing,platforms,PromethION,W4389223334,2026-11-06
+long_read_sequencing,platforms,PromethION,W7203949533,2026-11-06
+long_read_sequencing,platforms,PromethION,W4411124523,2026-11-06
+long_read_sequencing,platforms,PromethION,W7165522668,2026-11-06
+long_read_sequencing,platforms,Flongle,W4393275943,2026-11-06
+long_read_sequencing,platforms,Flongle,W4413038474,2026-11-06
+long_read_sequencing,platforms,Flongle,W4413636530,2026-11-06
+long_read_sequencing,platforms,Flongle,W4375852831,2026-11-06
+long_read_sequencing,platforms,CycloneSEQ,W7140512868,2026-11-06
+long_read_sequencing,platforms,CycloneSEQ,W7225104801,2026-11-06
+long_read_sequencing,platforms,CycloneSEQ,W4413341220,2026-11-06
+long_read_sequencing,platforms,CycloneSEQ,W7203819481,2026-11-06
+long_read_sequencing,platforms,CycloneSEQ,W4415583549,2026-11-06
+long_read_sequencing,methods,"""long-read sequencing""",W4385705950,2026-11-06
+long_read_sequencing,methods,"""nanopore sequencing""",W4389223334,2026-11-06
+long_read_sequencing,methods,"""nanopore sequencing""",W2955617048,2026-11-06
+long_read_sequencing,methods,"""nanopore sequencing""",W4391481020,2026-11-06
+long_read_sequencing,methods,"""single-molecule real-time sequencing"" OR ""SMRT sequencing""",W3141363273,2026-11-06
+long_read_sequencing,methods,"""single-molecule real-time sequencing"" OR ""SMRT sequencing""",W2605179586,2026-11-06
+long_read_sequencing,methods,"""single-molecule real-time sequencing"" OR ""SMRT sequencing""",W2618774403,2026-11-06
+long_read_sequencing,methods,"""single-molecule real-time sequencing"" OR ""SMRT sequencing""",W2980142769,2026-11-06
+long_read_sequencing,methods,"""single-molecule real-time sequencing"" OR ""SMRT sequencing""",W4411419276,2026-11-06
+long_read_sequencing,methods,"""single-molecule real-time sequencing"" OR ""SMRT sequencing""",W3160402891,2026-11-06
+long_read_sequencing,methods,"""HiFi reads"" OR ""HiFi sequencing""",W4410787149,2026-11-06
+long_read_sequencing,methods,"""HiFi reads"" OR ""HiFi sequencing""",W7164123833,2026-11-06
+long_read_sequencing,methods,"""third-generation sequencing""",W4409504953,2026-11-06
+long_read_sequencing,methods,"""third-generation sequencing""",W2011246380,2026-11-06
+long_read_sequencing,methods,"""third-generation sequencing""",W4409633762,2026-11-06
+long_read_sequencing,methods,"""third-generation sequencing""",W2949233210,2026-11-06
+long_read_sequencing,methods,"""third-generation sequencing""",W2892250190,2026-11-06
+long_read_sequencing,nih,long-read sequencing,10160779,2026-11-06
+long_read_sequencing,nih,long-read sequencing,10403109,2026-11-06
+long_read_sequencing,nih,long-read sequencing,10673671,2026-11-06
+long_read_sequencing,nih,nanopore sequencing,10873590,2026-11-06
+long_read_sequencing,patents,nanopore,10605800,2026-11-06
+long_read_sequencing,patents,nanopore,20190203286,2026-11-06
+long_read_sequencing,patents,nanopore,20180002742,2026-11-06
+single_cell,platforms,Chromium,W4410012092,2026-11-06
+single_cell,platforms,Chromium,W4400127826,2026-11-06
+single_cell,platforms,Chromium,W4400296262,2026-11-06
+single_cell,platforms,BD Rhapsody,W4392947517,2026-11-06
+single_cell,platforms,BD Rhapsody,W4408951453,2026-11-06
+single_cell,platforms,BD Rhapsody,W4409874135,2026-11-06
+single_cell,platforms,BD Rhapsody,W4410064434,2026-11-06
+single_cell,platforms,BD Rhapsody,W3210058230,2026-11-06
+single_cell,platforms,BD Rhapsody,W7126085243,2026-11-06
+single_cell,platforms,BD Rhapsody,W4415464140,2026-11-06
+single_cell,platforms,BD Rhapsody,W4315979051,2026-11-06
+single_cell,platforms,PIPseq,W7117989183,2026-11-06
+single_cell,platforms,PIPseq,W4415283457,2026-11-06
+single_cell,platforms,PIPseq,W2951681442,2026-11-06
+single_cell,platforms,PIPseq,W3186679502,2026-11-06
+single_cell,platforms,PIPseq,W4387345423,2026-11-06
+single_cell,platforms,PIPseq,W7148212126,2026-11-06
+single_cell,platforms,PIPseq,W4387458392,2026-11-06
+single_cell,platforms,Singleron,W7125409926,2026-11-06
+single_cell,platforms,Singleron,W4366525997,2026-11-06
+single_cell,platforms,Singleron,W7225183785,2026-11-06
+single_cell,platforms,Singleron,W2950460603,2026-11-06
+single_cell,platforms,Singleron,W4417535946,2026-11-06
+single_cell,platforms,Singleron,W4410418781,2026-11-06
+single_cell,platforms,Evercode,W4415283457,2026-11-06
+single_cell,platforms,Evercode,W7217534355,2026-11-06
+single_cell,platforms,Evercode,W7153199959,2026-11-06
+single_cell,platforms,ScaleBio,W7214213456,2026-11-06
+single_cell,platforms,ScaleBio,W7221753534,2026-11-06
+single_cell,platforms,ScaleBio,W4408217694,2026-11-06
+single_cell,platforms,Tapestri,W4404236441,2026-11-06
+single_cell,platforms,Tapestri,W4293862384,2026-11-06
+single_cell,platforms,Tapestri,W4200311748,2026-11-06
+single_cell,platforms,Tapestri,W3095877702,2026-11-06
+single_cell,platforms,Tapestri,W4414341863,2026-11-06
+single_cell,platforms,Tapestri,W4389233967,2026-11-06
+single_cell,platforms,Tapestri,W4415020375,2026-11-06
+single_cell,platforms,Tapestri,W3160339688,2026-11-06
+single_cell,platforms,Tapestri,W4414710061,2026-11-06
+single_cell,methods,"""single-cell RNA sequencing"" OR ""single-cell RNA-seq"" OR ""scRNA-seq""",W3118671263,2026-11-06
+single_cell,methods,"""single-cell RNA sequencing"" OR ""single-cell RNA-seq"" OR ""scRNA-seq""",W7221009230,2026-11-06
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",W7225238822,2026-11-06
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",W4412624871,2026-11-06
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",W4415325418,2026-11-06
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",W7222785595,2026-11-06
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",W4403091963,2026-11-06
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",W7165635442,2026-11-06
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",W4402551727,2026-11-06
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",W7214077767,2026-11-06
+single_cell,methods,"""single-cell ATAC"" OR ""scATAC-seq""",W7152597463,2026-11-06
+single_cell,methods,"""single-cell ATAC"" OR ""scATAC-seq""",W4405611901,2026-11-06
+single_cell,methods,"""single-cell ATAC"" OR ""scATAC-seq""",W7222674998,2026-11-06
+single_cell,methods,"""single-cell ATAC"" OR ""scATAC-seq""",W3167809470,2026-11-06
+single_cell,methods,"""single-cell ATAC"" OR ""scATAC-seq""",W4312922603,2026-11-06
+single_cell,methods,"""single-cell ATAC"" OR ""scATAC-seq""",W4413313962,2026-11-06
+single_cell,methods,"""single-cell ATAC"" OR ""scATAC-seq""",W4416140930,2026-11-06
+single_cell,methods,"""CITE-seq""",W4389222484,2026-11-06
+single_cell,methods,"""CITE-seq""",W4285794953,2026-11-06
+single_cell,methods,"""CITE-seq""",W4389228902,2026-11-06
+single_cell,methods,"""CITE-seq""",W7112293469,2026-11-06
+single_cell,methods,"""CITE-seq""",W4410276159,2026-11-06
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",W7154223489,2026-11-06
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",W4402826744,2026-11-06
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",W7128505297,2026-11-06
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",W7156992368,2026-11-06
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",W7203865879,2026-11-06
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",W4401211774,2026-11-06
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",W4406020965,2026-11-06
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",W7155453271,2026-11-06
+single_cell,nih,single-cell RNA sequencing,10627860,2026-11-06
+single_cell,nih,single-cell RNA sequencing,10944852,2026-11-06
+single_cell,nih,single-cell RNA sequencing,11414566,2026-11-06
+single_cell,nih,scRNA-seq,11166858,2026-11-06
+single_cell,nih,single-cell RNA sequencing,10766236,2026-11-06
+single_cell,nih,single-cell ATAC,11397574,2026-11-06
+single_cell,nih,single-cell RNA sequencing,10001677,2026-11-06
+single_cell,patents,single cell,8716015,2026-11-06
+single_cell,patents,single cell,12121899,2026-11-06
+single_cell,patents,single cell; single cell sequencing,11603556,2026-11-06
+single_cell,patents,single cell,20250122335,2026-11-06
+spatial_transcriptomics,platforms,Pyxa,W759087128,2026-11-06
+spatial_transcriptomics,platforms,Pyxa,W3184764988,2026-11-06
