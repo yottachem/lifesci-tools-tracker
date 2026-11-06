@@ -1,7 +1,7 @@
 # Mature anchors: qPCR/dPCR and flow cytometry.
 # Field reference and counting rules: taxonomy/spatial.yaml header.
-# Drafted 2026-11-05; Josh reviews. verify: true = launch year / ownership not yet checked against a primary source;
-# verify: launch = ownership checked 2026-11-05 (landscape cross-check, see taxonomy/spatial.yaml header), launch year still open.
+# Drafted 2026-11-05; Josh reviews. Ownership checked 2026-11-05 (landscape cross-check, see taxonomy/spatial.yaml header);
+# launch years and remaining ownership checked 2026-11-06 against press releases and filings (reference/launch_sources.yaml).
 
 technologies:
 
@@ -32,11 +32,11 @@ technologies:
       digital:
         label: Digital PCR
         platforms:
-          - {name: QX ddPCR, query: '"QX200" OR "QX100" OR "QX600" OR "QX ONE" OR "QX Continuum"', vendor: Bio-Rad, launched: 2011, verify: launch}
+          - {name: QX ddPCR, query: '"QX200" OR "QX100" OR "QX600" OR "QX ONE" OR "QX Continuum"', vendor: Bio-Rad, launched: 2011}
           - {name: QX700 (naica), query: '"QX700" OR ("naica" AND ("Stilla" OR "digital PCR")) OR "Stilla Nio" OR ("Nio" AND "Stilla Technologies")', vendor: Bio-Rad, acquired_from: Stilla Technologies (2025-06-30), launched: 2025,
              note: 'QX700 series (E, S, HT) is the relaunched Stilla Nio; naica is end-of-life but still cited (Bio-Rad FAQ). Nio clause added 2026-11-05; Nio needs "Stilla Technologies": Swedish "nio" (nine) and "stilla" (still) co-occur in theses, and Nio is an author surname',
              source: 'https://www.bio-rad.com/en-us/bio-rads-acquisition-stilla-technologies/1751570278475'}
-          - {name: QIAcuity, query: '"QIAcuity"', vendor: QIAGEN, launched: 2020, verify: launch}
+          - {name: QIAcuity, query: '"QIAcuity"', vendor: QIAGEN, launched: 2020}
           - {name: Absolute Q, query: '"Absolute Q"', context: ['digital PCR', 'dPCR', 'Thermo Fisher', 'QuantStudio'], vendor: Thermo Fisher Scientific,
              acquired_from: Combinati (2021)}
           - {name: Digital LightCycler, query: '"Digital LightCycler"', vendor: Roche}
@@ -44,10 +44,11 @@ technologies:
         label: Real-time PCR
         platforms:
           - {name: QuantStudio, query: '"QuantStudio"', vendor: Thermo Fisher Scientific, note: '"QuantStudio Absolute Q" mentions also count here'}
-          - {name: StepOne / 7500, query: '"StepOnePlus" OR "StepOne" OR "7500 Fast" OR "7500 Real-Time"', context: ['PCR', 'qPCR', 'Applied Biosystems'], vendor: Thermo Fisher Scientific, verify: true}
+          - {name: StepOne / 7500, query: '"StepOnePlus" OR "StepOne" OR "7500 Fast" OR "7500 Real-Time"', context: ['PCR', 'qPCR', 'Applied Biosystems'], vendor: Thermo Fisher Scientific,
+             note: '7500 (about 2004) and StepOne (2007) predate the 2010 counting window'}
           - {name: CFX, query: '"CFX96" OR "CFX384" OR "CFX Opus" OR "CFX Connect"', vendor: Bio-Rad}
           - {name: LightCycler, query: '"LightCycler 480" OR "LightCycler 96" OR "LightCycler PRO"', vendor: Roche}
-          - {name: Rotor-Gene, query: '"Rotor-Gene"', vendor: QIAGEN, verify: true}
+          - {name: Rotor-Gene, query: '"Rotor-Gene"', vendor: QIAGEN, acquired_from: Corbett Life Science (2008-07), note: predates the 2010 counting window}
           - {name: Biomark, query: '"Fluidigm BioMark" OR "BioMark HD" OR "Biomark X9" OR "Biomark X" OR "Standard BioTools Biomark"',
              context: ['Fluidigm', 'Standard BioTools', 'dynamic array', 'integrated fluidic circuit'], vendor: Standard BioTools,
              note: OpenAlex stems a bare "BioMark" to "biomarker" (precision 0.14 in the first sample); the query needs the vendor or model}
@@ -89,24 +90,24 @@ technologies:
           - {name: FACSCanto, query: '"FACSCanto"', vendor: Waters, acquired_from: BD (2026-02)}
           - {name: FACSAria, query: '"FACSAria"', vendor: Waters, acquired_from: BD (2026-02)}
           - {name: LSR Fortessa / LSR II, query: '"LSRFortessa" OR "LSR Fortessa" OR "LSRII" OR "LSR II"', vendor: Waters, acquired_from: BD (2026-02)}
-          - {name: FACSymphony, query: '"FACSymphony"', vendor: Waters, acquired_from: BD (2026-02), launched: 2016, verify: launch}
-          - {name: FACSDiscover, query: '"FACSDiscover"', vendor: Waters, acquired_from: BD (2026-02), launched: 2023, verify: launch}
+          - {name: FACSymphony, query: '"FACSymphony"', vendor: Waters, acquired_from: BD (2026-02), launched: 2016}
+          - {name: FACSDiscover, query: '"FACSDiscover"', vendor: Waters, acquired_from: BD (2026-02), launched: 2023}
           - {name: Accuri, query: '"Accuri"', vendor: Waters, acquired_from: BD (2026-02)}
       beckman:
         label: Beckman Coulter
         platforms:
-          - {name: CytoFLEX, query: '"CytoFLEX"', vendor: Danaher, launched: 2015, verify: launch}
+          - {name: CytoFLEX, query: '"CytoFLEX"', vendor: Danaher, launched: 2015}
           - {name: Gallios / Navios, query: '"Gallios" OR "Navios"', context: ['flow cytometer', 'flow cytometry', 'Beckman Coulter'], vendor: Danaher}
       spectral_other:
         label: Spectral and other vendors
         platforms:
-          - {name: Aurora, query: '"Aurora"', context: ['Cytek'], vendor: Cytek Biosciences, launched: 2017, verify: launch}
+          - {name: Aurora, query: '"Aurora"', context: ['Cytek'], vendor: Cytek Biosciences, launched: 2017}
           - {name: Northern Lights, query: '"Northern Lights"', context: ['Cytek'], vendor: Cytek Biosciences}
-          - {name: ImageStream, query: '"ImageStream"', vendor: Cytek Biosciences, acquired_from: Luminex (2023), verify: true, note: imaging flow cytometry (Amnis)}
+          - {name: ImageStream, query: '"ImageStream"', vendor: Cytek Biosciences, launched: 2005, acquired_from: Luminex (DiaSorin) (2023-02), note: imaging flow cytometry (Amnis)}
           - {name: Attune NxT, query: '"Attune NxT"', vendor: Thermo Fisher Scientific}
-          - {name: Sony cytometers, query: '"ID7000" OR "SH800" OR "MA900" OR "SA3800"', context: ['Sony'], vendor: Sony, verify: true}
+          - {name: Sony cytometers, query: '"ID7000" OR "SH800" OR "MA900" OR "SA3800"', context: ['Sony'], vendor: Sony, launched: 2012}
           - {name: NovoCyte, query: '"NovoCyte"', vendor: Agilent}
-          - {name: MACSQuant, query: '"MACSQuant"', vendor: Miltenyi Biotec, verify: true, note: MACSima (spatial) is counted under spatial proteomics}
+          - {name: MACSQuant, query: '"MACSQuant"', vendor: Miltenyi Biotec, launched: 2008, note: MACSima (spatial) is counted under spatial proteomics}
       mass:
         label: Suspension mass cytometry
         platforms:

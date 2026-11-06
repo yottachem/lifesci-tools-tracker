@@ -1,7 +1,7 @@
 # Proteomics beyond spatial: mass-spec, affinity/single-molecule, protein sequencing.
 # Field reference and counting rules: taxonomy/spatial.yaml header.
-# Drafted 2026-11-05; Josh reviews. verify: true = launch year / ownership not yet checked against a primary source;
-# verify: launch = ownership checked 2026-11-05 (landscape cross-check, see taxonomy/spatial.yaml header), launch year still open.
+# Drafted 2026-11-05; Josh reviews. Ownership checked 2026-11-05 (landscape cross-check, see taxonomy/spatial.yaml header);
+# launch years and remaining ownership checked 2026-11-06 against press releases and filings (reference/launch_sources.yaml).
 
 technologies:
 
@@ -34,23 +34,23 @@ technologies:
       orbitrap:
         label: Orbitrap (Thermo Fisher)
         platforms:
-          - {name: Orbitrap Astral, query: '"Orbitrap Astral"', vendor: Thermo Fisher Scientific, launched: 2023, verify: launch,
+          - {name: Orbitrap Astral, query: '"Orbitrap Astral"', vendor: Thermo Fisher Scientific, launched: 2023,
              note: Orbitrap Astral Zoom (ASMS 2026) matches this query}
           - {name: Orbitrap Exploris, query: '"Orbitrap Exploris" OR "Exploris 480" OR "Exploris 240"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'],
-             vendor: Thermo Fisher Scientific, launched: 2019, verify: true}
+             vendor: Thermo Fisher Scientific, launched: 2019}
           - {name: Q Exactive, query: '"Q Exactive" OR "Q-Exactive"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'],
-             vendor: Thermo Fisher Scientific, launched: 2011, verify: true, note: also a metabolomics workhorse; the context keeps proteomics use}
+             vendor: Thermo Fisher Scientific, launched: 2011, note: also a metabolomics workhorse; the context keeps proteomics use}
           - {name: Orbitrap Tribrid, query: '"Orbitrap Fusion" OR "Fusion Lumos" OR "Orbitrap Eclipse" OR "Orbitrap Ascend"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'],
-             vendor: Thermo Fisher Scientific, launched: 2013, verify: launch}
+             vendor: Thermo Fisher Scientific, launched: 2013}
       tof:
         label: Time-of-flight
         platforms:
-          - {name: timsTOF, query: '"timsTOF"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'], vendor: Bruker, launched: 2017, verify: launch}
+          - {name: timsTOF, query: '"timsTOF"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'], vendor: Bruker, launched: 2016}
           - {name: ZenoTOF / TripleTOF, query: '"ZenoTOF" OR "TripleTOF"', context: ['proteomics', 'proteome', 'proteomic', 'peptide', 'peptides'], vendor: Danaher}
       sample_prep:
         label: Sample prep for MS
         platforms:
-          - {name: Proteograph, query: '"Proteograph"', vendor: Seer, launched: 2021, verify: launch}
+          - {name: Proteograph, query: '"Proteograph"', vendor: Seer, launched: 2021}
     cpc:
       - G01N33/6848  # protein analysis by mass spectrometry
       - H01J49       # mass spectrometers (outside the life-science CPC scope; instrument patents are not counted)
@@ -83,8 +83,10 @@ technologies:
       sequencing_readout:
         label: Antibody pairs, sequencing readout
         platforms:
-          - {name: Olink, query: '"Olink"', vendor: Thermo Fisher Scientific, acquired_from: Olink Proteomics (2024-07), verify: true}
-          - {name: NULISA, query: '"NULISA" OR "NULISAseq"', vendor: Alamar Biosciences, launched: 2023, verify: launch}
+          - {name: Olink, query: '"Olink"', vendor: Thermo Fisher Scientific, launched: 2013, acquired_from: Olink Proteomics (2024-07),
+             note: 'Proseek Multiplex, the first PEA panel, 2013-03 (singleplex Proseek 2011); earlier Olink hits are mostly Duolink PLA'}
+          - {name: NULISA, query: '"NULISA" OR "NULISAseq"', vendor: Alamar Biosciences, launched: 2024,
+             note: 'ARGO HT and NULISAseq commercial 2024-01; 2023 was early access'}
       aptamer:
         label: Aptamer
         platforms:
@@ -92,7 +94,7 @@ technologies:
       single_molecule:
         label: Single-molecule counting
         platforms:
-          - {name: Simoa, query: '"Simoa"', vendor: Quanterix, launched: 2014, verify: launch}
+          - {name: Simoa, query: '"Simoa"', vendor: Quanterix, launched: 2014}
     note: Nautilus (single-molecule proteome analysis) is pre-commercial; add at launch
     cpc:
       - G01N33/543   # immunoassay with insoluble carriers (check)
@@ -125,7 +127,7 @@ technologies:
       recognizer:
         label: Recognizer-based
         platforms:
-          - {name: Platinum (Quantum-Si), query: '"Quantum-Si"', context: ['protein sequencing', 'Platinum Pro', 'single-molecule protein', 'Next-Generation Protein Sequencing'], vendor: Quantum-Si, launched: 2022, verify: launch,
+          - {name: Platinum (Quantum-Si), query: '"Quantum-Si"', context: ['protein sequencing', 'Platinum Pro', 'single-molecule protein', 'Next-Generation Protein Sequencing'], vendor: Quantum-Si, launched: 2023,
              note: '"peptide" and "Platinum" context let in SI-unit metrology papers ("quantum SI")'}
     note: Erisyon, Glyphic and Portal Biotech are pre-commercial; add when they ship
     cpc:

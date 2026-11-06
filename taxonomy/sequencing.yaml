@@ -2,8 +2,8 @@
 # Field reference and counting rules: taxonomy/spatial.yaml header.
 # OpenAlex splits camelCase brands and stems the parts ("GridION" matched "grid", 332K works/yr),
 # so they need a vendor-name context. "Vega" is also the VEGA genome-annotation database.
-# Drafted 2026-11-05; Josh reviews. verify: true = launch year / ownership not yet checked against a primary source;
-# verify: launch = ownership checked 2026-11-05 (landscape cross-check, see taxonomy/spatial.yaml header), launch year still open.
+# Drafted 2026-11-05; Josh reviews. Ownership checked 2026-11-05 (landscape cross-check, see taxonomy/spatial.yaml header);
+# launch years and remaining ownership checked 2026-11-06 against press releases and filings (reference/launch_sources.yaml).
 
 technologies:
 
@@ -35,32 +35,32 @@ technologies:
       illumina_sbs:
         label: Illumina sequencing by synthesis
         platforms:
-          - {name: NovaSeq, query: '"NovaSeq"', vendor: Illumina, launched: 2017, verify: launch}
-          - {name: NovaSeq X, query: '"NovaSeq X"', vendor: Illumina, launched: 2023, parent: NovaSeq, verify: launch}
-          - {name: NextSeq, query: '"NextSeq"', vendor: Illumina, launched: 2014, verify: launch}
-          - {name: MiSeq, query: '"MiSeq"', vendor: Illumina, launched: 2011, verify: launch}
-          - {name: MiniSeq / iSeq, query: '"MiniSeq" OR "iSeq 100"', vendor: Illumina, launched: 2016, verify: launch}
-          - {name: HiSeq, query: '"HiSeq"', vendor: Illumina, launched: 2010, verify: true, note: discontinued; still cited for legacy data}
+          - {name: NovaSeq, query: '"NovaSeq"', vendor: Illumina, launched: 2017}
+          - {name: NovaSeq X, query: '"NovaSeq X"', vendor: Illumina, launched: 2023, parent: NovaSeq}
+          - {name: NextSeq, query: '"NextSeq"', vendor: Illumina, launched: 2014}
+          - {name: MiSeq, query: '"MiSeq"', vendor: Illumina, launched: 2011}
+          - {name: MiniSeq / iSeq, query: '"MiniSeq" OR "iSeq 100"', vendor: Illumina, launched: 2016}
+          - {name: HiSeq, query: '"HiSeq"', vendor: Illumina, launched: 2010, note: discontinued; still cited for legacy data}
       other_optical:
         label: Other optical short-read
         platforms:
-          - {name: AVITI, query: '"AVITI"', context: ['Element Biosciences', 'Element AVITI', 'avidity sequencing'], vendor: Element Biosciences, launched: 2022, verify: launch,
+          - {name: AVITI, query: '"AVITI"', context: ['Element Biosciences', 'Element AVITI', 'avidity sequencing'], vendor: Element Biosciences, launched: 2022,
              note: AVITI24 (cell profiling) is counted under spatial transcriptomics}
           - {name: DNBSEQ, query: '"DNBSEQ" OR "MGISEQ" OR "BGISEQ"', vendor: MGI Tech,
              note: 'sold in the US by Complete Genomics (MGI subsidiary). MGI agreed 2026-02-23 to sell Complete Genomics to Swiss Rockets AG (~$50M; pending MGI holder approval and CFIUS); MGI keeps a license to 205 patents',
              pending: Complete Genomics sale to Swiss Rockets; confirm which entity sells DNBSEQ in the US after close}
-          - {name: UG 100 / UG 200, query: '("UG 100" OR "UG100" OR "UG 200" OR "ppmSeq") AND ("Ultima Genomics" OR "flow-based sequencing" OR "mostly natural sequencing")', vendor: Ultima Genomics, launched: 2023, verify: launch,
+          - {name: UG 100 / UG 200, query: '("UG 100" OR "UG100" OR "UG 200" OR "ppmSeq") AND ("Ultima Genomics" OR "flow-based sequencing" OR "mostly natural sequencing")', vendor: Ultima Genomics, launched: 2024,
              note: 'UG 200 and UG 200 Ultra launched 2026-02-23. Product names only, like other brands: "Ultima Genomics" alone matched funding disclosures (precision 0.65), and "Ultima" alone matched Spanish and Portuguese "última" near "ug" units'}
           - {name: VITARI, query: '"Element VITARI" OR ("VITARI" AND "Element Biosciences")', vendor: Element Biosciences, launched: 2026,
              note: 'announced 2026; ships 2H 2026 (landscape 2026-10-22). A bare "VITARI" matched the author surname Vitari; no instrument uses yet, resample after launch'}
-          - {name: Onso, query: '"Onso"', context: ['PacBio', 'Pacific Biosciences', 'sequencing by binding'], vendor: PacBio, launched: 2023, verify: launch}
+          - {name: Onso, query: '"Onso"', context: ['PacBio', 'Pacific Biosciences', 'sequencing by binding'], vendor: PacBio, launched: 2023}
           - {name: AXELIOS 1, query: '"AXELIOS" AND ("Roche" OR "sequencing by expansion" OR "SBX")', vendor: Roche, launched: 2026,
              note: 'SBX (sequencing by expansion); launched 2026-06-29. Roche calls it single-molecule but it competes with short-read benchtops'}
       ion_semiconductor:
         label: Ion semiconductor
         platforms:
           - {name: Ion Torrent, query: '"Ion Torrent" OR "Ion S5" OR "Ion PGM" OR "Ion Proton" OR "Genexus"', context: ['sequencing', 'sequencer', 'Ion AmpliSeq'],
-             vendor: Thermo Fisher Scientific, launched: 2010, verify: launch}
+             vendor: Thermo Fisher Scientific, launched: 2010}
     cpc:
       - C12Q1/6869   # sequencing methods
       - C12Q1/6874   # sequencing on solid supports
@@ -93,18 +93,18 @@ technologies:
       smrt:
         label: Single-molecule real-time (SMRT)
         platforms:
-          - {name: Sequel, query: '"Sequel"', context: ['PacBio', 'Pacific Biosciences', 'SMRT'], vendor: PacBio, launched: 2015, verify: true}
-          - {name: Revio, query: '"Revio"', context: ['PacBio', 'Pacific Biosciences', 'HiFi', 'SMRT'], vendor: PacBio, launched: 2023, verify: launch}
-          - {name: Vega, query: '"PacBio Vega" OR "Pacific Biosciences Vega"', note: 'a bare "Vega" with PacBio context matched author surnames (De La Vega, Tazon-Vega)', vendor: PacBio, launched: 2024, verify: launch}
+          - {name: Sequel, query: '"Sequel"', context: ['PacBio', 'Pacific Biosciences', 'SMRT'], vendor: PacBio, launched: 2015}
+          - {name: Revio, query: '"Revio"', context: ['PacBio', 'Pacific Biosciences', 'HiFi', 'SMRT'], vendor: PacBio, launched: 2023}
+          - {name: Vega, query: '"PacBio Vega" OR "Pacific Biosciences Vega"', note: 'a bare "Vega" with PacBio context matched author surnames (De La Vega, Tazon-Vega)', vendor: PacBio, launched: 2024}
       nanopore:
         label: Nanopore
         platforms:
-          - {name: MinION, query: '"MinION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2015, verify: launch}
-          - {name: GridION, query: '"GridION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2017, verify: launch}
-          - {name: PromethION, query: '"PromethION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2018, verify: launch}
-          - {name: Flongle, query: '"Flongle"', vendor: Oxford Nanopore Technologies, launched: 2019, verify: launch}
-          - {name: CycloneSEQ, query: '"CycloneSEQ"', vendor: MGI Tech, verify: true,
-             note: BGI nanopore; part of the MGI Tech acquisition announced 2026-03 (confirm close)}
+          - {name: MinION, query: '"MinION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2015}
+          - {name: GridION, query: '"GridION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2017}
+          - {name: PromethION, query: '"PromethION"', context: ['Oxford Nanopore'], vendor: Oxford Nanopore Technologies, launched: 2018}
+          - {name: Flongle, query: '"Flongle"', vendor: Oxford Nanopore Technologies, launched: 2019}
+          - {name: CycloneSEQ, query: '"CycloneSEQ"', vendor: MGI Tech, launched: 2024,
+             note: 'BGI nanopore (developed by BGI Xufeng); MGI Tech has held exclusive global commercial rights since 2024, so the vendor holds whether or not the 2026-03 deal closes'}
     cpc:
       - G01N33/48721   # nanopore analysis of nucleic acids
       - C12Q1/6869
@@ -137,20 +137,20 @@ technologies:
       partition:
         label: Droplet and well partitioning
         platforms:
-          - {name: Chromium, query: '"Chromium"', context: ['10x Genomics', 'Chromium Controller', 'Chromium X', 'Chromium iX', 'scRNA-seq', 'single-cell RNA', 'single-nucleus RNA'], vendor: 10x Genomics, launched: 2016, verify: launch}
-          - {name: BD Rhapsody, query: '"BD Rhapsody"', vendor: Waters, acquired_from: BD (2026-02), launched: 2017, verify: launch}
+          - {name: Chromium, query: '"Chromium"', context: ['10x Genomics', 'Chromium Controller', 'Chromium X', 'Chromium iX', 'scRNA-seq', 'single-cell RNA', 'single-nucleus RNA'], vendor: 10x Genomics, launched: 2016}
+          - {name: BD Rhapsody, query: '"BD Rhapsody"', vendor: Waters, acquired_from: BD (2026-02), launched: 2017}
           - {name: PIPseq, query: '"PIPseq"', vendor: Illumina, acquired_from: Fluent BioSciences (2024-07-09)}
-          - {name: Singleron, query: '"Singleron" OR "GEXSCOPE"', vendor: Singleron, verify: true}
+          - {name: Singleron, query: '"Singleron" OR "GEXSCOPE"', vendor: Singleron, launched: 2019}
       combinatorial:
         label: Combinatorial barcoding
         platforms:
-          - {name: Evercode, query: '"Evercode" OR "Parse Biosciences"', vendor: QIAGEN, acquired_from: Parse Biosciences (2025-12-02), launched: 2021, verify: launch}
+          - {name: Evercode, query: '"Evercode" OR "Parse Biosciences"', vendor: QIAGEN, acquired_from: Parse Biosciences (2025-12-02), launched: 2021}
           - {name: ScaleBio, query: '"ScaleBio" OR "Scale Biosciences"', context: ['single-cell RNA', 'single-nucleus RNA', 'scRNA-seq', 'snRNA-seq', 'combinatorial indexing', 'sci-RNA-seq', 'QuantumScale'],
              note: 'OpenAlex splits and stems "ScaleBio"/"Scale Biosciences" into ecology and ML papers ("large-scale bio..."), so the context is required', vendor: 10x Genomics, acquired_from: Scale Biosciences (2025-08-11)}
       targeted_dna:
         label: Targeted single-cell DNA
         platforms:
-          - {name: Tapestri, query: '"Tapestri"', context: ['Mission Bio', 'single-cell DNA', 'single-cell', 'scDNA'], vendor: Mission Bio, launched: 2017, verify: true}
+          - {name: Tapestri, query: '"Tapestri"', context: ['Mission Bio', 'single-cell DNA', 'single-cell', 'scDNA'], vendor: Mission Bio, launched: 2017}
     cpc:
       - C12Q1/6806   # sample preparation for nucleic acid analysis (check)
       - C12N15/1065  # barcode/library construction (check)

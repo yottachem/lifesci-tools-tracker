@@ -6,8 +6,9 @@ import os
 import re
 
 import pytest
+import yaml
 
-from ingest.common import load_taxonomies, load_vendors, platforms
+from ingest.common import ROOT, load_taxonomies, load_vendors, platforms
 
 TECHS = load_taxonomies()
 VENDORS = load_vendors()
@@ -57,6 +58,15 @@ def test_platform_names_unique_per_technology():
 def test_no_unverified_facts_at_launch():
     flagged = [p["name"] for _, _, p in PLATFORMS if p.get("verify")]
     assert not flagged, f"verify: true still set on {flagged}"
+
+
+def test_launch_sources_match_taxonomy():
+    sources = yaml.safe_load((ROOT / "reference" / "launch_sources.yaml").read_text())
+    by_name = {p["name"]: p for _, _, p in PLATFORMS}
+    for name, src in sources.items():
+        assert name in by_name, f"launch_sources.yaml names unknown platform {name}"
+        assert by_name[name].get("launched") == src["launched"], f"{name}: taxonomy and launch_sources.yaml disagree"
+        assert src["source"].startswith("https://"), name
 
 
 def test_public_vendors_have_cik_or_foreign_listing():

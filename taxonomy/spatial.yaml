@@ -7,7 +7,9 @@
 #                 Quotes are not fully exact: a trailing "s" is still stripped ("GenePS" matches "Genep",
 #                 "STOmics" matches "stomic"), so a brand ending in s needs an AND context term.
 #                 AND/OR/NOT allowed
-#     launched:   first commercial year; hits before it are counted as noise by the probe
+#     launched:   first year of general commercial shipments (early access excluded); hits before it are counted
+#                 as noise by the probe. Omitted for platforms that predate the 2010 counting window.
+#                 Sources: reference/launch_sources.yaml
 #     context:    for ambiguous names, the brand only counts when one of these co-occurs
 #     vendor:     current owner; acquired_from records the history
 #     verify:     true = ownership/launch facts not yet checked against a primary source;

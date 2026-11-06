@@ -1,0 +1,48 @@
+# Launch year and ownership sources for platforms checked 2026-11-06.
+# launched = first year of general commercial shipments (early access excluded); see taxonomy/spatial.yaml header.
+# Spatial platforms were checked 2026-11-03 (sources in that taxonomy's notes and the plan).
+
+QX ddPCR: {launched: 2011, source: "https://www.genengnews.com/topics/omics/bio-rad-spends-162m-to-purchase-quantalife-for-digital-pcr-technology/", fact: "QuantaLife full commercial launch June 2011; Bio-Rad acquired 2011-10"}
+QIAcuity: {launched: 2020, source: "https://www.selectscience.net/article/qiagen-adds-dpcr-platform-qiacuity-to-growing-portfolio-of-covid-19-testing-solutions"}
+StepOne / 7500: {launched: null, source: "https://biosciencetechnology.com/product-releases/2007/03/real-time-pcr-system-10067", fact: "StepOne 2007-01; 7500 about 2004; both before 2010"}
+Rotor-Gene: {launched: null, source: "https://www.labmanager.com/qiagen-acquires-corbett-life-science-21005", fact: "QIAGEN acquired Corbett Life Science 2008-07-01; Rotor-Gene predates it"}
+FACSymphony: {launched: 2016, source: "https://news.bd.com/2016-02-08-BD-Launches-BD-FACSymphony-TM-High-Speed-Cell-Analyzer-to-Enable-Identification-and-Analysis-of-Rare-Cell-Types?asPDF=1"}
+FACSDiscover: {launched: 2023, source: "https://news.bd.com/2023-05-18-BD-Launches-Worlds-First-Spectral-Cell-Sorter-with-High-Speed-Cell-Imaging"}
+CytoFLEX: {launched: 2015, source: "https://www.selectscience.net/article/beckman-coulter-at-aacr-2015", fact: "announced 2014-11, launched AACR 2015-04"}
+Aurora: {launched: 2017, source: "https://www.biospace.com/cytek-biosciences-debuts-new-advanced-flow-cytometry-system"}
+ImageStream: {launched: 2005, source: "https://www.news-medical.net/news/20091007/Commercial-shipments-of-ImageStreamX-imaging-flow-cytometers-begin.aspx", fact: "Amnis commercial sales from 2005-01; Cytek bought Luminex FCI unit 2023-02-28", ownership_source: "https://photonics.com/Articles/Cytek_Biosciences_Acquires_Flow_Cytometry/a68798"}
+Sony cytometers: {launched: 2012, source: "https://instrumentbusinessoutlook.com/?p=144014", fact: "SH800, Sony's first own cytometer, orders from fall 2012; Sony bought iCyt 2010-02"}
+MACSQuant: {launched: 2008, source: "https://www.biospace.com/miltenyi-biotec-inc-release-the-new-macsquant-tm-analyzer-combines-cell-enrichment-and-flow-cytometry"}
+Orbitrap Astral: {launched: 2023, source: "https://www.biospace.com/thermo-fisher-scientific-introduces-groundbreaking-mass-spectrometer-to-revolutionize-biological-discovery"}
+Orbitrap Exploris: {launched: 2019, source: "https://www.biospace.com/thermo-fisher-scientific-extends-industry-leading-mass-spectrometry-portfolio-with-a-new-generation-of-intelligence-driven-instruments-and-software"}
+Q Exactive: {launched: 2011, source: "https://www.labcompare.com/617-News/18908-Thermo-Fisher-Scientific-Debuts-High-Performance-Benchtop-Quadrupole-Orbitrap-Mass-Spectrometer-at-ASMS-2011/"}
+Orbitrap Tribrid: {launched: 2013, source: "https://www.selectscience.net/article/thermo-fisher-scientific-launches-world-s-first-tribrid-lc-ms-at-asms-2013"}
+timsTOF: {launched: 2016, source: "https://prnewswire.com/news-releases/bruker-introduces-innovative-timstof-mass-spectrometer-300279675.html", fact: "timsTOF ASMS 2016-06 (was 2017, the timsTOF Pro year)"}
+Proteograph: {launched: 2021, source: "https://investor.seer.bio/news-releases/news-release-details/seer-reports-fourth-quarter-and-full-year-2020-financial-results", fact: "broad commercial release 2021-01"}
+Olink: {launched: 2013, source: "https://www.biospace.com/olink-bioscience-introduces-scalable-protein-biomarker-assays-with-proseek-multiplex", fact: "Proseek Multiplex 2013-03"}
+NULISA: {launched: 2024, source: "https://itdigest.com/healthtech/alamar-biosciences-announces-commercial-launch-of-the-argo-ht-system-and-the-nulisaseq-inflammation-panel-250-for-ultra-high-sensitivity-protein-analysis-in-biofluids/", fact: "commercial launch 2024-01-04; unveiled 2023-04 with early access (was 2023)"}
+Simoa: {launched: 2014, source: "https://www.sec.gov/Archives/edgar/data/0001503274/000104746918001842/a2234843z10-k.htm", fact: "HD-1 commercial launch 2014-01 (10-K)"}
+Platinum (Quantum-Si): {launched: 2023, source: "https://ir.quantum-si.com/news-releases/news-release-details/quantum-si-begins-commercial-shipments-platinumtm-protein", fact: "orders 2022-12-20, shipments Q1 2023 (was 2022)"}
+NovaSeq: {launched: 2017, source: "https://www.fool.com/investing/2017/11/29/why-2017-was-a-year-to-remember-for-illumina-inc.aspx"}
+NovaSeq X: {launched: 2023, source: "https://insidermonkey.com/blog/illumina-inc-nasdaqilmn-q4-2022-earnings-call-transcript-1117876", fact: "first shipments Q1 2023"}
+NextSeq: {launched: 2014, source: "https://www.genomeweb.com/node/82046", fact: "NextSeq 500 2014-01"}
+MiSeq: {launched: 2011, source: "https://www.sec.gov/Archives/edgar/data/0001110803/000111080312000041/ilmn-201110k.htm", fact: "commercial shipments Q3 2011 (10-K)"}
+MiniSeq / iSeq: {launched: 2016, source: "https://statementdog.com/analysis/ILMN/earnings_calls/93891", fact: "MiniSeq 2016-01; iSeq 2018"}
+HiSeq: {launched: 2010, source: "https://www.sec.gov/Archives/edgar/data/0001110803/000095012311019925/a58258e10vk.htm", fact: "HiSeq 2000 2010 (10-K)"}
+AVITI: {launched: 2022, source: "https://www.businesswire.com/news/home/20220608005220/en/Element-Biosciences-Announces-First-Customer-Shipments-and-New-Offerings-for-AVITI%E2%84%A2-System"}
+UG 100 / UG 200: {launched: 2024, source: "https://genomeweb.com/sequencing/ultima-genomics-says-ug-100-sequencer-ready-prime-time-high-throughput-applications", fact: "full commercial availability 2024-02; early access 2022-2023 (was 2023)"}
+Onso: {launched: 2023, source: "https://www.sec.gov/Archives/edgar/data/1299130/000129913024000054/pacb-20231231.htm", fact: "shipments from Q3 2023 (10-K)"}
+Ion Torrent: {launched: 2010, source: "https://www.bio-itworld.com/news/2010/12/14/ion-torrent-s-$3-million-community-incentive-plan", fact: "PGM launched 2010-12-14"}
+Sequel: {launched: 2015, source: "https://www.pacb.com/press_releases/pacific-biosciences-provides-update-on-launch-of-new-sequel-system/", fact: "launched 2015-09-30, first shipments Q4 2015"}
+Revio: {launched: 2023, source: "https://www.sec.gov/Archives/edgar/data/1299130/000129913024000054/pacb-20231231.htm", fact: "shipments from Q1 2023 (10-K)"}
+Vega: {launched: 2024, source: "https://www.genomeweb.com/sequencing/pacific-biosciences-unveils-lower-throughput-benchtop-hifi-sequencer", fact: "announced 2024-11-06; seven units shipped Q4 2024"}
+MinION: {launched: 2015, source: "https://nanoporetech.com/about/history"}
+GridION: {launched: 2017, source: "https://nanoporetech.com/about/history"}
+PromethION: {launched: 2018, source: "https://nanoporetech.com/about/history"}
+Flongle: {launched: 2019, source: "https://nanoporetech.com/about/history"}
+CycloneSEQ: {launched: 2024, source: "https://www.biopharmatrend.com/news/mgi-introduces-new-cycloneseq-nanopore-sequencing-products-940/", fact: "released 2024-09; MGI Tech exclusive commercial rights"}
+Chromium: {launched: 2016, source: "https://investors.10xgenomics.com/news/news-details/2016/10x-Genomics-Announces-Global-Commercial-Availability-of-the-Chromium-System-at-the-European-Society-of-Human-Genetics-ESHG-Conference-5-18-2016/default.aspx"}
+BD Rhapsody: {launched: 2017, source: "https://news.bd.com/2017-09-12-BD-Expands-Genomics-Portfolio-with-New-Single-Cell-Platform-for-RNA-Expression-Analysis-1"}
+Singleron: {launched: 2019, source: "https://www.life-sciences-europe.com/organisation/singleron-biotechnologies-group-2018-nanjing-jiangsu-kiangsu-province-2001-49623.html", fact: "GEXSCOPE reagents 2019-01; company founded 2018"}
+Evercode: {launched: 2021, source: "https://www.businesswire.com/news/home/20260331939311/en/Parse-Biosciences-a-QIAGEN-Company-Launches-FFPE-compatible-Barcoding-T"}
+Tapestri: {launched: 2017, source: "https://www.biospace.com/precision-medicine-meets-single-cell-dna-analysis-with-mission-bio", fact: "launched ASHG 2017-10; Mission Bio still private (2026)"}
