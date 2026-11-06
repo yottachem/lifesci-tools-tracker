@@ -1,0 +1,85 @@
+{% extends "base.html.j2" %}
+{% block title %}Methods{% endblock %}
+{% block description %}How the tracker counts papers, NIH grants, patents and companies, and how precisely each query measures what it claims.{% endblock %}
+{% block body %}
+<h1>Methods</h1>
+<p class="lede">Every number on this site comes from a public source, a query written down in the repo, and a precision measured on a labeled sample. This page says what each signal counts and what it misses.</p>
+
+<h2>What gets counted</h2>
+<div class="prose">
+<p>Each technology is defined in a taxonomy file: a one-line definition, the method terms papers use for it, the commercial platforms that deliver it, the phrases NIH grants use, and the claim-style wording patents use. A platform belongs to one technology only. Academic methods (Slide-seq, seqFISH) count toward a technology's papers but never toward a vendor's share.</p>
+</div>
+<div class="tw"><table>
+<thead><tr><th>Signal</th><th>Source</th><th>Counts</th><th>Matched in</th></tr></thead>
+<tbody>
+<tr><td>Papers</td><td>OpenAlex</td><td>Scholarly works using any of the method terms, by publication year{% if not meta.has_total %} (the largest single term until the union series is in){% endif %}</td><td>Title and abstract</td></tr>
+<tr><td>Platform mentions</td><td>OpenAlex</td><td>Works naming each brand, by publication year. A paper naming two platforms counts once for each</td><td>Title, abstract and open-access full text</td></tr>
+<tr><td>NIH grants</td><td>NIH RePORTER</td><td>Project-years (one per award per fiscal year), deduplicated across terms, with award dollars</td><td>Project title and abstract</td></tr>
+<tr><td>Patents</td><td>USPTO PatentsView bulk files</td><td>US grants and published applications, inside a life-science classification scope</td><td>Title and abstract</td></tr>
+<tr><td>Companies</td><td>SEC EDGAR, month-end close</td><td>Revenue and product-line mix for public pure plays; market value for every public vendor</td><td>10-K and 20-F XBRL</td></tr>
+</tbody></table></div>
+
+<h3>Papers</h3>
+<div class="prose">
+<p>Only scholarly work types count: articles, reviews, preprints, conference papers and abstracts, book chapters, dissertations, editorials and letters. Datasets, software records and repository deposits name platforms too and would inflate the counts.</p>
+<p>The scholarly record itself grows every year, so papers are shown per 100K works indexed that year{% if not meta.has_total %} (pending: raw counts are shown until the denominator series is in){% endif %}. Growth is the average annual change from {{ meta.growth_from }} to {{ meta.full_year }}.</p>
+<p>Brand mentions search open-access full text because methods sections are where instruments get named. Closed-access papers are missed, so read platform counts as a trend and a share, not as an installed base.</p>
+</div>
+
+<h3>NIH grants</h3>
+<div class="prose">
+<p>Each grant term is an exact phrase in the project title or abstract. A project matching several terms counts once. Dollars are the total award for that fiscal year; a multi-year project counts in each year it's funded. NIH is one funder among many, and the strongest signal for academic demand in the US.</p>
+</div>
+
+<h3>Patents</h3>
+<div class="prose">
+<p>Patents don't use journal wording, so each technology has its own claim-style phrases ("spatial barcode", not "spatial transcriptomics"). Matching is case-insensitive and tolerant of hyphens and plurals, in title or abstract, inside a life-science classification scope (CPC subclasses C12Q, C12N, C12M, C07K, C07H, G01N, G16B, B01L, plus cell-image analysis groups). Claims aren't searched, so counts are a lower bound, consistent from year to year. Applications are counted by publication date, about 18 months after filing; grants come later still.</p>
+<p>Some matched patents name the technology only as a readout or one of many uses rather than as the invention. That share was measured on the labeled samples and is shown on each technology page.</p>
+</div>
+
+<h3>Companies</h3>
+<div class="prose">
+<p>Revenue mix comes from the product-line breakdown companies tag in their annual filings. Each year's lines must add up to total revenue within 1% or the year is left out. Some companies report products and services only, without splitting instruments from consumables. Diversified companies are listed with their platforms but their revenue isn't attributed to one technology.</p>
+<p>Market value is month-end close times the latest reported shares outstanding. Closes come from an unofficial source; only the derived monthly market value is stored or shown.</p>
+</div>
+
+<h2>Precision</h2>
+<div class="prose">
+<p>A query is only useful if its hits are what it says. For every platform brand and every method, grant and patent term, about 50 hits were drawn at random and each was labeled yes (uses the technology or names the commercial platform), no (another meaning) or unclear (not enough text to tell). Labels were drafted by an AI model (Claude) with a one-line reason per row, then checked by hand: a random 10% of rows, every no and unclear, and every label inferred from a repeated pattern.</p>
+<p>Precision is yes / (yes + no), with a 95% Wilson interval. An entry under 0.8 is flagged <span class="flag">low</span> on its technology page and its count should be read as a trend, not a level. Queries that failed were tightened with context words and re-scored; a narrowed query keeps a random subset of its labeled hits, so no relabeling was needed.</p>
+<p>{{ n_entries }} entries, {{ n_labeled | fmt }} labeled hits, {{ n_low }} flagged low.</p>
+</div>
+<div class="tw"><table>
+<thead><tr><th>Technology</th>{% for k, label in signal_labels.items() %}<th>{{ label }}</th>{% endfor %}<th class="n">Hits labeled</th></tr></thead>
+<tbody>
+{% for r in prec_rows %}
+<tr><td><a href="{{ r.t.id }}.html">{{ r.t.label }}</a></td>
+{% for k in signal_labels %}{% set c = r.cells.get(k) %}<td>{% if c %}<span class="n">{{ "%.2f" | format(c.min) }}</span>{% if c.low %} <span class="flag">low</span>{% endif %}{% if c.entry %} <small>{{ c.entry }}</small>{% endif %}{% if c.n > 1 %}<br><small>lowest of {{ c.n }}</small>{% endif %}{% else %}–{% endif %}</td>{% endfor %}
+<td class="n">{{ r.labeled | fmt }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+<p class="note-p">Lowest precision per signal; the brand or term is named where it's under 0.95. Flagged low: {% for r in low_entries %}{{ r.entry }} ({{ "%.2f" | format(r.precision) }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>
+<p class="note-p">Per-entry results, intervals and every labeled row are in <a href="{{ repo }}/tree/main/precision">precision/</a>.</p>
+
+<h2>Time and lags</h2>
+<div class="prose">
+<ul>
+<li>The current year is partial everywhere. It's shaded on paper charts and left off trend lines and growth rates. Headline figures use {{ meta.full_year }}, the latest full year, for every signal so technologies are compared on the same period.</li>
+<li>NIH fiscal years run October to September.</li>
+<li>Patent files refresh about quarterly. Applications publish about 18 months after filing, so recent filing activity shows up late.</li>
+<li>Fiscal years are named the way each company names them; a 52/53-week year ending January 1 belongs to the year before.</li>
+<li>Launch years are the first year of general commercial shipments, early access excluded, each with a cited source. Platforms launched before 2010 show no year.</li>
+</ul>
+</div>
+
+<h2>Stages and takes</h2>
+<div class="prose">
+<p>The emerging, growth and mature labels are an editorial starting point, set when each technology was added. The signals are shown separately, with no composite score, so a reader can disagree with the label.</p>
+<p>Product takes are signed and dated personal views on a technology. They aren't investment advice and don't assess individual vendors.</p>
+</div>
+
+<h2>Reproduce it</h2>
+<div class="prose">
+<p>Code, taxonomies, precision samples and derived data are in <a href="{{ repo }}">the repository</a>. Each run fetches every source, rebuilds the panel and runs the tests before the site is built. Code is MIT; derived data is CC-BY-4.0; upstream licenses are listed in <a href="{{ repo }}/blob/main/sources.yaml">sources.yaml</a>.</p>
+</div>
+{% endblock %}

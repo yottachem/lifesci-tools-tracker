@@ -129,6 +129,16 @@ def financials(name, edgar, mix, mv):
             "market_value_series": dict(sorted(v.items()))}
 
 
+def pending_deals(techs, vendors):
+    """Announced deals that would move a platform or vendor, until their close is confirmed."""
+    out = [{"what": name, "pending": v["pending"]} for name, v in vendors.items() if v.get("pending")]
+    for tech in techs.values():
+        for _, p in platforms(tech):
+            if p.get("pending") and not any(d["what"] == p["name"] for d in out):
+                out.append({"what": p["name"], "pending": p["pending"]})
+    return out
+
+
 def run():
     techs, vendors = load_taxonomies(), load_vendors()
     snaps = {s: latest(s) for s in ("openalex", "reporter", "uspto", "edgar", "edgar_mix", "market_value")}
@@ -180,7 +190,8 @@ def run():
         }
     meta = {"built": date.today().isoformat(), "full_year": FULL_YEAR, "growth_from": GROWTH_FROM,
             "years": [YEARS.start, YEARS.stop - 1], "snapshots": {s: d for s, (d, _) in snaps.items()},
-            "patents_through": max(r["date"] for r in uspto["pregrant"]), "has_total": bool(total)}
+            "patents_through": max(r["date"] for r in uspto["pregrant"]), "has_total": bool(total),
+            "uspto_files": uspto.get("files", {}), "pending_deals": pending_deals(techs, vendors)}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({"meta": meta, "technologies": panel}, indent=1, sort_keys=False))
     for t in panel.values():

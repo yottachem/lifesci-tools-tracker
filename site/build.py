@@ -1,5 +1,5 @@
 """Build the site into site/dist from site/data/panel.json (transform.panel).
-Pages: home (maturity scatter + signal table) and one page per technology.
+Pages: home (maturity scatter + signal table), one page per technology, methods, status.
 
 Usage: uv run python site/build.py [--preview]
 --preview marks every page as an internal preview and shows sections still waiting on Josh
@@ -7,6 +7,7 @@ Usage: uv run python site/build.py [--preview]
 """
 import json
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -21,6 +22,14 @@ DIST = HERE / "dist"
 REPO = "https://github.com/yottachem/lifesci-tools-tracker"
 SHARE_MIN = 50  # platform mentions a year before shares are charted
 STAGE_ORDER = {"emerging": 0, "growth": 1, "mature": 2}
+SIGNAL_LABELS = {"platforms": "Platform brands", "methods": "Method terms", "nih": "NIH terms", "patents": "Patent terms"}
+# Hand-curated inputs listed on the status page: everything else is fetched each run
+CURATED = [("taxonomy/", "Technologies, method and grant terms, platforms, vendors per platform, launch years"),
+           ("reference/vendors.yaml", "Vendor roster: ownership history, listings, pending deals"),
+           ("reference/launch_sources.yaml", "Source for every platform launch year"),
+           ("reference/revenue_members.yaml", "Which XBRL product lines map to instruments, consumables and services"),
+           ("precision/summary.csv", "Measured precision per brand and term, from labeled samples"),
+           ("precision/patent_use.csv", "Share of matched patents that only use the technology")]
 MIX_LABELS = {"instrument": "Instruments", "consumable": "Consumables", "product": "Products", "service": "Services",
               "other": "Other", "related_party": "Related party"}
 
@@ -104,6 +113,47 @@ def home_context(panel, meta):
     return {"scatter": scatter, "rows": rows}
 
 
+def methods_context(panel):
+    """One row per technology: per signal, entries scored and the lowest precision (brand or term named when < 0.95)."""
+    rows = []
+    for t in panel.values():
+        cells = {}
+        for sig in SIGNAL_LABELS:
+            ps = [r for r in t["precision"] if r["signal"] == sig and r["precision"] is not None]
+            if ps:
+                worst = min(ps, key=lambda r: r["precision"])
+                named = worst["entry"] if len(ps) > 1 and worst["precision"] < 0.95 else None
+                cells[sig] = {"n": len(ps), "min": worst["precision"], "entry": named, "low": worst["low"]}
+        rows.append({"t": t, "cells": cells, "labeled": sum(int(r["sampled"]) for r in t["precision"] if r["precision"] is not None)})
+    entries = [r for t in panel.values() for r in t["precision"] if r["precision"] is not None]
+    return {"prec_rows": rows, "signal_labels": SIGNAL_LABELS, "n_entries": len(entries),
+            "n_labeled": sum(int(r["sampled"]) for r in entries), "n_low": sum(r["low"] for r in entries),
+            "low_entries": [r for r in entries if r["low"]]}
+
+
+def last_changed(path):
+    """Date of the last commit touching path (needs full history in CI: checkout fetch-depth 0)."""
+    r = subprocess.run(["git", "log", "-1", "--format=%cs", "--", path], cwd=ROOT, capture_output=True, text=True)
+    return r.stdout.strip() or None
+
+
+def status_context(panel, meta):
+    uspto = meta.get("uspto_files", {})
+    through = {k: max((f["fileDataToDate"] for n, f in uspto.items() if n.startswith(k)), default=None) for k in ("g_", "pg_")}
+    modified = max((f["fileLastModifiedDateTime"][:10] for f in uspto.values()), default=None)
+    snaps = meta["snapshots"]
+    sources = [
+        {"name": "OpenAlex", "what": "Papers and platform mentions", "snap": snaps["openalex"], "cover": "Indexing lags publication by weeks to months"},
+        {"name": "NIH RePORTER", "what": "Grant project-years and award dollars", "snap": snaps["reporter"], "cover": "Current fiscal year (October to September) is partial"},
+        {"name": "USPTO PatentsView bulk", "what": "Patent grants and published applications", "snap": snaps["uspto"],
+         "cover": f"Grants through {through['g_']}, applications through {through['pg_']}; files last updated {modified}"},
+        {"name": "SEC EDGAR", "what": "Revenue and revenue mix (XBRL)", "snap": snaps["edgar"], "cover": "Latest 10-K or 20-F per company"},
+        {"name": "Month-end close", "what": "Market value (with EDGAR shares outstanding)", "snap": snaps["market_value"], "cover": "Monthly; only the derived market value is stored"},
+    ]
+    curated = [{"path": p, "what": w, "changed": last_changed(p)} for p, w in CURATED]
+    return {"sources": sources, "curated": curated, "pending_deals": meta.get("pending_deals", [])}
+
+
 def main(preview=False):
     data = json.loads((HERE / "data" / "panel.json").read_text())
     meta, panel = data["meta"], data["technologies"]
@@ -119,6 +169,8 @@ def main(preview=False):
     for t in panel.values():
         html = env.get_template("technology.html.j2").render(**common, page=t["id"], **tech_context(t, meta))
         (DIST / f"{t['id']}.html").write_text(html)
+    for name, ctx in (("methods", methods_context(panel)), ("status", status_context(panel, meta))):
+        (DIST / f"{name}.html").write_text(env.get_template(f"{name}.html.j2").render(**common, page=name, **ctx))
     shutil.copy(HERE / "data" / "panel.json", DIST / "panel.json")
     (DIST / ".nojekyll").touch()
     print(f"site/dist: {sum(1 for _ in DIST.rglob('*') if _.is_file())} files{' (preview)' if preview else ''}")

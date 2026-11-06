@@ -1,0 +1,39 @@
+{% extends "base.html.j2" %}
+{% block title %}Status{% endblock %}
+{% block description %}When each source was last fetched, what it covers, and which inputs are curated by hand.{% endblock %}
+{% block body %}
+<h1>Status</h1>
+<p class="lede">Built {{ meta.built }}. Headline figures are for {{ meta.full_year }}; {{ meta.years[1] }} is partial.</p>
+
+<h2>Sources</h2>
+<p class="sub">Fetched on every run. A source that fails keeps its last snapshot, and the date below says how old it is.</p>
+<div class="tw"><table>
+<thead><tr><th>Source</th><th>Feeds</th><th class="n">Snapshot</th><th>Coverage</th></tr></thead>
+<tbody>
+{% for s in sources %}
+<tr><td>{{ s.name }}</td><td>{{ s.what }}</td><td class="n">{{ s.snap }}</td><td>{{ s.cover }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+
+<h2>Curated by hand</h2>
+<p class="sub">These inputs change only when someone edits them. Dates are the last change in the repository.</p>
+<div class="tw"><table>
+<thead><tr><th>File</th><th>Holds</th><th class="n">Last changed</th></tr></thead>
+<tbody>
+{% for c in curated %}
+<tr><td><a href="{{ repo }}/tree/main/{{ c.path }}">{{ c.path }}</a></td><td>{{ c.what }}</td><td class="n">{{ c.changed or "–" }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+
+{% if pending_deals %}
+<h2>Pending deals</h2>
+<p class="sub">Announced but not confirmed closed. Platforms stay with their current vendor until the close is confirmed.</p>
+<div class="tw"><table>
+<thead><tr><th>Vendor or platform</th><th>Deal</th></tr></thead>
+<tbody>
+{% for d in pending_deals %}
+<tr><td>{{ d.what }}</td><td>{{ d.pending[:1] | upper }}{{ d.pending[1:] }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+{% endif %}
+{% endblock %}

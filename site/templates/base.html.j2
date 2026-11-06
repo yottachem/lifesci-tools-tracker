@@ -77,6 +77,8 @@ tr.fam td { font: 500 11px var(--font-data); text-transform: uppercase; letter-s
 .sig .num small { display: block; font-weight: 400; color: var(--muted); font-size: 11px; white-space: nowrap; max-width: 120px; overflow: hidden; text-overflow: ellipsis; }
 .sig .spark { width: 96px; flex: none; }
 .pending { border: 1px dashed var(--s2); padding: 10px 14px; color: var(--muted); font-size: 14px; max-width: 80ch; }
+.prose { max-width: 72ch; } .prose p, .prose li { margin: 6px 0; } .prose ul { padding-left: 20px; }
+details { margin: 6px 0; } summary { cursor: pointer; color: var(--s1); font-size: 14px; }
 ol.fn { font-size: 13px; color: var(--muted); padding-left: 20px; max-width: 86ch; }
 .foot { border-top: 1px dashed var(--line); }
 .foot-in { max-width: 1120px; margin: 0 auto; padding: 16px 16px 28px; font-size: 12.5px; color: var(--muted); display: grid; gap: 4px; }
@@ -89,6 +91,8 @@ ol.fn { font-size: 13px; color: var(--muted); padding-left: 20px; max-width: 86c
 <nav class="nav" aria-label="Site"><div class="nav-in">
   <a class="brand" href="index.html">Life Science Tools Tracker</a>
   <a class="l" href="index.html"{% if page == "index" %} aria-current="page"{% endif %}>Maturity map</a>
+  <a class="l" href="methods.html"{% if page == "methods" %} aria-current="page"{% endif %}>Methods</a>
+  <a class="l" href="status.html"{% if page == "status" %} aria-current="page"{% endif %}>Status</a>
   <a class="l" href="{{ repo }}">Code &amp; data</a>
 </div></nav>
 <div class="techs" aria-label="Technologies">

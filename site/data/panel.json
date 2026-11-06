@@ -16,7 +16,72 @@
    "market_value": "2026-11-06"
   },
   "patents_through": "2025-12-25",
-  "has_total": false
+  "has_total": false,
+  "uspto_files": {
+   "g_application.tsv.zip": {
+    "fileDataFromDate": "1976-01-01",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:25:00"
+   },
+   "g_assignee_disambiguated.tsv.zip": {
+    "fileDataFromDate": "1976-01-01",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:25:09"
+   },
+   "g_cpc_current.tsv.zip": {
+    "fileDataFromDate": "1976-01-01",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:25:56"
+   },
+   "g_patent.tsv.zip": {
+    "fileDataFromDate": "1976-01-01",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:29:41"
+   },
+   "g_patent_abstract.tsv.zip": {
+    "fileDataFromDate": "1976-01-01",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:30:25"
+   },
+   "pg_assignee_disambiguated.tsv.zip": {
+    "fileDataFromDate": "2001-03-15",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:35:46"
+   },
+   "pg_cpc_current.tsv.zip": {
+    "fileDataFromDate": "2001-03-15",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:36:15"
+   },
+   "pg_published_application.tsv.zip": {
+    "fileDataFromDate": "2001-03-15",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:37:45"
+   },
+   "pg_published_application_abstract.tsv.zip": {
+    "fileDataFromDate": "2001-03-15",
+    "fileDataToDate": "2025-12-31",
+    "fileLastModifiedDateTime": "2026-03-12 22:38:18"
+   }
+  },
+  "pending_deals": [
+   {
+    "what": "Bio-Techne",
+    "pending": "Merck KGaA acquisition; on close, COMET moves to Merck KGaA (Frankfurt listing, roster only) and TECH financials stop"
+   },
+   {
+    "what": "CyTOF",
+    "pending": "sale of mass cytometry business to Element Biosystems LLC agreed 2026-09-30; confirm close"
+   },
+   {
+    "what": "DNBSEQ",
+    "pending": "Complete Genomics sale to Swiss Rockets; confirm which entity sells DNBSEQ in the US after close"
+   },
+   {
+    "what": "Hyperion",
+    "pending": "sale of mass cytometry business to Element Biosystems LLC (GMT Venture Partners) agreed 2026-09-30; confirm close. Not Element Biosciences"
+   }
+  ]
  },
  "technologies": {
   "qpcr_dpcr": {
