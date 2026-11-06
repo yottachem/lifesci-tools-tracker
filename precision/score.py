@@ -152,7 +152,7 @@ def run():
                                 "precision": prec, "ci_low": lo, "ci_high": hi,
                                 "coverage": round((yes + no) / len(live), 2) if live else None,
                                 "low": prec is not None and prec < LOW})
-                spot += [{k: r.get(k, "") for k in SPOT_FIELDS} for r in live if r["josh_check"]
+                spot += [{k: r.get(k, "") for k in SPOT_FIELDS} for r in live if r["josh_check"] not in ("", "0")
                          and (tech_id, signal, r["entry"], r["id"]) not in done]
     for name, data, fields in (("summary", summary, list(summary[0])), ("spot_check", spot, SPOT_FIELDS)):
         with open(OUT / f"{name}.csv", "w", newline="") as f:

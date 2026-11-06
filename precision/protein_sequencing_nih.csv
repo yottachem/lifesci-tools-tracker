@@ -3,155 +3,155 @@ protein_sequencing,nih,single molecule protein sequencing,11291821,2026,R35,Prot
 and the rapid determination of mechanisms of drug resistance. Finally, we aim to advance new proteomics
 technologies, single-molecule protein sequencing and shotgun electron microscopy, both of which enable new
 types of highly sensitive characterization of protein expression and physical organization relevant to many
-asp...",yes,yes; term used for the technology as defined,0,
+asp...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,11009010,2025,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs,
 and the rapid determination of mechanisms of drug resistance. Finally, we aim to advance new proteomics
 technologies, single-molecule protein sequencing and shotgun electron microscopy, both of which enable new
 types of highly sensitive characterization of protein expression and physical organization relevant to many
-asp...",yes,yes; term used for the technology as defined,0,
-protein_sequencing,nih,single molecule protein sequencing,10498088,2022,R43,Dual Reader Protein Sequencing,none,,unclear,unclear; no abstract text in the source,0,
-protein_sequencing,nih,single molecule protein sequencing,9040203,2016,R01,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING,title/abstract,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING. DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional and...,yes,yes; term used for the technology as defined,0,
+asp...",yes,yes; term used for the technology as defined,,
+protein_sequencing,nih,single molecule protein sequencing,10498088,2022,R43,Dual Reader Protein Sequencing,none,,unclear,unclear; no abstract text in the source,,
+protein_sequencing,nih,single molecule protein sequencing,9040203,2016,R01,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING,title/abstract,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING. DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional and...,yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,nanopore protein sequencing; single molecule protein sequencing,9920763,2020,R01,Nanopore Direct Single-Molecule Protein Sequencing,title/abstract,"Nanopore Direct Single-Molecule Protein Sequencing. PROJECT SUMMARY/ABSTRACT:
  Proteins are the workhorses of cells and organisms. At present, no technologies are available for the
-routine proteome-scale sequencing and q...",yes,yes; term used for the technology as defined,0,
+routine proteome-scale sequencing and q...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10708013,2023,R01,Long-read single-molecule protein sequencing on an array of unfoldase-coupled nanopores,title/abstract,"Long-read single-molecule protein sequencing on an array of unfoldase-coupled nanopores. SUMMARY
 We propose to develop the foundations of a platform for direct sequencing of native, full-length protein strands
-usin...",yes,yes; term used for the technology as defined,0,
+usin...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10558585,2023,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs,
 and the rapid determination of mechanisms of drug resistance. Finally, we aim to advance new proteomics
 technologies, single-molecule protein sequencing and shotgun electron microscopy, both of which enable new
 types of highly sensitive characterization of protein expression and physical organization relevant to many
-asp...",yes,yes; term used for the technology as defined,0,
+asp...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10768560,2024,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs,
 and the rapid determination of mechanisms of drug resistance. Finally, we aim to advance new proteomics
 technologies, single-molecule protein sequencing and shotgun electron microscopy, both of which enable new
 types of highly sensitive characterization of protein expression and physical organization relevant to many
-asp...",yes,yes; term used for the technology as defined,0,
+asp...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10709532,2023,R01,Designed nanopores for single-molecule protein sequencing,title/abstract,"Designed nanopores for single-molecule protein sequencing. Maglia
 PROJECT SUMMARY
 Nanopores have emerged in the past few years as promising single-molecule sensors. The basic
-concept of nanopore sensing is to apply a potential...",yes,yes; term used for the technology as defined,1,
+concept of nanopore sensing is to apply a potential...",yes,yes; term used for the technology as defined,random,
 protein_sequencing,nih,fluorosequencing; single molecule protein sequencing,10499925,2022,R43,"Structural profiling of native proteins using fluorosequencing, a single molecule protein sequencing technology",title/abstract,"Structural profiling of native proteins using fluorosequencing, a single molecule protein sequencing technology. ABSTRACT
 Despite the wealth of accurate and high sensitive data from next-gen DNA sequencing technologies,
-understandin...",yes,yes; term used for the technology as defined,1,
+understandin...",yes,yes; term used for the technology as defined,random,
 protein_sequencing,nih,single molecule protein sequencing,10085651,2021,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs, and the rapid
 determination of mechanisms of drug resistance. Finally, we aim to advance a new proteomics technology,
 single-molecule protein sequencing, which could potentially solve problems currently limiting the field, by
-orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,0,
+orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,nanopore protein sequencing; single molecule protein sequencing,10139055,2021,R01,Nanopore Direct Single-Molecule Protein Sequencing,title/abstract,"Nanopore Direct Single-Molecule Protein Sequencing. PROJECT SUMMARY/ABSTRACT:
  Proteins are the workhorses of cells and organisms. At present, no technologies are available for the
-routine proteome-scale sequencing and q...",yes,yes; term used for the technology as defined,0,
+routine proteome-scale sequencing and q...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10646060,2023,R43,Single-molecule protein sequencing by detection and identification of N-terminal amino acids,title/abstract,"Single-molecule protein sequencing by detection and identification of N-terminal amino acids. SUMMARY - Subtle changes in protein expression are critical for proper growth and development, but irregu-
-lar...",yes,yes; term used for the technology as defined,0,
+lar...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,8473887,2013,R01,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING,title/abstract,"A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING.    
-DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional...",yes,yes; term used for the technology as defined,0,
+DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,fluorosequencing; single molecule protein sequencing,10645898,2023,R01,Chemistry for next-generation single-molecule fluorosequencing technology 2.0.,title/abstract,"Chemistry for next-generation single-molecule fluorosequencing technology 2.0.. PROJECT SUMMARY
 The human proteome is extremely complex, comprising > 10,000 proteins and 100 times proteoforms for each
-gene product. In cancer and oth...",yes,yes; term used for the technology as defined,0,
+gene product. In cancer and oth...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10498335,2022,R01,Towards Single-Molecule Protein Sequencing with Nanopores,title/abstract,"Towards Single-Molecule Protein Sequencing with Nanopores. Title:
 Towards Single-molecule Protein Sequencing with Nanopores
 Abstract:
-This proposal concerns the development of a nascent single-molecule proteomics...",yes,yes; term used for the technology as defined,0,
+This proposal concerns the development of a nascent single-molecule proteomics...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,8275377,2012,R01,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING,title/abstract,"A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING.    
-DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional...",yes,yes; term used for the technology as defined,0,
+DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,fluorosequencing; single molecule protein sequencing,10082331,2020,R43,Single molecule protein sequencing of alpha-synuclein species for Parkinson's disease diagnostics,title/abstract,"Single molecule protein sequencing of alpha-synuclein species for Parkinson's disease diagnostics. ABSTRACT Parkinson’s disease (PD) is a neurodegenerative disorder that is typically
-diagnosed when 60% of...",yes,yes; term used for the technology as defined,0,
+diagnosed when 60% of...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,fluorosequencing,10623602,2023,R35,Facilitating the Chemistry of Fluorosequencing,title/abstract,"Facilitating the Chemistry of Fluorosequencing. ABSTRACT
 While advances in nucleic acid sequencing to achieve parallel and single molecule analysis have been
-astounding, analogous techniques for peptide/protein seque...",yes,yes; term used for the technology as defined,0,
+astounding, analogous techniques for peptide/protein seque...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10496255,2022,R21,Direct Electrical Measurement of Proteasome Activity for Single-Molecule Protein Sequencing,title/abstract,"Direct Electrical Measurement of Proteasome Activity for Single-Molecule Protein Sequencing. Project Summary
 Direct electronic measurement of protease activity may yield signals that can be interpreted in terms of the
-amino acid sequence being processed by the...",yes,yes; term used for the technology as defined,0,
+amino acid sequence being processed by the...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10692865,2023,R01,Towards Single-Molecule Protein Sequencing with Nanopores,title/abstract,"Towards Single-Molecule Protein Sequencing with Nanopores. Title:
 Towards Single-molecule Protein Sequencing with Nanopores
 Abstract:
-This proposal concerns the development of a nascent single-molecule proteomics...",yes,yes; term used for the technology as defined,0,
+This proposal concerns the development of a nascent single-molecule proteomics...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,nanopore protein sequencing; single molecule protein sequencing,9751935,2019,R01,Nanopore Direct Single-Molecule Protein Sequencing,title/abstract,"Nanopore Direct Single-Molecule Protein Sequencing. PROJECT SUMMARY/ABSTRACT:
  Proteins are the workhorses of cells and organisms. At present, no technologies are available for the
-routine proteome-scale sequencing and q...",yes,yes; term used for the technology as defined,0,
+routine proteome-scale sequencing and q...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,11179965,2025,R43,Direct Proteolytic Machine Assessments for Unfolding and Sequencing Proteins,title/abstract,"...cient, cost-effective, and scalable protein sequencing methods. In response,
 Electronic BioSciences, Inc. (EBS) proposes to develop and demonstrate a novel enzyme-based, single-
 molecule protein sequencing system. This innovative platform will leverage enzyme-driven processing and
-sequencing of individual proteins and peptides, combined with advanced bioinformatics, to ach...",yes,yes; term used for the technology as defined,0,
+sequencing of individual proteins and peptides, combined with advanced bioinformatics, to ach...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,nanopore protein sequencing; single molecule protein sequencing,11428313,2026,R01,Nanopore technology development for reading intact proteoforms,title/abstract,"Nanopore technology development for reading intact proteoforms. SUMMARY
 We propose significant advancements in single-molecule protein sequencing (SMPS) technology, leveraging
 unfoldase-coupled nanopore arrays to directly sequence intact, native proteins. This platform aims to
-accurately determine full-length prot...",yes,yes; term used for the technology as defined,1,
+accurately determine full-length prot...",yes,yes; term used for the technology as defined,random,
 protein_sequencing,nih,single molecule protein sequencing,10646810,2023,R01,Asymmetric Single-Chain MspA nanopores for electroosmotic stretching and sequencing proteins,title/abstract,"Asymmetric Single-Chain MspA nanopores for electroosmotic stretching and sequencing proteins. Project Summary / Abstract
 Protein identification and/or single-molecule protein sequencing from minute amounts could revolutionize our
 understanding of health by providing a picture of the molecular state of the cell at the level of its most
-functional molecul...",yes,yes; term used for the technology as defined,1,
+functional molecul...",yes,yes; term used for the technology as defined,random,
 protein_sequencing,nih,nanopore protein sequencing; single molecule protein sequencing,9597154,2018,R01,Nanopore Direct Single-Molecule Protein Sequencing,title/abstract,"Nanopore Direct Single-Molecule Protein Sequencing. PROJECT SUMMARY/ABSTRACT:
  Proteins are the workhorses of cells and organisms. At present, no technologies are available for the
-routine proteome-scale sequencing and q...",yes,yes; term used for the technology as defined,0,
+routine proteome-scale sequencing and q...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,11414822,2026,R21,Enabling Protein Sequencing Through Friction-Mediated Nanopore Transport,title/abstract,"...emble real biological proteins. Our goal is to
 demonstrate that this new method can identify amino acids with high accuracy, laying the foundation for a fully
 functional single-molecule protein sequencing platform. When successful, this technology will represent a major
-leap forward in proteomics. It will allow researchers to rapidly analyze the proteins in a single cell,...",yes,yes; term used for the technology as defined,0,
+leap forward in proteomics. It will allow researchers to rapidly analyze the proteins in a single cell,...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10892827,2024,R01,Long-read single-molecule protein sequencing on an array of unfoldase-coupled nanopores,title/abstract,"Long-read single-molecule protein sequencing on an array of unfoldase-coupled nanopores. SUMMARY
 We propose to develop the foundations of a platform for direct sequencing of native, full-length protein strands
-usin...",yes,yes; term used for the technology as defined,0,
+usin...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,11253979,2025,R43,3D Printed Integrated Sample Preparation and Chromatography Platform for Limited Volume Proteomics,title/abstract,"...egrated single-cell and small-
 volume complex biological sample processing platforms. At scale, such capabilities would realize small-
 volume, single-cell proteomics, or single-molecule protein sequencing. These biotools will rapidly accelerate
-biomarker discovery for the early detection of diseases and infections.",yes,yes; term used for the technology as defined,1,
+biomarker discovery for the early detection of diseases and infections.",yes,yes; term used for the technology as defined,random,
 protein_sequencing,nih,single molecule protein sequencing,10932858,2024,R01,Designed nanopores for single-molecule protein sequencing,title/abstract,"Designed nanopores for single-molecule protein sequencing. Maglia
 PROJECT SUMMARY
 Nanopores have emerged in the past few years as promising single-molecule sensors. The basic
-concept of nanopore sensing is to apply a potential...",yes,yes; term used for the technology as defined,0,
+concept of nanopore sensing is to apply a potential...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,fluorosequencing,11042715,2025,R35,Facilitating the Chemistry of Fluorosequencing,title/abstract,"Facilitating the Chemistry of Fluorosequencing. ABSTRACT
 While advances in nucleic acid sequencing to achieve parallel and single molecule analysis have been
-astounding, analogous techniques for peptide/protein seque...",yes,yes; term used for the technology as defined,0,
+astounding, analogous techniques for peptide/protein seque...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10757309,2023,R43,Single-molecule protein sequencing by barcoding of N-terminal amino acids,title/abstract,"Single-molecule protein sequencing by barcoding of N-terminal amino acids. SUMMARY
 Proteins are responsible for much of the structure and function of all cells. Subtle changes in expression of var-
-ious p...",yes,yes; term used for the technology as defined,0,
+ious p...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,fluorosequencing; single molecule protein sequencing,11014667,2025,DP2,Integrated Nano-Opto-Fluidic System on Sapphire towards Single-Molecule Protein Sequencing,title/abstract,"Integrated Nano-Opto-Fluidic System on Sapphire towards Single-Molecule Protein Sequencing. PROJECT SUMMARY/ ABSTRACT
 Enabled by the development of high-throughput, low-cost nucleic acids sequencing technologies, there have
-been accelerated development in geno...",yes,yes; term used for the technology as defined,0,
+been accelerated development in geno...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10498892,2022,R43,Single-molecule protein sequencing by iterative isolation and identification of N-terminal amino acids,title/abstract,"Single-molecule protein sequencing by iterative isolation and identification of N-terminal amino acids. SUMMARY
-Proteins are responsible for much of the structure and function of all cells. Subtle changes...",yes,yes; term used for the technology as defined,0,
+Proteins are responsible for much of the structure and function of all cells. Subtle changes...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,fluorosequencing,11306618,2026,R35,Facilitating the Chemistry of Fluorosequencing,title/abstract,"Facilitating the Chemistry of Fluorosequencing. ABSTRACT
 While advances in nucleic acid sequencing to achieve parallel and single molecule analysis have been
-astounding, analogous techniques for peptide/protein seque...",yes,yes; term used for the technology as defined,0,
+astounding, analogous techniques for peptide/protein seque...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10499289,2022,R21,Single Molecule Protein Sequencing using Nanopores and Deep-UV Raman Spectroscopy,title/abstract,"Single Molecule Protein Sequencing using Nanopores and Deep-UV Raman Spectroscopy. Project Summary
-The central dogma of molecular biology is that information is transferred from DNA to RNA to protein thro...",yes,yes; term used for the technology as defined,0,
-protein_sequencing,nih,single molecule protein sequencing,11390928,2026,RM1,National Center for Translational and Developmental Proteomics,title/abstract,...NCTDP will harden the current generation of technologies for discovery and targeted measurement of proteoforms to bridge top down mass spectrometry with other -omics and single-molecule protein sequencing. The Center’s outreach and dissemination initiatives will address protein knowledge gaps and will significantly improve the capabilities of the research community to (a)...,yes,yes; term used for the technology as defined,0,
+The central dogma of molecular biology is that information is transferred from DNA to RNA to protein thro...",yes,yes; term used for the technology as defined,,
+protein_sequencing,nih,single molecule protein sequencing,11390928,2026,RM1,National Center for Translational and Developmental Proteomics,title/abstract,...NCTDP will harden the current generation of technologies for discovery and targeted measurement of proteoforms to bridge top down mass spectrometry with other -omics and single-molecule protein sequencing. The Center’s outreach and dissemination initiatives will address protein knowledge gaps and will significantly improve the capabilities of the research community to (a)...,yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,11352939,2026,R21,Next-Generation Oncoproteomic Sequencing and Precision Profiling,title/abstract,"...mplex modifications like phosphorylation and glycosylation, which are central to oncogenic
 processes. To address these limitations, we propose to develop an entirely new single-molecule protein
 sequencing platform capable of manipulating, controlling, and iteratively re-sequencing individual proteins. Our
-technology represents a transformative advance in oncoproteomics by...",yes,yes; term used for the technology as defined,0,
+technology represents a transformative advance in oncoproteomics by...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,11406864,2026,R44,Single-molecule protein sequencing: resolving individual amino acids via commercially accessible nanopores,title/abstract,"Single-molecule protein sequencing: resolving individual amino acids via commercially accessible nanopores. PROJECT SUMMARY
-The premise of single-molecule protein sequencing (SMPS) is to determine the ami...",yes,yes; term used for the technology as defined,1,
+The premise of single-molecule protein sequencing (SMPS) is to determine the ami...",yes,yes; term used for the technology as defined,random,
 protein_sequencing,nih,single molecule protein sequencing,9478764,2018,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs, and the rapid
 determination of mechanisms of drug resistance. Finally, we aim to advance a new proteomics technology,
 single-molecule protein sequencing, which could potentially solve problems currently limiting the field, by
-orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,0,
+orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10330772,2022,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs,
 and the rapid determination of mechanisms of drug resistance. Finally, we aim to advance new proteomics
 technologies, single-molecule protein sequencing and shotgun electron microscopy, both of which enable new
 types of highly sensitive characterization of protein expression and physical organization relevant to many
-asp...",yes,yes; term used for the technology as defined,0,
-protein_sequencing,nih,single molecule protein sequencing,11415341,2025,ZIC,CCR Genomics Core,title/abstract,"...ary preparation, Roche SBX (Sequencing by Expansion) on its novel single-molecule sequencing technology, Illumina's Innovation Roadmap and Discovery Day, and Quantum-Si: Single-Molecule Protein Sequencing Solutions. The Core has been in discussion with Element on the AVITI system to learn more about the capabilities of these bench-top sequencers and continues to explore P...",yes,yes; term used for the technology as defined,0,
+asp...",yes,yes; term used for the technology as defined,,
+protein_sequencing,nih,single molecule protein sequencing,11415341,2025,ZIC,CCR Genomics Core,title/abstract,"...ary preparation, Roche SBX (Sequencing by Expansion) on its novel single-molecule sequencing technology, Illumina's Innovation Roadmap and Discovery Day, and Quantum-Si: Single-Molecule Protein Sequencing Solutions. The Core has been in discussion with Element on the AVITI system to learn more about the capabilities of these bench-top sequencers and continues to explore P...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,10498859,2022,R01,Designed nanopores for single-molecule protein sequencing,title/abstract,"Designed nanopores for single-molecule protein sequencing. Maglia
 PROJECT SUMMARY
 Nanopores have emerged in the past few years as promising single-molecule sensors. The basic
-concept of nanopore sensing is to apply a potential...",yes,yes; term used for the technology as defined,0,
-protein_sequencing,nih,single molecule protein sequencing,8825522,2015,R01,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING,title/abstract,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING. DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional and...,yes,yes; term used for the technology as defined,1,
-protein_sequencing,nih,single molecule protein sequencing,11015200,2025,RM1,National Center for Translational and Developmental Proteomics,title/abstract,...NCTDP will harden the current generation of technologies for discovery and targeted measurement of proteoforms to bridge top down mass spectrometry with other -omics and single-molecule protein sequencing. The Center’s outreach and dissemination initiatives will address protein knowledge gaps and will significantly improve the capabilities of the research community to (a)...,yes,yes; term used for the technology as defined,0,
+concept of nanopore sensing is to apply a potential...",yes,yes; term used for the technology as defined,,
+protein_sequencing,nih,single molecule protein sequencing,8825522,2015,R01,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING,title/abstract,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING. DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional and...,yes,yes; term used for the technology as defined,random,
+protein_sequencing,nih,single molecule protein sequencing,11015200,2025,RM1,National Center for Translational and Developmental Proteomics,title/abstract,...NCTDP will harden the current generation of technologies for discovery and targeted measurement of proteoforms to bridge top down mass spectrometry with other -omics and single-molecule protein sequencing. The Center’s outreach and dissemination initiatives will address protein knowledge gaps and will significantly improve the capabilities of the research community to (a)...,yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,8641402,2014,R01,A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING,title/abstract,"A MOLECULAR TOOLKIT FOR SINGLE-MOLECULE PROTEIN SEQUENCING.    
-DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional...",yes,yes; term used for the technology as defined,0,
+DESCRIPTION (provided by applicant): The recent explosion of nucleic acid sequencing capacity has given rise to routine high-throughput analysis of transcriptional...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,9275630,2017,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs, and the rapid
 determination of mechanisms of drug resistance. Finally, we aim to advance a new proteomics technology,
 single-molecule protein sequencing, which could potentially solve problems currently limiting the field, by
-orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,0,
+orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,fluorosequencing,10821396,2024,R35,Facilitating the Chemistry of Fluorosequencing,title/abstract,"Facilitating the Chemistry of Fluorosequencing. ABSTRACT
 While advances in nucleic acid sequencing to achieve parallel and single molecule analysis have been
-astounding, analogous techniques for peptide/protein seque...",yes,yes; term used for the technology as defined,1,
+astounding, analogous techniques for peptide/protein seque...",yes,yes; term used for the technology as defined,random,
 protein_sequencing,nih,single molecule protein sequencing,9638553,2019,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs, and the rapid
 determination of mechanisms of drug resistance. Finally, we aim to advance a new proteomics technology,
 single-molecule protein sequencing, which could potentially solve problems currently limiting the field, by
-orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,0,
+orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,,
 protein_sequencing,nih,single molecule protein sequencing,9850605,2020,R35,Proteomics and model organism humanization to decode human genetics,title/abstract,"...e function, the screening and repurposing of drugs, and the rapid
 determination of mechanisms of drug resistance. Finally, we aim to advance a new proteomics technology,
 single-molecule protein sequencing, which could potentially solve problems currently limiting the field, by
-orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,0,
+orders-of-magnitude improvements in sensitivity and throughput. Success of these aims will give...",yes,yes; term used for the technology as defined,,

@@ -33,8 +33,8 @@ technologies:
         label: Digital PCR
         platforms:
           - {name: QX ddPCR, query: '"QX200" OR "QX100" OR "QX600" OR "QX ONE" OR "QX Continuum"', vendor: Bio-Rad, launched: 2011, verify: launch}
-          - {name: QX700 (naica), query: '"QX700" OR ("naica" AND ("Stilla" OR "digital PCR")) OR ("Nio" AND "Stilla")', vendor: Bio-Rad, acquired_from: Stilla Technologies (2025-06-30), launched: 2025,
-             note: 'QX700 series (E, S, HT) is the relaunched Stilla Nio; naica is end-of-life but still cited (Bio-Rad FAQ). Nio clause added 2026-11-05: its hits are not in the precision sample yet',
+          - {name: QX700 (naica), query: '"QX700" OR ("naica" AND ("Stilla" OR "digital PCR")) OR "Stilla Nio" OR ("Nio" AND "Stilla Technologies")', vendor: Bio-Rad, acquired_from: Stilla Technologies (2025-06-30), launched: 2025,
+             note: 'QX700 series (E, S, HT) is the relaunched Stilla Nio; naica is end-of-life but still cited (Bio-Rad FAQ). Nio clause added 2026-11-05; Nio needs "Stilla Technologies": Swedish "nio" (nine) and "stilla" (still) co-occur in theses, and Nio is an author surname',
              source: 'https://www.bio-rad.com/en-us/bio-rads-acquisition-stilla-technologies/1751570278475'}
           - {name: QIAcuity, query: '"QIAcuity"', vendor: QIAGEN, launched: 2020, verify: launch}
           - {name: Absolute Q, query: '"Absolute Q"', context: ['digital PCR', 'dPCR', 'Thermo Fisher', 'QuantStudio'], vendor: Thermo Fisher Scientific,

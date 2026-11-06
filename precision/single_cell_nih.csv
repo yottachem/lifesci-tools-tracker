@@ -2,201 +2,201 @@ technology,signal,entry,id,year,type,title,evidence,snippet,label,reason,josh_ch
 single_cell,nih,single-cell RNA sequencing,10627860,2023,RM1,"Chemical, Structural and Cell-Signaling Interrogation of 15-Prostanglandin Dehydrogenase in Tissue Repair and Regeneration",title/abstract,"...-PGDH expression in peripheral tissues and brain, respectively, and the discovery of cell and
 cytokine networks that respond to inhibiting 15-PGDH. We now propose to use single-cell RNA sequencing to
 determine the cell types that express 15-PGDH. Similar approaches will identify the cell-signaling network of
-induced cytokines and the cell types activated to expres...",yes,yes; term used for the technology as defined,1,
+induced cytokines and the cell types activated to expres...",yes,yes; term used for the technology as defined,random,
 single_cell,nih,scRNA-seq,10294400,2022,U19,Molecular Science Core,title/abstract,"...sed to generate genetic
 tools for access to specific cell populations.
 For the adult mouse thalamus, we have generated a large-scale single-cell transcriptomics dataset (scRNA-seq)
 to measure gene expression, and a matching single-nucleus chromatin accessibility dataset (snATAC-seq) to
-discover putative enhancers. In addition, we are in the proces...",yes,yes; term used for the technology as defined,0,
+discover putative enhancers. In addition, we are in the proces...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,11145847,2025,K99,Characterization of the metastatic TIME by subcellular spatial profiling,title/abstract,"...ered 4 weekly treatments of CTX with anti-CSF1R and anti-PD1. BrdU will be injected
 to detect lung and liver metastases. Spatial transcriptomics, Imaging mass cytometry, single cell RNA-
 sequencing, and flow cytometry, will be utilized to confirm macrophage depletion and study mechanisms of
-resistance within the metastatic TIME. Characterization of the lung and liv...",yes,yes; term used for the technology as defined,0,
+resistance within the metastatic TIME. Characterization of the lung and liv...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10064383,2020,R03,Sputum-Based Profiling to Predict Cystic Fibrosis Exacerbations,title/abstract,"...ave a 6-fold increase in AE likelihood within 60
 days. We are now integrating those studies with data from the cellular component of sputum, where preliminary
 data using single-cell RNA sequencing (scRNAseq) show that CF neutrophils and macrophages exhibit distinct
 transcriptomic profiles that separate AE from stable states.
- Our overall hypothesis is that a sputu...",yes,yes; term used for the technology as defined,0,
+ Our overall hypothesis is that a sputu...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10944852,2024,R01,An Ancient Neural Enhancer that has Rapidly Evolved in the Human Lineage,title/abstract,"...an lineage. HAR123 strongly promotes
 the generation of human neural progenitor cells (NPCs). In support of human HAR123 having human-specific
 functions, we found—through single-cell RNA-sequencing (scRNAseq) analysis—that human HAR123 drives
 cellular and molecular events that differ from those elicited by chimpanzee HAR123. To examine its function in
-vivo, we dele...",yes,yes; term used for the technology as defined,1,
-single_cell,nih,single-cell RNA sequencing,11419121,2026,R01,In-depth characterization of myeloid cells in human milk from HIV- and HIV+ donors as potential vehicles of and defenders against vertical transmission of HIV: essential data for targeted therapeutics,title/abstract,"...or augment through precision interventions for lactating women with HIV. Accordingly, we will: 1) define milk myeloid subsets in participants with and without HIV using single-cell RNA sequencing; 2) determine the HIV susceptibility and HIV Envelope expression profile of each newly defined subset; and 3) assess subset-specific Fc-mediated functions. The overall g...",yes,yes; term used for the technology as defined,0,
+vivo, we dele...",yes,yes; term used for the technology as defined,random,
+single_cell,nih,single-cell RNA sequencing,11419121,2026,R01,In-depth characterization of myeloid cells in human milk from HIV- and HIV+ donors as potential vehicles of and defenders against vertical transmission of HIV: essential data for targeted therapeutics,title/abstract,"...or augment through precision interventions for lactating women with HIV. Accordingly, we will: 1) define milk myeloid subsets in participants with and without HIV using single-cell RNA sequencing; 2) determine the HIV susceptibility and HIV Envelope expression profile of each newly defined subset; and 3) assess subset-specific Fc-mediated functions. The overall g...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10852612,2023,R35,Molecular and spatial mapping of hypothalamic cell-types using the Xenium analyzer,title/abstract,"...s in controlling genes in the brain and neuroplasticity. In our ongoing
 work, we have generated a cell-type specific molecular atlas of the A. burtoni hypothalamus using single-cell
 RNA-sequencing (scRNAseq). The hypothalamus is a conserved brain region that coordinates adaptive social
-behaviors across vertebrates. While scRNAseq provides cell-type resolution of s...",yes,yes; term used for the technology as defined,0,
+behaviors across vertebrates. While scRNAseq provides cell-type resolution of s...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,11182619,2025,K08,Defining the antigenic determinants of the adaptive immune response in IgG4-related disease,title/abstract,"...ctively.
 The training plan builds upon the skills learned under this mentorship team. Guided by his advisors and
 collaborators, Dr. Perugino will gain proficiency in (1) single cell RNA sequencing (Dr. Alex Shalek), (2) Ig/TCR
 repertoire analyses (Dr. Mark Davis), (3) peptide-MHC yeast display library development (Dr. Michael Birnbaum),
-immune cell interactions (D...",yes,yes; term used for the technology as defined,0,
+immune cell interactions (D...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq,11389486,2026,R00,Clearance of Dead Hepatocytes by Liver Macrophages in NASH,title/abstract,"...explore a mechanism-based therapeutic idea to restore Mφ-TIM4 in NASH, asking if
 this drug can improve efferocytosis and dampen NASH progression. Finally, I will conduct scRNA-seq analyses
 of the livers of the Mφ-TIM4-restoration model to probe the hypothesis that apHC efferocytosis leads to the
-secretion Mφ molecules that promote a pro-resolving...",yes,yes; term used for the technology as defined,0,
+secretion Mφ molecules that promote a pro-resolving...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq,10540383,2023,K08,Uncovering Epigenetic and Transcriptional Drivers of Neuroendocrine Plasticity at Single-Cell Level in Patients with Small Cell Lung Cancer Transformation,title/abstract,"...s and chemoresistance. It is poorly understood what gene regulatory mechanism
 drives SCLC transformation and SCLC subtype switching. Single-cell RNA and ATAC sequencing (scRNA-seq,
 snATAC-seq) in samples of combined LUAD/SCLC histology present an ideal platform to characterize the
-intratumoral heterogeneity of NE plasticity. As a control reference...",yes,yes; term used for the technology as defined,0,
+intratumoral heterogeneity of NE plasticity. As a control reference...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10010549,2020,R41,Sorting live cells using RNA-targeting CRISPR-Cas9 (RCas9),title/abstract,"Sorting live cells using RNA-targeting CRISPR-Cas9 (RCas9). Project Summary/Abstract
 Transcriptomic-based approaches, and in recent years, single-cell RNA sequencing, are revolutionizing our
 understanding of cellular heterogeneity, opening up a new route to identify novel cell markers at
-unprecedented scale across many different cell...",yes,yes; term used for the technology as defined,0,
-single_cell,nih,single-cell RNA sequencing,11414566,2025,ZIA,Mechanisms Of Synaptic Plasticity In The Adult And Developing Nervous System,title/abstract,...ut as yet they have been unable to resolve CA2-specific functions due largely to CA2 being a relatively small portion of the total neurons. Successful approaches such as single-cell RNA sequencing are unlikely to be feasible for CA2-targeted analyses in MR knockout animals because of the loss of many known CA2 cell-type specific gene markers. To begin to bridge th...,yes,yes; term used for the technology as defined,1,
+unprecedented scale across many different cell...",yes,yes; term used for the technology as defined,,
+single_cell,nih,single-cell RNA sequencing,11414566,2025,ZIA,Mechanisms Of Synaptic Plasticity In The Adult And Developing Nervous System,title/abstract,...ut as yet they have been unable to resolve CA2-specific functions due largely to CA2 being a relatively small portion of the total neurons. Successful approaches such as single-cell RNA sequencing are unlikely to be feasible for CA2-targeted analyses in MR knockout animals because of the loss of many known CA2 cell-type specific gene markers. To begin to bridge th...,yes,yes; term used for the technology as defined,random,
 single_cell,nih,single-cell RNA sequencing,10936943,2024,R01,Regulation of Neuroinflammation by Meningeal Lymphatics,title/abstract,"...g DCs, and this is unique to the cp, highlighting
 potentially different roles for dural lymphatics in neuroinflammation depending on their precise location. Here we
 show single-cell RNA sequencing data revealing that neuroinflammation induces cribriform plate lymphatic
-endothelial cell (cpLECs) gene expression related to antigen presentation, leukocyte adhesion, a...",yes,yes; term used for the technology as defined,0,
+endothelial cell (cpLECs) gene expression related to antigen presentation, leukocyte adhesion, a...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,9781687,2019,F99,Investigating molecular mechanism of T cell exhaustion in chronic infection and tumor microenvironment,title/abstract,"...lockade. In Specific Aim
 1.1, I focused on the transcriptional mechanisms of effector T cell loss and TEX progenitor establishment
 during chronic antigen exposure. Using single cell RNA sequencing (sc-RNA-Seq), we found two distinct
 transcriptional networks in the chronic effector T cells and the TEX progenitors, and we systematically
-described the molecular mecha...",yes,yes; term used for the technology as defined,0,
-single_cell,nih,single-cell RNA sequencing,11189554,2024,ZIA,Spatially mapping and modeling tuberculosis granulomas to define the immunological determinants of infection outcome,title/abstract,"...tablished in the lab. We are acquiring input cells from healthy human donor peripheral blood mononuclear cells from NIH’s blood bank and are preparing to conduct a large single cell RNA sequencing study of the determinants of bacterial control in this assay. We have also been collaborating with Clif Barry’s group (NIAID, LCIM) to develop two different reporter str...",yes,yes; term used for the technology as defined,0,
+described the molecular mecha...",yes,yes; term used for the technology as defined,,
+single_cell,nih,single-cell RNA sequencing,11189554,2024,ZIA,Spatially mapping and modeling tuberculosis granulomas to define the immunological determinants of infection outcome,title/abstract,"...tablished in the lab. We are acquiring input cells from healthy human donor peripheral blood mononuclear cells from NIH’s blood bank and are preparing to conduct a large single cell RNA sequencing study of the determinants of bacterial control in this assay. We have also been collaborating with Clif Barry’s group (NIAID, LCIM) to develop two different reporter str...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10321671,2022,R01,"Extrinsic regulation of primitive, myeloid-biased hematopoietic stem cells by Semaphorin 4a",title/abstract,"...Sema4a effects on
 myHSC; and 2) Define therapeutic opportunities for Sema4a as a myHSC “protector” from proliferative stress.
 Under the first aim, genetic mouse models, single-cell RNA Sequencing and intravital microscopy will be used
 to evaluate the effect of microenvironmental deletion of Sema4a or its putative receptor, Plexin D1, on myHSC
-and to uncover the r...",yes,yes; term used for the technology as defined,0,
+and to uncover the r...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10874387,2024,F31,The Role of mRNA Degradation in Embryonic Cell Fate Specification,title/abstract,"...will generate a transcriptome-wide map of mRNA decay rates
 throughout embryogenesis with spatial and temporal resolution. Transcript half-lives will be determined using
 single cell RNA-sequencing to measure mRNA abundance in embryonic cells treated with a transcription inhibitor.
-To validate half-lives measured by this transcription inhibition approach, I will us...",yes,yes; term used for the technology as defined,0,
+To validate half-lives measured by this transcription inhibition approach, I will us...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq; single-cell RNA sequencing,10689969,2023,P50,"Acne: a disease of lipid metabolism, microbiome and the immune response",title/abstract,"...metagenomics and lipidomics,
 establishing the goal to link together these diverse biologic responses into a model that may explain the
 pathogenesis of acne. By applying single cell RNA-sequencing (scRNA-seq) and spatial-seq, the Modlin and
 Gallo labs have together identified specific macrophage and mesenchymal stem cell fibroblasts subpopulations
-that occur in ac...",yes,yes; term used for the technology as defined,0,
+that occur in ac...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,11307572,2026,R01,Cellular and molecular regulators of melanocyte regeneration,title/abstract,"...ocyte stem cells (McSCs) as well as identify the
 signals and pathways that govern McSC-mediated melanocyte regeneration. McSC gene expression will be
 characterized using single-cell RNA sequencing (scRNAseq). In zebrafish we will perform longitudinal
 sampling of McSCs during regeneration to uncover pathways, both cell intrinsic and extrinsic, involved in
-determini...",yes,yes; term used for the technology as defined,0,
+determini...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,11388320,2026,F31,Defining oral and systemic immune modulation in peanut sublingual immunotherapy,title/abstract,"...ermine the immunological mechanisms of peanut SLIT using our mouse
 model of peanut allergy. We will monitor the trafficking of peanut to the cervical lymph nodes and use single-cell
 RNA sequencing techniques to characterize the immune cells and gene expression profiles induced throughout
-peanut SLIT. We will also measure peanut-specific immunoglobulins in the sali...",yes,yes; term used for the technology as defined,0,
+peanut SLIT. We will also measure peanut-specific immunoglobulins in the sali...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10689062,2023,F31,Effects of TDP-43 Pathology on Innate Antiviral Mechanisms in Neurodegenerative Disease,title/abstract,"...n, mislocalize
 to the cytoplasm, cannot bind to RNA, or both. I will also determine cell-specific molecular mechanisms that
 promote differences in antiviral pathways via single-cell RNA sequencing (Aim 2.1), and conduct targeted
 analysis of alternative splicing (ScISOr-Seq), transposable element expression (TEtranscripts), and protein
-levels (Western blotting). Fi...",yes,yes; term used for the technology as defined,0,
+levels (Western blotting). Fi...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq,11166858,2025,K99,Computational Modeling of the Interplay between External Signaling and Transcription Rewiring using Spatial Transcriptomics and Single Cell Multiome Data,title/abstract,"...hese tools will be able to address the significant limitations in existing methods including 1) inability to
 account for heterogenous gene expression and to use multiple scRNA-seq reference to perform statistical
 deconvolution, 2) the reliance on the transcription level of receptor/ligand to impute CCI, which may not reflect
-active protein levels...",yes,yes; term used for the technology as defined,1,
+active protein levels...",yes,yes; term used for the technology as defined,random,
 single_cell,nih,single-cell RNA sequencing,10766236,2024,K99,Comprehensive investigation of SP7 during the osteoblast-to-osteocyte transition,title/abstract,"...on. To perform transcriptomic
 profiling of developing osteocytes, I will develop novel laser-assisted microdissection methods to isolate viable
 matrix embedded cells for single cell RNA-sequencing. Like neurons in the brain, osteocytes in bone
 communicate with one another through an extensive network of dendritic connections. I will perform bioinformatic
-analyses...",yes,yes; term used for the technology as defined,1,
+analyses...",yes,yes; term used for the technology as defined,random,
 single_cell,nih,single-cell RNA sequencing,11058931,2025,R01,Non-parenchymalcells drive  the key features of alcohol associated hepatitis (AAH) in a fully humanized mouse liver,title/abstract,"...ies-specific paracrine regulation
 of hepatocyte alcohol/lipid metabolism and possibly bile acid synthesis/transport that is related to cholestasis.
 By employing bulk and single-cell RNA sequencing we found NPC ligands-hepatocyte receptors that may be
 responsible for this phenotype. Our aims are to examine the role of these ligand-receptors interaction in vitro
-and...",yes,yes; term used for the technology as defined,0,
+and...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10899777,2024,K08,Modulation of immune cell phenotype by hormone-producing epithelia in autoimmune endocrinopathies,title/abstract,"...requires dissection of interactions
 between infiltrating T cells and hormone-producing epithelial cells, such as thyrocytes. To address this challenge,
 I have performed single-cell RNA sequencing in human thyroid from patients with Hashimoto’s thyroiditis,
 Graves’ disease (an autoantibody-driven form of thyroid autoimmunity) and those without autoimmune thyroid
-d...",yes,yes; term used for the technology as defined,0,
+d...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,11004708,2025,R01,"Delineating mechanisms underlying azole-induced developmental toxicity using single cell transcriptomic approaches, genome editing tools, and alternative models",title/abstract,"...ty testing: rat whole embryo culture (WEC; Aim
 1), zebrafish (Zf; Aim 2) embryo, and human embryonic stem cell (hESC; Aim 3) models and innovative
 molecular tools (e.g., single-cell RNA sequencing, CRISPR-Cas9), to investigate mechanisms linked with
 azole-induced developmental toxicity during a predefined susceptible window in embryogenesis (early
-organogenesis)....",yes,yes; term used for the technology as defined,0,
+organogenesis)....",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq; single-cell RNA sequencing,10658423,2023,R01,Intersection of autophagy and vesicle trafficking in Her2-positive breast cancer,title/abstract,"...from the Golgi to endosomes and multiple vesicular bodies (MVBs) and eventually
 released from tumor cells in small extracellular vesicles (sEVs). Additionally, employing single-cell RNA
 sequencing (scRNA-seq) and bioinformatics analysis, we developed a workflow to determine pharmacological
-interventions that would yield similar effects as FIP200 ablation. We also...",yes,yes; term used for the technology as defined,0,
+interventions that would yield similar effects as FIP200 ablation. We also...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,9959331,2020,P30,Bone Cells Analysis,title/abstract,"...A sequencing core (Dr. Warman,
 Associate Director, Boston Children’s Hospital) will provide services to help CIs and their trainees
 design, perform, and analyze bulk and single cell RNA sequencing experiments that involve
 skeletal cells and tissues. The Core will provide help with designing bulk and single cell RNA
-sequencing experiments and with assisting with ti...",yes,yes; term used for the technology as defined,0,
+sequencing experiments and with assisting with ti...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq; single-cell RNA sequencing,10183187,2021,R01,Single Cell Genome-Wide Myeloid Response Profiling in Immunotherapy,title/abstract,"...ster lung cancer progression. To achieve our
 goals, we will combine efforts of two labs with complementary expertise: tumor immunobiology and myeloid
 cells (Pittet), and single cell RNA sequencing (scRNA-Seq) and theory/bioinformatics (Klein). We have further
-teamed up with clinicians to obtain both blood samples and fresh tumor biopsies from lung cancer patients...",yes,yes; term used for the technology as defined,0,
+teamed up with clinicians to obtain both blood samples and fresh tumor biopsies from lung cancer patients...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,11242721,2025,F30,Expanding single-cell transcriptomics to chart the role of noncoding RNAs in normal hematopoiesis,title/abstract,"...for cognate
 codons. When dysregulated, these ncRNAs contribute to the pathogenesis of hematologic neoplasms. Despite
 these advances, ncRNAs are not profiled in standard single-cell RNA sequencing (scRNAseq): ncRNAs are
 mostly not endogenously polyadenylated (EPA), preventing their capture by oligo-deoxythymidine primers. This
-limitation of scRNAseq critically pre...",yes,yes; term used for the technology as defined,0,
+limitation of scRNAseq critically pre...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,11052678,2026,I01,Epigenetic Regulation of Diabetic Wound Inflammation,title/abstract,"...s human wound tissue and blood samples collected from T2D patients to explore mechanisms of
 impaired wound healing under diabetic conditions. We present data using human single cell RNA sequencing
 and murine diabetic wound models, that the histone acetyltransferase, MOF, is increased in diabetic wound
-macrophages (Mφs) resulting in a persistent inflammatory Mφ phe...",yes,yes; term used for the technology as defined,0,
+macrophages (Mφs) resulting in a persistent inflammatory Mφ phe...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-nucleus RNA sequencing,11398417,2025,ZIA,"ALZHEIMERS RESEARCH PROJECT: Collaborative genomic and transcriptomic profilling of MCI and AD cases using Whole Genome Sequencing, and single cell and spatial transcriptomics",title/abstract,"...relevant phenotypic information. This approach ensures the dataset’s high value for genome-wide association studies (GWAS) and downstream genetic analyses. 
-In parallel, single-nucleus RNA sequencing (snRNA-seq) will be performed on 200 brain samples—67 from each of the AD, MCI, and NCI groups—to enable cell-type-specific profiling of gene expression. Spatial transcr...",yes,yes; term used for the technology as defined,0,
+In parallel, single-nucleus RNA sequencing (snRNA-seq) will be performed on 200 brain samples—67 from each of the AD, MCI, and NCI groups—to enable cell-type-specific profiling of gene expression. Spatial transcr...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10579216,2023,P20,Phosphoglycerate mutase 5 (PGAM5) in the regulation of hepatic lipid metabolism and carcinogenesis,title/abstract,"...nsible for these effects. A liver specific knockout
 mouse will be generated to determine whether hepatocyte specific loss of PGAM5 will inhibit
 steatosis in a HFD model. Single cell RNA sequencing of a human HCC cell line will determine if
 PGAM5 depletion alters gene expression associated with hepatic lipid metabolism. HCC
-spheroids will be used to characterize ho...",yes,yes; term used for the technology as defined,0,
+spheroids will be used to characterize ho...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10210085,2021,R01,The Biology of Stem Cells in the Human Parasite Schistosoma Mansoni,title/abstract,"...l to the parasite’s
 ability to respond to insults in vivo, including PZQ treatment. To test this hypothesis, we propose
 two specific aims. In Specific Aim 1, we will use single cell RNA sequencing to describe the
 cellular lineages that operate during parasite development and determine whether these linages
-programs are “reactivated” in adult worms following injury...",yes,yes; term used for the technology as defined,0,
+programs are “reactivated” in adult worms following injury...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq; single-cell RNA sequencing,10655354,2023,P30,Biochemistry & Molecular Biology  Instrumentation Core,title/abstract,"...ic light scattering
 instruments are available. Our core investigators can determine gene expression profiles using
 high throughput microfluidic assays, a next generation single cell RNA-sequencing (scRNA-seq)
 PCR approach. A recently purchased automated Western immunoblot system allows for
-quantification of low abundant proteins via a sensitive immunoassay reactio...",yes,yes; term used for the technology as defined,0,
+quantification of low abundant proteins via a sensitive immunoassay reactio...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq,11234283,2026,R01,Modeling CHARGE Syndrome with Human Inner Ear Organoids,title/abstract,"...lopment, we will
 determine CHD7-binding loci, their transcriptional activity states and chromatin accessibility in human otic
 progenitors through CUT&RUN, scATAC-seq and scRNA-seq. A potential role for CHD7 in posttranslational
 histone modifications will be assessed by immunoprecipitation and ChIP-PCR. To assess possible
-contributions of CHD7-depe...",yes,yes; term used for the technology as defined,0,
+contributions of CHD7-depe...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,11165249,2026,R01,Computational identification and experimental validation of senescent cells and signature genes in lung aging and diseases,title/abstract,"...is structured around two specific aims: Aim 1 will develop a new deep learning framework
 to identify cell-type-specific SnCs and senescence-associated genes (SnGs) from single-cell RNA sequencing
 data, utilizing both intracellular and extracellular signals for more precise identification. Aim 2 will advance the
-spatial characterization of SnCs in IPF lungs throug...",yes,yes; term used for the technology as defined,0,
+spatial characterization of SnCs in IPF lungs throug...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq,10896302,2024,R01,Transcription Factors Governing the Development of GHRH-neurons,title/abstract,"...atic processes in later postnatal life, such as integration of feeding, reproduction, and growth.
  Key preliminary results in this grant include: i) Single cell RNA-seq (scRNA-seq) analyses reveal eight TFs
 enriched in developing growth hormone-releasing hormone (GHRH)-neurons in the ARC, which control linear
-growth; Prox1, Gsx1, Egr1, Foxp2, Pbx3...",yes,yes; term used for the technology as defined,0,
+growth; Prox1, Gsx1, Egr1, Foxp2, Pbx3...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10785702,2024,R21,L-fucose-mediated enrichment of memory CD4+T cells and enhanced anti-melanoma immunity,title/abstract,"...immune memory
 and responses. In this project, we will delineate how L-fuc alters the biology of CD4+T cells to increase the
 development and expansion of cmCD4+T cells by single-cell RNA sequencing. We will further determine if L-fuc
-indeed enhances immunological memory and blocks tumor recurrence in vivo.",yes,yes; term used for the technology as defined,0,
+indeed enhances immunological memory and blocks tumor recurrence in vivo.",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10230749,2020,UH3,"Multiplexed imaging of Renin-Angiotensin System (RAS) pathways, endothelial and immune dysfunction in COVID-19 Lung",title/abstract,"...dysfunction leading to clot formation in lung arteries and other organs.
 Since the early unprecedented global effort to identify the cellular targets of SARS-CoV2 using single
 cell RNA sequencing (scRNAseq) data from multiple human and non-human single cell datasets,
-several in depth reports on individual organs infected and cells and cellular pathways affected b...",yes,yes; term used for the technology as defined,0,
+several in depth reports on individual organs infected and cells and cellular pathways affected b...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq; single-cell RNA sequencing,10866250,2024,K99,Unraveling the Role of p53 in Endothelium Homeostasis after Ionizing Radiation Exposure,title/abstract,"...model with TP53 mutations and elucidate the functional
 and molecular alterations after exposure to 20 Gy of X-rays radiation on the heart. Both projects employ in-depth
 single cell RNA-sequencing (scRNA-seq) analysis to map the gene regulatory networks perturbations across
-different cell-types at varied time points post-irradiation. This project will be guided by...",yes,yes; term used for the technology as defined,0,
+different cell-types at varied time points post-irradiation. This project will be guided by...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq,10214327,2021,RF1,A TIMEM252-dependent Microvascular Endophenotype in  Alzheimer’s Disease,title/abstract,"...ysiological levels, we hope to define a TMEM252-dependent link to vascular dysfunctions in aging and AD.
 As this molecular signature of microvascular injury was based on scRNA-seq analysis of multiple datasets
 obtained in TBI and aging mice, and cross-examined in human and mouse aging and AD samples, we expect
-that the propose project will provide...",yes,yes; term used for the technology as defined,0,
+that the propose project will provide...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq; single-cell RNA sequencing,11494256,2026,R61,Screening of novel compounds through the reversal of gene expression in idiopathic pulmonary fibrosis,title/abstract,"...ll airways in IPF consist of several distinct cell types, and the contribution of each to the pathogenesis of
 IPF remains largely unknown. Recent advances in multiplexed single-cell RNA sequencing (scRNA-seq) and
 the reduction in scRNA-seq costs have allowed for large-scale profiling of small airway cells, enabling the
-characterization of cellular and molecular fe...",yes,yes; term used for the technology as defined,0,
-single_cell,nih,single-cell RNA sequencing,11197440,2024,ZIA,"Tumor microenvironment in CLL and MCL: pathogenesis, targets, and therapy",title/abstract,"...in CLL pathogenesis, we integrated bulk transcriptome profiling of paired PB and LN samples from 34 patients. Oncogenic processes were upregulated in LN compared to PB. Single-cell RNA sequencing distinguished 3 major cell states: quiescent, activated, and proliferating. The activated subpopulation comprised only 2.2% to 4.3% of the total tumor bulk in LN samples...",yes,yes; term used for the technology as defined,0,
+characterization of cellular and molecular fe...",yes,yes; term used for the technology as defined,,
+single_cell,nih,single-cell RNA sequencing,11197440,2024,ZIA,"Tumor microenvironment in CLL and MCL: pathogenesis, targets, and therapy",title/abstract,"...in CLL pathogenesis, we integrated bulk transcriptome profiling of paired PB and LN samples from 34 patients. Oncogenic processes were upregulated in LN compared to PB. Single-cell RNA sequencing distinguished 3 major cell states: quiescent, activated, and proliferating. The activated subpopulation comprised only 2.2% to 4.3% of the total tumor bulk in LN samples...",yes,yes; term used for the technology as defined,,
 single_cell,nih,scRNA-seq,11320874,2026,R00,4D controllable extracellular matrix properties to guide iPSC-derived intestinal organoid fate and form,title/abstract,"...psey, a world-leading expert in intestinal biology, will serve as my co-
 mentors. I will consult my mentoring team, including Prof. Jason Spence (iPSC-derived organoids, scRNA-seq),
 Prof. Richard Benninger (imaging and image analysis), Dr. Joseph Dragavon (imaging and image analysis), and
-Prof. Jay Hesselberth (scRNA-seq and bioinformatics analysi...",yes,yes; term used for the technology as defined,0,
-single_cell,nih,single-cell ATAC,11397574,2026,U01,Multi-omic phenotyping of human transcriptional regulators,none,,unclear,unclear; no abstract text in the source,1,
+Prof. Jay Hesselberth (scRNA-seq and bioinformatics analysi...",yes,yes; term used for the technology as defined,,
+single_cell,nih,single-cell ATAC,11397574,2026,U01,Multi-omic phenotyping of human transcriptional regulators,none,,unclear,unclear; no abstract text in the source,random,
 single_cell,nih,scRNA-seq; single-cell RNA sequencing,11187265,2025,P50,Project 2: Mechanisms of Resistance to Neoantigen Vaccines in PDAC,title/abstract,"...accination. In Aim 1, we will use biospecimens from the trial to rigorously assess the functional biology of neoantigen-specific T cells present in the TME using coupled single-cell RNA sequencing (scRNA-seq) and TCR sequencing. 
  
-Aim 2: Test innovative strategies to address the paucity of cDC1 in PDAC. We have made important contributions to understanding the de...",yes,yes; term used for the technology as defined,0,
+Aim 2: Test innovative strategies to address the paucity of cDC1 in PDAC. We have made important contributions to understanding the de...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10001677,2020,DP2,Predictive engineering of cellular transcriptional state,title/abstract,"...informative to measure. We leverage the recently developed Perturb-seq screening
 technology, which allows pooled profiling of CRISPR-mediated genetic perturbations with single-cell RNA
 sequencing as the phenotypic readout. This approach allows us to overexpress many programmed
-combinations of TFs using CRISPR activation (CRISPRa) and obtain a direct readout of th...",yes,yes; term used for the technology as defined,1,
+combinations of TFs using CRISPR activation (CRISPRa) and obtain a direct readout of th...",yes,yes; term used for the technology as defined,random,
 single_cell,nih,scRNA-seq; single-cell RNA sequencing,10747002,2023,R01,Nuclear receptor regulation of epigenetic mechanisms regulating HIV CNS latency,title/abstract,"...ed mice support latent HIV infection of human microglia. We have been able to identify latently infected
 cells recovered from the humanized mice. In addition, we applied single cell RNA sequencing (scRNA-Seq) to
 confirm that the microglia have transcriptional characteristics that match reference human microglia and further
-identified subsets of reactive microglial...",yes,yes; term used for the technology as defined,0,
+identified subsets of reactive microglial...",yes,yes; term used for the technology as defined,,
 single_cell,nih,single-cell RNA sequencing,10601127,2023,U19,Sequencing Technology Core,title/abstract,"...host cell responses to infections and regulation of pathogen-encoded virulence genes at
 multiple time-points during an infection. More recently, new approaches, such as single cell RNA sequencing,
 have enabled a more discrete examination of the cellular response to infection and the transduction of signals
-from an infected cell to adjacent cells. Applications of...",yes,yes; term used for the technology as defined,0,
+from an infected cell to adjacent cells. Applications of...",yes,yes; term used for the technology as defined,,

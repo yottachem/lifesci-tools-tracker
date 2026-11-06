@@ -49,10 +49,10 @@ technologies:
           - {name: DNBSEQ, query: '"DNBSEQ" OR "MGISEQ" OR "BGISEQ"', vendor: MGI Tech,
              note: 'sold in the US by Complete Genomics (MGI subsidiary). MGI agreed 2026-02-23 to sell Complete Genomics to Swiss Rockets AG (~$50M; pending MGI holder approval and CFIUS); MGI keeps a license to 205 patents',
              pending: Complete Genomics sale to Swiss Rockets; confirm which entity sells DNBSEQ in the US after close}
-          - {name: UG 100 / UG 200, query: '"Ultima Genomics" OR (("UG 100" OR "UG 200") AND "Ultima")', vendor: Ultima Genomics, launched: 2023, verify: launch,
-             note: UG 200 and UG 200 Ultra launched 2026-02-23}
-          - {name: VITARI, query: '"VITARI"', context: ['Element Biosciences', 'sequencing', 'sequencer'], vendor: Element Biosciences, launched: 2026,
-             note: 'announced 2026; ships 2H 2026 (landscape 2026-10-22). Precision sample pending'}
+          - {name: UG 100 / UG 200, query: '("UG 100" OR "UG100" OR "UG 200" OR "ppmSeq") AND ("Ultima Genomics" OR "flow-based sequencing" OR "mostly natural sequencing")', vendor: Ultima Genomics, launched: 2023, verify: launch,
+             note: 'UG 200 and UG 200 Ultra launched 2026-02-23. Product names only, like other brands: "Ultima Genomics" alone matched funding disclosures (precision 0.65), and "Ultima" alone matched Spanish and Portuguese "última" near "ug" units'}
+          - {name: VITARI, query: '"Element VITARI" OR ("VITARI" AND "Element Biosciences")', vendor: Element Biosciences, launched: 2026,
+             note: 'announced 2026; ships 2H 2026 (landscape 2026-10-22). A bare "VITARI" matched the author surname Vitari; no instrument uses yet, resample after launch'}
           - {name: Onso, query: '"Onso"', context: ['PacBio', 'Pacific Biosciences', 'sequencing by binding'], vendor: PacBio, launched: 2023, verify: launch}
           - {name: AXELIOS 1, query: '"AXELIOS" AND ("Roche" OR "sequencing by expansion" OR "SBX")', vendor: Roche, launched: 2026,
              note: 'SBX (sequencing by expansion); launched 2026-06-29. Roche calls it single-molecule but it competes with short-read benchtops'}
@@ -95,7 +95,7 @@ technologies:
         platforms:
           - {name: Sequel, query: '"Sequel"', context: ['PacBio', 'Pacific Biosciences', 'SMRT'], vendor: PacBio, launched: 2015, verify: true}
           - {name: Revio, query: '"Revio"', context: ['PacBio', 'Pacific Biosciences', 'HiFi', 'SMRT'], vendor: PacBio, launched: 2023, verify: launch}
-          - {name: Vega, query: '"PacBio Vega" OR ("Vega" AND "PacBio" AND "benchtop")', vendor: PacBio, launched: 2024, verify: launch}
+          - {name: Vega, query: '"PacBio Vega" OR "Pacific Biosciences Vega"', note: 'a bare "Vega" with PacBio context matched author surnames (De La Vega, Tazon-Vega)', vendor: PacBio, launched: 2024, verify: launch}
       nanopore:
         label: Nanopore
         platforms:
@@ -145,7 +145,8 @@ technologies:
         label: Combinatorial barcoding
         platforms:
           - {name: Evercode, query: '"Evercode" OR "Parse Biosciences"', vendor: QIAGEN, acquired_from: Parse Biosciences (2025-12-02), launched: 2021, verify: launch}
-          - {name: ScaleBio, query: '"ScaleBio" OR "Scale Biosciences"', vendor: 10x Genomics, acquired_from: Scale Biosciences (2025-08-11)}
+          - {name: ScaleBio, query: '"ScaleBio" OR "Scale Biosciences"', context: ['single-cell RNA', 'single-nucleus RNA', 'scRNA-seq', 'snRNA-seq', 'combinatorial indexing', 'sci-RNA-seq', 'QuantumScale'],
+             note: 'OpenAlex splits and stems "ScaleBio"/"Scale Biosciences" into ecology and ML papers ("large-scale bio..."), so the context is required', vendor: 10x Genomics, acquired_from: Scale Biosciences (2025-08-11)}
       targeted_dna:
         label: Targeted single-cell DNA
         platforms:

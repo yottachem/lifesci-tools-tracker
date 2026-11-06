@@ -4,7 +4,7 @@ Each hit gets a snippet around the brand from its title/abstract, or else from E
 full text (cached in data/cache/europepmc/). Labels are added afterwards in the CSV:
   label       yes = names the commercial platform, no = another meaning, unclear = no evidence found
   reason      one line
-  josh_check  1 = in the random 10% spot-check (rows labelled no/unclear are reviewed too)
+  josh_check  random = in the random 10% spot-check; judgment/pattern = added by hand (rows labelled no/unclear are reviewed too)
 Precision = yes / (yes + no); evidence coverage = share of rows not unclear.
 
 Run: uv run python -m precision.sample_platforms [technology ...]
@@ -127,7 +127,7 @@ def run(techs=None):
                     ev, snip = "none", ""
                 rows.append({"technology": tech_id, "platform": p["name"], "work_id": w["id"].rsplit("/", 1)[-1],
                              "year": w.get("publication_year"), "title": title[:200], "evidence": ev, "snippet": snip,
-                             "label": "", "reason": "", "josh_check": int(rng.random() < 0.10), "josh_label": ""})
+                             "label": "", "reason": "", "josh_check": "random" if rng.random() < 0.10 else "", "josh_label": ""})
         with open(path, "w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=FIELDS)
             w.writeheader()

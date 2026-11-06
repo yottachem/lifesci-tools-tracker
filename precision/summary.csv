@@ -1,11 +1,136 @@
 technology,signal,entry,sampled,kept,yes,no,unclear,precision,ci_low,ci_high,coverage,low
+qpcr_dpcr,platforms,QX ddPCR,50,50,33,0,17,1.0,0.9,1.0,0.66,False
+qpcr_dpcr,platforms,QX700 (naica),50,43,23,0,20,1.0,0.86,1.0,0.53,False
+qpcr_dpcr,platforms,QIAcuity,50,50,35,0,15,1.0,0.9,1.0,0.7,False
+qpcr_dpcr,platforms,Absolute Q,50,50,31,3,16,0.91,0.77,0.97,0.68,False
+qpcr_dpcr,platforms,Digital LightCycler,27,27,12,0,15,1.0,0.76,1.0,0.44,False
+qpcr_dpcr,platforms,QuantStudio,50,50,29,0,21,1.0,0.88,1.0,0.58,False
+qpcr_dpcr,platforms,StepOne / 7500,50,50,27,0,23,1.0,0.88,1.0,0.54,False
+qpcr_dpcr,platforms,CFX,50,50,29,0,21,1.0,0.88,1.0,0.58,False
+qpcr_dpcr,platforms,LightCycler,50,50,34,0,16,1.0,0.9,1.0,0.68,False
+qpcr_dpcr,platforms,Rotor-Gene,50,50,19,0,31,1.0,0.83,1.0,0.38,False
+qpcr_dpcr,platforms,Biomark,50,50,34,0,16,1.0,0.9,1.0,0.68,False
+qpcr_dpcr,methods,"""quantitative PCR"" OR ""real-time PCR"" OR ""qPCR""",50,50,33,0,17,1.0,0.9,1.0,0.66,False
+qpcr_dpcr,methods,"""RT-qPCR""",50,50,39,0,11,1.0,0.91,1.0,0.78,False
+qpcr_dpcr,methods,"""digital PCR"" OR ""dPCR""",50,50,44,0,6,1.0,0.92,1.0,0.88,False
+qpcr_dpcr,methods,"""droplet digital PCR"" OR ""ddPCR""",50,50,42,0,8,1.0,0.92,1.0,0.84,False
+qpcr_dpcr,nih,all nih_terms,50,50,50,0,0,1.0,0.93,1.0,1.0,False
+qpcr_dpcr,patents,all patent_terms,50,50,50,0,0,1.0,0.93,1.0,1.0,False
+flow_cytometry,platforms,FACSCalibur,50,50,22,0,28,1.0,0.85,1.0,0.44,False
+flow_cytometry,platforms,FACSCanto,50,50,36,0,14,1.0,0.9,1.0,0.72,False
+flow_cytometry,platforms,FACSAria,50,50,31,0,19,1.0,0.89,1.0,0.62,False
+flow_cytometry,platforms,LSR Fortessa / LSR II,50,50,29,0,21,1.0,0.88,1.0,0.58,False
+flow_cytometry,platforms,FACSymphony,50,50,33,0,17,1.0,0.9,1.0,0.66,False
+flow_cytometry,platforms,FACSDiscover,50,50,23,0,27,1.0,0.86,1.0,0.46,False
+flow_cytometry,platforms,Accuri,50,50,32,0,18,1.0,0.89,1.0,0.64,False
+flow_cytometry,platforms,CytoFLEX,50,50,37,0,13,1.0,0.91,1.0,0.74,False
+flow_cytometry,platforms,Gallios / Navios,50,50,30,0,20,1.0,0.89,1.0,0.6,False
+flow_cytometry,platforms,Aurora,50,50,31,0,19,1.0,0.89,1.0,0.62,False
+flow_cytometry,platforms,Northern Lights,50,50,29,0,21,1.0,0.88,1.0,0.58,False
+flow_cytometry,platforms,ImageStream,50,50,32,0,18,1.0,0.89,1.0,0.64,False
+flow_cytometry,platforms,Attune NxT,50,50,32,0,18,1.0,0.89,1.0,0.64,False
+flow_cytometry,platforms,Sony cytometers,50,50,31,0,19,1.0,0.89,1.0,0.62,False
+flow_cytometry,platforms,NovoCyte,50,50,35,0,15,1.0,0.9,1.0,0.7,False
+flow_cytometry,platforms,MACSQuant,50,50,30,0,20,1.0,0.89,1.0,0.6,False
+flow_cytometry,platforms,CyTOF,50,50,32,0,18,1.0,0.89,1.0,0.64,False
+flow_cytometry,methods,"""flow cytometry""",50,50,40,0,10,1.0,0.91,1.0,0.8,False
+flow_cytometry,methods,"""spectral flow cytometry"" OR ""spectral cytometry""",50,50,47,0,3,1.0,0.92,1.0,0.94,False
+flow_cytometry,methods,"""mass cytometry"" NOT ""imaging mass cytometry""",50,50,47,0,3,1.0,0.92,1.0,0.94,False
+flow_cytometry,methods,"""fluorescence-activated cell sorting""",50,50,31,0,19,1.0,0.89,1.0,0.62,False
+flow_cytometry,methods,"""imaging flow cytometry""",50,50,34,0,16,1.0,0.9,1.0,0.68,False
+flow_cytometry,nih,all nih_terms,50,50,47,0,3,1.0,0.92,1.0,0.94,False
+flow_cytometry,patents,all patent_terms,50,50,49,1,0,0.98,0.9,1.0,1.0,False
+ms_proteomics,platforms,Orbitrap Astral,50,50,32,0,18,1.0,0.89,1.0,0.64,False
+ms_proteomics,platforms,Orbitrap Exploris,50,50,33,0,17,1.0,0.9,1.0,0.66,False
+ms_proteomics,platforms,Q Exactive,50,50,37,0,13,1.0,0.91,1.0,0.74,False
+ms_proteomics,platforms,Orbitrap Tribrid,50,50,34,0,16,1.0,0.9,1.0,0.68,False
+ms_proteomics,platforms,timsTOF,50,50,34,0,16,1.0,0.9,1.0,0.68,False
+ms_proteomics,platforms,ZenoTOF / TripleTOF,50,50,28,0,22,1.0,0.88,1.0,0.56,False
+ms_proteomics,platforms,Proteograph,50,50,35,0,15,1.0,0.9,1.0,0.7,False
+ms_proteomics,methods,"""mass spectrometry-based proteomics"" OR ""MS-based proteomics""",50,50,32,0,18,1.0,0.89,1.0,0.64,False
+ms_proteomics,methods,"""data-independent acquisition""",50,45,38,2,5,0.95,0.83,0.99,0.89,False
+ms_proteomics,methods,"""shotgun proteomics"" OR ""bottom-up proteomics""",50,50,34,0,16,1.0,0.9,1.0,0.68,False
+ms_proteomics,methods,"""top-down proteomics""",50,50,37,0,13,1.0,0.91,1.0,0.74,False
+ms_proteomics,methods,"""tandem mass tag""",50,50,31,0,19,1.0,0.89,1.0,0.62,False
+ms_proteomics,methods,"""single-cell proteomics""",50,24,18,1,5,0.95,0.75,0.99,0.79,False
+ms_proteomics,nih,all nih_terms,50,50,49,1,0,0.98,0.9,1.0,1.0,False
+ms_proteomics,patents,all patent_terms,50,50,49,1,0,0.98,0.9,1.0,1.0,False
+affinity_proteomics,platforms,Olink,50,50,28,0,22,1.0,0.88,1.0,0.56,False
+affinity_proteomics,platforms,NULISA,50,50,38,0,12,1.0,0.91,1.0,0.76,False
+affinity_proteomics,platforms,SomaScan,50,50,37,2,11,0.95,0.83,0.99,0.78,False
+affinity_proteomics,platforms,Simoa,50,50,37,0,13,1.0,0.91,1.0,0.74,False
+affinity_proteomics,methods,"""proximity extension assay""",50,50,44,0,6,1.0,0.92,1.0,0.88,False
+affinity_proteomics,methods,"""affinity proteomics"" OR ""affinity-based proteomics""",50,32,26,1,5,0.96,0.82,0.99,0.84,False
+affinity_proteomics,methods,"""aptamer-based proteomics"" OR ""aptamer-based proteomic""",50,50,39,0,11,1.0,0.91,1.0,0.78,False
+affinity_proteomics,methods,"""single molecule array""",50,50,43,0,7,1.0,0.92,1.0,0.86,False
+affinity_proteomics,nih,all nih_terms,50,43,41,1,1,0.98,0.88,1.0,0.98,False
+affinity_proteomics,patents,all patent_terms,45,20,18,2,0,0.9,0.7,0.97,1.0,False
+protein_sequencing,platforms,Platinum (Quantum-Si),50,28,10,0,18,1.0,0.72,1.0,0.36,False
+protein_sequencing,methods,"""single-molecule protein sequencing""",50,50,40,0,10,1.0,0.91,1.0,0.8,False
+protein_sequencing,methods,"""fluorosequencing""",29,29,28,0,1,1.0,0.88,1.0,0.97,False
+protein_sequencing,methods,"""nanopore protein sequencing""",28,28,24,0,4,1.0,0.86,1.0,0.86,False
+protein_sequencing,methods,"""protein sequencing""",50,33,27,1,5,0.96,0.82,0.99,0.85,False
+protein_sequencing,nih,all nih_terms,50,50,49,0,1,1.0,0.93,1.0,0.98,False
+protein_sequencing,patents,all patent_terms,44,44,44,0,0,1.0,0.92,1.0,1.0,False
+short_read_ngs,platforms,NovaSeq,50,50,36,0,14,1.0,0.9,1.0,0.72,False
+short_read_ngs,platforms,NovaSeq X,50,50,31,0,19,1.0,0.89,1.0,0.62,False
+short_read_ngs,platforms,NextSeq,50,50,35,0,15,1.0,0.9,1.0,0.7,False
+short_read_ngs,platforms,MiSeq,50,50,39,0,11,1.0,0.91,1.0,0.78,False
+short_read_ngs,platforms,MiniSeq / iSeq,50,50,34,0,16,1.0,0.9,1.0,0.68,False
+short_read_ngs,platforms,HiSeq,50,50,36,0,14,1.0,0.9,1.0,0.72,False
+short_read_ngs,platforms,AVITI,50,50,24,0,26,1.0,0.86,1.0,0.48,False
+short_read_ngs,platforms,DNBSEQ,50,50,40,0,10,1.0,0.91,1.0,0.8,False
+short_read_ngs,platforms,UG 100 / UG 200,50,22,5,0,17,1.0,0.57,1.0,0.23,False
+short_read_ngs,platforms,VITARI,50,0,0,0,0,,,,,False
+short_read_ngs,platforms,Onso,47,47,28,0,19,1.0,0.88,1.0,0.6,False
+short_read_ngs,platforms,AXELIOS 1,3,3,1,0,2,1.0,0.21,1.0,0.33,False
+short_read_ngs,platforms,Ion Torrent,50,50,27,1,22,0.96,0.82,0.99,0.56,False
+short_read_ngs,methods,"""next-generation sequencing""",50,50,44,0,6,1.0,0.92,1.0,0.88,False
+short_read_ngs,methods,"""massively parallel sequencing""",50,50,31,0,19,1.0,0.89,1.0,0.62,False
+short_read_ngs,methods,"""high-throughput sequencing""",50,50,37,0,13,1.0,0.91,1.0,0.74,False
+short_read_ngs,methods,"""whole-exome sequencing""",50,50,43,0,7,1.0,0.92,1.0,0.86,False
+short_read_ngs,methods,"""sequencing by synthesis""",50,50,42,0,8,1.0,0.92,1.0,0.84,False
+short_read_ngs,nih,all nih_terms,50,50,49,1,0,0.98,0.9,1.0,1.0,False
+short_read_ngs,patents,all patent_terms,50,50,50,0,0,1.0,0.93,1.0,1.0,False
+long_read_sequencing,platforms,Sequel,50,50,35,0,15,1.0,0.9,1.0,0.7,False
+long_read_sequencing,platforms,Revio,50,50,38,0,12,1.0,0.91,1.0,0.76,False
+long_read_sequencing,platforms,Vega,50,16,8,0,8,1.0,0.68,1.0,0.5,False
+long_read_sequencing,platforms,MinION,50,50,36,0,14,1.0,0.9,1.0,0.72,False
+long_read_sequencing,platforms,GridION,50,50,15,0,35,1.0,0.8,1.0,0.3,False
+long_read_sequencing,platforms,PromethION,50,50,33,0,17,1.0,0.9,1.0,0.66,False
+long_read_sequencing,platforms,Flongle,50,50,30,0,20,1.0,0.89,1.0,0.6,False
+long_read_sequencing,platforms,CycloneSEQ,50,50,36,0,14,1.0,0.9,1.0,0.72,False
+long_read_sequencing,methods,"""long-read sequencing""",50,50,44,0,6,1.0,0.92,1.0,0.88,False
+long_read_sequencing,methods,"""nanopore sequencing""",50,50,45,0,5,1.0,0.92,1.0,0.9,False
+long_read_sequencing,methods,"""single-molecule real-time sequencing"" OR ""SMRT sequencing""",50,50,29,0,21,1.0,0.88,1.0,0.58,False
+long_read_sequencing,methods,"""HiFi reads"" OR ""HiFi sequencing""",50,50,40,0,10,1.0,0.91,1.0,0.8,False
+long_read_sequencing,methods,"""third-generation sequencing""",50,50,41,0,9,1.0,0.91,1.0,0.82,False
+long_read_sequencing,nih,all nih_terms,50,50,49,0,1,1.0,0.93,1.0,0.98,False
+long_read_sequencing,patents,all patent_terms,50,43,42,1,0,0.98,0.88,1.0,1.0,False
+single_cell,platforms,Chromium,50,50,31,0,19,1.0,0.89,1.0,0.62,False
+single_cell,platforms,BD Rhapsody,50,50,33,0,17,1.0,0.9,1.0,0.66,False
+single_cell,platforms,PIPseq,50,50,35,0,15,1.0,0.9,1.0,0.7,False
+single_cell,platforms,Singleron,50,50,34,4,12,0.89,0.76,0.96,0.76,False
+single_cell,platforms,Evercode,50,50,32,0,18,1.0,0.89,1.0,0.64,False
+single_cell,platforms,ScaleBio,50,50,16,9,25,0.64,0.45,0.8,0.5,True
+single_cell,platforms,Tapestri,50,50,34,0,16,1.0,0.9,1.0,0.68,False
+single_cell,methods,"""single-cell RNA sequencing"" OR ""single-cell RNA-seq"" OR ""scRNA-seq""",50,50,43,0,7,1.0,0.92,1.0,0.86,False
+single_cell,methods,"""single-nucleus RNA sequencing"" OR ""single-nucleus RNA-seq"" OR ""snRNA-seq""",50,50,41,0,9,1.0,0.91,1.0,0.82,False
+single_cell,methods,"""single-cell ATAC"" OR ""scATAC-seq""",50,50,40,0,10,1.0,0.91,1.0,0.8,False
+single_cell,methods,"""CITE-seq""",50,50,44,0,6,1.0,0.92,1.0,0.88,False
+single_cell,methods,"""single-cell multiomics"" OR ""single-cell multi-omics""",50,50,46,0,4,1.0,0.92,1.0,0.92,False
+single_cell,nih,all nih_terms,50,50,49,0,1,1.0,0.93,1.0,0.98,False
+single_cell,patents,all patent_terms,50,50,47,3,0,0.94,0.84,0.98,1.0,False
 spatial_transcriptomics,platforms,Visium,50,44,25,1,18,0.96,0.81,0.99,0.59,False
 spatial_transcriptomics,platforms,Visium HD,50,44,30,0,14,1.0,0.89,1.0,0.68,False
+spatial_transcriptomics,platforms,StrataMap,5,5,0,0,5,,,,0.0,False
 spatial_transcriptomics,platforms,Stereo-seq,50,48,26,2,20,0.93,0.77,0.98,0.58,False
 spatial_transcriptomics,platforms,Curio Seeker / Trekker,50,25,12,6,7,0.67,0.44,0.84,0.72,True
 spatial_transcriptomics,platforms,AtlasXomics,33,33,11,13,9,0.46,0.28,0.65,0.73,True
 spatial_transcriptomics,platforms,Xenium,50,45,26,1,18,0.96,0.82,0.99,0.6,False
 spatial_transcriptomics,platforms,MERSCOPE,50,45,26,3,16,0.9,0.74,0.96,0.64,False
+spatial_transcriptomics,platforms,Atera,50,0,0,0,0,,,,,False
+spatial_transcriptomics,platforms,Pyxa,50,37,2,0,35,1.0,0.34,1.0,0.05,False
 spatial_transcriptomics,platforms,CosMx SMI,50,44,25,2,17,0.93,0.77,0.98,0.61,False
 spatial_transcriptomics,platforms,Molecular Cartography,50,47,25,1,21,0.96,0.81,0.99,0.55,False
 spatial_transcriptomics,platforms,GenePS,10,10,4,0,6,1.0,0.51,1.0,0.4,False

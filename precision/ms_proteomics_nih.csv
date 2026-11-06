@@ -1,164 +1,164 @@
 technology,signal,entry,id,year,type,title,evidence,snippet,label,reason,josh_check,josh_label
-ms_proteomics,nih,data-independent acquisition,11419954,2026,P30,Metabolomics Shared Resource,title/abstract,"...ribrid (NIH S10 grant) for unbiased metabolomic profiling using intelligent data-dependent acquisition, a SCIEX Triple TOF mass spectrometer for unbiased lipidomics with data-independent acquisition, and two Agilent 6495 Triple Quadrupole MS for targeted metabolomics, metabolic flux, quantification of metabolites and lipids coupled with Biocrates technology. Over th...",no,"no; data-independent acquisition for lipidomics in a metabolomics core, not proteomics",0,
-ms_proteomics,nih,top-down proteomics,8855324,2015,P41,National Resource for Translational and Developmental Proteomics,title/abstract,"...cers, including chronic lymphocytic leukemia, multiple myeloma, and acute myeloid leukemia. In technology, we will accelerate the development of the leading platform for top-down proteomics, including two new Fourier-Transform instruments, new protein fractionation technologies, and the AUTOPILOT software suite to allow strategic objectives of biomedical pr...",yes,yes; term used for the technology as defined,1,
+ms_proteomics,nih,data-independent acquisition,11419954,2026,P30,Metabolomics Shared Resource,title/abstract,"...ribrid (NIH S10 grant) for unbiased metabolomic profiling using intelligent data-dependent acquisition, a SCIEX Triple TOF mass spectrometer for unbiased lipidomics with data-independent acquisition, and two Agilent 6495 Triple Quadrupole MS for targeted metabolomics, metabolic flux, quantification of metabolites and lipids coupled with Biocrates technology. Over th...",no,"no; data-independent acquisition for lipidomics in a metabolomics core, not proteomics",judgment,
+ms_proteomics,nih,top-down proteomics,8855324,2015,P41,National Resource for Translational and Developmental Proteomics,title/abstract,"...cers, including chronic lymphocytic leukemia, multiple myeloma, and acute myeloid leukemia. In technology, we will accelerate the development of the leading platform for top-down proteomics, including two new Fourier-Transform instruments, new protein fractionation technologies, and the AUTOPILOT software suite to allow strategic objectives of biomedical pr...",yes,yes; term used for the technology as defined,random,
 ms_proteomics,nih,top-down proteomics,9099877,2016,P41,Administration and management,title/abstract,"...nce natural antibiotics; (c) collate spectral data through spectral 
 archives and networks; (d) develop universal tools for peptide identification; (e) develop tools for top-down 
-proteomics; and, (f) analyzing multiplexed spectra. The technology platforms are driven by a multitude of collaborative biomedical studies where the use of CCMS developed tools is...",yes,yes; term used for the technology as defined,0,
+proteomics; and, (f) analyzing multiplexed spectra. The technology platforms are driven by a multitude of collaborative biomedical studies where the use of CCMS developed tools is...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,10112703,2021,R01,Quantitative top-down proteomics of human colorectal cancer cells and tumors,title/abstract,"Quantitative top-down proteomics of human colorectal cancer cells and tumors. Project Summary
 It has been estimated that 145,600 people were diagnosed with colorectal cancer (CRC)
-and 51,020 deaths were...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,10926014,2023,ZIA,Molecular Mechanisms of TGF-beta Signaling Pathway,title/abstract,"...quired for the SMAD-independent activation of JNK and p38. In order to uncover additional mechanisms and pathways that function in TGF-beta signaling, we took a targeted quantitative proteomics approach to identify additional associated proteins of the TGFbRI complex. Through this approach, we uncovered several protein kinases that interact and/or are phosphory...",yes,yes; term used for the technology as defined,0,
+and 51,020 deaths were...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,10926014,2023,ZIA,Molecular Mechanisms of TGF-beta Signaling Pathway,title/abstract,"...quired for the SMAD-independent activation of JNK and p38. In order to uncover additional mechanisms and pathways that function in TGF-beta signaling, we took a targeted quantitative proteomics approach to identify additional associated proteins of the TGFbRI complex. Through this approach, we uncovered several protein kinases that interact and/or are phosphory...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,8958836,2015,P41,Collaboration and Service (pp 205- 256),title/abstract,"...xtends Service 1, Builds upon TR&D 1, 2, 3) 
 Service 7. Epiproteomic Histone Modification Panel version 2.0 (Extends Service 2, Builds upon 
 TR&D 4) 
 Service 8. Clinical Top-Down Proteomics (Extends Service 3, Builds upon TR&D 1, 2, 3) 
 Specific Aim 3 describes the management and marketing of these service lines. Within Attachments 1 and 
-2, we describe 8 c...",yes,yes; term used for the technology as defined,0,
+2, we describe 8 c...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,10246801,2021,R01,Enabling Top-Down Proteomics through Material Chemistry and Nanotechnology,title/abstract,"Enabling Top-Down Proteomics through Material Chemistry and Nanotechnology. Summary
  In the post-genomics era, a comprehensive analysis of “proteoforms” that arise from genetic variations and
-post-t...",yes,yes; term used for the technology as defined,0,
+post-t...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,10067548,2021,R01,Mechanisms of vitamin A deprivation and replacement therapy,title/abstract,"...gap in our knowledge and to analyze the
 underlying mechanisms.
 This proposal synergistically combines Drosophila genetics, immunohistochemistry, behavioral
 analysis, and quantitative proteomics. This multidisciplinary approach will allow us to evaluate the
 central hypotheses that different photoreceptor types – functionally equivalent to human rods
-and cones -...",yes,yes; term used for the technology as defined,0,
+and cones -...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,9137858,2016,R35,Mechanisms of phosphorylation signaling by phosphoprotein phosphatases,title/abstract,"...relationships, identifying opposing kinases, and determining regulatory inputs. My laboratory is uniquely
 positioned to address these outstanding challenges by combining quantitative proteomics and
 phosphoproteomics approaches in cells with reconstitution of minimal signaling units in vitro. PPP form
-multimeric holoenzymes with overlapping subunits that functio...",yes,yes; term used for the technology as defined,0,
+multimeric holoenzymes with overlapping subunits that functio...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics; top-down proteomics,9423893,2018,R01,Quantitative proteomics of Zebrafish embryos and blastomeres,title/abstract,"Quantitative proteomics of Zebrafish embryos and blastomeres. Project Summary
 Birth defects are the leading cause of infant death in the United States (Pediatrics 2012,
-129:338-48. PMID: 222911...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,10585129,2022,R01,Mechanism and Regulation of V(D)J Recombination,title/abstract,"...n a novel RAG1 mutant mouse. Aim 2. Determine components of and regulatory mechanisms in RCs. We will identify the components of RCs using in vivo proximity labeling and quantitative proteomics, establish the mechanism by which Spin1 interacts with RAG1 and stimulates recombination, and determine how the RAG1 NTR dictates gene segment repertoire through control...",yes,yes; term used for the technology as defined,0,
+129:338-48. PMID: 222911...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,10585129,2022,R01,Mechanism and Regulation of V(D)J Recombination,title/abstract,"...n a novel RAG1 mutant mouse. Aim 2. Determine components of and regulatory mechanisms in RCs. We will identify the components of RCs using in vivo proximity labeling and quantitative proteomics, establish the mechanism by which Spin1 interacts with RAG1 and stimulates recombination, and determine how the RAG1 NTR dictates gene segment repertoire through control...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,10818711,2023,P41,National Resource for Translational and Developmental Proteomics,title/abstract,"...m, we place major emphasis
 on enabling basic and clinical research in proteomics, reduction to practice to extend innovations to early
 adopters of new implementations of top-down proteomics, which is itself a new concept to many we
 encounter. We also embrace mechanisms including corporate partnerships, community engagement, training
-and dissemination to ens...",yes,yes; term used for the technology as defined,0,
+and dissemination to ens...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,shotgun proteomics,11378759,2026,U01,Advancing Protein Isoform Analysis through an Integrated Computational Framework.,title/abstract,"...r understanding of alternative splicing
 in cancer, the study of protein isoforms at the proteomic level is still in its infancy. Advances in mass
 spectrometry (MS)-based shotgun proteomics have enabled unbiased identification and quantification of more
 than 10,000 protein coding genes from biological samples. However, because shotgun proteomics data
-analys...",yes,yes; term used for the technology as defined,0,
+analys...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,10087667,2020,R00,An integrated approach to the study of mitochondrial vitamin B12 pathway and type II fatty acid synthesis,title/abstract,"...ct new pathway regulators; (b) to combine CRISPR editing in cultured cells and high-resolution LC-
 MS based metabolomics (including lipidomics) and proteomics (including top-down proteomics) to probe
 metabolism. The applicant's host laboratory and institute provide an ideal training environment for the
-proposed research. Her postdoctoral mentor Dr. Vamsi Mo...",yes,yes; term used for the technology as defined,0,
+proposed research. Her postdoctoral mentor Dr. Vamsi Mo...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,9594610,2018,RF1,"ALZHEIMER'S DISEASE PATHWAYS AND BIOMARKER DISCOVERY BY INTEGRATIVE PROTEOMICS, GLYCOPROTEOMICS, AND GLYCOMICS",title/abstract,"...ycome and their changes in AD. In this project, the research team will
 establish an innovative, high-throughput, multiplex platform that uses a combination of label-free
 quantitative proteomics and latest glycoproteomics and glycomics technologies for high-resolution,
-comprehensive analyses of total proteins, glycoproteins, and glycans in human clinical specime...",yes,yes; term used for the technology as defined,0,
+comprehensive analyses of total proteins, glycoproteins, and glycans in human clinical specime...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,11102685,2025,S10,Orbitrap Astral to support investigator proteomics research in a Core facility.,title/abstract,"...k separation efficiency and reproducibility, and the proposed MS system will have all the necessary
 hardware and software needed for rapid identification, profiling, and quantitative proteomics workflows. Based
 on the manufacturer’s data, we expect this instrument will be able to identify over 9,000 proteins in a 15-minute
-LC gradient or 12,000 proteins in a 60...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,top-down proteomics,9236198,2017,R44,PEPTIDE BEAD MICROARRAYS MEASURED BY MASS SPECTROMETRY IMAGING,title/abstract,"...uspension bead arrays on the fluorescence detection platforms. Achieving better integration of affinity separation with mass spectrometry will benefit both bottom-up and top-down proteomics and facilitate progress in basic research in systems biology, preclinical drug discovery, disease diagnostics and reagent development. Adeptrix is developing an analytic...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,8911799,2015,R21,Identification of microbiome proteins associated with IBD,title/abstract,...eins associated with IBD. DESCRIPTION (provided by applicant):  Our proposal seeks to advance the field of distal gut microbiome research from its basis in genomics into quantitative proteomics through identification and characterization of bacterial proteins and enzymatic activities that are associated with inflammatory bowel diseases (IBD). The human intestin...,yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,10049549,2020,R01,Post-lysosomal cholesterol trafficking networks,title/abstract,...PC1-dependent and -independent distribution pathways that can be identified based on unique cholesterol cargo interactomes. Elucidation of these protein networks through quantitative proteomics will identify major nodes through which lipoprotein cholesterol traffics and novel therapeutic targets..,yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,8860041,2015,R01,Molecular signatures of diabetic kidney disease,title/abstract,"...to identify the biologic pathways that are associated with progression from reduced eGFR to ESRD in type 2 diabetes. We propose to utilize a state-of-the-art, targeted, quantitative proteomics platform to quantify expression of 179 proteins from 12 biologically promising candidate pathways prior to progression from reduced eGFR to incident ESRD or 50% drop in...",yes,yes; term used for the technology as defined,0,
+LC gradient or 12,000 proteins in a 60...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,top-down proteomics,9236198,2017,R44,PEPTIDE BEAD MICROARRAYS MEASURED BY MASS SPECTROMETRY IMAGING,title/abstract,"...uspension bead arrays on the fluorescence detection platforms. Achieving better integration of affinity separation with mass spectrometry will benefit both bottom-up and top-down proteomics and facilitate progress in basic research in systems biology, preclinical drug discovery, disease diagnostics and reagent development. Adeptrix is developing an analytic...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,8911799,2015,R21,Identification of microbiome proteins associated with IBD,title/abstract,...eins associated with IBD. DESCRIPTION (provided by applicant):  Our proposal seeks to advance the field of distal gut microbiome research from its basis in genomics into quantitative proteomics through identification and characterization of bacterial proteins and enzymatic activities that are associated with inflammatory bowel diseases (IBD). The human intestin...,yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,10049549,2020,R01,Post-lysosomal cholesterol trafficking networks,title/abstract,...PC1-dependent and -independent distribution pathways that can be identified based on unique cholesterol cargo interactomes. Elucidation of these protein networks through quantitative proteomics will identify major nodes through which lipoprotein cholesterol traffics and novel therapeutic targets..,yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,8860041,2015,R01,Molecular signatures of diabetic kidney disease,title/abstract,"...to identify the biologic pathways that are associated with progression from reduced eGFR to ESRD in type 2 diabetes. We propose to utilize a state-of-the-art, targeted, quantitative proteomics platform to quantify expression of 179 proteins from 12 biologically promising candidate pathways prior to progression from reduced eGFR to incident ESRD or 50% drop in...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,data-independent acquisition,10113579,2021,P30,Proteomics Shared Resource,title/abstract,"...ted in 2017 and indicated that core rates were highly competitive. Future directions of the 
 PRO include: deep sequencing proteomics with advanced MS instrumentation and data-independent 
 acquisition (DIA) methods; top-down MS protein sequencing; ion mobility separation (IMS) mass spectrometry; 
-proteogenomics integration of genomics/proteomics data sets, and MS anal...",yes,yes; term used for the technology as defined,0,
+proteogenomics integration of genomics/proteomics data sets, and MS anal...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,11566393,2026,R61,IMAT-ITCR Collaboration: Integrated Computational Framework for Validation and Quantification of Intact Proteoforms in Patient-Derived Ovarian Cancer Spheroids,title/abstract,"...t need in
 proteoform-centric cancer research: robust validation and quantification of intact proteoforms. The
 parent IMAT project focuses on developing an ultrasensitive top-down proteomics platform for deep
 proteoform characterization in low-input ovarian cancer spheroids, while the parent ITCR project
-focuses on developing SEPepQuant, a computational fram...",yes,yes; term used for the technology as defined,0,
+focuses on developing SEPepQuant, a computational fram...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,10908533,2024,R01,Discovery and Characterization of Novel Sepsis Proteome Biomarkers,title/abstract,"...Gram-negative or Gram-positive bacteremia –
 coupled with access to a NIGMS national proteomics resource equipped with world-class instrumentation and
 expertise. Further, quantitative proteomics and immunoassays will be used for qualification and validation of the
 novel biomarkers in human plasma from sepsis patients.
- Specific Aim 1: Identification and organ ma...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,8581823,2013,K99,Cell non-autonomous nature of the heat shock response,title/abstract,...will include: learning to utilize the C. elegans nervous system to study neural-born extracellular signaling events in the intact animal; mass spectrometry techniques in quantitative proteomics which are necessary to identify pertinent signaling molecules and associated machinery; bioinformatic techniques necessary for small RNA profiling and tissue-specific ri...,yes,yes; term used for the technology as defined,0,
+ Specific Aim 1: Identification and organ ma...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,8581823,2013,K99,Cell non-autonomous nature of the heat shock response,title/abstract,...will include: learning to utilize the C. elegans nervous system to study neural-born extracellular signaling events in the intact animal; mass spectrometry techniques in quantitative proteomics which are necessary to identify pertinent signaling molecules and associated machinery; bioinformatic techniques necessary for small RNA profiling and tissue-specific ri...,yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,9273646,2016,R00,Molecular Modulation of Actomyosin Mechanics by Cardiac Myosin-Binding Protein C,title/abstract,"...his mentorship team, Dr. Previs will acquire new technical skills and combine state-of-the-art, single
 molecule biophysical techniques, in vitro protein expression, and quantitative proteomics to define the
 molecular basis for MyBP-C’s functional impact on calcium-dependent actomyosin interactions using native
-thick and thin filaments isolated from transgenic...",yes,yes; term used for the technology as defined,1,
+thick and thin filaments isolated from transgenic...",yes,yes; term used for the technology as defined,random,
 ms_proteomics,nih,quantitative proteomics,10160488,2020,R35,Estrogenic signaling upstream and downstream of mTOR,title/abstract,"...d and preliminary data. First, we will examine how mTOR is activated by estrogen, and what
 downstream cellular events are initiated. To accomplish this goal, we will use quantitative proteomics and
 phosphoproteomics for signaling pathway discovery, followed by biochemical investigation and cell biology-
-based studies of estrogen- and mTOR-regulated proteins. Se...",yes,yes; term used for the technology as defined,0,
+based studies of estrogen- and mTOR-regulated proteins. Se...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,9694297,2019,R01,The Role of the AR Interactome in SBMA,title/abstract,"...cellular dysfunction and ultimately cell death, at least in part by
 dysregulating protein-protein interactions that sustain normal cellular function. We have utilized a
 quantitative proteomics approach to identify changes in the AR protein interaction network caused by
-polyQ expansion in a cell model, and identified several protein candidates that may be invol...",yes,yes; term used for the technology as defined,0,
+polyQ expansion in a cell model, and identified several protein candidates that may be invol...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,9099884,2016,P41,Technology Research and Development Project 3: Spectral archives and spectral networks,title/abstract,"...nce natural antibiotics; (c) collate spectral data through spectral 
 archives and networks; (d) develop universal tools for peptide identification; (e) develop tools for top-down 
-proteomics; and, (f) analyzing multiplexed spectra. The technology platforms are driven by a multitude of collaborative biomedical studies where the use of CCMS developed tools is...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,8823725,2015,R01,Micro-RNA 122 and Chronic Hepatitis C,title/abstract,"...ion can be functionally uncoupled, and; (c) whether MASC function requires HCV sequences outside the response element. Aim 2 will: (a) combine RNA affinity selection and quantitative proteomics analysis to identify protein components of the MASC complex; (b) validate the presence of these proteins in the MASC complex by IP and assess their role in miR-122 funct...",yes,yes; term used for the technology as defined,0,
+proteomics; and, (f) analyzing multiplexed spectra. The technology platforms are driven by a multitude of collaborative biomedical studies where the use of CCMS developed tools is...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,8823725,2015,R01,Micro-RNA 122 and Chronic Hepatitis C,title/abstract,"...ion can be functionally uncoupled, and; (c) whether MASC function requires HCV sequences outside the response element. Aim 2 will: (a) combine RNA affinity selection and quantitative proteomics analysis to identify protein components of the MASC complex; (b) validate the presence of these proteins in the MASC complex by IP and assess their role in miR-122 funct...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,10613908,2023,R01,Role of Pif1 family DNA helicase Rrm3 in regulating DNA synthesis during replication stress,title/abstract,"...gression. We reasoned therefore that yeast that lacks Rrm3 makes an excellent model
 system for revealing the cellular response to replication fork pausing. Indeed, using quantitative proteomics we
 determined that the homologous recombination factor Rdh54 and the Rad5-mediated pathway for error-free
-lesion bypass are upregulated in the chromatin fraction of rrm3...",yes,yes; term used for the technology as defined,0,
+lesion bypass are upregulated in the chromatin fraction of rrm3...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,9636361,2018,U01,Quantitative Proteomics to Develop Robust Senescence-Related Biomarkers for Aging,title/abstract,"Quantitative Proteomics to Develop Robust Senescence-Related Biomarkers for Aging. SUMMARY
-Aging entails a plethora of changes at multiple levels – affecting molecules, cells, tissues, organs a...",yes,yes; term used for the technology as defined,0,
+Aging entails a plethora of changes at multiple levels – affecting molecules, cells, tissues, organs a...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,8215315,2011,P01,PROTEOMICS,title/abstract,"...ontrol of the transcription factors HSF-1 and DAF-16. We will identify
 the proteins whose expression levels are under the control of these transcription factors by using
 quantitative proteomics when the levels of HSF-1 and DAF-16 are reduced by RNAi. The methods,
-techniques, and experience are available in the proteomics core to conduct these analyses. The core...",yes,yes; term used for the technology as defined,0,
+techniques, and experience are available in the proteomics core to conduct these analyses. The core...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,11035346,2024,R01,Function of SMYD lysine methyltransferases in stress responses and proteostasis,title/abstract,"...ological assays to dissect the molecular contribution of Set6 and
 its catalytic activity to the proteostasis network under normal and stress conditions. We will also use quantitative
 proteomics, structure-function analysis, and genetic approaches to define regulatory mechanisms directing the
-activity of Set6 under normal and stress conditions, with a focus on i...",yes,yes; term used for the technology as defined,0,
+activity of Set6 under normal and stress conditions, with a focus on i...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,data-independent acquisition,10241060,2022,R01,Mass Spectrometric Studies of Neuropeptides in Feeding,title/abstract,"...lex levels of feeding-related information processing. The specific aims include: (1)
 Developing and applying mass defect-based, amine reactive chemical tags coupled with data-independent
 acquisition (DIA) mass spectrometry (MS)-based strategy for multiplexed quantitation of neuropeptide changes
-under different feeding conditions; (2) Developing a nanosecond photoche...",yes,yes; term used for the technology as defined,0,
+under different feeding conditions; (2) Developing a nanosecond photoche...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,11098598,2025,R21,Quantitative proteome of the photoreceptor outer-inner segment junction,title/abstract,"...reduce this knowledge gap by characterizing the unique
 proteome of the photoreceptor outer-inner segment junction. In Aim 1, we will employ a cutting-edge
 application of quantitative proteomics, called protein correlation profiling. Unlike traditional biochemical
-techniques, this methodology allows analyzing the unique protein composition of subcellular structu...",yes,yes; term used for the technology as defined,0,
+techniques, this methodology allows analyzing the unique protein composition of subcellular structu...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,shotgun proteomics,8195983,2012,I01,Molecular Biomarkers of Small Cell Lung Cancer Behaviour,title/abstract,"...will test the hypothesis that SCLCs carry genomic alterations that determines the expression
 profiles of proteins that are implicated in tumor progression. Array CGH and shotgun proteomics
 represent our key discovery platforms. Specific Aim 2: We propose to perform a detailed
 comparative genomic and proteomic analysis between SCLC and NSCLCs to identify
-po...",yes,yes; term used for the technology as defined,0,
+po...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,10312120,2022,K08,Intrinsic modifiers of beta-lactam resistance in nosocomial Enterobacterales,title/abstract,"...concerns a novel, conserved protein that the candidate has discovered helps
 mediate beta-lactam resistance in the Enterobacterales. Through targeted experimentation and
 quantitative proteomics, the candidate will discover how this protein functions at the molecular
-level. Aim 2A takes a broader focus, seeking to characterize how many mutations are necessary to...",yes,yes; term used for the technology as defined,0,
+level. Aim 2A takes a broader focus, seeking to characterize how many mutations are necessary to...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,9350398,2017,P50,Proteomic Core,title/abstract,"...(PTMs) including 
 phosphorylation, ubiquitylation and acetylation in the context of diseases. The Core has a wide breadth of 
 expertise in discovery as well as targeted quantitative proteomics methods and strategies. This includes stable 
 isotope labeling by amino acids in cell culture (SILAC) labeling, stable isotope labeling in mammals (SILAM), 
-tandem mass...",yes,yes; term used for the technology as defined,0,
+tandem mass...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,11091160,2026,P20,Research Technology Core,title/abstract,"...nd future research. In the previous 2 cycles of INBRE funding, we implemented
 an Emerging Technologies Program that supported educational/training workshops specific for quantitative
 proteomics, enabling our local proteomics core facility to expand to independence as the NIGMS IDeA National
-Resource for Quantitative Proteomics. We now will leverage our validate...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,9294088,2017,R01,GOLGI MATRIX ASSEMBLY AND DISASSEMBLY IN THE CELL CYCLE,title/abstract,"...vents with protein interactions in the Golgi matrix during the cell cycle, which can be validated and characterized in our in vitro assay. In this study, we will: 1) Use quantitative proteomics to analyze the components of the Golgi matrix in interphase and mitotic Golgi; 2) Identify protein-protein interactions in the Golgi matrix and membranes in interphase a...",yes,yes; term used for the technology as defined,0,
+Resource for Quantitative Proteomics. We now will leverage our validate...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,9294088,2017,R01,GOLGI MATRIX ASSEMBLY AND DISASSEMBLY IN THE CELL CYCLE,title/abstract,"...vents with protein interactions in the Golgi matrix during the cell cycle, which can be validated and characterized in our in vitro assay. In this study, we will: 1) Use quantitative proteomics to analyze the components of the Golgi matrix in interphase and mitotic Golgi; 2) Identify protein-protein interactions in the Golgi matrix and membranes in interphase a...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,8132834,2010,P30,La Jolla Interdisciplinary Neuroscience Center Cores - Pro Core BU,title/abstract,"...he highest mass accuracy and resolution,
 broad fragmentation capability (such as CID, ECD and IRMPD) and the ability to perform de novo
 peptide and protein sequencing (top-down proteomics) and directly characterize the most complex
 post-translational modifications in intact proteins, without prior digestion and processing of the sample.
-A primary object...",yes,yes; term used for the technology as defined,0,
+A primary object...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,10862152,2024,K99,Single Cell Proteoform Profiling using Top-Down Mass Spectrometry,title/abstract,"...munobiology and
 disease pathology have emphasized intact proteoform characterization without enzymatic
 digestion in bottom-up approaches. Current mass-spectrometry-based top-down proteomics
 technologies fall short in capturing the complex proteome in small biological samples such as
-single cells. This proposal generates a suite of novel technologies for hig...",yes,yes; term used for the technology as defined,0,
+single cells. This proposal generates a suite of novel technologies for hig...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,10335862,2022,R01,"Validation of Novel Pathogenic Post-Translational Modifications of Huntingtin, and of Modifying Enzymes as Therapeutic Targets for Huntington's Disease",title/abstract,"...ecule therapeutics remains an important
 alternative. We have identified near 40 PTMs (phosphorylation and acetylation) on endogenous Htt from human
 and mouse brain using quantitative proteomics. We find that the PTMs are arranged in clusters, and we have
-initial evidence for crosstalk among certain sites in these clusters.. Furthermore, we find that alteration...",yes,yes; term used for the technology as defined,1,
-ms_proteomics,nih,shotgun proteomics,7901361,2010,R24,DEVELOPMENT OF A PRIMATE GENOMIC RESOURCE,title/abstract,"...st National Laboratory. This group brings to the effort unrivaled mass spectrometry instrumentation and cutting-edge proteomics expertise. In Specific Aim 1, we will use shotgun proteomics and Fourier transform ion cyclotron resonance mass spectrometry to build macaque specific protein databases for use in identifying proteins present in various rhesus mac...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,quantitative proteomics,9267981,2017,R01,MECHANOTRANSDUCTION IN BLADDER SMOOTH MUSCLE,title/abstract,"...t-derived growth factor (PDGF). In the first global assessment of the PDGFR-regulated transcriptome and proteome in any organ or cell type, we used expression profiling, quantitative proteomics analysis, and state-of-the-art bioinformatics and identified MYC and JUN/AP-1 as the most significantly networked transcriptional regulators in PDGF-stimulated primary b...",yes,yes; term used for the technology as defined,0,
+initial evidence for crosstalk among certain sites in these clusters.. Furthermore, we find that alteration...",yes,yes; term used for the technology as defined,random,
+ms_proteomics,nih,shotgun proteomics,7901361,2010,R24,DEVELOPMENT OF A PRIMATE GENOMIC RESOURCE,title/abstract,"...st National Laboratory. This group brings to the effort unrivaled mass spectrometry instrumentation and cutting-edge proteomics expertise. In Specific Aim 1, we will use shotgun proteomics and Fourier transform ion cyclotron resonance mass spectrometry to build macaque specific protein databases for use in identifying proteins present in various rhesus mac...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,quantitative proteomics,9267981,2017,R01,MECHANOTRANSDUCTION IN BLADDER SMOOTH MUSCLE,title/abstract,"...t-derived growth factor (PDGF). In the first global assessment of the PDGFR-regulated transcriptome and proteome in any organ or cell type, we used expression profiling, quantitative proteomics analysis, and state-of-the-art bioinformatics and identified MYC and JUN/AP-1 as the most significantly networked transcriptional regulators in PDGF-stimulated primary b...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,top-down proteomics,9303400,2017,P41,Administration and management,title/abstract,"...nce natural antibiotics; (c) collate spectral data through spectral 
 archives and networks; (d) develop universal tools for peptide identification; (e) develop tools for top-down 
-proteomics; and, (f) analyzing multiplexed spectra. The technology platforms are driven by a multitude of collaborative biomedical studies where the use of CCMS developed tools is...",yes,yes; term used for the technology as defined,0,
+proteomics; and, (f) analyzing multiplexed spectra. The technology platforms are driven by a multitude of collaborative biomedical studies where the use of CCMS developed tools is...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,quantitative proteomics,9574292,2018,R35,Estrogenic signaling upstream and downstream of mTOR,title/abstract,"...d and preliminary data. First, we will examine how mTOR is activated by estrogen, and what
 downstream cellular events are initiated. To accomplish this goal, we will use quantitative proteomics and
 phosphoproteomics for signaling pathway discovery, followed by biochemical investigation and cell biology-
-based studies of estrogen- and mTOR-regulated proteins. Se...",yes,yes; term used for the technology as defined,0,
-ms_proteomics,nih,shotgun proteomics,8132582,2011,U01,Vanberbilt Biomarker Developmental Laboratory,title/abstract,"...guish cancer phenotypes, 2) Discover and verify protein biomarker candidates for plasma-based detection of colorectal and lung cancers. This work will apply standardized shotgun proteomics analyses for biomarker candidate discovery in tissues and a standardized LC- MRM-MS platform for quantitation of biomarker candidates in plasma. The Vanderbilt BDL will...",yes,yes; term used for the technology as defined,0,
+based studies of estrogen- and mTOR-regulated proteins. Se...",yes,yes; term used for the technology as defined,,
+ms_proteomics,nih,shotgun proteomics,8132582,2011,U01,Vanberbilt Biomarker Developmental Laboratory,title/abstract,"...guish cancer phenotypes, 2) Discover and verify protein biomarker candidates for plasma-based detection of colorectal and lung cancers. This work will apply standardized shotgun proteomics analyses for biomarker candidate discovery in tissues and a standardized LC- MRM-MS platform for quantitation of biomarker candidates in plasma. The Vanderbilt BDL will...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,data-independent acquisition; quantitative proteomics,11406100,2026,P20,Proteomics Core,title/abstract,"...rumentation and expertise for advanced mass spectrometry. The core is
 organized with the instrumentation and expertise required to make discovery proteomics and
 targeted quantitative proteomics experiments available to researchers in Oklahoma. The
 discovery proteomics experiments (Aim 1) will use data-dependent and data independent
-acquisition (DDA and DIA, res...",yes,yes; term used for the technology as defined,0,
+acquisition (DDA and DIA, res...",yes,yes; term used for the technology as defined,,
 ms_proteomics,nih,shotgun proteomics,10821484,2024,R21,A suite of conditional mouse models for secretome labeling,title/abstract,"...tions. In Specific Aim 1, we will generate three
 conditional secretome labeling mouse lines with TurboID localized to the secretory pathway, cytosol, or
 membrane and use shotgun proteomics to benchmark their performance relative to our first-generation viral
-reagents. In Specific Aim 2, we will use these conditional mice to address a fundamental and well-d...",yes,yes; term used for the technology as defined,0,
+reagents. In Specific Aim 2, we will use these conditional mice to address a fundamental and well-d...",yes,yes; term used for the technology as defined,,

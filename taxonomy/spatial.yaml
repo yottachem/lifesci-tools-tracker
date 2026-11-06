@@ -89,10 +89,10 @@ technologies:
         platforms:
           - {name: Xenium, query: '"Xenium"', context: ['spatial', 'in situ', 'transcript'], vendor: 10x Genomics, launched: 2022}
           - {name: MERSCOPE, query: '"MERSCOPE" OR "Vizgen"', vendor: Vizgen, launched: 2021, note: MERSCOPE Ultra matches this query}
-          - {name: Atera, query: '"Atera"', context: ['10x Genomics', 'in situ', 'spatial', 'whole transcriptome'], vendor: 10x Genomics, launched: 2026,
-             note: 'whole-transcriptome in situ, ~$495K, ships 2H 2026 (landscape 2026-10-22). "Atera" is also an IT software company, so the context is required. Precision sample pending'}
-          - {name: Pyxa, query: '"Pyxa" OR "Stellaromics"', context: ['spatial', 'STARmap', 'in situ', 'three-dimensional', '3D'], vendor: Stellaromics, launched: 2026,
-             note: 'STARmap-based 3D spatial multiomics in intact tissue; launched at AGBT 2026-02 (alpha called Plexa). Precision sample pending'}
+          - {name: Atera, query: '"10x Atera" OR ("Atera" AND "10x Genomics")', vendor: 10x Genomics, launched: 2026,
+             note: 'whole-transcriptome in situ, ~$495K, ships 2H 2026 (landscape 2026-10-22). "Atera" is also an IT company and an author surname, so the query needs 10x. No instrument uses yet; resample after launch'}
+          - {name: Pyxa, query: '"Pyxa"', context: ['spatial', 'STARmap', 'in situ', 'three-dimensional', '3D'], vendor: Stellaromics, launched: 2026,
+             note: 'STARmap-based 3D spatial multiomics in intact tissue; launched at AGBT 2026-02 (alpha called Plexa). "Stellaromics" alone matched founder disclosures, so only the product name counts'}
           - {name: CosMx SMI, query: '"CosMx"', vendor: Bruker, acquired_from: NanoString (2024), launched: 2021}
           - {name: Molecular Cartography, query: '"Molecular Cartography" AND "Resolve Biosciences"', vendor: Resolve Biosciences, launched: 2021}
           - {name: GenePS, query: '"GenePS" AND ("seqFISH" OR "Spatial Genomics")', vendor: Spatial Genomics, launched: 2022,

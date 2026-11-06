@@ -125,7 +125,8 @@ technologies:
       recognizer:
         label: Recognizer-based
         platforms:
-          - {name: Platinum (Quantum-Si), query: '"Quantum-Si"', context: ['protein sequencing', 'peptide', 'Platinum'], vendor: Quantum-Si, launched: 2022, verify: launch}
+          - {name: Platinum (Quantum-Si), query: '"Quantum-Si"', context: ['protein sequencing', 'Platinum Pro', 'single-molecule protein', 'Next-Generation Protein Sequencing'], vendor: Quantum-Si, launched: 2022, verify: launch,
+             note: '"peptide" and "Platinum" context let in SI-unit metrology papers ("quantum SI")'}
     note: Erisyon, Glyphic and Portal Biotech are pre-commercial; add when they ship
     cpc:
       - G01N33/6818  # sequencing of polypeptides (check)

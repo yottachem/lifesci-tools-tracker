@@ -108,7 +108,7 @@ def patents(tech_id, tech, rng):
 def row(tech_id, signal, entry, id_, year, type_, title, snip, rng):
     return {"technology": tech_id, "signal": signal, "entry": entry, "id": id_, "year": year, "type": type_,
             "title": (title or "")[:200], "evidence": "none" if snip is None else "title/abstract",
-            "snippet": snip or "", "label": "", "reason": "", "josh_check": int(rng.random() < 0.10), "josh_label": ""}
+            "snippet": snip or "", "label": "", "reason": "", "josh_check": "random" if rng.random() < 0.10 else "", "josh_label": ""}
 
 
 SIGNALS = {"methods": methods, "nih": nih, "patents": patents}

@@ -3,176 +3,176 @@ long_read_sequencing,nih,long-read sequencing,10570240,2023,R01,Charting the dif
 mutations in splicing factors are specifically associated with greater risk of transformation in CH. Therefore, we
 will develop and implement GoT-Splice, where long-read sequencing will be used to define splicing variation
 as a function of cell identity. Third, given the high importance of epigenetic patterning to hematopoietic stem
-cell identity,...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,third generation sequencing,8495603,2012,U54,A Platform for Large-Scale Genomic Discovery,title/abstract,"...types. We describe a research plan that will further our explorations of human health and disease, in a more comprehensive manner than ever before, and will investigate third-generation sequencing technologies, incorporating their unique attributes and integrating them to our production repertoire. One important aspect of our proposed work includes efforts to begi...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,long-read sequencing,11194330,2026,U54,Workforce Development Core,none,,unclear,unclear; no abstract text in the source,0,
+cell identity,...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,third generation sequencing,8495603,2012,U54,A Platform for Large-Scale Genomic Discovery,title/abstract,"...types. We describe a research plan that will further our explorations of human health and disease, in a more comprehensive manner than ever before, and will investigate third-generation sequencing technologies, incorporating their unique attributes and integrating them to our production repertoire. One important aspect of our proposed work includes efforts to begi...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,long-read sequencing,11194330,2026,U54,Workforce Development Core,none,,unclear,unclear; no abstract text in the source,,
 long_read_sequencing,nih,long-read sequencing,9957129,2020,R21,Identifying new ultrasound-sensitive proteins,title/abstract,"...NaC, and K2P) from the four other ultrasound-responsive species. The Edsinger lab will use either public
 information, next generation sequencing data, or single-molecule long-read sequencing data to identify the
 homologs of these mechanosensory proteins from the ultrasound-responsive species (Aim 1). The Chalasani
-lab will synthesize these genes and test the...",yes,yes; term used for the technology as defined,0,
+lab will synthesize these genes and test the...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10891040,2023,R24,Population genotyping of the germline immunoglobulin repertoire in AIDS-designated rhesus macaque breeding colonies,title/abstract,"...fined immunoglobulin (IG) alleles. This is best
 exemplified by a recent study large scale vaccine study by our group in which we sequenced a de novo genome
 of a RM using long-read sequencing in order to obtain accurate assemblies of the IG loci. This reference
-significantly enhanced the accuracy of tracking the mutations from germline elicited by our vaccine...",yes,yes; term used for the technology as defined,0,
+significantly enhanced the accuracy of tracking the mutations from germline elicited by our vaccine...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,9315492,2017,R01,Nanopore based profiling of epigenetic state,title/abstract,"...ropose the development of a novel
 epigenetic characterization methodology, fundamentally through the practical implementation of
 the sequencing of modified bases using a nanopore sequencing platform. Nanopore sequencing
 directly probes the chemical structure of the molecule in the pore with exquisite sensitivity. Its
-long reads enable correlation of epigene...",yes,yes; term used for the technology as defined,0,
+long reads enable correlation of epigene...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,8711914,2014,U19,Integrated genomics research in parasitic tropical diseases,title/abstract,"...at sites where a whole 
 organism vaccine will be tested represents a needed step toward the development of a broadly efficacious 
 malaria vaccine. A new third generation long read sequencing platform will be applied for the first time to 
 sequence and assemble malaria genomes using isolates collected in separately funded field studies. For 
-filariasis, doxyc...",yes,yes; term used for the technology as defined,0,
+filariasis, doxyc...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10678754,2022,ZIA,Characterization of HIV Reservoirs in the Brain,title/abstract,"...extraction of genomic DNA and verification of integrated HIV genome with our synthesized primers. In addition, this genomic DNA will be used as positive control for our long read sequencing of HIV reservoir from HIV patient tissue.
-4) We designed hybridization capture probe panel for the enrichment of HIV genomic fragment from the total genomic DNA extracti...",yes,yes; term used for the technology as defined,0,
+4) We designed hybridization capture probe panel for the enrichment of HIV genomic fragment from the total genomic DNA extracti...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,11019174,2025,P20,Project 5: miRNAs as mediators of developmental toxicity following paternal germ cell toxicant exposure,title/abstract,"...ic changes in
 embryonic cell development, spatial multiomics to identify the cell types responsible for altered sperm RNome
 following EGME exposure, and a combination of long-read sequencing and RNA mass spectrometry to identify
 changes in meiosis-critical RNAs that lead to EGME-induced spermatocyte apoptosis. We have collaborated
-with the COBRE leadership t...",yes,yes; term used for the technology as defined,0,
+with the COBRE leadership t...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10480521,2022,R43,High-throughput size-selection system for long-read sequencing library preparation,title/abstract,"High-throughput size-selection system for long-read sequencing library preparation. Project Summary/Abstract
 Most long-read DNA sequencing methods depend on library size selection techniques to control
-and/or improve read lengths. I...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,long-read sequencing,11177478,2024,ZIA,ALZHEIMERS RESEARCH PROJECT - Interrogating RNA Isoform Diversity and Function in Alzheimer's Disease by Long-Read Sequencing,title/abstract,"ALZHEIMERS RESEARCH PROJECT - Interrogating RNA Isoform Diversity and Function in Alzheimer's Disease by Long-Read Sequencing. In the past year, we have performed a pilot experiment using PBMCs from 3 healthy donors. These cells underwent a careful thawing and dead cell removal process, single-...",yes,yes; term used for the technology as defined,0,
+and/or improve read lengths. I...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,long-read sequencing,11177478,2024,ZIA,ALZHEIMERS RESEARCH PROJECT - Interrogating RNA Isoform Diversity and Function in Alzheimer's Disease by Long-Read Sequencing,title/abstract,"ALZHEIMERS RESEARCH PROJECT - Interrogating RNA Isoform Diversity and Function in Alzheimer's Disease by Long-Read Sequencing. In the past year, we have performed a pilot experiment using PBMCs from 3 healthy donors. These cells underwent a careful thawing and dead cell removal process, single-...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,9986158,2020,R01,Expanding the accessible genetic architecture of autism by single molecule sequencing,title/abstract,"...erized by the Simons
 Foundation and (2) to determine the differing effects of maternal and paternal smoking by direct
 quantification of maternal and paternal mutation by nanopore sequencing. This study would be
 the first to document and quantify an effect of parental tobacco consumption on the rates of
-germline mutation. Such a finding would have significan...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,nanopore sequencing,10487140,2021,ZIA,Noncanonical functions of the ribosome in response to cellular stress,title/abstract,"...encing technology to monitor RNA damage and modification caused by cellular and environmental stress, and we are currently developing computational methods for analyzing Nanopore sequencing data from stressed cells.",yes,yes; term used for the technology as defined,0,
+germline mutation. Such a finding would have significan...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,nanopore sequencing,10487140,2021,ZIA,Noncanonical functions of the ribosome in response to cellular stress,title/abstract,"...encing technology to monitor RNA damage and modification caused by cellular and environmental stress, and we are currently developing computational methods for analyzing Nanopore sequencing data from stressed cells.",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing; third generation sequencing,10333289,2022,P30,Shared Resource 01: Biomedical Informatics (BISR),title/abstract,"...(Cheng), (2) proteomics, and functional
 annotation of DNA non-coding regions (Zhang), (3) metabolomics and metagenomics (Mathe), (4) single-cell
 sequencing (Ma), and (5) long-read sequencing (Au). BISR supported Biospecimen Services Shared Resource
 (BSSR) projects (Total Cancer Care [TCC] and the Oncology Research Information Exchange Network [ORIEN])
-by est...",yes,yes; term used for the technology as defined,0,
+by est...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing; nanopore sequencing,10080760,2020,R44,Rapid Method to Enhance and Shape Long-Read Sequencing Read Length Distributions,title/abstract,"Rapid Method to Enhance and Shape Long-Read Sequencing Read Length Distributions. Project Summary
 By offering the ability to analyze long stretches of DNA spanning hundreds of kb to Mb in length, 3rd generation
-and linked-re...",yes,yes; term used for the technology as defined,0,
+and linked-re...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,10001012,2020,K01,Advanced sequencing as a novel diagnostic tool to discover strain-level variation and function of mucosal-adherent bacteria contributing to IBD,title/abstract,"...associated with intestinal inflammation and human disease 
 pathogenesis.
 
 I recently developed a novel sequencing and informatics protocol that interfaces with 
 existing nanopore sequencing technology to enable dynamic selection and identification of species 
 or genes from a metagenomic sample. This approach can be used to dynamically filter out DNA 
-sequen...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,long-read sequencing,11398547,2025,ZIC,DNA Sequencing Core,title/abstract,"...tate-of-the-art sequencing platforms include the Illumina NovaSeq X Plus, NextSeq 1000, MiSeq, and iSeq, offering flexibility for a wide range of projects. We also offer long-read sequencing capabilities using Oxford Nanopore technology. The Core is committed to delivering high-quality sequencing data with a fast turnaround time—typically within 2–3 days—and...",yes,yes; term used for the technology as defined,0,
+sequen...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,long-read sequencing,11398547,2025,ZIC,DNA Sequencing Core,title/abstract,"...tate-of-the-art sequencing platforms include the Illumina NovaSeq X Plus, NextSeq 1000, MiSeq, and iSeq, offering flexibility for a wide range of projects. We also offer long-read sequencing capabilities using Oxford Nanopore technology. The Core is committed to delivering high-quality sequencing data with a fast turnaround time—typically within 2–3 days—and...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,10063965,2021,R01,Algorithms and Software for the Assembly of Metagenomic Data,title/abstract,"...ion generated by emerging technologies, such as
 chromosome conformation information generated by Hi-C (10-12), or information about DNA
-modifications as generated by new nanopore sequencing devices(13, 14).",yes,yes; term used for the technology as defined,0,
+modifications as generated by new nanopore sequencing devices(13, 14).",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10308722,2022,R21,New technologies for accurate capture and sequencing of repeat-associated regions,title/abstract,"...of active transposable elements and thus will allow us
 to measure the genetic diversity of polymorphic insertions of these elements. After capture, we will use nanopore
 long-read sequencing to capture both the entire insertion as well as thousands of bases of surrounding sequence
-which will allow for accurate mapping of these elements to the genome. We will...",yes,yes; term used for the technology as defined,0,
+which will allow for accurate mapping of these elements to the genome. We will...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,11422385,2026,U24,GENCODE: comprehensive gene annotation for human and mouse,title/abstract,"...rence
 gene sets for human and mouse, which are critical for genomic research. Our work will prioritise the continued
 refinement of the reference gene sets, incorporating long-read sequencing data, ribosome profiling, constraint
 data, and draw on collaborative efforts such as the MANE project. This will ensure that the annotations remain
-comprehensive and acc...",yes,yes; term used for the technology as defined,0,
+comprehensive and acc...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,11171496,2025,U19,Mapping the human DRG and spinal cord functional genome at cellular and spatial resolution,title/abstract,"...ino-thalamic tract. Finally, in our third aim we will
 use ribosome profiling on human DRG and spinal cord to gain new insight into translational events in these
 tissues. Long-read sequencing will be used to map RNA modifications and splicing in a set of mRNAs that are
-critical for pain. Our work will create a comprehensive atlas of the transcriptome, epi-tra...",yes,yes; term used for the technology as defined,0,
+critical for pain. Our work will create a comprehensive atlas of the transcriptome, epi-tra...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10160779,2021,U19,Sequencing Technology Core,title/abstract,"...g and vaccine
 targets, and many other genes of interest. These technologies also have facilitated studies of the microbiome
 and host susceptibility genetics. Advances in long-read sequencing contribute to higher quality genome
 assemblies and facilitate comparisons of closely related bacteria. RNA sequencing analyses complement
-whole genome sequencing data by...",yes,yes; term used for the technology as defined,1,
+whole genome sequencing data by...",yes,yes; term used for the technology as defined,random,
 long_read_sequencing,nih,nanopore sequencing,10052002,2020,R01,Blood transcriptomics as CT adjuvant to exclude hemorrhage in acute stroke,title/abstract,"...whether mixed sex
 or race derived tests are more accurate than those derived from a single population. Finally, we investigate
 approaches to speed up testing using novel Nanopore sequencing technology.
 How? Our studies of blood biomarkers, developed at Grady Memorial Hospital Marcus Stroke Center, offers a
-diagnostic blood test that discriminates between is...",yes,yes; term used for the technology as defined,0,
+diagnostic blood test that discriminates between is...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,third generation sequencing,10331733,2022,R35,Computational Methods for Microbial and Microbiome Sequence Analysis,title/abstract,"...row. The even newer and more space-
 efficient Centrifuge system has also been highly successful and was recently incorporated into the analysis
 package of one of the new third-generation sequencing companies. We continue to work on improving the
 performance of both algorithms, and this project will allow us to extend them to handle the newest long-read
-data that is...",yes,yes; term used for the technology as defined,0,
+data that is...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10332957,2022,P30,BAF - SR Component,title/abstract,"...e and quantitative changes at the
 cellular level, including Next Generation Sequencing, including bulk DNA/RNA-Seq, Single cell/nuclei RNA and
 ATAC-seq, third generation long-read sequencing, quantitative gene expression, genotyping, complex protein
-mixtures, biomarker profiling, post-translational modifications, molecular interactions and kinetics, lipids,...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,long-read sequencing,11398416,2025,ZIA,Center for Alzheimer's and Related Dementias (CARD): Collaboration with the Multi-Partner Consortium to Expand Dementia Research in Latin America (ReDLat),title/abstract,"...project involves comprehensive sample collection across 10 sites in Latin America and 4 sites in Mexico, followed by whole genome sequencing and array-based genotyping. Long-read sequencing is being performed on a subset of cases to capture structural variants that may be missed by standard approaches in non-genetically-admixed populations. The ReDLat data...",yes,yes; term used for the technology as defined,0,
+mixtures, biomarker profiling, post-translational modifications, molecular interactions and kinetics, lipids,...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,long-read sequencing,11398416,2025,ZIA,Center for Alzheimer's and Related Dementias (CARD): Collaboration with the Multi-Partner Consortium to Expand Dementia Research in Latin America (ReDLat),title/abstract,"...project involves comprehensive sample collection across 10 sites in Latin America and 4 sites in Mexico, followed by whole genome sequencing and array-based genotyping. Long-read sequencing is being performed on a subset of cases to capture structural variants that may be missed by standard approaches in non-genetically-admixed populations. The ReDLat data...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10891651,2024,R01,Genomic Analysis of Centromere Assembly and Function,title/abstract,"...th variant
 content and proximity to mobile elements. Our project goals are to: 1) produce new genomic assemblies of
 functionally characterized centromeres using targeted long read sequencing approaches, 2) use human artificial
 chromosome assays to assess competency of different alpha satellite DNA arrangements for de novo centromere
-formation, 3) explore the...",yes,yes; term used for the technology as defined,0,
+formation, 3) explore the...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10403109,2022,U42,MHC GENETIC TYPING CORE,title/abstract,"...den the scope of our efforts beyond MHC, we have worked with Dr.
 Michael Snyder's team at Stanford to generate a de novo assembly of the pigtail macaque genome that used
 long-read sequencing technology. This pigtail macaque resource will facilitate use of functional genomics
-approaches in SIV studies. Expanding the genetic data available for pigtail macaques...",yes,yes; term used for the technology as defined,1,
+approaches in SIV studies. Expanding the genetic data available for pigtail macaques...",yes,yes; term used for the technology as defined,random,
 long_read_sequencing,nih,long-read sequencing,10879358,2024,R21,New approaches to determine the function of neuronal epigenetic marks,title/abstract,"...MeCP2 to maintain differential subtype-specific transcriptomes. We will further dissect how allele
 specific patterns of this methylation, which can only be decoded using long read sequencing, contribute to
 neuronal gene regulation. In the future, our approach, which can be easily implemented into standard nanopore
-workflows, will enable complete sequencing a...",yes,yes; term used for the technology as defined,0,
+workflows, will enable complete sequencing a...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,9967605,2020,R21,Chemically Tuned Silicon Nitride Nanopores for Nucleic Acid Sequencing,title/abstract,"...oving the ability to control silicon nitride nanopore surface
 chemistry and to modify silicon nitride nanopore size. While silicon nitride is a conventional
 material for nanopore sequencing applications, its complex charged native surface chemistry
 can present a challenging and complicated environment for a charged nucleic acid biopolymer
-passing through a...",yes,yes; term used for the technology as defined,0,
+passing through a...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,9466101,2018,R44,A Low-Cost Platform for Routine High-Accuracy Sizing of Nucleic Acid Samples with 100 bp - 100 Mbp Dynamic Range,title/abstract,"...ibutions in heterogeneous solutions. Given the ability to rapidly size DNA molecules
 longer than 50 kbp, the platform is particularly valuable for the quality control of long-read sequencing
 libraries, improving the efficiency of sequencing workflows. Consumable fluidic devices that allow the
-precise control of DNA transport can be fabricated using injection...",yes,yes; term used for the technology as defined,0,
+precise control of DNA transport can be fabricated using injection...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10456881,2022,R21,Genomic mechanisms of asexual reproduction,title/abstract,"...ty is maintained without genetic recombination,
 and which molecular changes drove the transition to asexual reproduction remain a mystery.
 We propose to use the power of long-read sequencing and comparative genomics to address these questions.
 In Aim 1, we will generate a highly contiguous, chromosome-level genome assembly for D. pachys. This will
-reveal the...",yes,yes; term used for the technology as defined,0,
+reveal the...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10673671,2023,R35,Understanding how structural mutations and individual RNA isoforms are involved in human health and disease,title/abstract,"...ly in disease research,
 will be to determine individual isoform function, and how that changes between sexes. We want
 to contribute to this effort, and propose to employ long-read sequencing technologies to
-accomplish these goals.",yes,yes; term used for the technology as defined,1,
+accomplish these goals.",yes,yes; term used for the technology as defined,random,
 long_read_sequencing,nih,long-read sequencing,9729350,2019,U19,Technology Core,title/abstract,"...ling methodologies, enabling
 increased scale and efficiency, improving data quality and decreasing costs. We will enhance our
 approaches to pathogen hybrid selection and long read sequencing, and also implement new protocols
 for low input RNA- and metagenomic-sequencing. Finally, building on our long track record of
-innovation in genomics, we will create new...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,long-read sequencing,10490164,2021,ZIC,Bioinformatics Core,title/abstract,"...and fellows, and an annual symposium on hot topics in the genomics field such as single-cell technology symposium in 2017, Epigenetics Sequencing Symposium in 2018, and Long-Read Sequencing Symposium in 2019. These symposiums featured presentations on basic and clinical research, computational data analysis, and emerging technologies in the epigenetics sequ...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,nanopore sequencing,7979724,2010,R01,Single-Molecule DNA Sequencing with Engineered Nanopores,title/abstract,"...ntified as they pass a reading head.  Here, we focus on the remaining tasks required to put into practice strand sequencing with the a-hemolysin (aHL) protein nanopore.  Nanopore sequencing is a rapid real-time technology; it does not require the time-consuming cyclic addition of reagents.  After implementing a chip with 106 pores, we expect nanopore sequen...",yes,yes; term used for the technology as defined,0,
-long_read_sequencing,nih,nanopore sequencing,10703068,2022,ZIC,CCR Genomics Core,title/abstract,"...quenced includes 10X single cell sequencing, full plasmid      sequencing, ChIP-Seq, RNA-Seq, amplicon sequencing, ATAC-Seq, END-Seq, and targeted panel      sequencing. Nanopore Sequencing (Oxford Nanopore MinION, MinIT, MinION Mk1C). A sequencing      technology that generates ultra-long reads, some of them more than 100kb. Here, single DNA (or      RNA)...",yes,yes; term used for the technology as defined,0,
+innovation in genomics, we will create new...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,long-read sequencing,10490164,2021,ZIC,Bioinformatics Core,title/abstract,"...and fellows, and an annual symposium on hot topics in the genomics field such as single-cell technology symposium in 2017, Epigenetics Sequencing Symposium in 2018, and Long-Read Sequencing Symposium in 2019. These symposiums featured presentations on basic and clinical research, computational data analysis, and emerging technologies in the epigenetics sequ...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,nanopore sequencing,7979724,2010,R01,Single-Molecule DNA Sequencing with Engineered Nanopores,title/abstract,"...ntified as they pass a reading head.  Here, we focus on the remaining tasks required to put into practice strand sequencing with the a-hemolysin (aHL) protein nanopore.  Nanopore sequencing is a rapid real-time technology; it does not require the time-consuming cyclic addition of reagents.  After implementing a chip with 106 pores, we expect nanopore sequen...",yes,yes; term used for the technology as defined,,
+long_read_sequencing,nih,nanopore sequencing,10703068,2022,ZIC,CCR Genomics Core,title/abstract,"...quenced includes 10X single cell sequencing, full plasmid      sequencing, ChIP-Seq, RNA-Seq, amplicon sequencing, ATAC-Seq, END-Seq, and targeted panel      sequencing. Nanopore Sequencing (Oxford Nanopore MinION, MinIT, MinION Mk1C). A sequencing      technology that generates ultra-long reads, some of them more than 100kb. Here, single DNA (or      RNA)...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,10873590,2024,P20,Data Science Core,title/abstract,"...E network, seven specific aims have been established
 that will (1) support the generation and analysis of genomic datasets from Illumina, Pacific Biosciences, and
 Oxford Nanopore sequencing technologies; (2) provide hands-on training in imaging, genomics, and
-bioinformatic technologies; (3) provide expertise on experimental design and usage of appropriate s...",yes,yes; term used for the technology as defined,1,
+bioinformatic technologies; (3) provide expertise on experimental design and usage of appropriate s...",yes,yes; term used for the technology as defined,random,
 long_read_sequencing,nih,long-read sequencing,11193876,2025,R01,Revealing the dynamics of RNA metabolism with nucleotide recoding chemistry,title/abstract,"...rk described in Aim 1 will extend this platform to provide
 robust detection of changes with transcript-isoform resolution. The work in Aim 2 will extend this
 platform to long-read sequencing formats and will include optimization of chemistry and
 processing for extended sequencing modalities. Aim 3 will establish experimental workflows to
-optimally integrate...",yes,yes; term used for the technology as defined,0,
+optimally integrate...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10884805,2024,U54,Investigating the effect of precision genomes for transcriptomics,title/abstract,"...elomere reference genome (CHM13), individual and combined references from the Human Pangenome Research Project, and de novo assembled individualized genomes generated by long-read sequencing. The study will evaluate tradeoffs in computational efficiency, mapping accuracy, and transcriptome interpretation across these reference frameworks. 
-We hypothesize tha...",yes,yes; term used for the technology as defined,0,
+We hypothesize tha...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,8184060,2011,R01,Instrument to Optimize DNA Sequencing by Recognition Tunneling,title/abstract,"Instrument to Optimize DNA Sequencing by Recognition Tunneling.   
-DESCRIPTION (provided by applicant): Nanopore sequencing is a technique in which DNA is driven electrophoretically through an orifice so small that each base must pass through one at a time. Translocation of thousands of bases...",yes,yes; term used for the technology as defined,0,
+DESCRIPTION (provided by applicant): Nanopore sequencing is a technique in which DNA is driven electrophoretically through an orifice so small that each base must pass through one at a time. Translocation of thousands of bases...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,10530592,2023,R01,Algorithms and Software for the Assembly of Metagenomic Data,title/abstract,"...ion generated by emerging technologies, such as
 chromosome conformation information generated by Hi-C (10-12), or information about DNA
-modifications as generated by new nanopore sequencing devices(13, 14).",yes,yes; term used for the technology as defined,0,
+modifications as generated by new nanopore sequencing devices(13, 14).",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,11357583,2026,R35,Function and fitness consequences of human genetic variation,title/abstract,"...rage the haplotype
 structure of the sample to home in on variants with causal effects on gene expression and splicing. We will
 supplement these data with single-molecule long-read sequencing of RNA from the same samples, offering
 unprecedented resolution of isoform diversity within and between human populations.
- A second goal of our work is to leverage the...",yes,yes; term used for the technology as defined,0,
+ A second goal of our work is to leverage the...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10468668,2022,R01,Identification of novel pathogenic tandem repeat expansions using long read sequencing,title/abstract,"Identification of novel pathogenic tandem repeat expansions using long read sequencing. Large expansions of tandemly repeated (TR) DNA sequences (eg. polyCAG) are known to underlie >30
-different human neurological diseases, including Huntington’s disease,...",yes,yes; term used for the technology as defined,0,
+different human neurological diseases, including Huntington’s disease,...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10693344,2023,R00,"Integrating 'omics', evolution, and biochemistry to understand fertilization",title/abstract,"...) and humans (R00), two specific aims are proposed that utilize state-of-the-
 art genomic, proteomic, and structural methods. In aim 1, for the K99 phase, I will combine long read
 sequencing technology, tests for molecular evolution, and quantitative proteomics to identify potential pairs of
-interacting reproductive proteins in abalone; for the R00 phase, I...",yes,yes; term used for the technology as defined,0,
+interacting reproductive proteins in abalone; for the R00 phase, I...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,9616809,2019,R33,Real-Time Unbiased Pathogen Detection in Febrile Illnesses by Nanopore Sequencing,title/abstract,"Real-Time Unbiased Pathogen Detection in Febrile Illnesses by Nanopore Sequencing. ﻿   
-DESCRIPTION (provided by applicant): Real-Time Unbiased Pathogen Detection in Febrile Illnesses by Nanopore Sequencing Acute febrile illness is one of the most com...",yes,yes; term used for the technology as defined,0,
+DESCRIPTION (provided by applicant): Real-Time Unbiased Pathogen Detection in Febrile Illnesses by Nanopore Sequencing Acute febrile illness is one of the most com...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,nanopore sequencing,8748877,2014,R01,Single-Molecule DNA Sequencing with Engineered Nanopores,title/abstract,"Single-Molecule DNA Sequencing with Engineered Nanopores.    
-DESCRIPTION (provided by applicant): Important technical problems in nanopore sequencing have been overcome within the last five years, culminating in a practicable device with significant advantages, including the ability to sequence DNA strands 100,000 bas...",yes,yes; term used for the technology as defined,0,
+DESCRIPTION (provided by applicant): Important technical problems in nanopore sequencing have been overcome within the last five years, culminating in a practicable device with significant advantages, including the ability to sequence DNA strands 100,000 bas...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,9571564,2018,P01,Project 3,title/abstract,"...act of alternative splicing
 and alternative transcript usage on T1D risk, and to identify and characterize disease relevant transcripts and
 isoforms, we propose to apply long read sequencing to RNA from selected lymphocyte populations in T1D and
-jointly analyze short and long read data to obtain reliable, cell type specific, information on transcript structu...",yes,yes; term used for the technology as defined,0,
+jointly analyze short and long read data to obtain reliable, cell type specific, information on transcript structu...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,11224039,2025,F30,RNA Decay of LINE-1 Retrotransposons as a New Mechanism to Maintain B Cell Genome Integrity,title/abstract,"...hemical and molecular approaches to
 assess whether m6A-binding protein YTHDC1 acts as an adaptor to specifically recruit exosome to L1 RNA. In
 Aim 3, I will use Nanopore long read sequencing to determine L1 retrotransposition “hotspots” and then
 characterize the cellular consequences of these insertions by examining proliferation, apoptosis, migratory
-potent...",yes,yes; term used for the technology as defined,0,
+potent...",yes,yes; term used for the technology as defined,,
 long_read_sequencing,nih,long-read sequencing,10818615,2024,UG3,Single Molecule Detection of L1 Insertions and Intermediates,title/abstract,"...pressed through methylation of its internal promoter. Here, we propose
 to develop single cell mapping approaches to detect de novo L1 insertions and integrate these with long-read
 sequencing approaches to reveal the epigenetic status of source elements. We will also pioneer highly innovative
-approaches to detect intermediates of the target primed reverse tra...",yes,yes; term used for the technology as defined,0,
+approaches to detect intermediates of the target primed reverse tra...",yes,yes; term used for the technology as defined,,
