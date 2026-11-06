@@ -6,6 +6,10 @@ on:
   schedule:
     - cron: "0 13 3 * *"   # 3rd of each month, 08:00 ET (EST)
   workflow_dispatch:
+    inputs:
+      sources:
+        description: "Sources to fetch, space-separated (blank = all): reporter openalex uspto edgar edgar_mix prices"
+        default: ""
 
 permissions:
   contents: write   # snapshots release
@@ -36,7 +40,8 @@ jobs:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           USPTO_ODP_API_KEY: ${{ secrets.USPTO_ODP_API_KEY }}
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
-        run: uv run python -m ingest.run
+          SOURCES: ${{ inputs.sources }}
+        run: uv run python -m ingest.run $SOURCES
       - name: Save snapshots
         run: uv run python -m ingest.archive save
       - name: Build panel
