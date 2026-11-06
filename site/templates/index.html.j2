@@ -1,0 +1,33 @@
+{% extends "base.html.j2" %}
+{% block title %}Maturity map{% endblock %}
+{% block body %}
+<h1>Where ten life science tools technologies sit on their adoption curve</h1>
+<p class="lede">Four public signals per technology: papers that use it, NIH grants that fund it, patents that extend it, and the companies that sell it. No composite score: each signal is shown on its own.</p>
+
+<h2>Volume and growth</h2>
+<p class="sub">Each circle is a technology. Across: papers using its methods in {{ meta.full_year }}. Up: average annual growth since {{ meta.growth_from }}{% if meta.has_total %}, as a share of all scholarly works so corpus growth doesn't count{% else %} in raw paper counts (per-100K rate pending){% endif %}. Size: NIH dollars in fiscal {{ meta.full_year }}. Shade: share of platform mentions held by the leading brand.</p>
+<div class="cw">{{ scatter | safe }}</div>
+<div class="key"><span>Leading brand's share:</span><span><i style="background:var(--c0)"></i> under 20%</span><span><i style="background:var(--c1)"></i> 20-40%</span><span><i style="background:var(--c2)"></i> 40-60%</span><span><i style="background:var(--c3)"></i> 60-80%</span><span><i style="background:var(--c4)"></i> 80% and up</span></div>
+
+<h2>Four signals, {{ meta.years[0] }} to now</h2>
+<p class="sub">Trend lines share no scale; read each against itself. Figures are for {{ meta.full_year }}, the latest full year. The current year is left off the trend lines while it's partial.</p>
+<div class="tw"><table class="sig">
+<thead><tr><th>Technology</th><th>Papers{% if meta.has_total %} per 100K works{% endif %}</th><th>NIH dollars</th><th>Patent applications</th><th>Leading brand share</th></tr></thead>
+<tbody>
+{% for r in rows %}
+<tr>
+  <td><a href="{{ r.t.id }}.html">{{ r.t.label }}</a><br><span class="pill">{{ r.t.stage }}</span></td>
+  <td><div class="cell"><span class="num">{% if meta.has_total %}{{ r.m.per100k | fmt("rate") }}{% else %}{{ r.m.publications | fmt }}{% endif %}<small>{{ r.m.growth_5y | fmt("pct") }} a yr</small></span>{{ r.s_pub | safe }}</div></td>
+  <td><div class="cell"><span class="num">{{ r.m.nih_dollars | fmt("usd") }}<small>{{ r.m.nih_project_years | fmt }} projects</small></span>{{ r.s_nih | safe }}</div></td>
+  <td><div class="cell"><span class="num">{{ r.m.patent_applications | fmt }}<small>{{ r.m.patent_grants | fmt }} grants</small></span>{{ r.s_pat | safe }}</div></td>
+  <td><div class="cell"><span class="num">{{ r.m.top_brand_share | fmt("pct") }}<small>{{ r.m.top_brand }}</small></span>{{ r.s_conc | safe }}</div></td>
+</tr>
+{% endfor %}
+</tbody></table></div>
+<ol class="fn">
+  <li>Papers: OpenAlex works whose title or abstract uses the technology's method terms{% if not meta.has_total %} (largest single term until the union series is in){% endif %}. Platform mentions also search open-access full text, where methods sections name the instrument.</li>
+  <li>NIH: RePORTER project-years whose title or abstract uses the technology's grant terms, deduplicated across terms. Dollars are total award amounts in the fiscal year.</li>
+  <li>Patents: US applications and grants whose title or abstract uses the technology's patent terms, inside a life-science CPC scope. Claims aren't searched, so counts are a consistent lower bound.</li>
+  <li>Every brand and term has a measured precision from a labeled random sample; entries under 0.8 are flagged on the technology pages.</li>
+</ol>
+{% endblock %}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% block title %}{% endblock %} · Life Science Tools Tracker</title>
+<meta name="description" content="{% block description %}Where life science tools technologies sit on their adoption curve, from papers, NIH grants, patents and the companies that sell them.{% endblock %}">
+{% if preview %}<meta name="robots" content="noindex">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Instrument spec sheet: ruled sections, mono figures, one indigo accent per chart and gray for the rest.
+   Tokens are redefined for dark mode; charts read them through classes. */
+:root { --bg:#f5f4ef; --surface:#fdfcf8; --fg:#1c1f26; --muted:#5d6370; --line:#cdd0d6; --grid:#e4e5e8; --tint:#e6e8ef;
+  --s1:#2f4ba0; --s2:#c2571a; --s3:#2f7d5b; --s4:#8a4f9e; --g:#a6abb5; --part:rgba(47,75,160,.07);
+  --c0:#dfe4f2; --c1:#b5c1e4; --c2:#8597d0; --c3:#566eba; --c4:#2f4ba0;
+  --font-display:"Newsreader",Georgia,serif; --font-body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --font-data:"IBM Plex Mono",ui-monospace,Menlo,monospace; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#13151a; --surface:#1a1d23; --fg:#e7e8ec; --muted:#9ba1ad;
+  --line:#343843; --grid:#262a32; --tint:#20242d; --s1:#8ea6f0; --s2:#f0965a; --s3:#6cc59b; --s4:#c99ade; --g:#5d6370; --part:rgba(142,166,240,.09);
+  --c0:#2a3150; --c1:#3a4a82; --c2:#5468b0; --c3:#7189d6; --c4:#9fb4f5; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg:#13151a; --surface:#1a1d23; --fg:#e7e8ec; --muted:#9ba1ad; --line:#343843; --grid:#262a32; --tint:#20242d;
+  --s1:#8ea6f0; --s2:#f0965a; --s3:#6cc59b; --s4:#c99ade; --g:#5d6370; --part:rgba(142,166,240,.09);
+  --c0:#2a3150; --c1:#3a4a82; --c2:#5468b0; --c3:#7189d6; --c4:#9fb4f5; color-scheme: dark; }
+* { box-sizing: border-box; } html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.55 var(--font-body); }
+a { color: var(--s1); } a:focus-visible { outline: 2px solid var(--s1); outline-offset: 2px; }
+.preview { background: var(--s2); color: #fff; font: 500 12px/1 var(--font-data); text-transform: uppercase; letter-spacing: .08em; padding: 7px 16px; text-align: center; }
+.nav { background: var(--surface); border-bottom: 2px solid var(--fg); }
+.nav-in { max-width: 1120px; margin: 0 auto; padding: 0 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; min-height: 52px; }
+.brand { font: 600 20px/1 var(--font-display); color: var(--fg); text-decoration: none; margin-right: auto; }
+.nav a.l { color: var(--muted); text-decoration: none; font-size: 14px; padding-block: 14px; }
+.nav a.l:hover, .nav a.l[aria-current="page"] { color: var(--fg); }
+.techs { max-width: 1120px; margin: 0 auto; padding: 8px 16px 0; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; }
+.techs a { color: var(--muted); text-decoration: none; } .techs a[aria-current="page"] { color: var(--fg); font-weight: 600; }
+main { max-width: 1120px; margin: 0 auto; padding: 20px 16px 48px; }
+h1 { font: 400 clamp(30px, 4.6vw, 44px)/1.08 var(--font-display); letter-spacing: -.01em; margin: 8px 0 10px; text-wrap: balance; }
+h2 { font: 600 24px/1.2 var(--font-display); margin: 36px 0 6px; padding-top: 10px; border-top: 2px solid var(--fg); }
+h3 { font: 600 18px/1.25 var(--font-display); margin: 20px 0 4px; }
+.lede { font: 400 19px/1.5 var(--font-display); max-width: 66ch; margin: 0 0 8px; }
+.sub, .note-p { color: var(--muted); font-size: 13.5px; max-width: 80ch; margin: 4px 0 8px; }
+.pill { display: inline-block; font: 500 11px/1 var(--font-data); text-transform: uppercase; letter-spacing: .07em; padding: 4px 8px; border: 1px solid var(--fg); }
+.flag { display: inline-block; font: 500 10.5px/1 var(--font-data); text-transform: uppercase; letter-spacing: .06em; padding: 3px 6px; border: 1px solid var(--s2); color: var(--s2); }
+.figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); border: 1px solid var(--fg); background: var(--surface); margin: 14px 0 4px; }
+.fig { padding: 10px 14px; border-right: 1px dashed var(--line); border-bottom: 1px dashed var(--line); }
+.fig b { display: block; font: 500 22px/1.2 var(--font-data); font-variant-numeric: tabular-nums; }
+.fig span { font-size: 12.5px; color: var(--muted); }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 8px 28px; }
+.cw { overflow-x: auto; } .cw .chart { min-width: 560px; } .cw .scatter { min-width: 680px; }
+.chart { width: 100%; height: auto; display: block; overflow: visible; margin: 6px 0; }
+.chart .grid { stroke: var(--grid); stroke-width: 1; } .chart .grid.zero { stroke: var(--muted); }
+.chart .tick, .chart .note, .chart .axis { font: 11px var(--font-data); fill: var(--muted); }
+.chart .axis { font-size: 12px; fill: var(--fg); }
+.chart .partial { fill: var(--part); }
+.chart .ln { fill: none; stroke-width: 2; stroke-linejoin: round; } .chart .ln.dash { stroke-dasharray: 3 3; }
+.chart .s-1 { stroke: var(--s1); } .chart .s-2 { stroke: var(--s2); } .chart .s-3 { stroke: var(--s3); } .chart .s-4 { stroke: var(--s4); }
+.chart .s-g { stroke: var(--g); stroke-width: 1.2; }
+.chart .pt-open { fill: var(--surface); stroke-width: 1.5; }
+.chart .end { font: 500 11.5px var(--font-data); } .chart .end .v { font-weight: 400; fill: var(--muted); }
+.chart .s-1-t { fill: var(--s1); } .chart .s-2-t { fill: var(--s2); } .chart .s-3-t { fill: var(--s3); } .chart .s-4-t { fill: var(--s4); } .chart .s-g-t { fill: var(--muted); }
+.chart .bar { fill: var(--s1); } .chart .bar.part { fill: var(--g); }
+.scatter circle { stroke: var(--fg); stroke-width: 1; fill-opacity: .9; }
+.scatter .c0 { fill: var(--c0); } .scatter .c1 { fill: var(--c1); } .scatter .c2 { fill: var(--c2); } .scatter .c3 { fill: var(--c3); } .scatter .c4 { fill: var(--c4); }
+.scatter .lab { font: 500 12.5px var(--font-body); fill: var(--fg); paint-order: stroke; stroke: var(--bg); stroke-width: 3px; }
+.scatter a:hover circle, .scatter a:focus circle { stroke-width: 2.5; }
+.key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 12.5px; color: var(--muted); align-items: center; margin: 4px 0; }
+.key i { display: inline-block; width: 12px; height: 12px; border: 1px solid var(--fg); vertical-align: -2px; margin-right: 1px; }
+.tw { overflow-x: auto; margin: 8px 0 4px; }
+table { border-collapse: collapse; font-size: 13.5px; background: var(--surface); border: 1px solid var(--fg); min-width: 100%; }
+th, td { padding: 7px 10px; border-bottom: 1px dashed var(--line); text-align: left; vertical-align: top; }
+th { font: 500 11px/1.25 var(--font-data); text-transform: uppercase; letter-spacing: .05em; background: var(--tint); border-bottom: 1px solid var(--fg); }
+td.n, th.n { text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.fam td { font: 500 11px var(--font-data); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); background: var(--bg); }
+.spark { width: 120px; height: 30px; display: block; } .spark .ln { fill: none; stroke-width: 1.6; } .spark .s-1 { stroke: var(--s1); } .spark .pt { fill: var(--s1); stroke: none; }
+.sig td { vertical-align: middle; } .sig .pill { margin-top: 5px; font-size: 10px; padding: 3px 6px; }
+.sig .cell { display: flex; align-items: center; gap: 10px; } .sig .num { font: 500 14px/1.3 var(--font-data); font-variant-numeric: tabular-nums; min-width: 78px; }
+.sig .num small { display: block; font-weight: 400; color: var(--muted); font-size: 11px; white-space: nowrap; max-width: 120px; overflow: hidden; text-overflow: ellipsis; }
+.sig .spark { width: 96px; flex: none; }
+.pending { border: 1px dashed var(--s2); padding: 10px 14px; color: var(--muted); font-size: 14px; max-width: 80ch; }
+ol.fn { font-size: 13px; color: var(--muted); padding-left: 20px; max-width: 86ch; }
+.foot { border-top: 1px dashed var(--line); }
+.foot-in { max-width: 1120px; margin: 0 auto; padding: 16px 16px 28px; font-size: 12.5px; color: var(--muted); display: grid; gap: 4px; }
+.foot a { color: inherit; }
+@media (max-width: 620px) { body { font-size: 14.5px; } .lede { font-size: 17px; } .fig b { font-size: 19px; } }
+</style>
+</head>
+<body>
+{% if preview %}<div class="preview">Internal preview, not published</div>{% endif %}
+<nav class="nav" aria-label="Site"><div class="nav-in">
+  <a class="brand" href="index.html">Life Science Tools Tracker</a>
+  <a class="l" href="index.html"{% if page == "index" %} aria-current="page"{% endif %}>Maturity map</a>
+  <a class="l" href="{{ repo }}">Code &amp; data</a>
+</div></nav>
+<div class="techs" aria-label="Technologies">
+{% for n in nav %}<a href="{{ n.id }}.html"{% if page == n.id %} aria-current="page"{% endif %}>{{ n.label }}</a>{% endfor %}
+</div>
+<main>
+{% block body %}{% endblock %}
+</main>
+<footer class="foot"><div class="foot-in">
+  <span>Snapshots: OpenAlex {{ meta.snapshots.openalex }}, NIH RePORTER {{ meta.snapshots.reporter }}, USPTO {{ meta.snapshots.uspto }} (filings through {{ meta.patents_through }}), SEC EDGAR {{ meta.snapshots.edgar }}, market value {{ meta.snapshots.market_value }}. Built {{ meta.built }}.</span>
+  <span>Code MIT, derived data CC-BY-4.0, upstream licenses in <a href="{{ repo }}/blob/main/sources.yaml">sources.yaml</a>. A personal project by Joshua Ritchey; views are his own.</span>
+</div></footer>
+</body>
+</html>

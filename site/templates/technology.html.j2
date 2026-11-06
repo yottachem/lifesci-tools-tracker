@@ -1,0 +1,90 @@
+{% extends "base.html.j2" %}
+{% set m = t.metrics %}
+{% set full = meta.full_year | string %}
+{% block title %}{{ t.label }}{% endblock %}
+{% block description %}{{ t.label }}: papers, NIH grants, patents and vendors, {{ meta.years[0] }} to now.{% endblock %}
+{% block body %}
+<span class="pill">{{ t.stage }}</span>
+<h1>{{ t.label }}</h1>
+<p class="lede">{{ t.definition }}</p>
+
+<div class="figs">
+  <div class="fig"><b>{{ m.publications | fmt }}</b><span>papers in {{ meta.full_year }}{% if rate %} ({{ m.per100k | fmt("rate") }} per 100K works){% endif %}</span></div>
+  <div class="fig"><b>{{ m.growth_5y | fmt("pct") }}</b><span>a year since {{ meta.growth_from }}{% if not rate %}, raw counts{% endif %}</span></div>
+  <div class="fig"><b>{{ m.nih_dollars | fmt("usd") }}</b><span>NIH, fiscal {{ meta.full_year }} ({{ m.nih_project_years | fmt }} project-years)</span></div>
+  <div class="fig"><b>{{ m.patent_applications | fmt }}</b><span>US patent applications in {{ meta.full_year }} ({{ m.patent_grants | fmt }} grants)</span></div>
+  <div class="fig"><b>{{ m.top_brand_share | fmt("pct") }}</b><span>of platform mentions: {{ m.top_brand }}</span></div>
+</div>
+
+<h2>Papers</h2>
+<p class="sub">{% if rate %}Works using the method terms per 100K scholarly works in OpenAlex, so growth of the corpus itself doesn't count.{% else %}Works whose title or abstract uses the largest single method term (a lower bound until the union series is in).{% endif %} The shaded year is partial.</p>
+<div class="cw">{{ pub_chart | safe }}</div>
+
+<h2>Platforms</h2>
+<p class="sub">Share of brand mentions in papers, full text included. A paper naming two platforms counts once for each. Sub-brands sit inside their parent's count. The chart starts in {{ share_from }}, the first year with at least 50 mentions.</p>
+<div class="cw">{{ share_chart | safe }}</div>
+<div class="tw"><table>
+<thead><tr><th>Platform</th><th>Vendor</th><th class="n">Launched</th><th class="n">Papers {{ meta.full_year }}</th><th class="n">Share</th><th class="n">Precision</th></tr></thead>
+<tbody>
+{% set ns = namespace(fam=None) %}
+{% for p in plat_rows %}
+{% if p.family_label != ns.fam %}{% set ns.fam = p.family_label %}<tr class="fam"><td colspan="6">{{ p.family_label }}</td></tr>{% endif %}
+<tr>
+  <td>{{ p.name }}{% if p.parent %} <small>(in {{ p.parent }})</small>{% endif %}</td>
+  <td>{{ p.vendor }}{% if p.pending %} <small>({{ p.pending }})</small>{% endif %}</td>
+  <td class="n">{{ p.launched or "–" }}</td>
+  <td class="n">{{ p.n_full | fmt }}</td>
+  <td class="n">{% if p.parent %}–{% else %}{{ p.share_full | fmt("pct") }}{% endif %}</td>
+  <td class="n">{{ "%.2f" | format(p.precision) if p.precision is not none else "–" }}{% if p.low %} <span class="flag">low</span>{% endif %}</td>
+</tr>
+{% endfor %}
+</tbody></table></div>
+{% if plat_rows | selectattr("low") | list %}<p class="note-p">Low: under 0.8 precision on a labeled random sample. Counts for these platforms include mentions that aren't uses (for example, author disclosures), so read their trend, not their level.</p>{% endif %}
+
+<div class="two">
+<section>
+<h2>NIH grants</h2>
+<p class="sub">Total award dollars by fiscal year, for projects whose title or abstract uses the grant terms.</p>
+<div class="cw">{{ nih_chart | safe }}</div>
+{% if t.nih.top_ics %}<p class="note-p">Largest funders, fiscal {{ meta.full_year - 4 }}-{{ meta.full_year }}: {% for ic, usd in t.nih.top_ics %}{{ ic }} {{ usd | fmt("usd") }}{% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+</section>
+<section>
+<h2>Patents</h2>
+<p class="sub">US applications (by publication date) and grants, through {{ meta.patents_through }}.</p>
+<div class="cw">{{ pat_chart | safe }}</div>
+{% if t.patents.pregrant.top_assignees %}<p class="note-p">Most applications, {{ meta.full_year - 4 }}-{{ meta.full_year }}: {% for a, n in t.patents.pregrant.top_assignees[:6] %}{{ a | title }} ({{ n }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+{% if t.patent_use_share is not none %}<p class="note-p">About {{ t.patent_use_share | fmt("pct") }} of matched patents name the technology only as a readout or one of several applications, rather than as the invention itself.</p>{% endif %}
+</section>
+</div>
+
+<h2>Companies</h2>
+<p class="sub">Who sells it. Market value is month-end close times latest reported shares outstanding. Diversified companies are listed for reference; their financials aren't attributed to one technology.</p>
+<div class="tw"><table>
+<thead><tr><th>Vendor</th><th>Platforms here</th><th>Listing</th><th class="n">Market value</th></tr></thead>
+<tbody>
+{% for v in t.vendors | sort(attribute="name") %}
+<tr><td>{{ v.name }}</td><td>{{ v.platforms | join(", ") }}</td>
+<td>{% if v.ticker %}{{ v.ticker }}{% endif %}{% if v.role == "pure_play" %} <small>pure play</small>{% elif v.status == "private" %}private{% elif v.status == "public_non_us" %}<small>non-US listing</small>{% endif %}</td>
+<td class="n">{% if v.financials and v.financials.market_value %}{{ v.financials.market_value.usd | fmt("usd") }} <small>{{ v.financials.market_value.month }}</small>{% else %}–{% endif %}</td></tr>
+{% endfor %}
+</tbody></table></div>
+
+{% for f in fin %}
+<h3>{{ f.name }} revenue{% if f.ticker %} ({{ f.ticker }}){% endif %}</h3>
+<div class="tw"><table>
+<thead><tr><th>Fiscal year</th><th class="n">Revenue</th>{% for k in f.mix_keys %}<th class="n">{{ mix_labels[k] }}</th>{% endfor %}{% for k in f.tech_keys %}<th class="n">{{ k | replace("_", " ") | capitalize }}</th>{% endfor %}</tr></thead>
+<tbody>
+{% for r in f.rows | reverse %}
+<tr><td>{{ r.fy }}</td><td class="n">{{ r.revenue | fmt("usd") }}</td>{% for k in f.mix_keys %}<td class="n">{{ r.mix.get(k) | fmt("usd") }}</td>{% endfor %}{% for k in f.tech_keys %}<td class="n">{{ r.technology.get(k) | fmt("usd") }}</td>{% endfor %}</tr>
+{% endfor %}
+</tbody></table></div>
+{% endfor %}
+{% if fin %}<p class="note-p">From 10-K (or 20-F) XBRL. Product lines reconcile to total revenue within 1% each year; technology columns appear only where the company reports them.</p>{% endif %}
+
+{% if preview %}
+<h2>Checked statements</h2>
+<p class="pending">Pending: data-checked statements for this technology (step 4).</p>
+<h2>Product take</h2>
+<p class="pending">Pending: Josh's dated, signed take.</p>
+{% endif %}
+{% endblock %}

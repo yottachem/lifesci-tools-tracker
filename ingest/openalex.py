@@ -73,19 +73,30 @@ def by_year(field, query):
     return counts, d["meta"].get("cost_usd", 0)
 
 
+def total_by_year():
+    """All scholarly works per year: the denominator for per-100K rates."""
+    r = get({"filter": f"type:{'|'.join(TYPES)}", "group_by": "publication_year"}, "all works")
+    d = r.json()
+    return {int(g["key"]): g["count"] for g in d["group_by"] if g["key"].isdigit()}, d["meta"].get("cost_usd", 0)
+
+
 def run():
     out, cost = {}, 0.0
+    out["_total"], cost = total_by_year()
     for tech_id, tech in load_taxonomies().items():
         methods, plats = {}, {}
         for m in tech["method_terms"]:
             methods[method_term(m)], usd = by_year("title_and_abstract.search", method_query(m))
             cost += usd
+        # union of the method terms, so a paper using two terms counts once
+        union, usd = by_year("title_and_abstract.search", " OR ".join(f"({method_query(m)})" for m in tech["method_terms"]))
+        cost += usd
         for fam_id, p in platforms(tech):
             q = platform_query(p)
             c, usd = by_year("default.search", q)
             cost += usd
             plats[p["name"]] = {"family": fam_id, "query": q, "launched": p.get("launched"), "counts": c}
-        out[tech_id] = {"methods": methods, "platforms": plats}
+        out[tech_id] = {"methods": methods, "union": union, "platforms": plats}
     path = write_snapshot("openalex", out)
     print(f"OpenAlex cost ${cost:.3f}")
     return path

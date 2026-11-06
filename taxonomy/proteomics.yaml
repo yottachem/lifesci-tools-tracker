@@ -58,6 +58,7 @@ technologies:
 
   affinity_proteomics:
     label: Affinity and single-molecule proteomics
+    short_label: Affinity proteomics   # chart labels
     stage: growth
     definition: >
       Measures hundreds to thousands of proteins in blood or lysate with affinity reagents
