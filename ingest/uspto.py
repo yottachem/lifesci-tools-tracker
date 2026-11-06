@@ -4,7 +4,9 @@ PatentsView's search API moved into ODP on 2026-03-20; the data now comes as bul
   PVGPATDIS   granted patents (g_*), 1976+
   PVPGPUBDIS  pre-grant publications (pg_*), 2001+; ~18 months after filing, so fresher than grants
 Files are cached in data/cache/uspto/ (gitignored) and re-downloaded only when ODP's
-fileLastModifiedDateTime changes. Matching is ours, not a search engine's: exact phrases from
+fileLastModifiedDateTime changes. corpus_<kind>.stamp.json records the stamps each scoped corpus
+was built from, so a run with a current corpus (CI restores it from the snapshots release) skips
+the ~6 GB download entirely. Matching is ours, not a search engine's: exact phrases from
 each technology's method_terms and nih_terms, case-insensitive, hyphen/space tolerant, in title or
 abstract, within a shared life-science CPC scope (SCOPE_*). The scoped corpus is cached as
 parquet so term changes re-run in seconds. CPC classes and assignees are attached to every match.
@@ -185,17 +187,38 @@ def match(corpus, techs):
     return sorted(hits, key=lambda h: (h["date"], h["id"]))
 
 
+def corpus_stamp(kind):
+    return CACHE / f"corpus_{kind}.stamp.json"
+
+
+def stamps(cfg, index):
+    return {name: index[name]["fileLastModifiedDateTime"] for name in cfg["files"].values()}
+
+
+def corpus_current(kind, cfg, index):
+    """True when the cached scoped corpus was built from the files ODP serves now."""
+    st = corpus_stamp(kind)
+    return (CACHE / f"corpus_{kind}.parquet").exists() and st.exists() and json.loads(st.read_text()) == stamps(cfg, index)
+
+
 def run(download_only=False):
     techs = load_taxonomies()
     out, meta = {}, {}
     for kind, cfg in DATASETS.items():
         index = file_index(cfg["product"])
-        paths = {}
-        for role, name in cfg["files"].items():
-            paths[role], _ = download(name, index[name])
+        for name in cfg["files"].values():
             meta[name] = {k: index[name].get(k) for k in ("fileLastModifiedDateTime", "fileDataFromDate", "fileDataToDate")}
+        if not download_only and corpus_current(kind, cfg, index):
+            print(f"{kind}: corpus current, no download", flush=True)
+            corpus = pd.read_parquet(CACHE / f"corpus_{kind}.parquet")
+        else:
+            paths = {role: download(name, index[name])[0] for role, name in cfg["files"].items()}
+            if download_only:
+                continue
+            corpus = build_corpus(kind, cfg, paths)
+            corpus_stamp(kind).write_text(json.dumps(stamps(cfg, index), indent=1, sort_keys=True))
         if not download_only:
-            out[kind] = match(build_corpus(kind, cfg, paths), techs)
+            out[kind] = match(corpus, techs)
             print(f"{kind}: {len(out[kind]):,} matches", flush=True)
     if download_only:
         print(json.dumps(meta, indent=1))

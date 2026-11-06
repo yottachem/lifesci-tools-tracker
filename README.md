@@ -21,8 +21,17 @@ uv run python -m ingest.uspto        # patent bulk files (downloads ~6 GB on fir
 uv run python -m ingest.edgar        # annual revenue, gross profit, shares
 uv run python -m ingest.edgar_mix    # revenue by product/service member from 10-K XBRL instances
 uv run python -m ingest.prices       # derived monthly market value
+uv run python -m ingest.run          # all of the above; a failed source keeps its last snapshot
+uv run python -m transform.panel     # signal panel -> site/data/panel.json
+uv run python site/build.py          # static site -> site/dist (--preview for the internal build)
 uv run pytest
 ```
+
+Monthly in CI (`.github/workflows/update.yml`): restore snapshots from the `snapshots` release,
+fetch, save snapshots, build the panel, test, build and deploy the site. The release carries the
+latest raw snapshot per source and the scoped USPTO corpus, so the ~6 GB patent download only
+happens when USPTO publishes new files (`ingest/archive.py`). Scheduled runs need the repo
+variable `SCHEDULE_ON=true`; deploys need `PAGES_LIVE=true`.
 
 Keys and contact are read from environment variables, or from the macOS Keychain locally:
 
@@ -39,8 +48,11 @@ Keys and contact are read from environment variables, or from the macOS Keychain
 | `taxonomy/` | Per technology: definition, method terms, NIH terms, patent terms, platforms and their queries |
 | `reference/` | Vendor roster with ownership history and sources; curated XBRL revenue-member map |
 | `sources.yaml` | Source registry: URL, auth, license |
-| `ingest/` | One module per source; writes dated raw snapshots to `data/raw/` |
-| `tests/` | Taxonomy and roster rules (query quoting, vendor coverage, term format) |
+| `ingest/` | One module per source; writes dated raw snapshots to `data/raw/`. `run.py` fetches all, `archive.py` carries snapshots between CI runs |
+| `transform/` | Signal panel per technology from the latest snapshots |
+| `precision/` | Labeled samples and measured precision per brand and term |
+| `site/` | Jinja templates, server-rendered SVG charts, build script; `data/panel.json` is the derived data |
+| `tests/` | Taxonomy and roster rules (query quoting, vendor coverage, term format, launch sources), ingest helpers |
 | `data/` | `raw/` snapshots and `cache/` bulk files; not committed |
 
 ## Counting rules

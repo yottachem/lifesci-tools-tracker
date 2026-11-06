@@ -1,0 +1,71 @@
+name: update
+# Monthly: restore snapshots -> fetch sources -> archive snapshots -> build panel -> test -> build site -> deploy.
+# Off until launch: scheduled runs need repo variable SCHEDULE_ON=true, deploys need PAGES_LIVE=true.
+# Secrets: OPENALEX_API_KEY, USPTO_ODP_API_KEY, CONTACT_EMAIL (SEC User-Agent; never written to the repo).
+on:
+  schedule:
+    - cron: "0 13 3 * *"   # 3rd of each month, 08:00 ET (EST)
+  workflow_dispatch:
+
+permissions:
+  contents: write   # snapshots release
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'schedule' || vars.SCHEDULE_ON == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150   # a quarterly USPTO refresh downloads ~6 GB and rebuilds the corpus
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # status page dates hand-curated files from git history
+      - uses: astral-sh/setup-uv@v5
+      - name: Restore snapshots
+        run: uv run python -m ingest.archive restore
+      - name: Fetch sources
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          USPTO_ODP_API_KEY: ${{ secrets.USPTO_ODP_API_KEY }}
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+        run: uv run python -m ingest.run
+      - name: Save snapshots
+        run: uv run python -m ingest.archive save
+      - name: Build panel
+        run: uv run python -m transform.panel
+      - name: Test
+        run: LAUNCH_GATE=1 uv run pytest -q
+      - name: Build site
+        run: uv run python site/build.py
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+      - name: Open an issue for failed sources
+        if: always() && hashFiles('data/raw/_failed.txt') != ''
+        run: |
+          if [ -s data/raw/_failed.txt ]; then
+            gh issue create -R "$GITHUB_REPOSITORY" --title "Sources failed $(date -u +%F)" \
+              --body "$(printf 'These kept their last snapshot:\n\n```\n%s\n```\n\n%s' "$(cat data/raw/_failed.txt)" "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")"
+          fi
+      - name: Open an issue if the run fails
+        if: failure() && github.event_name == 'schedule'
+        run: gh issue create -R "$GITHUB_REPOSITORY" --title "Update failed $(date -u +%F)" --body "See ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+  deploy:
+    needs: build
+    if: vars.PAGES_LIVE == 'true'
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
