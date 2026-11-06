@@ -56,7 +56,10 @@ Keys and contact are read from environment variables, or from the macOS Keychain
 - NIH grants for affinity proteomics are counted from method terms only (proximity extension, aptamer, single molecule array). In grant text "affinity proteomics" mostly means affinity purification-mass spec, so it is left out and the series undercounts.
 - Every brand query and search term has a measured precision from a labeled random sample (`precision/`); platforms under 0.8 are flagged on the site. Counts are compared across years per 100K OpenAlex works, and the current year is marked partial.
 - Patents count when a title or abstract term matches within a life-science CPC scope. Claims are not searched, so counts are a consistent lower bound. There is no title or CPC rule: some matches name the technology only as a readout or list item, and that use-only share is measured per technology in `precision/patent_use.csv` (2 to 20% across technologies; protein sequencing 32%, where nanopore patents list it as an application) and shown as a footnote.
-- Market value is derived (month-end close x latest reported shares outstanding). Raw prices are not stored or published.
+- Market value is derived (month-end close x latest reported shares outstanding). Dual-class filers (Bio-Rad, Quantum-Si, Seer) report shares per class on the cover page; the classes are summed. Raw prices are not stored or published.
+- Revenue comes from 10-K filings, and from the US-GAAP 20-F for QIAGEN. Years are fiscal years as the filer names them (Illumina's 52/53-week year ending 2023-01-01 is fiscal 2022). Revenue mix reconciles to total revenue within 1% each year.
+- Cytek, Seer and Quantum-Si report product revenue without splitting instruments from consumables, so their mix shows product and service only.
+- Alamar Biosciences (IPO April 2026) has market value but no revenue until its first 10-K (expected March 2027).
 
 ## License
 

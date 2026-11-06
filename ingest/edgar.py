@@ -12,19 +12,21 @@ import requests
 from ingest.common import load_vendors, user_agent, write_snapshot
 
 URL = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json"
-REVENUE = ["RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "SalesRevenueNet"]
+REVENUE = ["RevenueFromContractWithCustomerExcludingAssessedTax", "RevenueFromContractWithCustomerIncludingAssessedTax",
+           "Revenues", "SalesRevenueNet"]  # PacBio tags the "including" concept from 2019
+ANNUAL = ("10-K", "20-F")  # QIAGEN files a US-GAAP 20-F as a foreign private issuer
 GROSS = ["GrossProfit"]
 COST = ["CostOfRevenue", "CostOfGoodsAndServicesSold"]
 SHARES = ["CommonStockSharesOutstanding", "WeightedAverageNumberOfSharesOutstandingBasic"]
 
 
 def annual(facts, concepts, unit="USD"):
-    """Fiscal-year values from 10-K filings: {fy_end_date: value}. First concept with data wins per year;
+    """Fiscal-year values from 10-K (or 20-F) filings: {fy_end_date: value}. First concept with data wins per year;
     later filings override earlier ones (restatements)."""
     out = {}
     for c in concepts:
         for x in facts.get(c, {}).get("units", {}).get(unit, []):
-            if x.get("form") != "10-K" or x.get("fp") != "FY":
+            if x.get("form") not in ANNUAL or x.get("fp") != "FY":
                 continue
             if "start" in x and not _full_year(x["start"], x["end"]):
                 continue

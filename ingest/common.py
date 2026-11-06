@@ -2,7 +2,7 @@
 import json
 import os
 import subprocess
-from datetime import date
+from datetime import date, timedelta
 from functools import cache
 from pathlib import Path
 
@@ -72,3 +72,8 @@ def write_snapshot(source, payload):
     path = d / f"{date.today().isoformat()}.json"
     path.write_text(json.dumps(payload, indent=1, sort_keys=True))
     return path
+
+
+def fiscal_year(end):
+    """Fiscal year named the way the filer names it: a 52/53-week year ending 2023-01-01 is fiscal 2022."""
+    return (date.fromisoformat(end) - timedelta(days=31)).year

@@ -16,19 +16,20 @@ from datetime import date
 import requests
 import yaml
 
-from ingest.common import ROOT, load_vendors, user_agent, write_snapshot
+from ingest.common import ROOT, fiscal_year, load_vendors, user_agent, write_snapshot
 
 SUBMISSIONS = "https://data.sec.gov/submissions/CIK{cik:010d}.json"
 ARCHIVE = "https://www.sec.gov/Archives/edgar/data/{cik}/{acc}/{doc}"
-REVENUE = {"RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues"}
+REVENUE = {"RevenueFromContractWithCustomerExcludingAssessedTax", "RevenueFromContractWithCustomerIncludingAssessedTax", "Revenues"}
 AXIS = "srt:ProductOrServiceAxis"
+SPLIT = "us-gaap:RelatedPartyTransactionsByRelatedPartyAxis"  # Seer splits each product line by related party from FY2023
 NS = {"xbrli": "http://www.xbrl.org/2003/instance", "xbrldi": "http://xbrl.org/2006/xbrldi"}
 
 
-def ten_ks(cik, since=2018):
+def ten_ks(cik, since=2018, forms=("10-K", "20-F")):
     d = requests.get(SUBMISSIONS.format(cik=cik), headers={"User-Agent": user_agent()}, timeout=60).json()["filings"]["recent"]
     for form, acc, doc, rdate in zip(d["form"], d["accessionNumber"], d["primaryDocument"], d["reportDate"]):
-        if form == "10-K" and rdate and int(rdate[:4]) >= since:
+        if form in forms and rdate and int(rdate[:4]) >= since:
             yield acc.replace("-", ""), doc, rdate
 
 
@@ -52,10 +53,18 @@ def mix_from_instance(root, report_date):
             contexts[c.get("id")] = "total"
         elif len(members) == 1 and members[0].get("dimension") == AXIS:
             contexts[c.get("id")] = members[0].text.strip()
-    out = {}
+        elif len(members) == 2 and {m.get("dimension") for m in members} == {AXIS, SPLIT}:
+            contexts[c.get("id")] = ("split", next(m.text.strip() for m in members if m.get("dimension") == AXIS))
+    out, split = {}, {}
     for el in root:
         if el.tag.split("}")[-1] in REVENUE and el.get("contextRef") in contexts and el.text:
-            out.setdefault(contexts[el.get("contextRef")], float(el.text))
+            key = contexts[el.get("contextRef")]
+            if isinstance(key, tuple):
+                split.setdefault(key[1], {}).setdefault(el.get("contextRef"), float(el.text))
+            else:
+                out.setdefault(key, float(el.text))
+    for member, parts in split.items():   # used only when the filing has no unsplit fact for the member
+        out.setdefault(member, sum(parts.values()))
     return out
 
 
@@ -93,7 +102,7 @@ def run():
             flag = "ok" if x["reconciled"] else "MISMATCH"
             mix = ", ".join(f"{k} {val / 1e6:,.0f}M" for k, val in sorted(x["mix"].items()))
             tech = "; ".join(f"{t} {sum(g.values()) / 1e6:,.0f}M" for t, g in x["technology"].items())
-            print(f"{name} {y[:4]} [{flag}] total {(x['total'] or 0) / 1e6:,.0f}M | {mix}" + (f" | {tech}" if tech else ""))
+            print(f"{name} FY{fiscal_year(y)} [{flag}] total {(x['total'] or 0) / 1e6:,.0f}M | {mix}" + (f" | {tech}" if tech else ""))
     return write_snapshot("edgar_mix", result)
 
 

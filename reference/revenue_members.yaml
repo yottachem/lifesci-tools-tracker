@@ -1,7 +1,9 @@
 # XBRL revenue members (srt:ProductOrServiceAxis) mapped to revenue mix and to technologies.
 # Leaf members only, so nothing is counted twice. ingest.edgar_mix checks that each year's mix
 # sums to reported total revenue (within 1%) and flags years that don't.
-# Checked against 10-K instances 2026-11-03.
+# product = instruments plus consumables, for filers that don't split them (Cytek, Seer, Quantum-Si).
+# Checked against 10-K instances 2026-11-03 (10x, Quanterix) and 2026-11-06 (the rest).
+# Alamar Biosciences (IPO 2026-04) has no 10-K yet; add it after the FY2026 10-K (about March 2027).
 
 10x Genomics:
   mix:
@@ -27,6 +29,35 @@ Quanterix:
     spatial_proteomics:
       product: [qtrx:SpatialProductRevenueMember]
       service: [qtrx:SpatialServiceAndOtherRevenueMember]
-    affinity_single_molecule_proteomics:
+    affinity_proteomics:
       product: [qtrx:SimoaProductRevenueMember]
       service: [qtrx:SimoaServiceAndOtherRevenueMember]
+
+Illumina:   # no technology split; SomaScan (acquired 2026-01-30) is not broken out
+  mix:
+    instrument: [ilmn:InstrumentsMember]
+    consumable: [ilmn:ConsumablesMember]
+    service: [us-gaap:ServiceMember, us-gaap:ServiceOtherMember]
+
+PacBio:
+  mix:
+    instrument: [pacb:InstrumentMember]
+    consumable: [pacb:ConsumableMember]
+    service: [pacb:ServiceAndOtherMember]
+
+Cytek Biosciences:
+  mix:
+    product: [us-gaap:ProductMember]
+    service: [us-gaap:ServiceMember]
+
+Seer:
+  mix:
+    product: [us-gaap:ProductMember]
+    service: [us-gaap:ServiceMember]
+    other: [ck0001726445:OtherMember, ck0001726445:GrantAndOtherMember, seer:GrantAndOtherMember, us-gaap:GrantMember]
+    related_party: [seer:RelatedPartyMember]   # FY2021-2022 tagged related-party revenue as its own product line
+
+Quantum-Si:
+  mix:
+    product: [us-gaap:ProductMember]
+    service: [us-gaap:ServiceMember]
