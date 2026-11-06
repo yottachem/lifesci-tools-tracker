@@ -55,7 +55,7 @@ Keys and contact are read from environment variables, or from the macOS Keychain
 - Mass-spec proteomics includes mass-spec tissue and single-cell proteomics. Affinity proteomics excludes low-plex immunoassays (ELISA, bead panels). CyTOF and imaging flow count under flow cytometry.
 - NIH grants for affinity proteomics are counted from method terms only (proximity extension, aptamer, single molecule array). In grant text "affinity proteomics" mostly means affinity purification-mass spec, so it is left out and the series undercounts.
 - Every brand query and search term has a measured precision from a labeled random sample (`precision/`); platforms under 0.8 are flagged on the site. Counts are compared across years per 100K OpenAlex works, and the current year is marked partial.
-- Patents count when a title or abstract term matches within a life-science CPC scope. Claims are not searched, so counts are a consistent lower bound.
+- Patents count when a title or abstract term matches within a life-science CPC scope. Claims are not searched, so counts are a consistent lower bound. There is no title or CPC rule: some matches name the technology only as a readout or list item, and that use-only share is measured per technology in `precision/patent_use.csv` (2 to 20% across technologies; protein sequencing 32%, where nanopore patents list it as an application) and shown as a footnote.
 - Market value is derived (month-end close x latest reported shares outstanding). Raw prices are not stored or published.
 
 ## License

@@ -18,21 +18,29 @@ Writes precision/summary.csv (per entry) and precision/spot_check.csv (rows for 
 Precision = yes / (yes + no), with a 95% Wilson interval; low = precision under LOW.
 precision/reviewed.csv records rows Josh has spot-checked (python -m precision.score --reviewed
 marks the current spot_check.csv done); they leave spot_check.csv but keep their josh_label.
+Patent "yes" reasons are tagged core: (the invention is the technology or an assay built on it) or
+use: (the technology is only a readout, a validation step or a list item). precision/patent_use.csv
+gives the use share per technology; there is no title/CPC rule (decision 2026-11-06), so a share
+above USE_WATCH is printed for review.
 Josh's josh_label, where filled, overrides label. Each run first copies josh_label from
 spot_check.csv into the samples, so regenerating spot_check.csv never loses it.
 
 Run: uv run python -m precision.score
 """
 import csv
+import hashlib
 import json
 import math
+import re
 
 from ingest.common import ROOT, load_taxonomies, method_term, platforms
 from ingest.openalex import get, method_query, platform_query, works_filter
 
 OUT = ROOT / "precision"
 RAW = ROOT / "data" / "raw"
+KEPT = ROOT / "data" / "cache" / "precision_kept.json"
 LOW = 0.8
+USE_WATCH = 0.30  # patent use-only share that prompts a second look at a title/CPC rule
 SIGNALS = ("platforms", "methods", "nih", "patents")
 SPOT_FIELDS = ["technology", "signal", "entry", "id", "year", "type", "title", "evidence", "snippet",
                "label", "reason", "josh_check", "josh_label"]
@@ -44,13 +52,22 @@ def norm(r, signal):
 
 
 def openalex_kept(ids, field, query):
-    """Work ids from ids that the query (with the type filter) still matches."""
+    """Work ids from ids that the query (with the type filter) still matches.
+    Cached per (field, query, ids) in data/cache/precision_kept.json, so a re-run only queries
+    OpenAlex for entries whose query or sample changed (delete the file to refresh all)."""
+    key = hashlib.sha1(json.dumps([field, query, sorted(ids)]).encode()).hexdigest()
+    cache = json.loads(KEPT.read_text()) if KEPT.exists() else {}
+    if key in cache:
+        return set(cache[key])
     out = set()
     for i in range(0, len(ids), 50):
         params = {"filter": f"openalex:{'|'.join(ids[i:i + 50])}," + works_filter(field, query),
                   "per-page": 50, "select": "id"}
         r = get(params, f"re-scoring {query}")
         out |= {w["id"].rsplit("/", 1)[-1] for w in r.json()["results"]}
+    cache[key] = sorted(out)
+    KEPT.parent.mkdir(parents=True, exist_ok=True)
+    KEPT.write_text(json.dumps(cache))
     return out
 
 
@@ -132,10 +149,19 @@ def wilson(yes, n, z=1.96):
     return round((mid - half) / (1 + z * z / n), 2), round((mid + half) / (1 + z * z / n), 2)
 
 
+def patent_use(tech_id, live):
+    """Core vs use-only among the kept patent rows labeled yes."""
+    tags = [re.search(r"\b(core|use):", r["reason"]) for r in live if final(r) == "yes"]
+    core, use = (sum(bool(t) and t.group(1) == lab for t in tags) for lab in ("core", "use"))
+    share = round(use / (core + use), 2) if core + use else None
+    return {"technology": tech_id, "yes": len(tags), "core": core, "use": use, "untagged": len(tags) - core - use,
+            "use_share": share, "watch": share is not None and share > USE_WATCH}
+
+
 def run():
     merge_spot_checks()
     done = reviewed()
-    summary, spot = [], []
+    summary, spot, uses = [], [], []
     for tech_id, tech in load_taxonomies().items():
         for signal in SIGNALS:
             path = OUT / f"{tech_id}_{signal}.csv"
@@ -152,14 +178,17 @@ def run():
                                 "precision": prec, "ci_low": lo, "ci_high": hi,
                                 "coverage": round((yes + no) / len(live), 2) if live else None,
                                 "low": prec is not None and prec < LOW})
+                if signal == "patents":
+                    uses.append(patent_use(tech_id, live))
                 spot += [{k: r.get(k, "") for k in SPOT_FIELDS} for r in live if r["josh_check"] not in ("", "0")
                          and (tech_id, signal, r["entry"], r["id"]) not in done]
-    for name, data, fields in (("summary", summary, list(summary[0])), ("spot_check", spot, SPOT_FIELDS)):
+    for name, data, fields in (("summary", summary, list(summary[0])), ("spot_check", spot, SPOT_FIELDS),
+                               ("patent_use", uses, list(uses[0]))):
         with open(OUT / f"{name}.csv", "w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=fields)
             w.writeheader()
             w.writerows(data)
-    return summary, spot
+    return summary, spot, uses
 
 
 if __name__ == "__main__":
@@ -167,8 +196,12 @@ if __name__ == "__main__":
     if sys.argv[1:2] == ["--reviewed"]:
         print(mark_reviewed(sys.argv[2]), "rows marked reviewed")
         sys.exit()
-    summary, spot = run()
+    summary, spot, uses = run()
     for s in summary:
         print(f"{s['signal']:9} {s['entry'][:34]:34} kept {s['kept']:2}/{s['sampled']:2}  precision {s['precision']}  "
               f"[{s['ci_low']}, {s['ci_high']}]  coverage {s['coverage']}{'  LOW' if s['low'] else ''}")
+    for u in uses:
+        if u["watch"] or u["untagged"]:
+            print(f"patents   {u['technology']:24} use share {u['use_share']}  untagged {u['untagged']}"
+                  f"{'  WATCH' if u['watch'] else ''}")
     print(len(spot), "spot-check rows -> precision/spot_check.csv")
