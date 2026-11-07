@@ -1,6 +1,7 @@
 name: update
 # Monthly: restore snapshots -> fetch sources -> archive snapshots -> build panel -> check statements -> test -> build site -> deploy.
-# Off until launch: scheduled runs need repo variable SCHEDULE_ON=true, deploys need PAGES_LIVE=true.
+# A push to main skips fetch and archive: it rebuilds the site from the stored snapshots.
+# Scheduled runs need repo variable SCHEDULE_ON=true, deploys need PAGES_LIVE=true.
 # Secrets: OPENALEX_API_KEY, USPTO_ODP_API_KEY, CONTACT_EMAIL (SEC User-Agent; never written to the repo).
 on:
   schedule:
@@ -10,6 +11,8 @@ on:
       sources:
         description: "Sources to fetch, space-separated (blank = all): reporter openalex uspto edgar edgar_mix prices"
         default: ""
+  push:
+    branches: [main]
 
 permissions:
   contents: write   # snapshots release
@@ -36,6 +39,7 @@ jobs:
       - name: Restore snapshots
         run: uv run python -m ingest.archive restore
       - name: Fetch sources
+        if: github.event_name != 'push'
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           USPTO_ODP_API_KEY: ${{ secrets.USPTO_ODP_API_KEY }}
@@ -43,6 +47,7 @@ jobs:
           SOURCES: ${{ inputs.sources }}
         run: uv run python -m ingest.run $SOURCES
       - name: Save snapshots
+        if: github.event_name != 'push'
         run: uv run python -m ingest.archive save
       - name: Build panel
         run: uv run python -m transform.panel
@@ -63,7 +68,7 @@ jobs:
               --body "$(printf 'These kept their last snapshot:\n\n```\n%s\n```\n\n%s' "$(cat data/raw/_failed.txt)" "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")"
           fi
       - name: Open an issue for statements under review
-        if: always() && hashFiles('analysis/results/review.json') != ''
+        if: always() && github.event_name != 'push' && hashFiles('analysis/results/review.json') != ''
         run: |
           uv run python -m analysis.claims --markdown > review.md
           if [ -s review.md ]; then
