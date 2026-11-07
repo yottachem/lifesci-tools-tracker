@@ -16,6 +16,17 @@
   <div class="fig"><b>{{ m.top_brand_share | fmt("pct") }}</b><span>of platform mentions: {{ m.top_brand }}</span></div>
 </div>
 
+{% set shown = claims | selectattr("html") | list %}
+{% if shown %}
+<h2>What the data says</h2>
+<p class="sub">Each statement is re-checked against the data on every monthly run. When the data stops supporting one, it's replaced with the plain numbers and marked under review until it's rewritten.</p>
+<ul class="claims">
+{% for c in shown %}
+<li>{{ c.html | safe }}{% if c.status != "ok" %} <span class="flag">under review</span>{% endif %}{% if preview %}<br><code class="cond">holds: {{ c.holds }}</code>{% endif %}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
 <h2>Papers</h2>
 <p class="sub">{% if rate %}Works using the method terms per 100K scholarly works in OpenAlex, so growth of the corpus itself doesn't count.{% else %}Works whose title or abstract uses the largest single method term (a lower bound until the union series is in).{% endif %} The shaded year is partial.</p>
 <div class="cw">{{ pub_chart | safe }}</div>
@@ -82,8 +93,6 @@
 {% if fin %}<p class="note-p">From 10-K (or 20-F) XBRL. Product lines reconcile to total revenue within 1% each year; technology columns appear only where the company reports them.</p>{% endif %}
 
 {% if preview %}
-<h2>Checked statements</h2>
-<p class="pending">Pending: data-checked statements for this technology (step 4).</p>
 <h2>Product take</h2>
 <p class="pending">Pending: Josh's dated, signed take.</p>
 {% endif %}

@@ -160,6 +160,8 @@ def main(preview=False):
     env = Environment(loader=FileSystemLoader(HERE / "templates"), autoescape=select_autoescape(["html", "j2"]),
                       trim_blocks=True, lstrip_blocks=True)
     env.filters["fmt"] = charts.fmt
+    claims_path = HERE / "data" / "claims.json"
+    claims = json.loads(claims_path.read_text()) if claims_path.exists() else {}
     nav = sorted(panel.values(), key=lambda t: (STAGE_ORDER.get(t["stage"], 9), t["label"]))
     common = {"meta": meta, "nav": nav, "repo": REPO, "preview": preview}
     if DIST.exists():
@@ -167,7 +169,7 @@ def main(preview=False):
     DIST.mkdir(parents=True)
     (DIST / "index.html").write_text(env.get_template("index.html.j2").render(**common, page="index", **home_context(panel, meta)))
     for t in panel.values():
-        html = env.get_template("technology.html.j2").render(**common, page=t["id"], **tech_context(t, meta))
+        html = env.get_template("technology.html.j2").render(**common, page=t["id"], claims=claims.get(t["id"], []), **tech_context(t, meta))
         (DIST / f"{t['id']}.html").write_text(html)
     for name, ctx in (("methods", methods_context(panel)), ("status", status_context(panel, meta))):
         (DIST / f"{name}.html").write_text(env.get_template(f"{name}.html.j2").render(**common, page=name, **ctx))

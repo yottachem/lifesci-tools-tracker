@@ -1,0 +1,202 @@
+{
+ "spatial_transcriptomics": [
+  {
+   "id": "fastest",
+   "status": "ok",
+   "html": "The fastest-growing technology tracked. Papers per 100K works rose about 24x from 2020 to 2025, 89% a year.",
+   "holds": "t.growth_rank == 1 and t.multiple >= 10"
+  },
+  {
+   "id": "funding",
+   "status": "ok",
+   "html": "Funding followed. NIH dollars went from $54 million in fiscal 2020 to $620 million in 2025, third among the 10 technologies.",
+   "holds": "t.nih_growth > 0.3 and t.nih_rank <= 3"
+  },
+  {
+   "id": "imaging_gain",
+   "status": "ok",
+   "html": "Visium is still the most-named platform at 40% of mentions. Xenium, launched in 2022, reached 18% by 2025, the largest gain of any platform here.",
+   "holds": "t.lead == 'Visium' and t.gainer == 'Xenium' and t.gainer_share >= 0.15 and t.gainer_launched >= 2021"
+  }
+ ],
+ "spatial_proteomics": [
+  {
+   "id": "second_fastest",
+   "status": "ok",
+   "html": "The second-fastest-growing technology tracked. Papers per 100K works grew 34% a year since 2020, about 4.4x overall.",
+   "holds": "t.growth_rank == 2"
+  },
+  {
+   "id": "one_leader",
+   "status": "ok",
+   "html": "One platform holds about half of mentions. PhenoCycler (CODEX) has 49%; the next, Hyperion, has 14%.",
+   "holds": "t.lead == 'PhenoCycler (CODEX)' and 0.42 <= t.lead_share <= 0.58 and t.second_share < 0.25"
+  },
+  {
+   "id": "funding",
+   "status": "ok",
+   "html": "NIH dollars grew 41% a year, from $20 million in fiscal 2020 to $109 million in 2025.",
+   "holds": "t.nih_growth > 0.25"
+  }
+ ],
+ "single_cell": [
+  {
+   "id": "volume",
+   "status": "ok",
+   "html": "The largest body of work outside the mature technologies, 14,823 papers in 2025, and still growing 31% a year per 100K works.",
+   "holds": "t.papers > max(spatial_transcriptomics.papers, spatial_proteomics.papers, long_read_sequencing.papers, ms_proteomics.papers, affinity_proteomics.papers, protein_sequencing.papers) and t.growth > 0.2"
+  },
+  {
+   "id": "nih_first",
+   "status": "ok",
+   "html": "The most NIH funding of any technology tracked, $906 million in fiscal 2025, up from $345 million in 2020.",
+   "holds": "t.nih_rank == 1"
+  },
+  {
+   "id": "concentrated",
+   "status": "ok",
+   "html": "The most concentrated platform market tracked. Chromium accounts for 82% of platform mentions, down from 92% in 2020.",
+   "holds": "t.conc_rank == 1 and t.lead_share < t.lead_share_from"
+  }
+ ],
+ "long_read_sequencing": [
+  {
+   "id": "doubled",
+   "status": "ok",
+   "html": "Papers per 100K works more than doubled from 2020 to 2025 (2.3x).",
+   "holds": "t.multiple >= 2"
+  },
+  {
+   "id": "funding_faster",
+   "status": "ok",
+   "html": "NIH dollars grew faster than papers, 28% a year to $203 million in fiscal 2025.",
+   "holds": "t.nih_growth > t.growth and t.nih_growth > 0.15"
+  },
+  {
+   "id": "platforms",
+   "status": "ok",
+   "html": "Nanopore platforms account for 69% of mentions. Within them the mix is moving to higher throughput. MinION fell from 53% in 2020 to 38%, and PromethION rose to 15%.",
+   "holds": "t.top_vendor == 'Oxford Nanopore Technologies' and t.top_vendor_share > 0.5 and t.lead == 'MinION' and t.lead_share < t.lead_share_from - 0.05 and t.gainer == 'PromethION'"
+  }
+ ],
+ "ms_proteomics": [
+  {
+   "id": "vs_affinity",
+   "status": "ok",
+   "html": "Papers per 100K works grew 6% a year since 2020, slower than affinity proteomics (13%), which started from a smaller base (269 papers in 2020, against 1,330 here).",
+   "holds": "0 < t.growth < affinity_proteomics.growth and affinity_proteomics.papers_from < t.papers_from"
+  },
+  {
+   "id": "orbitrap_mix",
+   "status": "ok",
+   "html": "Thermo Fisher instruments account for 81% of platform mentions. Within them, Q Exactive fell from 63% in 2020 to 42% as Orbitrap Exploris rose to 16%.",
+   "holds": "t.top_vendor == 'Thermo Fisher Scientific' and t.top_vendor_share > 0.7 and t.lead == 'Q Exactive' and t.lead_share < t.lead_share_from - 0.1 and t.gainer == 'Orbitrap Exploris'"
+  },
+  {
+   "id": "nih_flat",
+   "status": "ok",
+   "html": "NIH dollars were roughly flat, $79 million in fiscal 2020 and $82 million in 2025.",
+   "holds": "abs(t.nih_growth) < 0.03"
+  }
+ ],
+ "affinity_proteomics": [
+  {
+   "id": "nearly_doubled",
+   "status": "ok",
+   "html": "Papers per 100K works nearly doubled from 2020 to 2025 (1.8x), from a small base of 269 papers.",
+   "holds": "1.6 <= t.multiple < 2"
+  },
+  {
+   "id": "two_platforms",
+   "status": "ok",
+   "html": "Two platforms account for 75% of mentions, Olink (40%) and Simoa (34%).",
+   "holds": "t.lead == 'Olink' and t.second == 'Simoa' and t.top2_share > 0.7"
+  },
+  {
+   "id": "nih_smallest",
+   "status": "ok",
+   "html": "The least NIH funding of any technology tracked, $5 million in fiscal 2025 for grants that name these methods.",
+   "holds": "t.nih_rank == t.n_tech"
+  }
+ ],
+ "protein_sequencing": [
+  {
+   "id": "smallest",
+   "status": "ok",
+   "html": "The smallest field tracked, 48 papers in 2025, though papers per 100K works grew 10% a year since 2020.",
+   "holds": "t.papers_rank == t.n_tech and t.growth > 0"
+  },
+  {
+   "id": "one_platform",
+   "status": "ok",
+   "html": "One commercial platform, Platinum (Quantum-Si), accounts for every platform mention.",
+   "holds": "t.n_platforms == 1 and t.lead_share == 1"
+  },
+  {
+   "id": "patent_use",
+   "status": "ok",
+   "html": "About 32% of matched patents use protein sequencing as a readout or one of many applications rather than as the invention, the highest share of any technology tracked.",
+   "holds": "t.use_rank == 1 and t.use_share >= 0.25"
+  }
+ ],
+ "short_read_ngs": [
+  {
+   "id": "flat",
+   "status": "ok",
+   "html": "Flat as a share of all research, 191.3 papers per 100K works in 2025 and 187.1 in 2020.",
+   "holds": "abs(t.growth) < 0.02"
+  },
+  {
+   "id": "nih_patents_down",
+   "status": "ok",
+   "html": "NIH dollars and US patent applications both fell since 2020, NIH by 5% a year to $616 million and applications from 134 to 97.",
+   "holds": "t.nih_growth < 0 and t.apps_growth < 0"
+  },
+  {
+   "id": "novaseq",
+   "status": "ok",
+   "html": "Illumina platforms account for 91% of mentions. NovaSeq rose from 6% in 2020 to 37%, the most-named platform.",
+   "holds": "t.top_vendor == 'Illumina' and t.top_vendor_share > 0.8 and t.lead == 'NovaSeq' and t.lead_share > t.lead_share_from + 0.1"
+  }
+ ],
+ "qpcr_dpcr": [
+  {
+   "id": "largest",
+   "status": "ok",
+   "html": "The largest body of work tracked, 31,004 papers in 2025, growing about as fast as research overall (+1% a year per 100K works).",
+   "holds": "t.papers_rank == 1 and abs(t.growth) < 0.03"
+  },
+  {
+   "id": "nih_down",
+   "status": "ok",
+   "html": "NIH dollars naming these methods fell from $87 million in fiscal 2020 to $63 million in 2025.",
+   "holds": "t.nih < 0.85 * t.nih_from"
+  },
+  {
+   "id": "split",
+   "status": "ok",
+   "html": "No platform dominates. CFX leads with 29% of mentions; QuantStudio about doubled its share since 2020, to 26%.",
+   "holds": "t.lead == 'CFX' and t.second == 'QuantStudio' and t.lead_share < 0.35 and t.gainer == 'QuantStudio' and t.gainer_share >= 1.9 * t.gainer_share_from"
+  }
+ ],
+ "flow_cytometry": [
+  {
+   "id": "funded_patented",
+   "status": "ok",
+   "html": "Papers per 100K works are flat, but the field is second in NIH dollars ($722 million) and first in US patent applications (99 in 2025).",
+   "holds": "t.nih_rank == 2 and t.apps_rank == 1 and abs(t.growth) < 0.03"
+  },
+  {
+   "id": "least_concentrated",
+   "status": "ok",
+   "html": "The least concentrated platform market tracked. The most-named platform, LSR Fortessa / LSR II, has 17% of mentions.",
+   "holds": "t.conc_rank == t.conc_n"
+  },
+  {
+   "id": "cytoflex",
+   "status": "ok",
+   "html": "CytoFLEX about doubled its share of mentions since 2020, from 7% to 16%.",
+   "holds": "t.gainer == 'CytoFLEX' and t.gainer_share >= 1.9 * t.gainer_share_from"
+  }
+ ]
+}

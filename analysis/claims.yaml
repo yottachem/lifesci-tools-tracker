@@ -1,0 +1,171 @@
+# Checked statements per technology. analysis/claims.py re-checks each one on every run.
+#
+#   id        unique within the technology
+#   text      what the page says. {t.name:format} fills in a value from the current run; t is this
+#             technology, other technologies by id (single_cell.growth). **bold** is allowed.
+#             formats: pct (31%), spct (+31%), apct (magnitude, for "fell 5%"), x (3.8x), usd ($620 million), int, f1, ord (third), lower
+#             See every value: uv run python -m analysis.claims --values
+#   holds     the condition the text depends on, as a Python expression over the same values.
+#             If false, the page shows `fallback` marked "under review" and the monthly run opens an issue.
+#   fallback  neutral wording with current numbers, no interpretation ("" hides the statement).
+#
+# Rules: technology-level statements; a platform or vendor is named only for its share of mentions,
+# never judged. A rewrite changes text and holds together so the condition states exactly what the
+# text asserts. Never loosen holds just to clear a flag.
+#
+# Values are fractions (growth 0.31 = 31% a year). Growth is papers per 100K works, 5-year average.
+
+# Plausibility ranges, by value name. A value outside its range is treated as a possible data
+# problem, not a finding: every statement that uses it is held for review (data_check).
+checks:
+  growth: [-0.3, 1.5]
+  multiple: [0.2, 40]
+  per100k: [0, 1000]
+  nih_growth: [-0.5, 1.0]
+  apps_growth: [-0.6, 1.0]
+  lead_share: [0, 1]
+  second_share: [0, 1]
+  top2_share: [0, 1]
+  top_vendor_share: [0, 1]
+  use_share: [0, 0.6]
+
+claims:
+  spatial_transcriptomics:
+    - id: fastest
+      holds: t.growth_rank == 1 and t.multiple >= 10
+      text: The fastest-growing technology tracked. Papers per 100K works rose about {t.multiple:x} from {t.from_year} to {t.year}, {t.growth:pct} a year.
+      fallback: Papers per 100K works changed {t.growth:spct} a year from {t.from_year} to {t.year}.
+    - id: funding
+      holds: t.nih_growth > 0.3 and t.nih_rank <= 3
+      text: Funding followed. NIH dollars went from {t.nih_from:usd} in fiscal {t.from_year} to {t.nih:usd} in {t.year}, {t.nih_rank:ord} among the {t.n_tech} technologies.
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}, {t.nih_from:usd} in {t.from_year}.
+    - id: imaging_gain
+      holds: t.lead == 'Visium' and t.gainer == 'Xenium' and t.gainer_share >= 0.15 and t.gainer_launched >= 2021
+      text: Visium is still the most-named platform at {t.lead_share:pct} of mentions. Xenium, launched in {t.gainer_launched}, reached {t.gainer_share:pct} by {t.year}, the largest gain of any platform here.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+
+  spatial_proteomics:
+    - id: second_fastest
+      holds: t.growth_rank == 2
+      text: The second-fastest-growing technology tracked. Papers per 100K works grew {t.growth:pct} a year since {t.from_year}, about {t.multiple:x} overall.
+      fallback: Papers per 100K works changed {t.growth:spct} a year since {t.from_year}.
+    - id: one_leader
+      holds: t.lead == 'PhenoCycler (CODEX)' and 0.42 <= t.lead_share <= 0.58 and t.second_share < 0.25
+      text: One platform holds about half of mentions. PhenoCycler (CODEX) has {t.lead_share:pct}; the next, {t.second}, has {t.second_share:pct}.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+    - id: funding
+      holds: t.nih_growth > 0.25
+      text: NIH dollars grew {t.nih_growth:pct} a year, from {t.nih_from:usd} in fiscal {t.from_year} to {t.nih:usd} in {t.year}.
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}.
+
+  single_cell:
+    - id: volume
+      holds: t.papers > max(spatial_transcriptomics.papers, spatial_proteomics.papers, long_read_sequencing.papers, ms_proteomics.papers, affinity_proteomics.papers, protein_sequencing.papers) and t.growth > 0.2
+      text: The largest body of work outside the mature technologies, {t.papers:int} papers in {t.year}, and still growing {t.growth:pct} a year per 100K works.
+      fallback: '{t.papers:int} papers in {t.year}; papers per 100K works changed {t.growth:spct} a year since {t.from_year}.'
+    - id: nih_first
+      holds: t.nih_rank == 1
+      text: The most NIH funding of any technology tracked, {t.nih:usd} in fiscal {t.year}, up from {t.nih_from:usd} in {t.from_year}.
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}.
+    - id: concentrated
+      holds: t.conc_rank == 1 and t.lead_share < t.lead_share_from
+      text: The most concentrated platform market tracked. {t.lead} accounts for {t.lead_share:pct} of platform mentions, down from {t.lead_share_from:pct} in {t.from_year}.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+
+  long_read_sequencing:
+    - id: doubled
+      holds: t.multiple >= 2
+      text: Papers per 100K works more than doubled from {t.from_year} to {t.year} ({t.multiple:x}).
+      fallback: Papers per 100K works changed {t.growth:spct} a year since {t.from_year}.
+    - id: funding_faster
+      holds: t.nih_growth > t.growth and t.nih_growth > 0.15
+      text: NIH dollars grew faster than papers, {t.nih_growth:pct} a year to {t.nih:usd} in fiscal {t.year}.
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}.
+    - id: platforms
+      holds: t.top_vendor == 'Oxford Nanopore Technologies' and t.top_vendor_share > 0.5 and t.lead == 'MinION' and t.lead_share < t.lead_share_from - 0.05 and t.gainer == 'PromethION'
+      text: Nanopore platforms account for {t.top_vendor_share:pct} of mentions. Within them the mix is moving to higher throughput. MinION fell from {t.lead_share_from:pct} in {t.from_year} to {t.lead_share:pct}, and PromethION rose to {t.gainer_share:pct}.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+
+  ms_proteomics:
+    - id: vs_affinity
+      holds: 0 < t.growth < affinity_proteomics.growth and affinity_proteomics.papers_from < t.papers_from
+      text: Papers per 100K works grew {t.growth:pct} a year since {t.from_year}, slower than affinity proteomics ({affinity_proteomics.growth:pct}), which started from a smaller base ({affinity_proteomics.papers_from:int} papers in {t.from_year}, against {t.papers_from:int} here).
+      fallback: Papers per 100K works changed {t.growth:spct} a year since {t.from_year}.
+    - id: orbitrap_mix
+      holds: t.top_vendor == 'Thermo Fisher Scientific' and t.top_vendor_share > 0.7 and t.lead == 'Q Exactive' and t.lead_share < t.lead_share_from - 0.1 and t.gainer == 'Orbitrap Exploris'
+      text: Thermo Fisher instruments account for {t.top_vendor_share:pct} of platform mentions. Within them, Q Exactive fell from {t.lead_share_from:pct} in {t.from_year} to {t.lead_share:pct} as Orbitrap Exploris rose to {t.gainer_share:pct}.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+    - id: nih_flat
+      holds: abs(t.nih_growth) < 0.03
+      text: NIH dollars were roughly flat, {t.nih_from:usd} in fiscal {t.from_year} and {t.nih:usd} in {t.year}.
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}.
+
+  affinity_proteomics:
+    - id: nearly_doubled
+      holds: 1.6 <= t.multiple < 2
+      text: Papers per 100K works nearly doubled from {t.from_year} to {t.year} ({t.multiple:x}), from a small base of {t.papers_from:int} papers.
+      fallback: Papers per 100K works changed {t.growth:spct} a year since {t.from_year}.
+    - id: two_platforms
+      holds: t.lead == 'Olink' and t.second == 'Simoa' and t.top2_share > 0.7
+      text: Two platforms account for {t.top2_share:pct} of mentions, Olink ({t.lead_share:pct}) and Simoa ({t.second_share:pct}).
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+    - id: nih_smallest
+      holds: t.nih_rank == t.n_tech
+      text: The least NIH funding of any technology tracked, {t.nih:usd} in fiscal {t.year} for grants that name these methods.
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}.
+
+  protein_sequencing:
+    - id: smallest
+      holds: t.papers_rank == t.n_tech and t.growth > 0
+      text: The smallest field tracked, {t.papers:int} papers in {t.year}, though papers per 100K works grew {t.growth:pct} a year since {t.from_year}.
+      fallback: '{t.papers:int} papers in {t.year}.'
+    - id: one_platform
+      holds: t.n_platforms == 1 and t.lead_share == 1
+      text: One commercial platform, {t.lead}, accounts for every platform mention.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+    - id: patent_use
+      holds: t.use_rank == 1 and t.use_share >= 0.25
+      text: About {t.use_share:pct} of matched patents use protein sequencing as a readout or one of many applications rather than as the invention, the highest share of any technology tracked.
+      fallback: About {t.use_share:pct} of matched patents use protein sequencing as a readout or one of many applications.
+
+  short_read_ngs:
+    - id: flat
+      holds: abs(t.growth) < 0.02
+      text: Flat as a share of all research, {t.per100k:f1} papers per 100K works in {t.year} and {t.per100k_from:f1} in {t.from_year}.
+      fallback: Papers per 100K works changed {t.growth:spct} a year since {t.from_year}.
+    - id: nih_patents_down
+      holds: t.nih_growth < 0 and t.apps_growth < 0
+      text: NIH dollars and US patent applications both fell since {t.from_year}, NIH by {t.nih_growth:apct} a year to {t.nih:usd} and applications from {t.apps_from:int} to {t.apps:int}.
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}; US patent applications were {t.apps:int}.
+    - id: novaseq
+      holds: t.top_vendor == 'Illumina' and t.top_vendor_share > 0.8 and t.lead == 'NovaSeq' and t.lead_share > t.lead_share_from + 0.1
+      text: Illumina platforms account for {t.top_vendor_share:pct} of mentions. NovaSeq rose from {t.lead_share_from:pct} in {t.from_year} to {t.lead_share:pct}, the most-named platform.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+
+  qpcr_dpcr:
+    - id: largest
+      holds: t.papers_rank == 1 and abs(t.growth) < 0.03
+      text: The largest body of work tracked, {t.papers:int} papers in {t.year}, growing about as fast as research overall ({t.growth:spct} a year per 100K works).
+      fallback: '{t.papers:int} papers in {t.year}; papers per 100K works changed {t.growth:spct} a year since {t.from_year}.'
+    - id: nih_down
+      holds: t.nih < 0.85 * t.nih_from
+      text: NIH dollars naming these methods fell from {t.nih_from:usd} in fiscal {t.from_year} to {t.nih:usd} in {t.year}.
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}.
+    - id: split
+      holds: t.lead == 'CFX' and t.second == 'QuantStudio' and t.lead_share < 0.35 and t.gainer == 'QuantStudio' and t.gainer_share >= 1.9 * t.gainer_share_from
+      text: No platform dominates. CFX leads with {t.lead_share:pct} of mentions; QuantStudio about doubled its share since {t.from_year}, to {t.second_share:pct}.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+
+  flow_cytometry:
+    - id: funded_patented
+      holds: t.nih_rank == 2 and t.apps_rank == 1 and abs(t.growth) < 0.03
+      text: Papers per 100K works are flat, but the field is second in NIH dollars ({t.nih:usd}) and first in US patent applications ({t.apps:int} in {t.year}).
+      fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}; US patent applications were {t.apps:int}.
+    - id: least_concentrated
+      holds: t.conc_rank == t.conc_n
+      text: The least concentrated platform market tracked. The most-named platform, {t.lead}, has {t.lead_share:pct} of mentions.
+      fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
+    - id: cytoflex
+      holds: t.gainer == 'CytoFLEX' and t.gainer_share >= 1.9 * t.gainer_share_from
+      text: CytoFLEX about doubled its share of mentions since {t.from_year}, from {t.gainer_share_from:pct} to {t.gainer_share:pct}.
+      fallback: ''
