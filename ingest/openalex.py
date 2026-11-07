@@ -88,8 +88,10 @@ def run():
         for m in tech["method_terms"]:
             methods[method_term(m)], usd = by_year("title_and_abstract.search", method_query(m))
             cost += usd
-        # union of the method terms, so a paper using two terms counts once
-        union, usd = by_year("title_and_abstract.search", " OR ".join(f"({method_query(m)})" for m in tech["method_terms"]))
+        # union of the method terms, so a paper using two terms counts once. Pipe-joined filter values, not
+        # boolean OR: OR-ing a phrase with a stopword ("in situ sequencing", "sequencing by synthesis") with
+        # another phrase returns fewer works than the other phrase alone (checked 2026-11-06)
+        union, usd = by_year("title_and_abstract.search", "|".join(method_query(m) for m in tech["method_terms"]))
         cost += usd
         for fam_id, p in platforms(tech):
             q = platform_query(p)

@@ -7,5 +7,5 @@ protein_sequencing,44,30,14,0,0.32,True
 short_read_ngs,50,40,10,0,0.2,False
 long_read_sequencing,42,40,2,0,0.05,False
 single_cell,47,41,6,0,0.13,False
-spatial_transcriptomics,43,0,0,43,,False
-spatial_proteomics,41,0,0,41,,False
+spatial_transcriptomics,43,42,1,0,0.02,False
+spatial_proteomics,41,38,3,0,0.07,False
