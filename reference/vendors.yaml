@@ -48,7 +48,8 @@ vendors:
       - {date: 2023-07-10, event: Completed acquisition of Lunaphore (COMET), source: 'https://www.biospace.com/bio-techne-completes-lunaphore-acquisition'}
       - {date: 2026-06-25, event: 'Agreed to be acquired by Merck KGaA ($73/share, ~$11.3B EV). Stockholders approved 2026-09-23; not closed as of the 2026-10-22 landscape (expected late 2026 / early 2027)',
          source: 'https://www.dcatvci.org/top-industry-news/merck-kgaa-to-acquire-bio-techne-for-11-3-bn-to-boost-life-sciences-products-arm/'}
-    pending: Merck KGaA acquisition; on close, COMET moves to Merck KGaA (Frankfurt listing, roster only) and TECH financials stop
+    # on close: COMET moves to Merck KGaA (Frankfurt listing, roster only) and TECH financials stop
+    pending: Agreed on 2026-06-25 to be acquired by Merck KGaA; stockholders approved on 2026-09-23. When it closes, COMET is listed under Merck KGaA
   Standard BioTools:
     status: public
     ticker: LAB

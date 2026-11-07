@@ -20,6 +20,9 @@ import charts  # noqa: E402  (site/charts.py)
 
 DIST = HERE / "dist"
 REPO = "https://github.com/yottachem/lifesci-tools-tracker"
+SITE_URL = "https://yottachem.github.io/lifesci-tools-tracker/"
+# Cloudflare Web Analytics site token for yottachem.github.io (public; it ships in the page). Empty = no beacon.
+ANALYTICS_TOKEN = ""
 SHARE_MIN = 50  # platform mentions a year before shares are charted
 STAGE_ORDER = {"emerging": 0, "growth": 1, "mature": 2}
 SIGNAL_LABELS = {"platforms": "Platform brands", "methods": "Method terms", "nih": "NIH terms", "patents": "Patent terms"}
@@ -110,7 +113,7 @@ def home_context(panel, meta):
         rows.append({"t": t, "m": t["metrics"],
                      "s_pub": charts.spark(pub, ys, partial=partial), "s_nih": charts.spark(nih, ys),
                      "s_pat": charts.spark(pat, [y for y in ys if y <= full]), "s_conc": charts.spark(conc, ys, partial=partial)})
-    return {"scatter": scatter, "rows": rows}
+    return {"scatter": scatter, "rows": rows, "points": pts}
 
 
 def methods_context(panel):
@@ -163,7 +166,8 @@ def main(preview=False):
     claims_path = HERE / "data" / "claims.json"
     claims = json.loads(claims_path.read_text()) if claims_path.exists() else {}
     nav = sorted(panel.values(), key=lambda t: (STAGE_ORDER.get(t["stage"], 9), t["label"]))
-    common = {"meta": meta, "nav": nav, "repo": REPO, "preview": preview}
+    common = {"meta": meta, "nav": nav, "repo": REPO, "preview": preview, "site_url": SITE_URL,
+              "analytics_token": "" if preview else ANALYTICS_TOKEN}
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
@@ -174,6 +178,8 @@ def main(preview=False):
     for name, ctx in (("methods", methods_context(panel)), ("status", status_context(panel, meta))):
         (DIST / f"{name}.html").write_text(env.get_template(f"{name}.html.j2").render(**common, page=name, **ctx))
     shutil.copy(HERE / "data" / "panel.json", DIST / "panel.json")
+    for f in (HERE / "static").iterdir():
+        shutil.copy(f, DIST / f.name)
     (DIST / ".nojekyll").touch()
     print(f"site/dist: {sum(1 for _ in DIST.rglob('*') if _.is_file())} files{' (preview)' if preview else ''}")
 

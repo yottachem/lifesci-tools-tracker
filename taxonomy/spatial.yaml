@@ -159,8 +159,7 @@ technologies:
         label: Metal-tag mass spec imaging
         platforms:
           - {name: Hyperion, query: '"Hyperion" AND "imaging mass cytometry"', launched: 2017, vendor: Standard BioTools, acquired_from: Fluidigm (rename 2022),
-             pending: sale of mass cytometry business to Element Biosystems LLC (GMT Venture Partners) agreed 2026-09-30; confirm close.
-               Not Element Biosciences}
+             pending: 'Standard BioTools agreed on 2026-09-30 to sell its mass cytometry business to Element Biosystems LLC (not Element Biosciences). When it closes, Hyperion moves to the buyer'}
           - {name: MIBIscope, query: '"MIBIscope" OR "MIBI-TOF" OR "Ionpath"', vendor: Oregon Physics, acquired_from: Ionpath (2025), launched: 2020,
              note: 'Oregon Physics bought the MIBIscope IP and assets in 2025 and has made and serviced it since 2025-09. "Ionpath" stays in the query: papers cite the original maker'}
     cpc:

@@ -112,7 +112,7 @@ technologies:
         label: Suspension mass cytometry
         platforms:
           - {name: CyTOF, query: '"CyTOF"', vendor: Standard BioTools, acquired_from: Fluidigm (rename 2022),
-             pending: sale of mass cytometry business to Element Biosystems LLC agreed 2026-09-30; confirm close}
+             pending: 'Standard BioTools agreed on 2026-09-30 to sell its mass cytometry business to Element Biosystems LLC (not Element Biosciences). When it closes, CyTOF moves to the buyer'}
     cpc:
       - G01N15/14    # optical investigation of particles in a flow (flow cytometry)
       - G01N15/1429  # signal processing (check)

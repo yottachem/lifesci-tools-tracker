@@ -5,7 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{% block title %}{% endblock %} · Life Science Tools Tracker</title>
 <meta name="description" content="{% block description %}Where life science tools technologies sit on their adoption curve, from papers, NIH grants, patents and the companies that sell them.{% endblock %}">
-{% if preview %}<meta name="robots" content="noindex">{% endif %}
+{% set page_file = "" if page == "index" else page ~ ".html" %}
+{% if preview %}<meta name="robots" content="noindex">{% else %}<link rel="canonical" href="{{ site_url }}{{ page_file }}">{% endif %}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Life Science Tools Tracker">
+<meta property="og:title" content="{{ self.title() }} · Life Science Tools Tracker">
+<meta property="og:description" content="{{ self.description() }}">
+<meta property="og:url" content="{{ site_url }}{{ page_file }}">
+<meta property="og:image" content="{{ site_url }}social.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Scatter of ten life science tools technologies by paper volume and five-year growth">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -59,7 +70,7 @@ h3 { font: 600 18px/1.25 var(--font-display); margin: 20px 0 4px; }
 .chart .end { font: 500 11.5px var(--font-data); } .chart .end .v { font-weight: 400; fill: var(--muted); }
 .chart .s-1-t { fill: var(--s1); } .chart .s-2-t { fill: var(--s2); } .chart .s-3-t { fill: var(--s3); } .chart .s-4-t { fill: var(--s4); } .chart .s-g-t { fill: var(--muted); }
 .chart .bar { fill: var(--s1); } .chart .bar.part { fill: var(--g); }
-.scatter circle { stroke: var(--fg); stroke-width: 1; fill-opacity: .9; }
+.scatter circle { stroke: var(--fg); stroke-width: 1.2; fill-opacity: .72; }
 .scatter .c0 { fill: var(--c0); } .scatter .c1 { fill: var(--c1); } .scatter .c2 { fill: var(--c2); } .scatter .c3 { fill: var(--c3); } .scatter .c4 { fill: var(--c4); }
 .scatter .lab { font: 500 12.5px var(--font-body); fill: var(--fg); paint-order: stroke; stroke: var(--bg); stroke-width: 3px; }
 .scatter a:hover circle, .scatter a:focus circle { stroke-width: 2.5; }
@@ -108,5 +119,6 @@ ol.fn { font-size: 13px; color: var(--muted); padding-left: 20px; max-width: 86c
   <span>Snapshots: OpenAlex {{ meta.snapshots.openalex }}, NIH RePORTER {{ meta.snapshots.reporter }}, USPTO {{ meta.snapshots.uspto }} (filings through {{ meta.patents_through }}), SEC EDGAR {{ meta.snapshots.edgar }}, market value {{ meta.snapshots.market_value }}. Built {{ meta.built }}.</span>
   <span>Code MIT, derived data CC-BY-4.0, upstream licenses in <a href="{{ repo }}/blob/main/sources.yaml">sources.yaml</a>. A personal project by Joshua Ritchey; views are his own.</span>
 </div></footer>
+{% if analytics_token %}<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ analytics_token }}"}'></script>{% endif %}
 </body>
 </html>

@@ -129,7 +129,7 @@ def spark(values, years, *, partial=None, width=150, height=34, cls="s-1"):
             f'<circle cx="{x(a):.1f}" cy="{y(b):.1f}" r="2.4" class="pt {cls}"/></svg>')
 
 
-def scatter(points, *, width=900, height=520, desc=""):
+def scatter(points, *, width=900, height=520, desc="", char_w=6.8):
     """points: [{"label", "href", "x" (>0, log), "y" (fraction), "r_value", "color_value" (0-1)}]"""
     top, bottom, left, right = 30, 46, 58, 70
     w, h = width - left - right, height - top - bottom
@@ -147,7 +147,7 @@ def scatter(points, *, width=900, height=520, desc=""):
     rmax = max(p["r_value"] or 0 for p in points) or 1
 
     def r(v):
-        return 5 + 22 * math.sqrt((v or 0) / rmax)
+        return 5 + 18 * math.sqrt((v or 0) / rmax)
     out = [f'<svg viewBox="0 0 {width} {height}" role="img" aria-label="{escape(desc)}" class="chart scatter">']
     for t in ticks:
         out.append(f'<line x1="{left}" x2="{left + w}" y1="{y(t):.1f}" y2="{y(t):.1f}" class="grid{" zero" if t == 0 else ""}"/>'
@@ -169,19 +169,25 @@ def scatter(points, *, width=900, height=520, desc=""):
         level = min(4, int((p["color_value"] or 0) * 5))
         dots.append(f'<a href="{p["href"]}"><circle cx="{cx:.1f}" cy="{cy:.1f}" r="{rr:.1f}" class="c{level}">'
                     f'<title>{escape(p["tip"])}</title></circle></a>')
-        tw = 6.8 * len(p["label"])  # approximate label width at 12.5px
+        tw = char_w * len(p["label"])  # approximate label width (6.8 px a character at 12.5px)
+        fs = char_w / 0.54  # font size implied by char_w, for the label's height
         # right, left, above, below, then further out; first spot that overlaps no circle or label wins
         cands = [(cx + rr + 5, cy + 4, "start"), (cx - rr - 5, cy + 4, "end"), (cx, cy - rr - 6, "middle"),
                  (cx, cy + rr + 15, "middle"), (cx + rr + 5, cy - rr - 4, "start"), (cx + rr + 5, cy + rr + 12, "start"),
                  (cx - rr - 5, cy - rr - 4, "end"), (cx - rr - 5, cy + rr + 12, "end")]
-        for tx, ty, anchor in cands:
+        own = (cx - rr, cy - rr, cx + rr, cy + rr)
+
+        def cost(c):
+            """(outside the plot, overlap area with other circles and labels): lowest wins, first on ties."""
+            tx, ty, anchor = c
             x0 = tx if anchor == "start" else tx - tw if anchor == "end" else tx - tw / 2
-            box = (x0, ty - 11, x0 + tw, ty + 3)
-            inside = box[0] >= left - 30 and box[2] <= width and box[1] >= 0 and box[3] <= top + h
-            hit = any(box[0] < b[2] and box[2] > b[0] and box[1] < b[3] and box[3] > b[1]
-                      for b in placed if b != (cx - rr, cy - rr, cx + rr, cy + rr))
-            if inside and not hit:
-                break
+            box = (x0, ty - 0.85 * fs, x0 + tw, ty + 0.3 * fs)
+            outside = not (box[0] >= left - 30 and box[2] <= width and box[1] >= 0 and box[3] <= top + h)
+            area = sum(max(0, min(box[2], b[2]) - max(box[0], b[0])) * max(0, min(box[3], b[3]) - max(box[1], b[1]))
+                       for b in placed if b != own)
+            return (outside, area), box
+        tx, ty, anchor = min(cands, key=lambda c: cost(c)[0])
+        box = cost((tx, ty, anchor))[1]
         placed.append(box)
         labels.append(f'<a href="{p["href"]}"><text x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anchor}" class="lab">{escape(p["label"])}</text></a>')
     out += dots + labels

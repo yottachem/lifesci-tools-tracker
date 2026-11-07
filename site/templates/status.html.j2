@@ -32,7 +32,7 @@
 <thead><tr><th>Vendor or platform</th><th>Deal</th></tr></thead>
 <tbody>
 {% for d in pending_deals %}
-<tr><td>{{ d.what }}</td><td>{{ d.pending[:1] | upper }}{{ d.pending[1:] }}</td></tr>
+<tr><td>{{ d.what }}</td><td>{{ d.pending }}{% if not d.pending.endswith('.') %}.{% endif %}</td></tr>
 {% endfor %}
 </tbody></table></div>
 {% endif %}

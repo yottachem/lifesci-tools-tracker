@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* 1200x630 social preview card, rendered by site/social.py. Light theme only. */
+:root { --bg:#f5f4ef; --surface:#fdfcf8; --fg:#1c1f26; --muted:#5d6370; --grid:#e4e5e8; --s1:#2f4ba0;
+  --c0:#dfe4f2; --c1:#b5c1e4; --c2:#8597d0; --c3:#566eba; --c4:#2f4ba0; color-scheme: light; }
+* { box-sizing: border-box; margin: 0; }
+body { width: 1200px; height: 630px; background: var(--bg); color: var(--fg); font-family: "IBM Plex Sans", sans-serif;
+  padding: 44px 56px; display: grid; grid-template-columns: 400px 1fr; gap: 28px; border-top: 10px solid var(--s1); }
+h1 { font: 400 50px/1.05 "Newsreader", Georgia, serif; letter-spacing: -.01em; margin-top: 18px; }
+p { font: 400 21px/1.4 "Newsreader", Georgia, serif; color: var(--muted); margin-top: 18px; }
+.brand { font: 500 14px "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--s1); }
+.url { position: absolute; bottom: 40px; left: 56px; font: 400 16px "IBM Plex Mono", monospace; color: var(--muted); }
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart .grid { stroke: var(--grid); } .chart .grid.zero { stroke: var(--muted); }
+.chart .tick, .chart .axis { font: 13px "IBM Plex Mono", monospace; fill: var(--muted); } .chart .axis { fill: var(--fg); }
+.scatter circle { stroke: var(--fg); stroke-width: 1.2; fill-opacity: .8; }
+.scatter .c0 { fill: var(--c0); } .scatter .c1 { fill: var(--c1); } .scatter .c2 { fill: var(--c2); } .scatter .c3 { fill: var(--c3); } .scatter .c4 { fill: var(--c4); }
+.scatter .lab { font: 500 15px "IBM Plex Sans", sans-serif; fill: var(--fg); paint-order: stroke; stroke: var(--bg); stroke-width: 4px; }
+</style>
+</head>
+<body>
+<div>
+  <div class="brand">Life Science Tools Tracker</div>
+  <h1>Where ten life science tools technologies sit on their adoption curve</h1>
+  <p>Papers, NIH grants, patents and the companies that sell them, {{ meta.years[0] }} to now.</p>
+  <div class="url">{{ site_url | replace("https://", "") }}</div>
+</div>
+<div>{{ scatter | safe }}</div>
+</body>
+</html>

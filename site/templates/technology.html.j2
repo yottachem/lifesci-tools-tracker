@@ -42,7 +42,7 @@
 {% if p.family_label != ns.fam %}{% set ns.fam = p.family_label %}<tr class="fam"><td colspan="6">{{ p.family_label }}</td></tr>{% endif %}
 <tr>
   <td>{{ p.name }}{% if p.parent %} <small>(in {{ p.parent }})</small>{% endif %}</td>
-  <td>{{ p.vendor }}{% if p.pending %} <small>({{ p.pending }})</small>{% endif %}</td>
+  <td>{{ p.vendor }}{% if p.pending %} <small><a href="status.html" title="{{ p.pending }}">sale pending</a></small>{% endif %}</td>
   <td class="n">{{ p.launched or "–" }}</td>
   <td class="n">{{ p.n_full | fmt }}</td>
   <td class="n">{% if p.parent %}–{% else %}{{ p.share_full | fmt("pct") }}{% endif %}</td>

@@ -67,19 +67,19 @@
   "pending_deals": [
    {
     "what": "Bio-Techne",
-    "pending": "Merck KGaA acquisition; on close, COMET moves to Merck KGaA (Frankfurt listing, roster only) and TECH financials stop"
+    "pending": "Agreed on 2026-06-25 to be acquired by Merck KGaA; stockholders approved on 2026-09-23. When it closes, COMET is listed under Merck KGaA"
    },
    {
     "what": "CyTOF",
-    "pending": "sale of mass cytometry business to Element Biosystems LLC agreed 2026-09-30; confirm close"
+    "pending": "Standard BioTools agreed on 2026-09-30 to sell its mass cytometry business to Element Biosystems LLC (not Element Biosciences). When it closes, CyTOF moves to the buyer"
    },
    {
     "what": "DNBSEQ",
-    "pending": "Complete Genomics sale to Swiss Rockets; confirm which entity sells DNBSEQ in the US after close"
+    "pending": "MGI Tech agreed on 2026-02-23 to sell Complete Genomics, which sells DNBSEQ in the US, to Swiss Rockets AG, subject to MGI shareholder approval and CFIUS review"
    },
    {
     "what": "Hyperion",
-    "pending": "sale of mass cytometry business to Element Biosystems LLC (GMT Venture Partners) agreed 2026-09-30; confirm close. Not Element Biosciences"
+    "pending": "Standard BioTools agreed on 2026-09-30 to sell its mass cytometry business to Element Biosystems LLC (not Element Biosciences). When it closes, Hyperion moves to the buyer"
    }
   ]
  },
@@ -2928,7 +2928,7 @@
      "vendor": "Standard BioTools",
      "launched": null,
      "parent": null,
-     "pending": "sale of mass cytometry business to Element Biosystems LLC agreed 2026-09-30; confirm close",
+     "pending": "Standard BioTools agreed on 2026-09-30 to sell its mass cytometry business to Element Biosystems LLC (not Element Biosciences). When it closes, CyTOF moves to the buyer",
      "counts": {
       "2010": 23,
       "2011": 36,
@@ -8737,7 +8737,7 @@
      "vendor": "MGI Tech",
      "launched": null,
      "parent": null,
-     "pending": "Complete Genomics sale to Swiss Rockets; confirm which entity sells DNBSEQ in the US after close",
+     "pending": "MGI Tech agreed on 2026-02-23 to sell Complete Genomics, which sells DNBSEQ in the US, to Swiss Rockets AG, subject to MGI shareholder approval and CFIUS review",
      "counts": {
       "2010": 8,
       "2011": 14,
@@ -15861,7 +15861,7 @@
      "vendor": "Standard BioTools",
      "launched": 2017,
      "parent": null,
-     "pending": "sale of mass cytometry business to Element Biosystems LLC (GMT Venture Partners) agreed 2026-09-30; confirm close. Not Element Biosciences",
+     "pending": "Standard BioTools agreed on 2026-09-30 to sell its mass cytometry business to Element Biosystems LLC (not Element Biosciences). When it closes, Hyperion moves to the buyer",
      "counts": {
       "2010": 0,
       "2011": 0,

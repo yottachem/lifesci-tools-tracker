@@ -48,7 +48,7 @@ technologies:
              note: AVITI24 (cell profiling) is counted under spatial transcriptomics}
           - {name: DNBSEQ, query: '"DNBSEQ" OR "MGISEQ" OR "BGISEQ"', vendor: MGI Tech,
              note: 'sold in the US by Complete Genomics (MGI subsidiary). MGI agreed 2026-02-23 to sell Complete Genomics to Swiss Rockets AG (~$50M; pending MGI holder approval and CFIUS); MGI keeps a license to 205 patents',
-             pending: Complete Genomics sale to Swiss Rockets; confirm which entity sells DNBSEQ in the US after close}
+             pending: 'MGI Tech agreed on 2026-02-23 to sell Complete Genomics, which sells DNBSEQ in the US, to Swiss Rockets AG, subject to MGI shareholder approval and CFIUS review'}
           - {name: UG 100 / UG 200, query: '("UG 100" OR "UG100" OR "UG 200" OR "ppmSeq") AND ("Ultima Genomics" OR "flow-based sequencing" OR "mostly natural sequencing")', vendor: Ultima Genomics, launched: 2024,
              note: 'UG 200 and UG 200 Ultra launched 2026-02-23. Product names only, like other brands: "Ultima Genomics" alone matched funding disclosures (precision 0.65), and "Ultima" alone matched Spanish and Portuguese "última" near "ug" units'}
           - {name: VITARI, query: '"Element VITARI" OR ("VITARI" AND "Element Biosciences")', vendor: Element Biosciences, launched: 2026,
