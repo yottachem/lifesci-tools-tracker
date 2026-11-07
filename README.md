@@ -9,7 +9,7 @@ Where is each life science tools technology on its adoption curve? This project 
 | Patents | USPTO Open Data Portal (PatentsView bulk files) | Innovation: grants and published applications, top assignees |
 | Companies | SEC EDGAR, month-end market data | Who sells it: revenue mix, technology segment revenue, market value |
 
-**Status: pre-launch.** The spatial pilot is in progress; the public site is not published yet.
+**Site: https://yottachem.github.io/lifesci-tools-tracker/**. Rebuilt monthly from public data.
 
 ## Run
 
@@ -28,7 +28,8 @@ uv run pytest
 ```
 
 Monthly in CI (`.github/workflows/update.yml`): restore snapshots from the `snapshots` release,
-fetch, save snapshots, build the panel, test, build and deploy the site. The release carries the
+fetch, save snapshots, build the panel, test, build and deploy the site. A push to `main` rebuilds
+and deploys from the stored snapshots without fetching. The release carries the
 latest raw snapshot per source and the scoped USPTO corpus, so the ~6 GB patent download only
 happens when USPTO publishes new files (`ingest/archive.py`). Scheduled runs need the repo
 variable `SCHEDULE_ON=true`; deploys need `PAGES_LIVE=true`.
