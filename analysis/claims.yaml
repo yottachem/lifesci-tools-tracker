@@ -37,7 +37,7 @@ claims:
       fallback: Papers per 100K works changed {t.growth:spct} a year from {t.from_year} to {t.year}.
     - id: funding
       holds: t.nih_growth > 0.3 and t.nih_rank <= 3
-      text: Funding followed. NIH dollars went from {t.nih_from:usd} in fiscal {t.from_year} to {t.nih:usd} in {t.year}, {t.nih_rank:ord} among the {t.n_tech} technologies.
+      text: NIH dollars rose from {t.nih_from:usd} in fiscal {t.from_year} to {t.nih:usd} in {t.year}, {t.nih_rank:ord} among the {t.n_tech} technologies.
       fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}, {t.nih_from:usd} in {t.from_year}.
     - id: imaging_gain
       holds: t.lead == 'Visium' and t.gainer == 'Xenium' and t.gainer_share >= 0.15 and t.gainer_launched >= 2021
@@ -60,8 +60,8 @@ claims:
 
   single_cell:
     - id: volume
-      holds: t.papers > max(spatial_transcriptomics.papers, spatial_proteomics.papers, long_read_sequencing.papers, ms_proteomics.papers, affinity_proteomics.papers, protein_sequencing.papers) and t.growth > 0.2
-      text: The largest body of work outside the mature technologies, {t.papers:int} papers in {t.year}, and still growing {t.growth:pct} a year per 100K works.
+      holds: t.stage in ('emerging', 'growth') and t.stage_papers_rank == 1 and t.growth > 0.2
+      text: More papers than any other emerging or growth-stage technology tracked, {t.papers:int} in {t.year}, and still growing {t.growth:pct} a year per 100K works.
       fallback: '{t.papers:int} papers in {t.year}; papers per 100K works changed {t.growth:spct} a year since {t.from_year}.'
     - id: nih_first
       holds: t.nih_rank == 1
@@ -83,7 +83,7 @@ claims:
       fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}.
     - id: platforms
       holds: t.top_vendor == 'Oxford Nanopore Technologies' and t.top_vendor_share > 0.5 and t.lead == 'MinION' and t.lead_share < t.lead_share_from - 0.05 and t.gainer == 'PromethION'
-      text: Nanopore platforms account for {t.top_vendor_share:pct} of mentions. Within them the mix is moving to higher throughput. MinION fell from {t.lead_share_from:pct} in {t.from_year} to {t.lead_share:pct}, and PromethION rose to {t.gainer_share:pct}.
+      text: Nanopore platforms account for {t.top_vendor_share:pct} of mentions. MinION fell from {t.lead_share_from:pct} in {t.from_year} to {t.lead_share:pct}, and the higher-throughput PromethION rose to {t.gainer_share:pct}.
       fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
 
   ms_proteomics:
@@ -111,7 +111,7 @@ claims:
       fallback: The most-named platform is {t.lead} at {t.lead_share:pct} of mentions in {t.year}.
     - id: nih_smallest
       holds: t.nih_rank == t.n_tech
-      text: The least NIH funding of any technology tracked, {t.nih:usd} in fiscal {t.year} for grants that name these methods.
+      text: NIH grants that name these methods totaled {t.nih:usd} in fiscal {t.year}, the least of any technology tracked. Studies that use the methods without naming them in the grant title or abstract aren't counted.
       fallback: NIH dollars were {t.nih:usd} in fiscal {t.year}.
 
   protein_sequencing:

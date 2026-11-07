@@ -80,6 +80,9 @@ def values(panel=None):
             "top_vendor": vendors[0][0] if vendors else None, "top_vendor_share": vendors[0][1] if vendors else None,
             "n_platforms": len(tops),
         }
+    staged = sorted((k for k in out if out[k]["stage"] in ("emerging", "growth")), key=lambda k: -(out[k]["papers"] or 0))
+    for k in out:
+        out[k]["stage_papers_rank"] = staged.index(k) + 1 if k in staged else None
     for key, field in (("growth_rank", "growth"), ("papers_rank", "papers"), ("nih_rank", "nih"), ("apps_rank", "apps")):
         order = sorted(out, key=lambda k: -(out[k][field] or float("-inf")))
         for i, k in enumerate(order):

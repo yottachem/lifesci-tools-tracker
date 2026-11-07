@@ -9,7 +9,7 @@
   {
    "id": "funding",
    "status": "ok",
-   "html": "Funding followed. NIH dollars went from $54 million in fiscal 2020 to $620 million in 2025, third among the 10 technologies.",
+   "html": "NIH dollars rose from $54 million in fiscal 2020 to $620 million in 2025, third among the 10 technologies.",
    "holds": "t.nih_growth > 0.3 and t.nih_rank <= 3"
   },
   {
@@ -43,8 +43,8 @@
   {
    "id": "volume",
    "status": "ok",
-   "html": "The largest body of work outside the mature technologies, 14,823 papers in 2025, and still growing 31% a year per 100K works.",
-   "holds": "t.papers > max(spatial_transcriptomics.papers, spatial_proteomics.papers, long_read_sequencing.papers, ms_proteomics.papers, affinity_proteomics.papers, protein_sequencing.papers) and t.growth > 0.2"
+   "html": "More papers than any other emerging or growth-stage technology tracked, 14,823 in 2025, and still growing 31% a year per 100K works.",
+   "holds": "t.stage in ('emerging', 'growth') and t.stage_papers_rank == 1 and t.growth > 0.2"
   },
   {
    "id": "nih_first",
@@ -75,7 +75,7 @@
   {
    "id": "platforms",
    "status": "ok",
-   "html": "Nanopore platforms account for 69% of mentions. Within them the mix is moving to higher throughput. MinION fell from 53% in 2020 to 38%, and PromethION rose to 15%.",
+   "html": "Nanopore platforms account for 69% of mentions. MinION fell from 53% in 2020 to 38%, and the higher-throughput PromethION rose to 15%.",
    "holds": "t.top_vendor == 'Oxford Nanopore Technologies' and t.top_vendor_share > 0.5 and t.lead == 'MinION' and t.lead_share < t.lead_share_from - 0.05 and t.gainer == 'PromethION'"
   }
  ],
@@ -115,7 +115,7 @@
   {
    "id": "nih_smallest",
    "status": "ok",
-   "html": "The least NIH funding of any technology tracked, $5 million in fiscal 2025 for grants that name these methods.",
+   "html": "NIH grants that name these methods totaled $5 million in fiscal 2025, the least of any technology tracked. Studies that use the methods without naming them in the grant title or abstract aren't counted.",
    "holds": "t.nih_rank == t.n_tech"
   }
  ],
