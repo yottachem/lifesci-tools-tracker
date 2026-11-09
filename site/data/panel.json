@@ -1,6 +1,6 @@
 {
  "meta": {
-  "built": "2026-11-06",
+  "built": "2026-11-09",
   "full_year": 2025,
   "growth_from": 2020,
   "years": [
@@ -81,7 +81,11 @@
     "what": "Hyperion",
     "pending": "Standard BioTools agreed on 2026-09-30 to sell its mass cytometry business to Element Biosystems LLC (not Element Biosciences). When it closes, Hyperion moves to the buyer"
    }
-  ]
+  ],
+  "usaspending": {
+   "snap": "2026-11-09",
+   "awards": 262
+  }
  },
  "technologies": {
   "qpcr_dpcr": {
@@ -2075,6 +2079,7 @@
      "low": false
     }
    ],
+   "economics": null,
    "metrics": {
     "publications": 31004,
     "per100k": 295.92686318956737,
@@ -4869,6 +4874,7 @@
      "low": false
     }
    ],
+   "economics": null,
    "metrics": {
     "publications": 22690,
     "per100k": 216.57142709880284,
@@ -6542,6 +6548,7 @@
      "low": false
     }
    ],
+   "economics": null,
    "metrics": {
     "publications": 2028,
     "per100k": 19.356846811651483,
@@ -7827,6 +7834,7 @@
      "low": false
     }
    ],
+   "economics": null,
    "metrics": {
     "publications": 573,
     "per100k": 5.469168255954783,
@@ -8325,6 +8333,7 @@
      "low": false
     }
    ],
+   "economics": null,
    "metrics": {
     "publications": 48,
     "per100k": 0.458150220394118,
@@ -10366,6 +10375,7 @@
      "low": false
     }
    ],
+   "economics": null,
    "metrics": {
     "publications": 20038,
     "per100k": 191.25862742202784,
@@ -11531,6 +11541,7 @@
      "low": false
     }
    ],
+   "economics": null,
    "metrics": {
     "publications": 2817,
     "per100k": 26.887691059379797,
@@ -13303,6 +13314,92 @@
      "low": false
     }
    ],
+   "economics": {
+    "cost_unit": null,
+    "model": {
+     "amortize_years": 5,
+     "default_service_share": 0.12,
+     "utilization": {
+      "low": 0.25,
+      "typical": 0.5,
+      "max": 1.0
+     },
+     "excludes": "labor, sample prep, analysis, facility overhead"
+    },
+    "sequencing": {
+     "usd_per_gb": 2.0,
+     "gb_per_m_pairs": 0.3,
+     "source_type": "spec",
+     "as_of": "2026-11",
+     "url": "https://assets.illumina.com/systems/sequencing-platforms/novaseq-x-plus/specifications.html",
+     "note": "NovaSeq X 25B reagent cost at full flow-cell use, a floor; core sequencing rates are higher"
+    },
+    "configs": [],
+    "prices": [],
+    "traction": [
+     {
+      "vendor": "10x Genomics",
+      "lines": {
+       "Chromium": {
+        "technology": "single_cell",
+        "platforms": [
+         "Chromium"
+        ]
+       }
+      },
+      "disclosures": [
+       {
+        "metric": "cumulative_instruments_sold",
+        "line": "Chromium",
+        "values": {
+         "2023": 5180,
+         "2024": 5808,
+         "2025": 6477
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1770787/000162828026007822/txg-20251231.htm",
+        "quote": "Chromium (Single Cell) 6,477 5,808 5,180 Visium (Spatial) 1,015 810 531 Xenium (Spatial) 554 421 255 Cumulative instruments sold 8,046 7,039 5,966"
+       },
+       {
+        "metric": "consumable_reactions_sold",
+        "line": "Chromium",
+        "values": {
+         "2023": 312500,
+         "2024": 310900,
+         "2025": 378300
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1770787/000162828026007822/txg-20251231.htm",
+        "quote": "Chromium (Single Cell) 378,300 310,900 312,500 Visium (Spatial) 31,200 35,400 29,300 Xenium (Spatial) 14,500 10,800 5,200 Total consumable reactions 424,000 357,100 347,000"
+       }
+      ],
+      "ratios": [
+       {
+        "fy": 2024,
+        "instrument_revenue": 35212000.0,
+        "consumable_revenue": 372308000.0,
+        "shipped": 628,
+        "asp": 56070.06369426752,
+        "per_instrument": 67766.29049872588,
+        "reactions_per_instrument": {
+         "Chromium": 56.58900618856935
+        },
+        "per_reaction": 1197.5168864586683
+       },
+       {
+        "fy": 2025,
+        "instrument_revenue": 22671000.0,
+        "consumable_revenue": 363206000.0,
+        "shipped": 669,
+        "asp": 33887.892376681615,
+        "per_instrument": 59129.99592999593,
+        "reactions_per_instrument": {
+         "Chromium": 61.58730158730159
+        },
+        "per_reaction": 960.1004493787999
+       }
+      ]
+     }
+    ]
+   },
    "metrics": {
     "publications": 14823,
     "per100k": 141.48251493545857,
@@ -15498,6 +15595,971 @@
      "low": false
     }
    ],
+   "economics": {
+    "cost_unit": "one tissue section (slide, capture area, chip or tile) at the stated area and plex",
+    "model": {
+     "amortize_years": 5,
+     "default_service_share": 0.12,
+     "utilization": {
+      "low": 0.25,
+      "typical": 0.5,
+      "max": 1.0
+     },
+     "excludes": "labor, sample prep, analysis, facility overhead"
+    },
+    "sequencing": {
+     "usd_per_gb": 2.0,
+     "gb_per_m_pairs": 0.3,
+     "source_type": "spec",
+     "as_of": "2026-11",
+     "url": "https://assets.illumina.com/systems/sequencing-platforms/novaseq-x-plus/specifications.html",
+     "note": "NovaSeq X 25B reagent cost at full flow-cell use, a floor; core sequencing rates are higher"
+    },
+    "configs": [
+     {
+      "platform": "Visium HD",
+      "config": "FFPE, 6.5 mm",
+      "unit": "capture area",
+      "area_mm2": 42,
+      "plex": "whole transcriptome, ~18K genes (probe-based)",
+      "consumables": {
+       "usd": 3449,
+       "source_type": "gsa",
+       "as_of": "2026-11",
+       "url": "https://www.govsci.com/product-detail/10x--Genomics/1000675",
+       "note": "4-reaction kit $13,795 / 4"
+      },
+      "sequencing_usd": 165.0,
+      "read_pairs_m": {
+       "value": 275,
+       "source_type": "spec",
+       "url": "https://www.10xgenomics.com/support/spatial-gene-expression-hd/documentation/steps/sequencing/sequencing-requirements-for-visium-hd-spatial-gene-expression"
+      },
+      "variable": 3614.0,
+      "capacity": {
+       "per_year": 500,
+       "source_type": "model",
+       "basis": "about 10 capture areas a week; the CytAssist is not the bottleneck"
+      },
+      "instrument": {
+       "usd": 86160,
+       "item": "Visium CytAssist",
+       "source_type": "paid",
+       "as_of": "2024-12",
+       "url": "https://www.usaspending.gov/award/CONT_AWD_HU000125P0010_9700_-NONE-_-NONE-"
+      },
+      "service": {
+       "usd": 11819,
+       "default": false,
+       "source": {
+        "usd": 11819,
+        "item": "CytAssist 12-month assurance plan",
+        "source_type": "gsa",
+        "as_of": "2026-11",
+        "url": "https://www.govsci.com/product-detail/10x--Genomics/1000524"
+       }
+      },
+      "fixed_per_year": 29051.0,
+      "levels": {
+       "low": {
+        "fixed_share": 232.408,
+        "total": 3846.408
+       },
+       "typical": {
+        "fixed_share": 116.204,
+        "total": 3730.204
+       },
+       "max": {
+        "fixed_share": 58.102,
+        "total": 3672.102
+       }
+      },
+      "observed": {
+       "units_per_year": 34.19178082191781,
+       "fy": 2025,
+       "vendor": "10x Genomics",
+       "line": "Visium",
+       "fixed_share": 849.6486378205128,
+       "total": 4463.648637820513
+      },
+      "core": [
+       {
+        "usd": 4500,
+        "rate": "internal",
+        "facility": "Pitt HSSC",
+        "source_type": "core",
+        "as_of": "2026-11",
+        "url": "https://www.sharedfacilities.pitt.edu/health-sciences-sequencing-core/pricing",
+        "note": "$9,000 per 2-area slide"
+       },
+       {
+        "usd": 4619,
+        "rate": "internal",
+        "facility": "Weill Cornell EPICORE",
+        "source_type": "core",
+        "as_of": "2026-11",
+        "url": "https://epicore.med.cornell.edu/pricelist.php",
+        "note": "$9,237 per 2-area slide"
+       },
+       {
+        "usd": 3193,
+        "rate": "external academic",
+        "facility": "UCLA TCGB",
+        "source_type": "core",
+        "as_of": "2026-07",
+        "url": "https://www.uclahealth.org/departments/pathology/research-services/technology-center-genomics-bioinformatics-tcgb/pricing",
+        "note": "$6,387 per 2-area slide"
+       }
+      ]
+     },
+     {
+      "platform": "Visium HD",
+      "config": "Fresh frozen, 6.5 mm",
+      "unit": "capture area",
+      "area_mm2": 42,
+      "plex": "whole transcriptome, ~18K genes (probe-based)",
+      "consumables": {
+       "usd": 3449,
+       "source_type": "gsa",
+       "as_of": "2026-11",
+       "url": "https://www.govsci.com/product-detail/10x--Genomics/1000675",
+       "note": "4-reaction kit $13,795 / 4"
+      },
+      "sequencing_usd": 420.0,
+      "read_pairs_m": {
+       "value": 700,
+       "source_type": "spec",
+       "url": "https://www.10xgenomics.com/support/spatial-gene-expression-hd/documentation/steps/sequencing/sequencing-requirements-for-visium-hd-spatial-gene-expression"
+      },
+      "variable": 3869.0,
+      "capacity": {
+       "per_year": 500,
+       "source_type": "model",
+       "basis": "about 10 capture areas a week; the CytAssist is not the bottleneck"
+      },
+      "instrument": {
+       "usd": 86160,
+       "item": "Visium CytAssist",
+       "source_type": "paid",
+       "as_of": "2024-12",
+       "url": "https://www.usaspending.gov/award/CONT_AWD_HU000125P0010_9700_-NONE-_-NONE-"
+      },
+      "service": {
+       "usd": 11819,
+       "default": false,
+       "source": {
+        "usd": 11819,
+        "item": "CytAssist 12-month assurance plan",
+        "source_type": "gsa",
+        "as_of": "2026-11",
+        "url": "https://www.govsci.com/product-detail/10x--Genomics/1000524"
+       }
+      },
+      "fixed_per_year": 29051.0,
+      "levels": {
+       "low": {
+        "fixed_share": 232.408,
+        "total": 4101.408
+       },
+       "typical": {
+        "fixed_share": 116.204,
+        "total": 3985.204
+       },
+       "max": {
+        "fixed_share": 58.102,
+        "total": 3927.102
+       }
+      },
+      "observed": {
+       "units_per_year": 34.19178082191781,
+       "fy": 2025,
+       "vendor": "10x Genomics",
+       "line": "Visium",
+       "fixed_share": 849.6486378205128,
+       "total": 4718.648637820513
+      },
+      "core": []
+     },
+     {
+      "platform": "Stereo-seq",
+      "config": "1 x 1 cm chip",
+      "unit": "chip",
+      "area_mm2": 100,
+      "plex": "whole transcriptome (polyA)",
+      "consumables": null,
+      "sequencing_usd": 900.0,
+      "read_pairs_m": {
+       "value": 1500,
+       "source_type": "spec",
+       "url": "https://en.stomics.tech/",
+       "note": "1.5B reads per cm\u00b2; sequenced on DNBSEQ, whose price is not public"
+      },
+      "variable": null,
+      "capacity": null,
+      "instrument": null,
+      "service": null,
+      "fixed_per_year": null,
+      "levels": {
+       "low": {
+        "fixed_share": null,
+        "total": null
+       },
+       "typical": {
+        "fixed_share": null,
+        "total": null
+       },
+       "max": {
+        "fixed_share": null,
+        "total": null
+       }
+      },
+      "observed": null,
+      "core": [
+       {
+        "usd": 9000,
+        "rate": "federal service purchase",
+        "facility": "Mirxes",
+        "source_type": "paid",
+        "as_of": "2023-11",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_12305B24P0011_12H2_-NONE-_-NONE-",
+        "note": "$36,000 for 4 chips, full service"
+       }
+      ]
+     },
+     {
+      "platform": "Curio Seeker / Trekker",
+      "config": "Seeker 3 x 3 mm",
+      "unit": "tile",
+      "area_mm2": 9,
+      "plex": "whole transcriptome (polyA)",
+      "consumables": null,
+      "sequencing_usd": 240.0,
+      "read_pairs_m": {
+       "value": 400,
+       "source_type": "spec",
+       "url": "https://www.takarabio.com/learning-centers/spatial-omics/seeker-resources",
+       "note": "vendor range 200-600M; midpoint"
+      },
+      "variable": null,
+      "capacity": null,
+      "instrument": null,
+      "service": null,
+      "fixed_per_year": null,
+      "levels": {
+       "low": {
+        "fixed_share": null,
+        "total": null
+       },
+       "typical": {
+        "fixed_share": null,
+        "total": null
+       },
+       "max": {
+        "fixed_share": null,
+        "total": null
+       }
+      },
+      "observed": null,
+      "core": []
+     },
+     {
+      "platform": "Xenium",
+      "config": "v1, predesigned panel",
+      "unit": "slide",
+      "area_mm2": 235,
+      "plex": "up to 480 genes",
+      "consumables": {
+       "usd": 4201,
+       "source_type": "derived",
+       "as_of": "2026-11",
+       "url": "https://www.govsci.com/product-detail/10x--Genomics/1000461",
+       "note": "Per run of 2 slides: decoding reagents 1000461 $3,798 + decoding consumables 1000487 $2,470 + slides and sample prep 1000460 $1,709 + panel $426 = $8,403"
+      },
+      "sequencing_usd": null,
+      "read_pairs_m": null,
+      "variable": 4201,
+      "capacity": {
+       "per_year": 208,
+       "source_type": "model",
+       "basis": "2 runs a week x 2 slides; a full-area v1 run is under 72 h (vendor)"
+      },
+      "instrument": {
+       "usd": 343144,
+       "item": "Xenium Analyzer",
+       "source_type": "paid",
+       "as_of": "2026-06",
+       "url": "https://www.usaspending.gov/award/CONT_AWD_SPE2D626F1HD4_9700_SPE2DE24D0014_9700"
+      },
+      "service": {
+       "usd": 38500,
+       "default": false,
+       "source": {
+        "usd": 38500,
+        "item": "Annual maintenance",
+        "source_type": "paid",
+        "as_of": "2026-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N98026P01246_7529_-NONE-_-NONE-"
+       }
+      },
+      "fixed_per_year": 107128.8,
+      "levels": {
+       "low": {
+        "fixed_share": 2060.169230769231,
+        "total": 6261.169230769231
+       },
+       "typical": {
+        "fixed_share": 1030.0846153846155,
+        "total": 5231.084615384616
+       },
+       "max": {
+        "fixed_share": 515.0423076923078,
+        "total": 4716.042307692308
+       }
+      },
+      "observed": {
+       "units_per_year": 29.743589743589745,
+       "fy": 2025,
+       "vendor": "10x Genomics",
+       "line": "Xenium",
+       "fixed_share": 3601.7441379310344,
+       "total": 7802.744137931035
+      },
+      "core": [
+       {
+        "usd": 5091,
+        "rate": "external academic",
+        "facility": "UCLA TCGB",
+        "source_type": "core",
+        "as_of": "2026-07",
+        "url": "https://www.uclahealth.org/departments/pathology/research-services/technology-center-genomics-bioinformatics-tcgb/pricing"
+       },
+       {
+        "usd": 6500,
+        "rate": "internal",
+        "facility": "Pitt HSSC",
+        "source_type": "core",
+        "as_of": "2026-11",
+        "url": "https://www.sharedfacilities.pitt.edu/health-sciences-sequencing-core/pricing",
+        "note": "with cell segmentation"
+       }
+      ]
+     },
+     {
+      "platform": "Xenium",
+      "config": "Prime 5K",
+      "unit": "slide",
+      "area_mm2": 235,
+      "plex": "5,000 genes",
+      "consumables": {
+       "usd": 8075,
+       "source_type": "gsa",
+       "as_of": "2026-11",
+       "url": "https://www.govsci.com/product-detail/10x--Genomics/1000671/EA",
+       "note": "2-reaction kit $16,150, all-in (panel, prep with segmentation, slides, decoding) per user guide CG000760 Rev C"
+      },
+      "sequencing_usd": null,
+      "read_pairs_m": null,
+      "variable": 8075,
+      "capacity": {
+       "per_year": 104,
+       "source_type": "model",
+       "basis": "1 run a week x 2 slides; a full-area Prime run is under 144 h (vendor)"
+      },
+      "instrument": {
+       "usd": 343144,
+       "item": "Xenium Analyzer",
+       "source_type": "paid",
+       "as_of": "2026-06",
+       "url": "https://www.usaspending.gov/award/CONT_AWD_SPE2D626F1HD4_9700_SPE2DE24D0014_9700"
+      },
+      "service": {
+       "usd": 38500,
+       "default": false,
+       "source": {
+        "usd": 38500,
+        "item": "Annual maintenance",
+        "source_type": "paid",
+        "as_of": "2026-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N98026P01246_7529_-NONE-_-NONE-"
+       }
+      },
+      "fixed_per_year": 107128.8,
+      "levels": {
+       "low": {
+        "fixed_share": 4120.338461538462,
+        "total": 12195.338461538462
+       },
+       "typical": {
+        "fixed_share": 2060.169230769231,
+        "total": 10135.169230769232
+       },
+       "max": {
+        "fixed_share": 1030.0846153846155,
+        "total": 9105.084615384616
+       }
+      },
+      "observed": {
+       "units_per_year": 29.743589743589745,
+       "fy": 2025,
+       "vendor": "10x Genomics",
+       "line": "Xenium",
+       "fixed_share": 3601.7441379310344,
+       "total": 11676.744137931035
+      },
+      "core": [
+       {
+        "usd": 8435,
+        "rate": "external academic",
+        "facility": "UCLA TCGB",
+        "source_type": "core",
+        "as_of": "2026-07",
+        "url": "https://www.uclahealth.org/departments/pathology/research-services/technology-center-genomics-bioinformatics-tcgb/pricing"
+       },
+       {
+        "usd": 11750,
+        "rate": "internal",
+        "facility": "Pitt HSSC",
+        "source_type": "core",
+        "as_of": "2026-11",
+        "url": "https://www.sharedfacilities.pitt.edu/health-sciences-sequencing-core/pricing",
+        "note": "with cell segmentation"
+       }
+      ]
+     },
+     {
+      "platform": "MERSCOPE",
+      "config": "3 cm\u00b2 imaging area",
+      "unit": "slide",
+      "area_mm2": 300,
+      "plex": "up to ~1,000 genes",
+      "consumables": null,
+      "sequencing_usd": null,
+      "read_pairs_m": null,
+      "variable": null,
+      "capacity": {
+       "per_year": 156,
+       "source_type": "model",
+       "basis": "about 9 cm\u00b2 imaged a week (vendor), 3 slides"
+      },
+      "instrument": {
+       "usd": 322600,
+       "source_type": "paid",
+       "as_of": "2023-08",
+       "url": "https://www.usaspending.gov/award/CONT_AWD_75N95023P00378_7529_-NONE-_-NONE-"
+      },
+      "service": {
+       "usd": 32500,
+       "default": false,
+       "source": {
+        "usd": 32500,
+        "source_type": "paid",
+        "as_of": "2024-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N95024P00454_7529_-NONE-_-NONE-"
+       }
+      },
+      "fixed_per_year": 97020.0,
+      "levels": {
+       "low": {
+        "fixed_share": 2487.6923076923076,
+        "total": null
+       },
+       "typical": {
+        "fixed_share": 1243.8461538461538,
+        "total": null
+       },
+       "max": {
+        "fixed_share": 621.9230769230769,
+        "total": null
+       }
+      },
+      "observed": null,
+      "core": []
+     },
+     {
+      "platform": "CosMx SMI",
+      "config": "6K RNA, 100 FOVs",
+      "unit": "slide",
+      "area_mm2": 26,
+      "plex": "6,000 genes",
+      "consumables": null,
+      "sequencing_usd": null,
+      "read_pairs_m": null,
+      "variable": null,
+      "capacity": {
+       "per_year": 160,
+       "source_type": "model",
+       "basis": "2 slides per 4.5-day run at 100 FOVs (vendor run-time estimate)"
+      },
+      "instrument": {
+       "usd": 246975,
+       "source_type": "paid",
+       "as_of": "2023-09",
+       "url": "https://www.usaspending.gov/award/CONT_AWD_75N93023P01313_7529_-NONE-_-NONE-"
+      },
+      "service": {
+       "usd": 12561,
+       "default": false,
+       "source": {
+        "usd": 12561,
+        "source_type": "paid",
+        "as_of": "2025-02",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N91025P00229_7529_-NONE-_-NONE-",
+        "note": "may be partial-year"
+       }
+      },
+      "fixed_per_year": 61956.0,
+      "levels": {
+       "low": {
+        "fixed_share": 1548.9,
+        "total": null
+       },
+       "typical": {
+        "fixed_share": 774.45,
+        "total": null
+       },
+       "max": {
+        "fixed_share": 387.225,
+        "total": null
+       }
+      },
+      "observed": null,
+      "core": [
+       {
+        "usd": 18404,
+        "rate": "internal",
+        "facility": "K-State CEZID",
+        "source_type": "core",
+        "as_of": "2026-01",
+        "url": "https://www.k-state.edu/cezid/research-core-facilities/CosMxServices.html",
+        "note": "per 1-slide run"
+       }
+      ]
+     },
+     {
+      "platform": "GeoMx DSP",
+      "config": "Whole transcriptome atlas, 12 ROIs",
+      "unit": "slide",
+      "area_mm2": null,
+      "plex": "18K+ genes",
+      "consumables": null,
+      "sequencing_usd": 60.0,
+      "read_pairs_m": {
+       "value": 100,
+       "source_type": "spec",
+       "url": "https://nanostring.com/wp-content/uploads/PB_MK3683_GeoMx-WTA_r9.pdf",
+       "note": "an upper bound on cost; GeoMx reads are short"
+      },
+      "variable": null,
+      "capacity": {
+       "per_year": 1000,
+       "source_type": "model",
+       "basis": "4 slides a day (vendor: 4-8) x 250 days"
+      },
+      "instrument": {
+       "usd": 246650,
+       "source_type": "paid",
+       "as_of": "2023-06",
+       "url": "https://www.usaspending.gov/award/CONT_AWD_75N91023P00496_7529_-NONE-_-NONE-"
+      },
+      "service": {
+       "usd": 34107,
+       "default": false,
+       "source": {
+        "usd": 34107,
+        "source_type": "paid",
+        "as_of": "2026-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N98026P01277_7529_-NONE-_-NONE-"
+       }
+      },
+      "fixed_per_year": 83437.0,
+      "levels": {
+       "low": {
+        "fixed_share": 333.748,
+        "total": null
+       },
+       "typical": {
+        "fixed_share": 166.874,
+        "total": null
+       },
+       "max": {
+        "fixed_share": 83.437,
+        "total": null
+       }
+      },
+      "observed": null,
+      "core": [
+       {
+        "usd": 6333,
+        "rate": "internal",
+        "facility": "K-State CEZID",
+        "source_type": "core",
+        "as_of": "2026-01",
+        "url": "https://www.k-state.edu/cezid/research-core-facilities/GeoMxServices.html",
+        "note": "per 1-slide run"
+       }
+      ]
+     }
+    ],
+    "prices": [
+     {
+      "platform": "Visium HD",
+      "instrument": [
+       {
+        "usd": 54457,
+        "item": "Visium CytAssist",
+        "source_type": "gsa",
+        "as_of": "2026-11",
+        "url": "https://www.govsci.com/product-detail/10x--Genomics/1000441"
+       },
+       {
+        "usd": 75395,
+        "item": "Visium CytAssist",
+        "source_type": "paid",
+        "as_of": "2022-09",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N91022P00956_7529_-NONE-_-NONE-"
+       },
+       {
+        "usd": 86160,
+        "item": "Visium CytAssist",
+        "source_type": "paid",
+        "as_of": "2024-12",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_HU000125P0010_9700_-NONE-_-NONE-"
+       }
+      ],
+      "service": [
+       {
+        "usd": 11819,
+        "item": "CytAssist 12-month assurance plan",
+        "source_type": "gsa",
+        "as_of": "2026-11",
+        "url": "https://www.govsci.com/product-detail/10x--Genomics/1000524"
+       }
+      ],
+      "needs": "a sequencer (not costed; sequencing is priced per read instead)",
+      "note": null,
+      "awards": {
+       "found": 71,
+       "cited": 2
+      }
+     },
+     {
+      "platform": "Stereo-seq",
+      "instrument": [],
+      "service": [],
+      "needs": null,
+      "note": null,
+      "awards": {
+       "found": 3,
+       "cited": 1
+      }
+     },
+     {
+      "platform": "Curio Seeker / Trekker",
+      "instrument": [],
+      "service": [],
+      "needs": null,
+      "note": "kit only, no instrument. A federal kit bundle cost $24,999 (2023-09), unit count not stated.",
+      "awards": {
+       "found": 1,
+       "cited": 0
+      }
+     },
+     {
+      "platform": "Xenium",
+      "instrument": [
+       {
+        "usd": 394669,
+        "item": "Xenium Analyzer",
+        "source_type": "gsa",
+        "as_of": "2026-11",
+        "url": "https://www.govsci.com/product-detail/10x--Genomics/1000481/EA"
+       },
+       {
+        "usd": 249900,
+        "item": "Xenium Analyzer",
+        "source_type": "paid",
+        "as_of": "2023-06",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N95023P00387_7529_-NONE-_-NONE-"
+       },
+       {
+        "usd": 343144,
+        "item": "Xenium Analyzer",
+        "source_type": "paid",
+        "as_of": "2025-10",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_SPE2D626F0005_9700_SPE2DE24D0014_9700"
+       },
+       {
+        "usd": 343144,
+        "item": "Xenium Analyzer",
+        "source_type": "paid",
+        "as_of": "2026-06",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_SPE2D626F1HD4_9700_SPE2DE24D0014_9700"
+       },
+       {
+        "usd": 365000,
+        "item": "Xenium Analyzer",
+        "source_type": "s10",
+        "as_of": "2025",
+        "url": "https://reporter.nih.gov/",
+        "note": "UT Health"
+       }
+      ],
+      "service": [
+       {
+        "usd": 66383,
+        "item": "Basic service plan",
+        "source_type": "gsa",
+        "as_of": "2026-11",
+        "url": "https://www.govsci.com/product-detail/10x--Genomics/1000482"
+       },
+       {
+        "usd": 35000,
+        "item": "Service plan",
+        "source_type": "paid",
+        "as_of": "2025-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N92025P00299_7529_-NONE-_-NONE-"
+       },
+       {
+        "usd": 38500,
+        "item": "Annual maintenance",
+        "source_type": "paid",
+        "as_of": "2026-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N98026P01246_7529_-NONE-_-NONE-"
+       }
+      ],
+      "needs": null,
+      "note": null,
+      "awards": {
+       "found": 44,
+       "cited": 5
+      }
+     },
+     {
+      "platform": "MERSCOPE",
+      "instrument": [
+       {
+        "usd": 322600,
+        "source_type": "paid",
+        "as_of": "2023-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N95023P00378_7529_-NONE-_-NONE-"
+       },
+       {
+        "usd": 377500,
+        "source_type": "paid",
+        "as_of": "2023-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_36C26123P1517_3600_-NONE-_-NONE-"
+       },
+       {
+        "usd": 148815,
+        "item": "MERSCOPE Ultra",
+        "source_type": "paid",
+        "as_of": "2025-08",
+        "model": false,
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N95025P00362_7529_-NONE-_-NONE-",
+        "note": "includes install and training; may be an upgrade or discounted"
+       },
+       {
+        "usd": 299500,
+        "source_type": "s10",
+        "as_of": "2022",
+        "url": "https://reporter.nih.gov/",
+        "note": "lowest of 3 S10 awards FY2022-23 ($299",
+        "500-333": null,
+        "366)": null
+       }
+      ],
+      "service": [
+       {
+        "usd": 32500,
+        "source_type": "paid",
+        "as_of": "2024-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N95024P00454_7529_-NONE-_-NONE-"
+       }
+      ],
+      "needs": null,
+      "note": null,
+      "awards": {
+       "found": 13,
+       "cited": 4
+      }
+     },
+     {
+      "platform": "CosMx SMI",
+      "instrument": [
+       {
+        "usd": 246975,
+        "source_type": "paid",
+        "as_of": "2023-09",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N93023P01313_7529_-NONE-_-NONE-"
+       },
+       {
+        "usd": 295000,
+        "source_type": "s10",
+        "as_of": "2023",
+        "url": "https://reporter.nih.gov/",
+        "note": "lowest of 3 S10 awards FY2023-24 ($295",
+        "000-357": null,
+        "193)": null
+       }
+      ],
+      "service": [
+       {
+        "usd": 10598,
+        "source_type": "paid",
+        "as_of": "2024-10",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N91025P00021_7529_-NONE-_-NONE-"
+       },
+       {
+        "usd": 12561,
+        "source_type": "paid",
+        "as_of": "2025-02",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N91025P00229_7529_-NONE-_-NONE-",
+        "note": "may be partial-year"
+       }
+      ],
+      "needs": null,
+      "note": null,
+      "awards": {
+       "found": 15,
+       "cited": 3
+      }
+     },
+     {
+      "platform": "GeoMx DSP",
+      "instrument": [
+       {
+        "usd": 245565,
+        "source_type": "paid",
+        "as_of": "2022-05",
+        "model": false,
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N94022P00401_7529_-NONE-_-NONE-",
+        "note": "includes kits"
+       },
+       {
+        "usd": 246650,
+        "source_type": "paid",
+        "as_of": "2023-06",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N91023P00496_7529_-NONE-_-NONE-"
+       }
+      ],
+      "service": [
+       {
+        "usd": 34107,
+        "source_type": "paid",
+        "as_of": "2026-08",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N98026P01277_7529_-NONE-_-NONE-"
+       },
+       {
+        "usd": 51987,
+        "source_type": "paid",
+        "as_of": "2026-04",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_36C25726C0034_3600_-NONE-_-NONE-"
+       }
+      ],
+      "needs": "a sequencer or nCounter for readout",
+      "note": null,
+      "awards": {
+       "found": 55,
+       "cited": 4
+      }
+     }
+    ],
+    "traction": [
+     {
+      "vendor": "10x Genomics",
+      "lines": {
+       "Visium": {
+        "technology": "spatial_transcriptomics",
+        "platforms": [
+         "Visium",
+         "Visium HD"
+        ],
+        "note": "units are Visium CytAssist instruments"
+       },
+       "Xenium": {
+        "technology": "spatial_transcriptomics",
+        "platforms": [
+         "Xenium"
+        ]
+       }
+      },
+      "disclosures": [
+       {
+        "metric": "cumulative_instruments_sold",
+        "line": "Visium",
+        "values": {
+         "2023": 531,
+         "2024": 810,
+         "2025": 1015
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1770787/000162828026007822/txg-20251231.htm",
+        "quote": "Chromium (Single Cell) 6,477 5,808 5,180 Visium (Spatial) 1,015 810 531 Xenium (Spatial) 554 421 255 Cumulative instruments sold 8,046 7,039 5,966"
+       },
+       {
+        "metric": "cumulative_instruments_sold",
+        "line": "Xenium",
+        "values": {
+         "2023": 255,
+         "2024": 421,
+         "2025": 554
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1770787/000162828026007822/txg-20251231.htm",
+        "quote": "Chromium (Single Cell) 6,477 5,808 5,180 Visium (Spatial) 1,015 810 531 Xenium (Spatial) 554 421 255 Cumulative instruments sold 8,046 7,039 5,966"
+       },
+       {
+        "metric": "consumable_reactions_sold",
+        "line": "Visium",
+        "values": {
+         "2023": 29300,
+         "2024": 35400,
+         "2025": 31200
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1770787/000162828026007822/txg-20251231.htm",
+        "quote": "Chromium (Single Cell) 378,300 310,900 312,500 Visium (Spatial) 31,200 35,400 29,300 Xenium (Spatial) 14,500 10,800 5,200 Total consumable reactions 424,000 357,100 347,000"
+       },
+       {
+        "metric": "consumable_reactions_sold",
+        "line": "Xenium",
+        "values": {
+         "2023": 5200,
+         "2024": 10800,
+         "2025": 14500
+        },
+        "url": "https://www.sec.gov/Archives/edgar/data/1770787/000162828026007822/txg-20251231.htm",
+        "quote": "Chromium (Single Cell) 378,300 310,900 312,500 Visium (Spatial) 31,200 35,400 29,300 Xenium (Spatial) 14,500 10,800 5,200 Total consumable reactions 424,000 357,100 347,000"
+       }
+      ],
+      "ratios": [
+       {
+        "fy": 2024,
+        "instrument_revenue": 57503000.0,
+        "consumable_revenue": 121124000.0,
+        "shipped": 445,
+        "asp": 129220.22471910113,
+        "per_instrument": 120103.12345066931,
+        "reactions_per_instrument": {
+         "Visium": 52.79642058165548,
+         "Xenium": 31.952662721893493
+        },
+        "per_reaction": 2621.7316017316016
+       },
+       {
+        "fy": 2025,
+        "instrument_revenue": 34108000.0,
+        "consumable_revenue": 143977000.0,
+        "shipped": 338,
+        "asp": 100911.2426035503,
+        "per_instrument": 102840.71428571429,
+        "reactions_per_instrument": {
+         "Visium": 34.19178082191781,
+         "Xenium": 29.743589743589745
+        },
+        "per_reaction": 3150.4814004376367
+       }
+      ]
+     }
+    ]
+   },
    "metrics": {
     "publications": 4527,
     "per100k": 43.209292660920255,
@@ -17524,6 +18586,246 @@
      "low": false
     }
    ],
+   "economics": {
+    "cost_unit": "one tissue section (slide) at the stated plex, or one mm\u00b2 ablated for imaging mass cytometry",
+    "model": {
+     "amortize_years": 5,
+     "default_service_share": 0.12,
+     "utilization": {
+      "low": 0.25,
+      "typical": 0.5,
+      "max": 1.0
+     },
+     "excludes": "labor, sample prep, analysis, facility overhead"
+    },
+    "sequencing": {
+     "usd_per_gb": 2.0,
+     "gb_per_m_pairs": 0.3,
+     "source_type": "spec",
+     "as_of": "2026-11",
+     "url": "https://assets.illumina.com/systems/sequencing-platforms/novaseq-x-plus/specifications.html",
+     "note": "NovaSeq X 25B reagent cost at full flow-cell use, a floor; core sequencing rates are higher"
+    },
+    "configs": [
+     {
+      "platform": "PhenoCycler (CODEX)",
+      "config": "PhenoCycler-Fusion, 40-plex",
+      "unit": "slide",
+      "area_mm2": null,
+      "plex": "40 proteins",
+      "consumables": null,
+      "sequencing_usd": null,
+      "read_pairs_m": null,
+      "variable": null,
+      "capacity": {
+       "per_year": 500,
+       "source_type": "model",
+       "basis": "one 2-slide run a day (~14 cycles, ~10.5 h, derived from vendor cycle time) x 250 days"
+      },
+      "instrument": {
+       "usd": 340650,
+       "item": "PhenoCycler-Fusion",
+       "source_type": "s10",
+       "as_of": "2023",
+       "url": "https://reporter.nih.gov/"
+      },
+      "service": {
+       "usd": 33168,
+       "default": false,
+       "source": {
+        "usd": 33168,
+        "item": "Preventive maintenance",
+        "source_type": "paid",
+        "as_of": "2026-06",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_140D0426P0149_1406_-NONE-_-NONE-"
+       }
+      },
+      "fixed_per_year": 101298.0,
+      "levels": {
+       "low": {
+        "fixed_share": 810.384,
+        "total": null
+       },
+       "typical": {
+        "fixed_share": 405.192,
+        "total": null
+       },
+       "max": {
+        "fixed_share": 202.596,
+        "total": null
+       }
+      },
+      "observed": null,
+      "core": [
+       {
+        "usd": 3598,
+        "rate": "internal",
+        "facility": "Fred Hutch",
+        "source_type": "core",
+        "as_of": "2026-07",
+        "url": "https://www.fredhutch.org/en/research/divisions/translational-science-and-therapeutics-division/translational-pathology/rates-scheduling.html",
+        "note": "$1,173 base + $61 per antibody; staining only"
+       }
+      ]
+     },
+     {
+      "platform": "Hyperion",
+      "config": "Hyperion XTi, Tissue Mode",
+      "unit": "mm\u00b2 ablated",
+      "area_mm2": null,
+      "plex": "40+ proteins",
+      "consumables": null,
+      "sequencing_usd": null,
+      "read_pairs_m": null,
+      "variable": null,
+      "capacity": {
+       "per_year": 17520,
+       "source_type": "model",
+       "basis": "2 mm\u00b2 an hour (vendor), continuous"
+      },
+      "instrument": {
+       "usd": 802514,
+       "item": "Hyperion XTi",
+       "source_type": "s10",
+       "as_of": "2026",
+       "url": "https://reporter.nih.gov/",
+       "note": "Texas A&M"
+      },
+      "service": {
+       "usd": 96301.68,
+       "default": true,
+       "source": null
+      },
+      "fixed_per_year": 256804.47999999998,
+      "levels": {
+       "low": {
+        "fixed_share": 58.631159817351595,
+        "total": null
+       },
+       "typical": {
+        "fixed_share": 29.315579908675797,
+        "total": null
+       },
+       "max": {
+        "fixed_share": 14.657789954337899,
+        "total": null
+       }
+      },
+      "observed": null,
+      "core": []
+     }
+    ],
+    "prices": [
+     {
+      "platform": "PhenoCycler (CODEX)",
+      "instrument": [
+       {
+        "usd": 202170,
+        "item": "CODEX",
+        "source_type": "s10",
+        "as_of": "2021",
+        "url": "https://reporter.nih.gov/"
+       },
+       {
+        "usd": 340650,
+        "item": "PhenoCycler-Fusion",
+        "source_type": "s10",
+        "as_of": "2023",
+        "url": "https://reporter.nih.gov/"
+       }
+      ],
+      "service": [
+       {
+        "usd": 33168,
+        "item": "Preventive maintenance",
+        "source_type": "paid",
+        "as_of": "2026-06",
+        "url": "https://www.usaspending.gov/award/CONT_AWD_140D0426P0149_1406_-NONE-_-NONE-"
+       }
+      ],
+      "needs": null,
+      "note": null,
+      "awards": {
+       "found": 59,
+       "cited": 1
+      }
+     },
+     {
+      "platform": "Hyperion",
+      "instrument": [
+       {
+        "usd": 507000,
+        "item": "CyTOF XT to Hyperion XTi upgrade",
+        "source_type": "paid",
+        "as_of": "2025-09",
+        "model": false,
+        "url": "https://www.usaspending.gov/award/CONT_AWD_75N94025P00585_7529_-NONE-_-NONE-"
+       },
+       {
+        "usd": 802514,
+        "item": "Hyperion XTi",
+        "source_type": "s10",
+        "as_of": "2026",
+        "url": "https://reporter.nih.gov/",
+        "note": "Texas A&M"
+       },
+       {
+        "usd": 829223,
+        "item": "Hyperion XTi with CyTOF XT",
+        "source_type": "s10",
+        "as_of": "2024",
+        "model": false,
+        "url": "https://reporter.nih.gov/",
+        "note": "Baylor; bundled"
+       }
+      ],
+      "service": [],
+      "needs": null,
+      "note": null,
+      "awards": {
+       "found": 1,
+       "cited": 1
+      }
+     }
+    ],
+    "traction": [
+     {
+      "vendor": "Quanterix",
+      "lines": {
+       "PhenoCycler and PhenoImager": {
+        "technology": "spatial_proteomics",
+        "platforms": [
+         "PhenoCycler (CODEX)"
+        ],
+        "note": "Akoya reported both imagers together; PhenoImager is not a tracked platform"
+       }
+      },
+      "disclosures": [
+       {
+        "metric": "installed_base",
+        "line": "PhenoCycler and PhenoImager",
+        "values": {
+         "2023": 1183,
+         "2024": 1330
+        },
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=akoya&type=10-K",
+        "quote": "Akoya Biosciences FY2024 10-K (filed before the 2025-07 Quanterix acquisition)"
+       },
+       {
+        "metric": "placements",
+        "line": "PhenoCycler and PhenoImager",
+        "values": {
+         "2023": 249,
+         "2024": 147
+        },
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=akoya&type=10-K",
+        "quote": "Akoya Biosciences FY2024 10-K (filed before the 2025-07 Quanterix acquisition)"
+       }
+      ],
+      "ratios": []
+     }
+    ]
+   },
    "metrics": {
     "publications": 1521,
     "per100k": 14.517635108738615,

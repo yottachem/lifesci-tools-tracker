@@ -32,3 +32,29 @@ sources:
     auth: none
     license: Unofficial; publish derived monthly market cap only, never raw prices
     module: ingest.prices
+  usaspending:
+    name: USAspending.gov federal awards
+    url: https://api.usaspending.gov/api/v2/search/spending_by_award/
+    auth: none
+    license: Public domain (US Gov)
+    module: ingest.usaspending  # platform-named contracts; curated into reference/economics.yaml as source_type paid
+  govsci:
+    name: Government Scientific Source product pages (federal schedule prices)
+    url: https://www.govsci.com/product-detail/
+    auth: none
+    license: Public web pages; prices cited by hand, no scraper
+  reporter_s10:
+    name: NIH RePORTER S10 shared-instrument awards
+    url: https://api.reporter.nih.gov/v2/projects/search
+    auth: none; <= 1 request/second
+    license: Public domain (US Gov)
+    note: activity code S10 plus the brand name; cited by hand as source_type s10
+  core_rates:
+    name: Academic core-facility rate sheets
+    url: listed per value in reference/economics.yaml
+    license: Public web pages; cited by hand
+  tenk_units:
+    name: Unit disclosures in 10-K text (instruments sold, reactions sold, installed base)
+    url: https://www.sec.gov/
+    license: Public domain (US Gov)
+    note: quoted by hand into reference/traction.yaml

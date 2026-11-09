@@ -1,0 +1,200 @@
+# Platform economics (v2, DRAFT 2026-11-09). Every number cites a public source.
+# Seeded from the Tools Companies vault analysis spatial-platform-comparison, where each value was checked.
+#
+# source_type, in the model's order of preference:
+#   paid  = federal purchase record (USAspending.gov award amount)
+#   gsa   = federal schedule price (Government Scientific Source product page)
+#   list  = vendor price list or web store
+#   filing = price stated in a 10-K, earnings call or investor day
+#   s10   = NIH S10 shared-instrument award (regular S10 capped at $750K; may bundle accessories)
+#   press = launch or trade-press price
+# Not ranked: spec (vendor claim), derived (computed from cited inputs), model (an assumption of the cost model),
+#   core (academic core-facility rate: what a researcher pays; shown as a check, never a model input).
+# The model takes the most recent value of the best-ranked source type; ties take the lower value.
+# model: false keeps a value on the page but out of the model (upgrades, bundles, unclear scope).
+# as_of: YYYY-MM (award or access month) or YYYY (fiscal year).
+#
+# platforms.<name> uses the taxonomy name. Per platform:
+#   instrument: hardware a lab has to buy; `item` names it when it isn't the platform itself
+#   service:    service contract per year
+#   configs:    costed assay configurations: unit, consumables and sequencing per unit, capacity at 100% use
+#   core:       per-unit core rates for a config
+#   award_terms: USAspending keywords; ingest.usaspending pulls matching federal awards as evidence to review
+
+model:
+  amortize_years: 5
+  default_service_share: 0.12   # of instrument price per year, used only when no service price is public
+  utilization: {low: 0.25, typical: 0.5, max: 1.0}   # typical lab, busy core, vendor-spec maximum
+  excludes: labor, sample prep, analysis, facility overhead
+
+sequencing:   # applied to configs with read_pairs_m
+  usd_per_gb: 2.0
+  gb_per_m_pairs: 0.3   # 2x150
+  source_type: spec
+  as_of: 2026-11
+  url: https://assets.illumina.com/systems/sequencing-platforms/novaseq-x-plus/specifications.html
+  note: NovaSeq X 25B reagent cost at full flow-cell use, a floor; core sequencing rates are higher
+
+platforms:
+
+  Visium HD:
+    award_terms: ["Visium HD", "CytAssist"]   # USAspending search (ingest.usaspending)
+    instrument:
+      - {usd: 54457, item: Visium CytAssist, source_type: gsa, as_of: 2026-11, url: "https://www.govsci.com/product-detail/10x--Genomics/1000441"}
+      - {usd: 75395, item: Visium CytAssist, source_type: paid, as_of: 2022-09, url: "https://www.usaspending.gov/award/CONT_AWD_75N91022P00956_7529_-NONE-_-NONE-"}
+      - {usd: 86160, item: Visium CytAssist, source_type: paid, as_of: 2024-12, url: "https://www.usaspending.gov/award/CONT_AWD_HU000125P0010_9700_-NONE-_-NONE-"}
+    service:
+      - {usd: 11819, item: CytAssist 12-month assurance plan, source_type: gsa, as_of: 2026-11, url: "https://www.govsci.com/product-detail/10x--Genomics/1000524"}
+    needs: a sequencer (not costed; sequencing is priced per read instead)
+    configs:
+      - name: FFPE, 6.5 mm
+        unit: capture area
+        area_mm2: 42
+        plex: whole transcriptome, ~18K genes (probe-based)
+        consumables: {usd: 3449, source_type: gsa, as_of: 2026-11, url: "https://www.govsci.com/product-detail/10x--Genomics/1000675", note: "4-reaction kit $13,795 / 4"}
+        read_pairs_m: {value: 275, source_type: spec, url: "https://www.10xgenomics.com/support/spatial-gene-expression-hd/documentation/steps/sequencing/sequencing-requirements-for-visium-hd-spatial-gene-expression"}
+        capacity: {per_year: 500, source_type: model, basis: about 10 capture areas a week; the CytAssist is not the bottleneck}
+        core:
+          - {usd: 4500, rate: internal, facility: Pitt HSSC, source_type: core, as_of: 2026-11, url: "https://www.sharedfacilities.pitt.edu/health-sciences-sequencing-core/pricing", note: "$9,000 per 2-area slide"}
+          - {usd: 4619, rate: internal, facility: Weill Cornell EPICORE, source_type: core, as_of: 2026-11, url: "https://epicore.med.cornell.edu/pricelist.php", note: "$9,237 per 2-area slide"}
+          - {usd: 3193, rate: external academic, facility: UCLA TCGB, source_type: core, as_of: 2026-07, url: "https://www.uclahealth.org/departments/pathology/research-services/technology-center-genomics-bioinformatics-tcgb/pricing", note: "$6,387 per 2-area slide"}
+      - name: Fresh frozen, 6.5 mm
+        unit: capture area
+        area_mm2: 42
+        plex: whole transcriptome, ~18K genes (probe-based)
+        consumables: {usd: 3449, source_type: gsa, as_of: 2026-11, url: "https://www.govsci.com/product-detail/10x--Genomics/1000675", note: "4-reaction kit $13,795 / 4"}
+        read_pairs_m: {value: 700, source_type: spec, url: "https://www.10xgenomics.com/support/spatial-gene-expression-hd/documentation/steps/sequencing/sequencing-requirements-for-visium-hd-spatial-gene-expression"}
+        capacity: {per_year: 500, source_type: model, basis: about 10 capture areas a week; the CytAssist is not the bottleneck}
+
+  Xenium:
+    award_terms: ["Xenium"]   # USAspending search (ingest.usaspending)
+    instrument:
+      - {usd: 394669, item: Xenium Analyzer, source_type: gsa, as_of: 2026-11, url: "https://www.govsci.com/product-detail/10x--Genomics/1000481/EA"}
+      - {usd: 249900, item: Xenium Analyzer, source_type: paid, as_of: 2023-06, url: "https://www.usaspending.gov/award/CONT_AWD_75N95023P00387_7529_-NONE-_-NONE-"}
+      - {usd: 343144, item: Xenium Analyzer, source_type: paid, as_of: 2025-10, url: "https://www.usaspending.gov/award/CONT_AWD_SPE2D626F0005_9700_SPE2DE24D0014_9700"}
+      - {usd: 343144, item: Xenium Analyzer, source_type: paid, as_of: 2026-06, url: "https://www.usaspending.gov/award/CONT_AWD_SPE2D626F1HD4_9700_SPE2DE24D0014_9700"}
+      - {usd: 365000, item: Xenium Analyzer, source_type: s10, as_of: "2025", url: "https://reporter.nih.gov/", note: UT Health}
+    service:
+      - {usd: 66383, item: Basic service plan, source_type: gsa, as_of: 2026-11, url: "https://www.govsci.com/product-detail/10x--Genomics/1000482"}
+      - {usd: 35000, item: Service plan, source_type: paid, as_of: 2025-08, url: "https://www.usaspending.gov/award/CONT_AWD_75N92025P00299_7529_-NONE-_-NONE-"}
+      - {usd: 38500, item: Annual maintenance, source_type: paid, as_of: 2026-08, url: "https://www.usaspending.gov/award/CONT_AWD_75N98026P01246_7529_-NONE-_-NONE-"}
+    configs:
+      - name: v1, predesigned panel
+        unit: slide
+        area_mm2: 235
+        plex: up to 480 genes
+        consumables: {usd: 4201, source_type: derived, as_of: 2026-11, url: "https://www.govsci.com/product-detail/10x--Genomics/1000461", note: "Per run of 2 slides: decoding reagents 1000461 $3,798 + decoding consumables 1000487 $2,470 + slides and sample prep 1000460 $1,709 + panel $426 = $8,403"}
+        capacity: {per_year: 208, source_type: model, basis: 2 runs a week x 2 slides; a full-area v1 run is under 72 h (vendor)}
+        core:
+          - {usd: 5091, rate: external academic, facility: UCLA TCGB, source_type: core, as_of: 2026-07, url: "https://www.uclahealth.org/departments/pathology/research-services/technology-center-genomics-bioinformatics-tcgb/pricing"}
+          - {usd: 6500, rate: internal, facility: Pitt HSSC, source_type: core, as_of: 2026-11, url: "https://www.sharedfacilities.pitt.edu/health-sciences-sequencing-core/pricing", note: with cell segmentation}
+      - name: Prime 5K
+        unit: slide
+        area_mm2: 235
+        plex: 5,000 genes
+        consumables: {usd: 8075, source_type: gsa, as_of: 2026-11, url: "https://www.govsci.com/product-detail/10x--Genomics/1000671/EA", note: "2-reaction kit $16,150, all-in (panel, prep with segmentation, slides, decoding) per user guide CG000760 Rev C"}
+        capacity: {per_year: 104, source_type: model, basis: 1 run a week x 2 slides; a full-area Prime run is under 144 h (vendor)}
+        core:
+          - {usd: 8435, rate: external academic, facility: UCLA TCGB, source_type: core, as_of: 2026-07, url: "https://www.uclahealth.org/departments/pathology/research-services/technology-center-genomics-bioinformatics-tcgb/pricing"}
+          - {usd: 11750, rate: internal, facility: Pitt HSSC, source_type: core, as_of: 2026-11, url: "https://www.sharedfacilities.pitt.edu/health-sciences-sequencing-core/pricing", note: with cell segmentation}
+
+  CosMx SMI:
+    award_terms: ["CosMx"]   # USAspending search (ingest.usaspending)
+    instrument:
+      - {usd: 246975, source_type: paid, as_of: 2023-09, url: "https://www.usaspending.gov/award/CONT_AWD_75N93023P01313_7529_-NONE-_-NONE-"}
+      - {usd: 295000, source_type: s10, as_of: "2023", url: "https://reporter.nih.gov/", note: lowest of 3 S10 awards FY2023-24 ($295,000-357,193)}
+    service:
+      - {usd: 10598, source_type: paid, as_of: 2024-10, url: "https://www.usaspending.gov/award/CONT_AWD_75N91025P00021_7529_-NONE-_-NONE-"}
+      - {usd: 12561, source_type: paid, as_of: 2025-02, url: "https://www.usaspending.gov/award/CONT_AWD_75N91025P00229_7529_-NONE-_-NONE-", note: may be partial-year}
+    configs:
+      - name: 6K RNA, 100 FOVs
+        unit: slide
+        area_mm2: 26
+        plex: 6,000 genes
+        capacity: {per_year: 160, source_type: model, basis: "2 slides per 4.5-day run at 100 FOVs (vendor run-time estimate)"}
+        core:
+          - {usd: 18404, rate: internal, facility: K-State CEZID, source_type: core, as_of: 2026-01, url: "https://www.k-state.edu/cezid/research-core-facilities/CosMxServices.html", note: per 1-slide run}
+
+  MERSCOPE:
+    award_terms: ["MERSCOPE", "Vizgen"]   # USAspending search (ingest.usaspending)
+    instrument:
+      - {usd: 322600, source_type: paid, as_of: 2023-08, url: "https://www.usaspending.gov/award/CONT_AWD_75N95023P00378_7529_-NONE-_-NONE-"}
+      - {usd: 377500, source_type: paid, as_of: 2023-08, url: "https://www.usaspending.gov/award/CONT_AWD_36C26123P1517_3600_-NONE-_-NONE-"}
+      - {usd: 148815, item: MERSCOPE Ultra, source_type: paid, as_of: 2025-08, model: false, url: "https://www.usaspending.gov/award/CONT_AWD_75N95025P00362_7529_-NONE-_-NONE-", note: includes install and training; may be an upgrade or discounted}
+      - {usd: 299500, source_type: s10, as_of: "2022", url: "https://reporter.nih.gov/", note: lowest of 3 S10 awards FY2022-23 ($299,500-333,366)}
+    service:
+      - {usd: 32500, source_type: paid, as_of: 2024-08, url: "https://www.usaspending.gov/award/CONT_AWD_75N95024P00454_7529_-NONE-_-NONE-"}
+    configs:
+      - name: 3 cm² imaging area
+        unit: slide
+        area_mm2: 300
+        plex: up to ~1,000 genes
+        capacity: {per_year: 156, source_type: model, basis: "about 9 cm² imaged a week (vendor), 3 slides"}
+
+  GeoMx DSP:
+    award_terms: ["GeoMx"]   # USAspending search (ingest.usaspending)
+    instrument:
+      - {usd: 245565, source_type: paid, as_of: 2022-05, model: false, url: "https://www.usaspending.gov/award/CONT_AWD_75N94022P00401_7529_-NONE-_-NONE-", note: includes kits}
+      - {usd: 246650, source_type: paid, as_of: 2023-06, url: "https://www.usaspending.gov/award/CONT_AWD_75N91023P00496_7529_-NONE-_-NONE-"}
+    service:
+      - {usd: 34107, source_type: paid, as_of: 2026-08, url: "https://www.usaspending.gov/award/CONT_AWD_75N98026P01277_7529_-NONE-_-NONE-"}
+      - {usd: 51987, source_type: paid, as_of: 2026-04, url: "https://www.usaspending.gov/award/CONT_AWD_36C25726C0034_3600_-NONE-_-NONE-"}
+    needs: a sequencer or nCounter for readout
+    configs:
+      - name: Whole transcriptome atlas, 12 ROIs
+        unit: slide
+        plex: 18K+ genes
+        read_pairs_m: {value: 100, source_type: spec, url: "https://nanostring.com/wp-content/uploads/PB_MK3683_GeoMx-WTA_r9.pdf", note: an upper bound on cost; GeoMx reads are short}
+        capacity: {per_year: 1000, source_type: model, basis: "4 slides a day (vendor: 4-8) x 250 days"}
+        core:
+          - {usd: 6333, rate: internal, facility: K-State CEZID, source_type: core, as_of: 2026-01, url: "https://www.k-state.edu/cezid/research-core-facilities/GeoMxServices.html", note: per 1-slide run}
+
+  PhenoCycler (CODEX):
+    award_terms: ["PhenoCycler", "Akoya"]   # USAspending search (ingest.usaspending)
+    instrument:
+      - {usd: 202170, item: CODEX, source_type: s10, as_of: "2021", url: "https://reporter.nih.gov/"}
+      - {usd: 340650, item: PhenoCycler-Fusion, source_type: s10, as_of: "2023", url: "https://reporter.nih.gov/"}
+    service:
+      - {usd: 33168, item: Preventive maintenance, source_type: paid, as_of: 2026-06, url: "https://www.usaspending.gov/award/CONT_AWD_140D0426P0149_1406_-NONE-_-NONE-"}
+    configs:
+      - name: PhenoCycler-Fusion, 40-plex
+        unit: slide
+        plex: 40 proteins
+        capacity: {per_year: 500, source_type: model, basis: "one 2-slide run a day (~14 cycles, ~10.5 h, derived from vendor cycle time) x 250 days"}
+        core:
+          - {usd: 3598, rate: internal, facility: Fred Hutch, source_type: core, as_of: 2026-07, url: "https://www.fredhutch.org/en/research/divisions/translational-science-and-therapeutics-division/translational-pathology/rates-scheduling.html", note: "$1,173 base + $61 per antibody; staining only"}
+
+  Hyperion:
+    award_terms: ["Hyperion XTi", "imaging mass cytometry"]   # USAspending search (ingest.usaspending)
+    instrument:
+      - {usd: 507000, item: CyTOF XT to Hyperion XTi upgrade, source_type: paid, as_of: 2025-09, model: false, url: "https://www.usaspending.gov/award/CONT_AWD_75N94025P00585_7529_-NONE-_-NONE-"}
+      - {usd: 802514, item: Hyperion XTi, source_type: s10, as_of: "2026", url: "https://reporter.nih.gov/", note: Texas A&M}
+      - {usd: 829223, item: Hyperion XTi with CyTOF XT, source_type: s10, as_of: "2024", model: false, url: "https://reporter.nih.gov/", note: Baylor; bundled}
+    configs:
+      - name: Hyperion XTi, Tissue Mode
+        unit: mm² ablated
+        plex: 40+ proteins
+        capacity: {per_year: 17520, source_type: model, basis: "2 mm² an hour (vendor), continuous"}
+
+  Curio Seeker / Trekker:
+    award_terms: ["Curio Seeker", "Curio Bioscience"]   # USAspending search (ingest.usaspending)
+    instrument: []
+    configs:
+      - name: Seeker 3 x 3 mm
+        unit: tile
+        area_mm2: 9
+        plex: whole transcriptome (polyA)
+        read_pairs_m: {value: 400, source_type: spec, url: "https://www.takarabio.com/learning-centers/spatial-omics/seeker-resources", note: "vendor range 200-600M; midpoint"}
+    note: kit only, no instrument. A federal kit bundle cost $24,999 (2023-09), unit count not stated.
+
+  Stereo-seq:
+    award_terms: ["Stereo-seq", "STOmics"]   # USAspending search (ingest.usaspending)
+    instrument: []
+    configs:
+      - name: 1 x 1 cm chip
+        unit: chip
+        area_mm2: 100
+        plex: whole transcriptome (polyA)
+        read_pairs_m: {value: 1500, source_type: spec, url: "https://en.stomics.tech/", note: "1.5B reads per cm²; sequenced on DNBSEQ, whose price is not public"}
+        core:
+          - {usd: 9000, rate: federal service purchase, facility: Mirxes, source_type: paid, as_of: 2023-11, url: "https://www.usaspending.gov/award/CONT_AWD_12305B24P0011_12H2_-NONE-_-NONE-", note: "$36,000 for 4 chips, full service"}

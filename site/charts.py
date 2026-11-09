@@ -12,6 +12,8 @@ FONT = 'font-family="var(--font-data)"'
 def fmt(v, kind="n"):
     if v is None:
         return "–"
+    if kind == "usd0":  # exact dollars, for per-unit costs
+        return f"${v:,.0f}"
     if kind == "usd":
         return f"${v / 1e9:,.1f}B" if abs(v) >= 1e9 else f"${v / 1e6:,.0f}M" if abs(v) >= 1e6 else f"${v / 1e3:,.0f}K"
     if kind == "pct":
@@ -191,5 +193,34 @@ def scatter(points, *, width=900, height=520, desc="", char_w=6.8):
         placed.append(box)
         labels.append(f'<a href="{p["href"]}"><text x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anchor}" class="lab">{escape(p["label"])}</text></a>')
     out += dots + labels
+    out.append("</svg>")
+    return "".join(out)
+
+
+def cost_range(rows, *, width=1000, label_w=250, desc=""):
+    """rows: [{"label", "low", "typical", "max", "observed", "core": [usd]}], dollars per unit.
+    A band from the cost at full use to the cost at low use, a dot at typical use, an open dot at observed use,
+    and a tick per core-facility rate."""
+    row_h, top, bottom, right = 34, 10, 30, 24
+    height = top + bottom + row_h * len(rows)
+    w = width - label_w - right
+    vals = [v for r in rows for v in [r["low"], r["observed"], *r["core"]] if v]
+    ticks = nice_ticks(0, max(vals or [1]), 5)
+    x = scale(0, ticks[-1], label_w, label_w + w)
+    out = [f'<svg viewBox="0 0 {width} {height}" role="img" aria-label="{escape(desc)}" class="chart">']
+    for t in ticks:
+        label = f"${t / 1e3:g}K" if t else "$0"
+        out.append(f'<line x1="{x(t):.1f}" x2="{x(t):.1f}" y1="{top}" y2="{height - bottom}" class="grid"/>'
+                   f'<text x="{x(t):.1f}" y="{height - bottom + 16}" text-anchor="middle" class="tick">{label}</text>')
+    for i, r in enumerate(rows):
+        cy = top + row_h * i + row_h / 2
+        out.append(f'<text x="{label_w - 10}" y="{cy + 4:.1f}" text-anchor="end" class="axis">{escape(r["label"])}</text>')
+        out.append(f'<line x1="{x(r["max"]):.1f}" x2="{x(r["low"]):.1f}" y1="{cy:.1f}" y2="{cy:.1f}" class="rng">'
+                   f'<title>{escape(r["label"])}: {fmt(r["max"], "usd")} at full use to {fmt(r["low"], "usd")} at 25%</title></line>')
+        for c in r["core"]:
+            out.append(f'<line x1="{x(c):.1f}" x2="{x(c):.1f}" y1="{cy - 9:.1f}" y2="{cy + 9:.1f}" class="core"><title>Core rate {fmt(c, "usd")}</title></line>')
+        out.append(f'<circle cx="{x(r["typical"]):.1f}" cy="{cy:.1f}" r="5" class="dot1"><title>Typical use (50%): {fmt(r["typical"], "usd")}</title></circle>')
+        if r["observed"]:
+            out.append(f'<circle cx="{x(r["observed"]):.1f}" cy="{cy:.1f}" r="5" class="dot2"><title>Observed use: {fmt(r["observed"], "usd")}</title></circle>')
     out.append("</svg>")
     return "".join(out)

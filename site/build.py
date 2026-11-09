@@ -9,6 +9,7 @@ import json
 import shutil
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -24,6 +25,7 @@ SITE_URL = "https://yottachem.github.io/lifesci-tools-tracker/"
 # Cloudflare Web Analytics site token for yottachem.github.io (public; it ships in the page). Empty = no beacon.
 ANALYTICS_TOKEN = "ee99837aed054d67b79a567044baec28"
 SHARE_MIN = 50  # platform mentions a year before shares are charted
+STALE_MONTHS = 18  # prices older than this are counted as stale on the technology page
 STAGE_ORDER = {"emerging": 0, "growth": 1, "mature": 2}
 SIGNAL_LABELS = {"platforms": "Platform brands", "methods": "Method terms", "nih": "NIH terms", "patents": "Patent terms"}
 # Hand-curated inputs listed on the status page: everything else is fetched each run
@@ -31,6 +33,8 @@ CURATED = [("taxonomy/", "Technologies, method and grant terms, platforms, vendo
            ("reference/vendors.yaml", "Vendor roster: ownership history, listings, pending deals"),
            ("reference/launch_sources.yaml", "Source for every platform launch year"),
            ("reference/revenue_members.yaml", "Which XBRL product lines map to instruments, consumables and services"),
+           ("reference/economics.yaml", "Instrument, service and consumable prices, capacity assumptions and core rates, each cited"),
+           ("reference/traction.yaml", "Instruments sold, reactions sold and installed base from annual filings"),
            ("precision/summary.csv", "Measured precision per brand and term, from labeled samples"),
            ("precision/patent_use.csv", "Share of matched patents that only use the technology")]
 MIX_LABELS = {"instrument": "Instruments", "consumable": "Consumables", "product": "Products", "service": "Services",
@@ -86,8 +90,31 @@ def tech_context(t, meta):
         fin_rows.append({"name": v["name"], "ticker": v["ticker"], "rows": rows, "market_value": f["market_value"],
                          "mix_keys": [k for k in MIX_LABELS if any(k in r["mix"] for r in rows)],
                          "tech_keys": sorted({k for r in rows for k in r["technology"]})})
-    return {"t": t, "share_from": share_from, "pub_chart": pub_chart, "share_chart": share_chart, "nih_chart": nih_chart, "pat_chart": pat_chart,
+    econ = economics_context(t)
+    return {"t": t, "econ": econ, "share_from": share_from, "pub_chart": pub_chart, "share_chart": share_chart, "nih_chart": nih_chart, "pat_chart": pat_chart,
             "plat_rows": plat_rows, "fin": fin_rows, "rate": rate, "mix_labels": MIX_LABELS}
+
+
+def economics_context(t):
+    """Rows with a full modeled cost go on the range chart; the rest show the instrument share only."""
+    e = t.get("economics")
+    if not e:
+        return None
+    full = [c for c in e["configs"] if c["levels"]["typical"]["total"] is not None]
+    chart_rows = [{"label": f"{c['platform']}, {c['config']}", "low": c["levels"]["low"]["total"],
+                   "typical": c["levels"]["typical"]["total"], "max": c["levels"]["max"]["total"],
+                   "observed": (c["observed"] or {}).get("total"), "core": [k["usd"] for k in c["core"]]} for c in full]
+    chart = charts.cost_range(chart_rows, desc=f"Modeled cost per unit, {t['label']}") if chart_rows else None
+    for c in e["configs"]:  # model inputs older than STALE_MONTHS are marked on the page
+        inputs = [c["instrument"], (c["service"] or {}).get("source"), c["consumables"]]
+        c["stale"] = any(v and months_old(v["as_of"]) > STALE_MONTHS for v in inputs)
+    return {**e, "chart": chart, "full": full, "partial": [c for c in e["configs"] if c not in full]}
+
+
+def months_old(as_of):
+    y, m = (int(x) for x in (str(as_of).split("-") + ["12"])[:2])
+    today = date.today()
+    return (today.year - y) * 12 + today.month - m
 
 
 def home_context(panel, meta):
@@ -153,6 +180,9 @@ def status_context(panel, meta):
         {"name": "SEC EDGAR", "what": "Revenue and revenue mix (XBRL)", "snap": snaps["edgar"], "cover": "Latest 10-K or 20-F per company"},
         {"name": "Month-end close", "what": "Market value (with EDGAR shares outstanding)", "snap": snaps["market_value"], "cover": "Monthly; only the derived market value is stored"},
     ]
+    if (u := meta.get("usaspending") or {}).get("snap"):
+        sources.append({"name": "USAspending.gov", "what": "Federal purchases naming a platform (price evidence)", "snap": u["snap"],
+                        "cover": f"{u['awards']:,} contract awards since fiscal 2019; cited by hand in economics.yaml"})
     curated = [{"path": p, "what": w, "changed": last_changed(p)} for p, w in CURATED]
     return {"sources": sources, "curated": curated, "pending_deals": meta.get("pending_deals", [])}
 

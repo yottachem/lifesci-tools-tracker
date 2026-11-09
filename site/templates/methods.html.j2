@@ -17,6 +17,7 @@
 <tr><td>NIH grants</td><td>NIH RePORTER</td><td>Project-years (one per award per fiscal year), deduplicated across terms, with award dollars</td><td>Project title and abstract</td></tr>
 <tr><td>Patents</td><td>USPTO PatentsView bulk files</td><td>US grants and published applications, inside a life-science classification scope</td><td>Title and abstract</td></tr>
 <tr><td>Companies</td><td>SEC EDGAR, month-end close</td><td>Revenue and product-line mix for public pure plays; market value for every public vendor</td><td>10-K and 20-F XBRL</td></tr>
+<tr><td>Economics</td><td>USAspending.gov, federal schedule, NIH S10, core rate sheets, 10-K text</td><td>Instrument, service and consumable prices; units and reactions sold</td><td>Curated and cited by hand</td></tr>
 </tbody></table></div>
 
 <h3>Papers</h3>
@@ -60,6 +61,16 @@
 </tbody></table></div>
 <p class="note-p">Lowest precision per signal; the brand or term is named where it's under 0.95. Flagged low: {% for r in low_entries %}{{ r.entry }} ({{ "%.2f" | format(r.precision) }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>
 <p class="note-p">Per-entry results, intervals and every labeled row are in <a href="{{ repo }}/tree/main/precision">precision/</a>.</p>
+
+<h2>Economics</h2>
+<div class="prose">
+<p>Where public prices exist, a technology page shows what one sample costs to run. A sample is defined per technology (a tissue section for spatial methods) and costs are compared within a technology only, because area, plex and depth differ between platforms.</p>
+<p><b>Prices.</b> Every price is cited and tagged with its source. In order of preference: a federal purchase record on USAspending.gov (what a buyer actually paid), the federal schedule price, a vendor list price, a price stated in a filing, and an NIH S10 shared-instrument award. Federal prices are a floor for what academic labs pay; a whole purchase award can include installation or training, and those that clearly bundle other items are shown but kept out of the model. Prices more than 18 months old are marked stale.</p>
+<p><b>Cost per sample.</b> Consumables and sequencing per sample, plus the instrument spread over 5 years and its yearly service contract, divided by the samples run in a year. Samples a year at full use is a stated assumption from vendor run times. The cost is shown at 25% of that (a typical lab), 50% (a busy core) and 100%. Where no service price is public, 12% of the instrument price a year is assumed and marked. Labor, sample prep, analysis and facility overhead are excluded. Sequencing is priced at a reagent-only floor per gigabase; core sequencing costs more.</p>
+<p><b>Observed use.</b> Some companies report instruments sold and consumable reactions sold each year. Reactions divided by the average number of instruments sold to date give samples run per instrument per year, and the cost at that rate. Retired instruments stay in the count, so observed use is a lower bound.</p>
+<p><b>Units and pull-through.</b> Where a company reports units for the same product lines as its technology revenue, the page shows instruments shipped, implied instrument price (instrument revenue over units shipped) and consumable revenue per instrument. Implied price blends every instrument in the line; a test flags any year where it falls outside half to twice the units-weighted schedule price.</p>
+<p><b>Core-facility rates</b> are what a researcher pays an academic core, shown as a check on the model. They are often subsidized and include different things (labor, slides, sequencing), so they are never a model input.</p>
+</div>
 
 <h2>Time and lags</h2>
 <div class="prose">

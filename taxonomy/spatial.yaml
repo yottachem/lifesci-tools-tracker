@@ -21,6 +21,7 @@
 # 2025-2026 primary or trade-press source). Ownership was cleared only on V rows that name the platform or
 # the business unit that sells it; V~ rows (aggregator or single source) left verify: true. Conflicts were
 # settled against primary filings (Qiagen 20-F for Parse, 10x 10-Q for Scale, Bio-Rad FAQ for QX700).
+#   cost_unit:    what one sample is when cost is compared (economics v2); compared within a technology only
 #   cpc:          headline patent classes (reference only); matching uses the shared life-science CPC scope in ingest/uspto.py
 #   nih_terms:    RePORTER title/abstract phrases (funded demand)
 #   patent_terms: claim-style wording patents use instead of journal terms (title/abstract, plural-tolerant);
@@ -39,6 +40,7 @@ technologies:
   spatial_transcriptomics:
     label: Spatial transcriptomics
     stage: emerging
+    cost_unit: one tissue section (slide, capture area, chip or tile) at the stated area and plex
     definition: >
       Measures RNA expression with the tissue location preserved, either by capturing
       transcripts onto a spatially barcoded surface (sequencing-based) or by reading them
@@ -117,6 +119,7 @@ technologies:
   spatial_proteomics:
     label: Spatial proteomics
     stage: emerging
+    cost_unit: one tissue section (slide) at the stated plex, or one mm² ablated for imaging mass cytometry
     definition: >
       Images many proteins in one tissue section with location preserved, by cyclic
       immunofluorescence, DNA-barcoded antibodies, or metal-tagged antibodies read by mass

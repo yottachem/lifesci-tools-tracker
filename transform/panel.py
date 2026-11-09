@@ -2,7 +2,8 @@
 
 Per technology: publications (union of method terms, per 100K works), platform mentions and share,
 NIH project-years and dollars, patent grants and applications with top assignees, the vendor roster,
-pure-play financials and market value, and measured precision. Home-page metrics use the latest full
+pure-play financials and market value, measured precision, and (where curated) platform economics
+and commercial traction (transform.economics). Home-page metrics use the latest full
 year (FULL_YEAR) for every signal so the technologies are compared on the same period.
 
 Run: uv run python -m transform.panel
@@ -13,6 +14,7 @@ from collections import Counter
 from datetime import date
 
 from ingest.common import RAW, ROOT, YEARS, fiscal_year, load_taxonomies, load_vendors, platforms
+from transform import economics
 
 OUT = ROOT / "site" / "data" / "panel.json"
 FULL_YEAR = date.today().year - 1      # latest complete publication, patent and NIH year
@@ -144,6 +146,7 @@ def run():
     snaps = {s: latest(s) for s in ("openalex", "reporter", "uspto", "edgar", "edgar_mix", "market_value")}
     oa_all, reporter, uspto = snaps["openalex"][1], snaps["reporter"][1], snaps["uspto"][1]
     edgar, mix, mv = snaps["edgar"][1], snaps["edgar_mix"][1], snaps["market_value"][1]
+    awards_snap = latest("usaspending") if (RAW / "usaspending").exists() else (None, {})
     total = {int(k): v for k, v in oa_all.get("_total", {}).items()}
     prec_all = precision_rows()
     use = patent_use()
@@ -175,6 +178,7 @@ def run():
             "publications": pubs, "platforms": plats, "vendor_share": vendor_share(plats, FULL_YEAR),
             "nih": nih, "patents": pats, "patent_use_share": use.get(tech_id), "vendors": roster,
             "precision": [r for r in prec_all if r["technology"] == tech_id],
+            "economics": economics.technology(tech_id, tech, mix, awards_snap[1]),
             "metrics": {
                 "publications": pubs["counts"][FULL_YEAR],
                 "per100k": pubs["per100k"].get(FULL_YEAR),
@@ -191,7 +195,8 @@ def run():
     meta = {"built": date.today().isoformat(), "full_year": FULL_YEAR, "growth_from": GROWTH_FROM,
             "years": [YEARS.start, YEARS.stop - 1], "snapshots": {s: d for s, (d, _) in snaps.items()},
             "patents_through": max(r["date"] for r in uspto["pregrant"]), "has_total": bool(total),
-            "uspto_files": uspto.get("files", {}), "pending_deals": pending_deals(techs, vendors)}
+            "uspto_files": uspto.get("files", {}), "pending_deals": pending_deals(techs, vendors),
+            "usaspending": {"snap": awards_snap[0], "awards": sum(len(v) for v in awards_snap[1].values())}}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({"meta": meta, "technologies": panel}, indent=1, sort_keys=False))
     for t in panel.values():

@@ -1,0 +1,50 @@
+# Commercial traction (v2, DRAFT 2026-11-09): unit disclosures from annual filings, each with its source.
+# Revenue comes from the edgar_mix snapshot, so derived ratios are computed only where the filer's
+# technology revenue lines up with the platforms its units cover (10x spatial from FY2023).
+#
+# vendors.<name>:
+#   lines:   product lines the filer counts units for, mapped to taxonomy platforms and technology
+#   metrics: {metric, line, values: {fiscal year: n}, source_type, url, quote}
+#     cumulative_instruments_sold, consumable_reactions_sold, installed_base, placements
+
+vendors:
+
+  10x Genomics:
+    lines:
+      Chromium: {technology: single_cell, platforms: [Chromium]}
+      Visium: {technology: spatial_transcriptomics, platforms: [Visium, Visium HD], note: "units are Visium CytAssist instruments"}
+      Xenium: {technology: spatial_transcriptomics, platforms: [Xenium]}
+    metrics:
+      - metric: cumulative_instruments_sold
+        values:
+          Chromium: {2023: 5180, 2024: 5808, 2025: 6477}
+          Visium: {2023: 531, 2024: 810, 2025: 1015}
+          Xenium: {2023: 255, 2024: 421, 2025: 554}
+        source_type: filing
+        url: https://www.sec.gov/Archives/edgar/data/1770787/000162828026007822/txg-20251231.htm
+        quote: "Chromium (Single Cell) 6,477 5,808 5,180 Visium (Spatial) 1,015 810 531 Xenium (Spatial) 554 421 255 Cumulative instruments sold 8,046 7,039 5,966"
+      - metric: consumable_reactions_sold
+        values:
+          Chromium: {2023: 312500, 2024: 310900, 2025: 378300}
+          Visium: {2023: 29300, 2024: 35400, 2025: 31200}
+          Xenium: {2023: 5200, 2024: 10800, 2025: 14500}
+        source_type: filing
+        url: https://www.sec.gov/Archives/edgar/data/1770787/000162828026007822/txg-20251231.htm
+        quote: "Chromium (Single Cell) 378,300 310,900 312,500 Visium (Spatial) 31,200 35,400 29,300 Xenium (Spatial) 14,500 10,800 5,200 Total consumable reactions 424,000 357,100 347,000"
+
+  Quanterix:
+    lines:
+      PhenoCycler and PhenoImager: {technology: spatial_proteomics, platforms: [PhenoCycler (CODEX)], note: "Akoya reported both imagers together; PhenoImager is not a tracked platform"}
+    metrics:
+      - metric: installed_base
+        values:
+          PhenoCycler and PhenoImager: {2023: 1183, 2024: 1330}
+        source_type: filing
+        url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=akoya&type=10-K
+        quote: Akoya Biosciences FY2024 10-K (filed before the 2025-07 Quanterix acquisition)
+      - metric: placements
+        values:
+          PhenoCycler and PhenoImager: {2023: 249, 2024: 147}
+        source_type: filing
+        url: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=akoya&type=10-K
+        quote: Akoya Biosciences FY2024 10-K (filed before the 2025-07 Quanterix acquisition)

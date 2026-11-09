@@ -92,6 +92,71 @@
 {% endfor %}
 {% if fin %}<p class="note-p">From 10-K (or 20-F) XBRL. Product lines reconcile to total revenue within 1% each year; technology columns appear only where the company reports them.</p>{% endif %}
 
+{% if econ %}
+{% macro src(v) %}{% if v %}<a class="src" href="{{ v.url }}" title="{{ v.note or v.item or '' }}">{{ v.source_type }}</a>{% endif %}{% endmacro %}
+<h2>Economics</h2>
+{% if econ.configs %}
+<p class="sub">Cost per sample, where a sample is {{ econ.cost_unit }}. Modeled from public prices: consumables and sequencing per unit, plus the instrument over {{ econ.model.amortize_years }} years and its yearly service, spread over the units run in a year. {{ econ.model.excludes | capitalize }} are excluded. Compare platforms within this technology only: area and plex differ by row.</p>
+{% if econ.chart %}
+<div class="cw">{{ econ.chart | safe }}</div>
+<p class="note-p">Band: cost per unit from full use (left) to 25% use (right). Filled dot: 50% use, a busy core. Open dot: observed use, from the vendor's reported reactions per instrument. Ticks: academic core-facility rates for the same unit.</p>
+{% endif %}
+<div class="tw"><table>
+<thead><tr><th>Platform and unit</th><th class="n">Instrument<br>service / yr</th><th class="n">Consumables<br>+ sequencing</th><th class="n">Units / yr<br>full use</th><th class="n">Cost per unit<br>25% / <b>50%</b> / 100% use</th><th class="n">Observed use</th></tr></thead>
+<tbody>
+{% for c in econ.full + econ.partial %}
+{% set L = c.levels %}
+<tr>
+  <td class="wide">{{ c.platform }}{% if c.stale %} <span class="flag">stale</span>{% endif %}<br><small>{{ c.config }}{% if c.plex %}; {{ c.plex }}{% endif %}. Per {{ c.unit }}{% if c.area_mm2 %}, {{ c.area_mm2 }} mm²{% endif %}</small></td>
+  <td class="n">{% if c.instrument %}{{ c.instrument.usd | fmt("usd0") }} {{ src(c.instrument) }}{% if c.instrument.item and c.instrument.item != c.platform %}<br><small>{{ c.instrument.item }}</small>{% endif %}<br>{{ c.service.usd | fmt("usd0") }} {% if c.service.default %}<span class="src" title="{{ (econ.model.default_service_share * 100) | round | int }}% of instrument price; no service price is public">default</span>{% else %}{{ src(c.service.source) }}{% endif %}{% else %}–{% endif %}</td>
+  <td class="n">{% if c.consumables %}{{ c.consumables.usd | fmt("usd0") }} {{ src(c.consumables) }}{% else %}<small>not public</small>{% endif %}{% if c.sequencing_usd %}<br><small>+ {{ c.sequencing_usd | fmt("usd0") }} seq.<br>({{ c.read_pairs_m.value | fmt }}M pairs)</small>{% endif %}</td>
+  <td class="n">{% if c.capacity %}<span title="{{ c.capacity.basis }}">{{ c.capacity.per_year | fmt }}</span>{% else %}–{% endif %}</td>
+  <td class="n">{% if c.variable is not none %}{{ L.low.total | fmt("usd0") }} / <b>{{ L.typical.total | fmt("usd0") }}</b> / {{ L.max.total | fmt("usd0") }}{% elif L.typical.fixed_share is not none %}{{ L.low.fixed_share | fmt("usd0") }} / <b>{{ L.typical.fixed_share | fmt("usd0") }}</b> / {{ L.max.fixed_share | fmt("usd0") }}*{% else %}–{% endif %}</td>
+  <td class="n">{% if c.observed and c.observed.total is not none %}{{ c.observed.total | fmt("usd0") }}<br><small>{{ c.observed.units_per_year | round | int }} a year, FY{{ c.observed.fy }}</small>{% else %}–{% endif %}</td>
+</tr>
+{% endfor %}
+</tbody></table></div>
+<p class="note-p">Instrument and service: the most recent price of the best available source, in this order: federal purchase (paid), federal schedule (gsa), vendor list, filing, NIH S10 award. Units a year at full use is a stated assumption from vendor run times (hover for the basis). * Instrument and service share only: consumable prices for this platform are not public, so the full cost can't be modeled.{% if econ.configs | selectattr("sequencing_usd") | list %} Sequencing is priced at {{ econ.sequencing.usd_per_gb | fmt("usd0") }} per Gb, a reagent floor; core sequencing costs more.{% endif %}{% if econ.configs | selectattr("stale") | list %} Rows marked stale rest on a price more than 18 months old.{% endif %}</p>
+
+<h3>Price evidence</h3>
+<div class="tw"><table>
+<thead><tr><th>Platform</th><th>Instrument prices</th><th>Service per year</th></tr></thead>
+<tbody>
+{% for p in econ.prices %}
+<tr><td>{{ p.platform }}{% if p.needs %}<br><small>needs {{ p.needs }}</small>{% endif %}{% if p.note %}<br><small>{{ p.note }}</small>{% endif %}{% if p.awards %}<br><small>{{ p.awards.found }} federal awards name it; {{ p.awards.cited }} cited here</small>{% endif %}</td>
+<td>{% for v in p.instrument | sort(attribute="as_of", reverse=true) %}{{ v.usd | fmt("usd0") }} {{ src(v) }} <small>{{ v.as_of }}{% if v.item and v.item != p.platform %}, {{ v.item }}{% endif %}{% if v.model is false %}, not used: {{ v.note }}{% endif %}</small>{% if not loop.last %}<br>{% endif %}{% else %}<small>no instrument{% if not p.note %}, or no public price{% endif %}</small>{% endfor %}</td>
+<td>{% for v in p.service | sort(attribute="as_of", reverse=true) %}{{ v.usd | fmt("usd0") }} {{ src(v) }} <small>{{ v.as_of }}{% if v.item %}, {{ v.item }}{% endif %}</small>{% if not loop.last %}<br>{% endif %}{% else %}–{% endfor %}</td></tr>
+{% endfor %}
+</tbody></table></div>
+<p class="note-p">paid: a federal purchase record on USAspending.gov (whole award; some include installation or training). Awards naming a platform are pulled each month and read by hand; only clean instrument, service or kit purchases are cited. gsa: the federal schedule price. s10: an NIH shared-instrument award, capped at $750K and sometimes bundled with accessories. Each tag links to its source.</p>
+
+{% endif %}
+
+{% for tr in econ.traction %}
+<h3>{{ tr.vendor }}: units and pull-through</h3>
+{% if not econ.configs %}<p class="sub">Instruments and consumables sold, from annual filings. Platform prices for this technology are not in yet.</p>{% endif %}
+{% if tr.ratios %}
+{% set lines = tr.lines.keys() | list %}
+<div class="tw"><table>
+<thead><tr><th>Fiscal year</th><th class="n">Instruments shipped</th><th class="n">Implied instrument price</th><th class="n">Consumables per instrument</th>{% for ln in lines %}<th class="n">{{ ln }} reactions per instrument</th>{% endfor %}<th class="n">Consumables per reaction</th></tr></thead>
+<tbody>
+{% for r in tr.ratios | reverse %}
+<tr><td>{{ r.fy }}</td><td class="n">{{ r.shipped | fmt }}</td><td class="n">{{ r.asp | fmt("usd") }}</td><td class="n">{{ r.per_instrument | fmt("usd") }}</td>{% for ln in lines %}<td class="n">{{ r.reactions_per_instrument.get(ln) | fmt }}</td>{% endfor %}<td class="n">{{ r.per_reaction | fmt("usd0") }}</td></tr>
+{% endfor %}
+</tbody></table></div>
+<p class="note-p">From the 10-K: shipped is the change in cumulative instruments sold ({{ lines | join(", ") }}); per-instrument figures divide by the average of the year's opening and closing count, so retired instruments still count. Revenue is the company's {{ t.label | lower }} instrument and consumable revenue.</p>
+{% endif %}
+<div class="tw"><table>
+<thead><tr><th>Reported</th><th>Line</th>{% for y in tr.disclosures | map(attribute="values") | map("list") | sum(start=[]) | unique | sort %}<th class="n">{{ y }}</th>{% endfor %}</tr></thead>
+<tbody>
+{% set ys = tr.disclosures | map(attribute="values") | map("list") | sum(start=[]) | unique | sort | list %}
+{% for d in tr.disclosures %}
+<tr><td><a href="{{ d.url }}" title="{{ d.quote or '' }}">{{ d.metric | replace("_", " ") | capitalize }}</a></td><td>{{ d.line }}{% if tr.lines[d.line].note %}<br><small>{{ tr.lines[d.line].note }}</small>{% endif %}</td>{% for y in ys %}<td class="n">{{ d["values"].get(y) | fmt }}</td>{% endfor %}</tr>
+{% endfor %}
+</tbody></table></div>
+{% endfor %}
+{% endif %}
+
 {% if preview %}
 <h2>Product take</h2>
 <p class="pending">Pending: Josh's dated, signed take.</p>

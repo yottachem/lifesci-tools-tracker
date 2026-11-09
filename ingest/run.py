@@ -12,7 +12,7 @@ import traceback
 
 from ingest.common import RAW
 
-SOURCES = ["reporter", "openalex", "uspto", "edgar", "edgar_mix", "prices"]
+SOURCES = ["reporter", "openalex", "uspto", "edgar", "edgar_mix", "prices", "usaspending"]
 FAILED = RAW / "_failed.txt"
 SECRETS = ("OPENALEX_API_KEY", "USPTO_ODP_API_KEY", "CONTACT_EMAIL")
 
