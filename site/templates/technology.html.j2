@@ -125,7 +125,7 @@
 <thead><tr><th>Platform</th><th>Instrument prices</th><th>Service per year</th></tr></thead>
 <tbody>
 {% for p in econ.prices %}
-<tr><td>{{ p.platform }}{% if p.needs %}<br><small>needs {{ p.needs }}</small>{% endif %}{% if p.note %}<br><small>{{ p.note }}</small>{% endif %}{% if p.awards %}<br><small>{{ p.awards.found }} federal awards name it; {{ p.awards.cited }} cited here</small>{% endif %}</td>
+<tr><td>{{ p.platform }}{% if p.needs %}<br><small>needs {{ p.needs }}</small>{% endif %}{% if p.note %}<br><small>{{ p.note }}</small>{% endif %}{% if p.awards %}<br><small>{{ p.awards.found }} federal award{{ ' names' if p.awards.found == 1 else 's name' }} it; {{ p.awards.cited }} cited here</small>{% endif %}</td>
 <td>{% for v in p.instrument | sort(attribute="as_of", reverse=true) %}{{ v.usd | fmt("usd0") }} {{ src(v) }} <small>{{ v.as_of }}{% if v.item and v.item != p.platform %}, {{ v.item }}{% endif %}{% if v.model is false %}, not used: {{ v.note }}{% endif %}</small>{% if not loop.last %}<br>{% endif %}{% else %}<small>no instrument{% if not p.note %}, or no public price{% endif %}</small>{% endfor %}</td>
 <td>{% for v in p.service | sort(attribute="as_of", reverse=true) %}{{ v.usd | fmt("usd0") }} {{ src(v) }} <small>{{ v.as_of }}{% if v.item %}, {{ v.item }}{% endif %}</small>{% if not loop.last %}<br>{% endif %}{% else %}–{% endfor %}</td></tr>
 {% endfor %}
