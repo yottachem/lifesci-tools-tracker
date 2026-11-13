@@ -16,9 +16,11 @@
   <div class="fig"><b>{{ m.top_brand_share | fmt("pct") }}</b><span>of platform mentions: {{ m.top_brand }}</span></div>
 </div>
 
+<nav class="toc" aria-label="On this page">{% if claims | selectattr("html") | list %}<a href="#statements">What the data says</a>{% endif %}<a href="#papers">Papers</a><a href="#platforms">Platforms</a><a href="#nih">NIH grants</a><a href="#patents">Patents</a><a href="#companies">Companies</a>{% if econ %}<a href="#economics">Economics</a>{% endif %}</nav>
+
 {% set shown = claims | selectattr("html") | list %}
 {% if shown %}
-<h2>What the data says</h2>
+<h2 id="statements">What the data says</h2>
 <p class="sub">Each statement is re-checked against the data on every monthly run. When the data stops supporting one, it's replaced with the plain numbers and marked under review until it's rewritten.</p>
 <ul class="claims">
 {% for c in shown %}
@@ -27,11 +29,11 @@
 </ul>
 {% endif %}
 
-<h2>Papers</h2>
+<h2 id="papers">Papers</h2>
 <p class="sub">{% if rate %}Works using the method terms per 100K scholarly works in OpenAlex, so growth of the corpus itself doesn't count.{% else %}Works whose title or abstract uses the largest single method term (a lower bound until the union series is in).{% endif %} The shaded year is partial.</p>
 <div class="cw">{{ pub_chart | safe }}</div>
 
-<h2>Platforms</h2>
+<h2 id="platforms">Platforms</h2>
 <p class="sub">Share of brand mentions in papers, full text included. A paper naming two platforms counts once for each. Sub-brands sit inside their parent's count. The chart starts in {{ share_from }}, the first year with at least 50 mentions.</p>
 <div class="cw">{{ share_chart | safe }}</div>
 <div class="tw"><table>
@@ -54,13 +56,13 @@
 
 <div class="two">
 <section>
-<h2>NIH grants</h2>
+<h2 id="nih">NIH grants</h2>
 <p class="sub">Total award dollars by fiscal year, for projects whose title or abstract uses the grant terms.</p>
 <div class="cw">{{ nih_chart | safe }}</div>
 {% if t.nih.top_ics %}<p class="note-p">Largest funders, fiscal {{ meta.full_year - 4 }}-{{ meta.full_year }}: {% for ic, usd in t.nih.top_ics %}{{ ic }} {{ usd | fmt("usd") }}{% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
 </section>
 <section>
-<h2>Patents</h2>
+<h2 id="patents">Patents</h2>
 <p class="sub">US applications (by publication date) and grants, through {{ meta.patents_through }}.</p>
 <div class="cw">{{ pat_chart | safe }}</div>
 {% if t.patents.pregrant.top_assignees %}<p class="note-p">Most applications, {{ meta.full_year - 4 }}-{{ meta.full_year }}: {% for a, n in t.patents.pregrant.top_assignees[:6] %}{{ a | title }} ({{ n }}){% if not loop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
@@ -68,7 +70,7 @@
 </section>
 </div>
 
-<h2>Companies</h2>
+<h2 id="companies">Companies</h2>
 <p class="sub">Who sells it. Market value is month-end close times latest reported shares outstanding. Diversified companies are listed for reference; their financials aren't attributed to one technology.</p>
 <div class="tw"><table>
 <thead><tr><th>Vendor</th><th>Platforms here</th><th>Listing</th><th class="n">Market value</th></tr></thead>
@@ -94,7 +96,7 @@
 
 {% if econ %}
 {% macro src(v) %}{% if v %}<a class="src" href="{{ v.url }}" title="{{ v.note or v.item or '' }}">{{ v.source_type }}</a>{% endif %}{% endmacro %}
-<h2>Economics</h2>
+<h2 id="economics">Economics</h2>
 {% if econ.configs %}
 <p class="sub">Cost per sample, where a sample is {{ econ.cost_unit }}. Modeled from public prices: consumables and sequencing per unit, plus the instrument over {{ econ.model.amortize_years }} years and its yearly service, spread over the units run in a year. {{ econ.model.excludes | capitalize }} are excluded. Compare platforms within this technology only: area and plex differ by row.</p>
 {% if econ.chart %}
